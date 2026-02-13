@@ -1,0 +1,46 @@
+# GoA: Improved Economy - Event Modifiers
+
+ie_gold_vein_modifier = {
+	local_tax_modifier = 0.2
+	economy_techpoints = 0.02
+	icon = 4
+}
+
+ie_trade_fair_modifier = {
+	local_tax_modifier = 0.1
+	tech_growth_modifier = 0.1
+	icon = 4
+}
+
+ie_arcane_market_boom_modifier = {
+	local_tax_modifier = 0.15
+	culture_techpoints = 0.03
+	economy_techpoints = 0.02
+	tech_growth_modifier = 0.15
+	icon = 4
+}
+
+ie_bountiful_harvest_modifier = {
+	local_tax_modifier = 0.15
+	supply_limit = 2
+	levy_reinforce_rate = 0.1
+	icon = 4
+}
+
+ie_economic_boom_modifier = {
+	local_tax_modifier = 0.25
+	economy_techpoints = 0.03
+	icon = 4
+}
+
+ie_economic_depression_modifier = {
+	local_tax_modifier = -0.15
+	levy_reinforce_rate = -0.1
+	local_revolt_risk = 0.01
+	icon = 1
+}
+
+# Opinion modifier for harvest festival
+opinion_held_festival = {
+	opinion = 10
+}

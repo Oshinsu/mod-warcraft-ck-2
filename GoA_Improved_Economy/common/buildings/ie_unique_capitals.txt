@@ -1,0 +1,244 @@
+# GoA: Improved Economy - Unique Capital Buildings
+# Major Warcraft cities get unique economic buildings
+# These are location-locked to specific baronies
+
+castle = {
+
+	###############################################
+	# STORMWIND - Trade District
+	###############################################
+	ie_ca_stormwind_trade_district = {
+		desc = ie_ca_stormwind_trade_district_desc
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_stormwind
+					title = b_stormcliff
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 500
+		build_time = 730
+
+		tax_income = 8
+		local_tax_modifier = 0.15
+		economy_techpoints = 0.05
+		liege_prestige = 0.3
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# ORGRIMMAR - Great War Forge
+	###############################################
+	ie_ca_orgrimmar_war_forge = {
+		desc = ie_ca_orgrimmar_war_forge_desc
+		potential = {
+			FROMFROM = { title = b_orgrimmar }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 400
+		build_time = 730
+
+		tax_income = 5
+		military_techpoints = 0.08
+		levy_reinforce_rate = 0.2
+		retinuesize = 50
+		land_morale = 0.1
+		liege_prestige = 0.5
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# IRONFORGE - Hall of Explorers
+	###############################################
+	ie_ca_ironforge_hall_explorers = {
+		desc = ie_ca_ironforge_hall_explorers_desc
+		potential = {
+			FROMFROM = { title = b_ironforge }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 500
+		build_time = 730
+
+		tax_income = 7
+		economy_techpoints = 0.06
+		military_techpoints = 0.04
+		culture_techpoints = 0.04
+		tech_growth_modifier = 0.2
+		liege_prestige = 0.3
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# THUNDER BLUFF - Elder Rise Markets
+	###############################################
+	ie_ca_thunderbluff_elder_rise = {
+		desc = ie_ca_thunderbluff_elder_rise_desc
+		potential = {
+			FROMFROM = { title = b_thunderbluff }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 300
+		build_time = 547
+
+		tax_income = 4
+		liege_piety = 0.5
+		liege_prestige = 0.2
+		culture_techpoints = 0.05
+		supply_limit = 2
+		local_tax_modifier = 0.1
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# GNOMEREGAN - Innovation Hub
+	###############################################
+	ie_ca_gnomeregan_innovation = {
+		desc = ie_ca_gnomeregan_innovation_desc
+		potential = {
+			FROMFROM = { title = b_gnomeregan }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 500
+		build_time = 730
+
+		tax_income = 6
+		economy_techpoints = 0.08
+		military_techpoints = 0.06
+		culture_techpoints = 0.06
+		tech_growth_modifier = 0.3
+		liege_prestige = 0.2
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+}
+
+city = {
+
+	###############################################
+	# STORMWIND - Old Town Markets (city holding)
+	###############################################
+	ie_ct_stormwind_old_town = {
+		desc = ie_ct_stormwind_old_town_desc
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_old_town
+					title = b_trade_district
+				}
+			}
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+		gold_cost = 400
+		build_time = 547
+
+		tax_income = 10
+		local_tax_modifier = 0.2
+		economy_techpoints = 0.05
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# BORALUS - Grand Admiral's Harbor
+	###############################################
+	ie_ct_boralus_harbor = {
+		desc = ie_ct_boralus_harbor_desc
+		potential = {
+			FROMFROM = { title = b_boralus }
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+		gold_cost = 600
+		build_time = 730
+
+		tax_income = 8
+		local_tax_modifier = 0.15
+		galleys = 15
+		economy_techpoints = 0.04
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# DALARAN - Violet Citadel Commerce
+	###############################################
+	ie_ct_dalaran_violet = {
+		desc = ie_ct_dalaran_violet_desc
+		potential = {
+			FROMFROM = { title = b_dalaran }
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+		gold_cost = 800
+		build_time = 1095
+
+		tax_income = 10
+		local_tax_modifier = 0.2
+		culture_techpoints = 0.1
+		economy_techpoints = 0.08
+		military_techpoints = 0.05
+		tech_growth_modifier = 0.3
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+}
+
+temple = {
+
+	###############################################
+	# DARNASSUS - Temple of the Moon Treasury
+	###############################################
+	ie_tp_darnassus_moon_treasury = {
+		desc = ie_tp_darnassus_moon_treasury_desc
+		potential = {
+			FROMFROM = { title = b_darnassus }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 400
+		build_time = 547
+
+		tax_income = 6
+		liege_piety = 0.8
+		liege_prestige = 0.3
+		local_tax_modifier = 0.15
+		culture_techpoints = 0.06
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# SILVERMOON - Sunstrider Spire Commerce
+	###############################################
+	ie_tp_silvermoon_sunstrider = {
+		desc = ie_tp_silvermoon_sunstrider_desc
+		potential = {
+			FROMFROM = { title = b_silvermoon }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 600
+		build_time = 730
+
+		tax_income = 8
+		liege_prestige = 0.5
+		local_tax_modifier = 0.2
+		culture_techpoints = 0.08
+		economy_techpoints = 0.05
+		tech_growth_modifier = 0.2
+
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+}

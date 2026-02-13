@@ -1,0 +1,144 @@
+# GoA: Improved Economy - Tribal Economic Buildings
+# Tribal holdings in vanilla GoA have no economic buildings at all
+# This gives tribal realms (many Warcraft factions) economic viability
+
+tribal = {
+
+	###############################################
+	# TRIBAL MARKET - Basic income for tribal
+	###############################################
+
+	ie_tb_market_1 = {
+		desc = ie_tb_market_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 25
+		build_time = 182
+		tax_income = 0.5
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 0.5
+	}
+	ie_tb_market_2 = {
+		desc = ie_tb_market_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tb_hillfort_1 }
+		upgrades_from = ie_tb_market_1
+		gold_cost = 50
+		build_time = 274
+		tax_income = 1
+		ai_creation_factor = 99
+
+		extra_tech_building_start = 1.0
+	}
+	ie_tb_market_3 = {
+		desc = ie_tb_market_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		prerequisites = { tb_hillfort_2 }
+		upgrades_from = ie_tb_market_2
+		gold_cost = 100
+		build_time = 365
+		tax_income = 1.5
+		economy_techpoints = 0.01
+		ai_creation_factor = 98
+
+		extra_tech_building_start = 1.2
+	}
+	ie_tb_market_4 = {
+		desc = ie_tb_market_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		prerequisites = { tb_hillfort_3 }
+		upgrades_from = ie_tb_market_3
+		gold_cost = 150
+		build_time = 547
+		tax_income = 2
+		economy_techpoints = 0.02
+		local_tax_modifier = 0.05
+		ai_creation_factor = 97
+
+		extra_tech_building_start = 0.8
+	}
+
+	###############################################
+	# TRIBAL GATHERING GROUND - Prestige + income
+	###############################################
+
+	ie_tb_gathering_1 = {
+		desc = ie_tb_gathering_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 20
+		build_time = 182
+		tax_income = 0.3
+		liege_prestige = 0.1
+		ai_creation_factor = 95
+
+		extra_tech_building_start = 0.5
+	}
+	ie_tb_gathering_2 = {
+		desc = ie_tb_gathering_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		upgrades_from = ie_tb_gathering_1
+		gold_cost = 40
+		build_time = 274
+		tax_income = 0.6
+		liege_prestige = 0.2
+		culture_techpoints = 0.01
+		ai_creation_factor = 94
+
+		extra_tech_building_start = 1.0
+	}
+	ie_tb_gathering_3 = {
+		desc = ie_tb_gathering_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ie_tb_gathering_2
+		gold_cost = 80
+		build_time = 365
+		tax_income = 1
+		liege_prestige = 0.3
+		culture_techpoints = 0.02
+		ai_creation_factor = 93
+
+		extra_tech_building_start = 0.8
+	}
+
+	###############################################
+	# TRIBAL HUNTING GROUNDS - Supply + income
+	###############################################
+
+	ie_tb_hunting_1 = {
+		desc = ie_tb_hunting_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 15
+		build_time = 182
+		tax_income = 0.3
+		supply_limit = 0.5
+		ai_creation_factor = 92
+
+		extra_tech_building_start = 0.5
+	}
+	ie_tb_hunting_2 = {
+		desc = ie_tb_hunting_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		upgrades_from = ie_tb_hunting_1
+		gold_cost = 35
+		build_time = 274
+		tax_income = 0.6
+		supply_limit = 1
+		levy_reinforce_rate = 0.05
+		ai_creation_factor = 91
+
+		extra_tech_building_start = 1.0
+	}
+	ie_tb_hunting_3 = {
+		desc = ie_tb_hunting_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ie_tb_hunting_2
+		gold_cost = 70
+		build_time = 365
+		tax_income = 1
+		supply_limit = 1.5
+		levy_reinforce_rate = 0.1
+		ai_creation_factor = 90
+
+		extra_tech_building_start = 0.8
+	}
+}

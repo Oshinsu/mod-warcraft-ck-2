@@ -1,0 +1,372 @@
+# GoA: Improved Economy - Economic Events
+# Periodic events that add economic flavor and gameplay
+
+namespace = ie_economy
+
+###############################################
+# Gold Vein Discovered (Mountain provinces)
+###############################################
+character_event = {
+	id = ie_economy.1
+	desc = ie_economy.1.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		any_demesne_province = {
+			OR = {
+				terrain = mountain
+				terrain = hills
+			}
+			NOT = { has_province_modifier = ie_gold_vein_modifier }
+		}
+		NOT = { has_character_flag = ie_gold_vein_cooldown }
+		wealth >= 0
+		stewardship >= 8
+	}
+
+	mean_time_to_happen = {
+		years = 25
+		modifier = {
+			factor = 0.7
+			stewardship >= 15
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				culture_group = dwarf_group
+				culture_group = goblin_group
+				culture_group = kobold_group
+			}
+		}
+		modifier = {
+			factor = 1.5
+			trait = slothful
+		}
+	}
+
+	option = {
+		name = ie_economy.1.a # Invest in the mine
+		trigger = { wealth >= 100 }
+		wealth = -100
+		random_demesne_province = {
+			limit = {
+				OR = {
+					terrain = mountain
+					terrain = hills
+				}
+				NOT = { has_province_modifier = ie_gold_vein_modifier }
+			}
+			add_province_modifier = {
+				name = ie_gold_vein_modifier
+				duration = 3650 # 10 years
+			}
+		}
+		set_character_flag = ie_gold_vein_cooldown
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = ie_economy.1.b # Sell the mining rights
+		wealth = 150
+		prestige = -25
+		set_character_flag = ie_gold_vein_cooldown
+		ai_chance = { factor = 20 }
+	}
+}
+
+###############################################
+# Trade Caravan Arrives
+###############################################
+character_event = {
+	id = ie_economy.2
+	desc = ie_economy.2.desc
+	picture = GFX_evt_caravan
+
+	trigger = {
+		is_ruler = yes
+		is_at_sea = no
+		NOT = { has_character_flag = ie_caravan_cooldown }
+		any_demesne_province = {
+			OR = {
+				terrain = farmlands
+				terrain = plains
+			}
+		}
+		NOT = { trait = cruel }
+		NOT = { trait = arbitrary }
+	}
+
+	mean_time_to_happen = {
+		years = 15
+		modifier = {
+			factor = 0.7
+			stewardship >= 12
+		}
+		modifier = {
+			factor = 0.7
+			OR = {
+				culture_group = goblin_group
+				culture_group = human_group
+			}
+		}
+		modifier = {
+			factor = 0.8
+			trait = diligent
+		}
+	}
+
+	option = {
+		name = ie_economy.2.a # Welcome the traders
+		wealth = 50
+		prestige = 10
+		random_demesne_province = {
+			limit = {
+				OR = {
+					terrain = farmlands
+					terrain = plains
+				}
+			}
+			add_province_modifier = {
+				name = ie_trade_fair_modifier
+				duration = 1825 # 5 years
+			}
+		}
+		set_character_flag = ie_caravan_cooldown
+		ai_chance = { factor = 70 }
+	}
+
+	option = {
+		name = ie_economy.2.b # Tax them heavily
+		wealth = 100
+		prestige = -15
+		set_character_flag = ie_caravan_cooldown
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = ie_economy.2.c # Rob them
+		trigger = {
+			OR = {
+				trait = greedy
+				trait = cruel
+				trait = deceitful
+			}
+		}
+		wealth = 200
+		prestige = -50
+		piety = -25
+		set_character_flag = ie_caravan_cooldown
+		ai_chance = { factor = 10 }
+	}
+}
+
+###############################################
+# Arcane Market Boom (Magic cultures)
+###############################################
+character_event = {
+	id = ie_economy.3
+	desc = ie_economy.3.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		NOT = { has_character_flag = ie_arcane_boom_cooldown }
+		OR = {
+			religion = arcane_religion
+			culture_group = gnome_group
+			culture_group = goblin_group
+			culture = highborne
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 20
+		modifier = {
+			factor = 0.6
+			learning >= 15
+		}
+		modifier = {
+			factor = 0.7
+			trait = scholar
+		}
+	}
+
+	option = {
+		name = ie_economy.3.a # Encourage the arcane market
+		wealth = 75
+		prestige = 25
+		capital_scope = {
+			add_province_modifier = {
+				name = ie_arcane_market_boom_modifier
+				duration = 3650 # 10 years
+			}
+		}
+		set_character_flag = ie_arcane_boom_cooldown
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = ie_economy.3.b # Regulate and tax
+		wealth = 150
+		set_character_flag = ie_arcane_boom_cooldown
+		ai_chance = { factor = 20 }
+	}
+}
+
+###############################################
+# Goblin Investor Approaches
+###############################################
+character_event = {
+	id = ie_economy.4
+	desc = ie_economy.4.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		NOT = { has_character_flag = ie_goblin_investor_cooldown }
+		NOT = { culture_group = undead_group }
+		wealth >= 50
+	}
+
+	mean_time_to_happen = {
+		years = 30
+		modifier = {
+			factor = 0.5
+			culture_group = goblin_group
+		}
+		modifier = {
+			factor = 0.7
+			stewardship >= 12
+		}
+		modifier = {
+			factor = 0.8
+			diplomacy >= 12
+		}
+	}
+
+	option = {
+		name = ie_economy.4.a # Accept the investment
+		wealth = -200
+		character_event = { id = ie_economy.5 days = 730 } # Payoff in 2 years
+		set_character_flag = ie_goblin_investor_cooldown
+		ai_chance = { factor = 60 }
+	}
+
+	option = {
+		name = ie_economy.4.b # Decline politely
+		prestige = 5
+		set_character_flag = ie_goblin_investor_cooldown
+		ai_chance = { factor = 40 }
+	}
+}
+
+# Goblin Investment Payoff
+character_event = {
+	id = ie_economy.5
+	desc = ie_economy.5.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			60 = { set_character_flag = ie_investment_success }
+			25 = { set_character_flag = ie_investment_moderate }
+			15 = { set_character_flag = ie_investment_failure }
+		}
+	}
+
+	option = {
+		name = ie_economy.5.a
+		trigger = { has_character_flag = ie_investment_success }
+		wealth = 500
+		prestige = 50
+		clr_character_flag = ie_investment_success
+	}
+
+	option = {
+		name = ie_economy.5.b
+		trigger = { has_character_flag = ie_investment_moderate }
+		wealth = 250
+		clr_character_flag = ie_investment_moderate
+	}
+
+	option = {
+		name = ie_economy.5.c
+		trigger = { has_character_flag = ie_investment_failure }
+		wealth = 50
+		prestige = -25
+		clr_character_flag = ie_investment_failure
+	}
+}
+
+###############################################
+# Harvest Festival (Farmland/Plains)
+###############################################
+character_event = {
+	id = ie_economy.6
+	desc = ie_economy.6.desc
+	picture = GFX_evt_feast
+
+	trigger = {
+		is_ruler = yes
+		NOT = { has_character_flag = ie_harvest_cooldown }
+		any_demesne_province = {
+			OR = {
+				terrain = farmlands
+				terrain = plains
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 10
+		modifier = {
+			factor = 0.7
+			stewardship >= 12
+		}
+		modifier = {
+			factor = 0.7
+			OR = {
+				culture_group = human_group
+				culture_group = tauren_group
+			}
+		}
+	}
+
+	option = {
+		name = ie_economy.6.a # Hold a grand festival
+		wealth = -50
+		prestige = 30
+		random_demesne_province = {
+			limit = {
+				OR = {
+					terrain = farmlands
+					terrain = plains
+				}
+			}
+			add_province_modifier = {
+				name = ie_bountiful_harvest_modifier
+				duration = 1825 # 5 years
+			}
+		}
+		any_vassal = {
+			limit = { is_ruler = yes }
+			opinion = {
+				who = ROOT
+				modifier = opinion_held_festival
+				years = 3
+			}
+		}
+		set_character_flag = ie_harvest_cooldown
+		ai_chance = { factor = 70 }
+	}
+
+	option = {
+		name = ie_economy.6.b # Stockpile the surplus
+		wealth = 75
+		set_character_flag = ie_harvest_cooldown
+		ai_chance = { factor = 30 }
+	}
+}

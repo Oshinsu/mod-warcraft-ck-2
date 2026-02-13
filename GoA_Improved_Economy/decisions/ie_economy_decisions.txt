@@ -1,0 +1,212 @@
+# GoA: Improved Economy - Economic Decisions
+
+decisions = {
+
+	###############################################
+	# Establish Trade Agreements
+	###############################################
+	ie_establish_trade_agreement = {
+		only_playable = yes
+
+		potential = {
+			is_ruler = yes
+			is_landed = yes
+			NOT = { has_character_modifier = ie_trade_agreement_active }
+			NOT = { trait = incapable }
+		}
+
+		allow = {
+			wealth >= 200
+			diplomacy >= 8
+			stewardship >= 8
+			custom_tooltip = {
+				text = ie_not_at_war_tooltip
+				NOT = { war = yes }
+			}
+		}
+
+		effect = {
+			wealth = -200
+			prestige = 50
+			add_character_modifier = {
+				name = ie_trade_agreement_active
+				duration = 3650 # 10 years
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = ie_economic_boom_modifier
+					duration = 3650
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { wealth >= 500 }
+			}
+			modifier = {
+				factor = 2
+				stewardship >= 15
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					culture_group = goblin_group
+					culture_group = human_group
+					culture_group = dwarf_group
+				}
+			}
+		}
+	}
+
+	###############################################
+	# Commission Grand Construction
+	###############################################
+	ie_commission_grand_construction = {
+		only_playable = yes
+
+		potential = {
+			is_ruler = yes
+			is_landed = yes
+			higher_tier_than = COUNT
+			NOT = { has_character_flag = ie_grand_construction_active }
+			NOT = { trait = incapable }
+		}
+
+		allow = {
+			wealth >= 500
+			stewardship >= 10
+			custom_tooltip = {
+				text = ie_peace_required_tooltip
+				NOT = { war = yes }
+			}
+		}
+
+		effect = {
+			wealth = -500
+			prestige = 100
+			set_character_flag = ie_grand_construction_active
+			any_demesne_province = {
+				limit = { is_capital = yes }
+				add_province_modifier = {
+					name = ie_economic_boom_modifier
+					duration = 7300 # 20 years
+				}
+			}
+			character_event = { id = ie_economy.6 days = 365 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { wealth >= 1000 }
+			}
+			modifier = {
+				factor = 3
+				stewardship >= 15
+			}
+		}
+	}
+
+	###############################################
+	# Develop Mining Operations
+	###############################################
+	ie_develop_mining = {
+		only_playable = yes
+
+		potential = {
+			is_ruler = yes
+			is_landed = yes
+			any_demesne_province = {
+				OR = {
+					terrain = mountain
+					terrain = hills
+				}
+			}
+			NOT = { has_character_flag = ie_mining_development_active }
+			NOT = { trait = incapable }
+		}
+
+		allow = {
+			wealth >= 150
+			stewardship >= 6
+		}
+
+		effect = {
+			wealth = -150
+			random_demesne_province = {
+				limit = {
+					OR = {
+						terrain = mountain
+						terrain = hills
+					}
+					NOT = { has_province_modifier = ie_gold_vein_modifier }
+				}
+				add_province_modifier = {
+					name = ie_gold_vein_modifier
+					duration = 7300 # 20 years
+				}
+			}
+			set_character_flag = ie_mining_development_active
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { wealth >= 400 }
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					culture_group = dwarf_group
+					culture_group = goblin_group
+					culture_group = kobold_group
+				}
+			}
+		}
+	}
+
+	###############################################
+	# Hire Goblin Financial Advisor
+	###############################################
+	ie_hire_goblin_advisor = {
+		only_playable = yes
+
+		potential = {
+			is_ruler = yes
+			is_landed = yes
+			NOT = { has_character_modifier = ie_goblin_advisor_active }
+			NOT = { culture_group = goblin_group }
+			NOT = { trait = incapable }
+		}
+
+		allow = {
+			wealth >= 100
+			diplomacy >= 6
+		}
+
+		effect = {
+			wealth = -100
+			add_character_modifier = {
+				name = ie_goblin_advisor_active
+				duration = 3650 # 10 years
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { wealth >= 300 }
+			}
+			modifier = {
+				factor = 0
+				stewardship >= 15 # Already good at economy
+			}
+		}
+	}
+}
