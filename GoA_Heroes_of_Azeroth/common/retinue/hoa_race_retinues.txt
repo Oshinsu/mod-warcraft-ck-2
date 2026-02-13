@@ -1,0 +1,998 @@
+# GoA: Heroes of Azeroth - Unites Speciales par Race
+# Chaque race dispose de 2-3 types de retinues uniques
+# avec des noms personnalises, stats et caracteristiques specifiques
+#
+# SYSTEME DE STATS :
+# - light_infantry (LI) : rapide, bon en flanquement, faible armure
+# - heavy_infantry (HI) : solide, bon en defense, lent
+# - pikemen (PI) : anti-cavalerie, bonne defense
+# - light_cavalry (LC) : rapide, raid, flanquement
+# - knights (KN) : charge devastatrice, coute cher
+# - archers (AR) : degats a distance, fragile au CaC
+# - horse_archers (HA) : mobile + tir, polyvalent
+# - war_elephants (WE) : equivalent siege vivant / creature lourde
+
+###############################################
+# ============================================
+# HUMAIN - Alliance
+# ============================================
+###############################################
+
+# CHEVALIERS DE STORMWIND
+# Elite montee de l'Alliance. Charge devastatrice, haute armure.
+# Les heritiers des legendaires chevaliers de Lothar.
+hoa_ret_chevaliers_stormwind = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture_group = human_group
+			culture = stormwindian
+		}
+	}
+
+	modifier = {
+		knights_offensive = 0.4
+		knights_defensive = 0.3
+		knights_morale = 0.3
+	}
+
+	cost = 200
+	maintenance_multiplier = 2.5
+
+	compose = {
+		knights = 100
+		heavy_infantry = 50
+	}
+}
+
+# MAGES DE BATAILLE DE DALARAN
+# Mages militarises. Degats arcaniques a distance, soutien magique.
+# Formes par le Kirin Tor pour la guerre.
+hoa_ret_mages_dalaran = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture_group = human_group
+			culture = dalaran
+		}
+	}
+
+	modifier = {
+		archers_offensive = 0.5
+		archers_morale = 0.3
+		light_infantry_defensive = 0.2
+	}
+
+	cost = 250
+	maintenance_multiplier = 3.0
+
+	compose = {
+		archers = 100
+		light_infantry = 50
+	}
+}
+
+# MILICE DE WESTFALL
+# Infanterie legere bon marche. Paysans armes defendent leurs terres.
+# Braves mais mal equipes, ils compensent par le nombre.
+hoa_ret_milice_westfall = {
+	potential = {
+		is_nomadic = no
+		culture_group = human_group
+	}
+
+	modifier = {
+		light_infantry_offensive = 0.1
+		light_infantry_defensive = 0.2
+		light_infantry_morale = 0.2
+	}
+
+	cost = 50
+	maintenance_multiplier = 1.0
+
+	compose = {
+		light_infantry = 200
+		archers = 50
+	}
+}
+
+###############################################
+# ============================================
+# ORC - Horde
+# ============================================
+###############################################
+
+# GARDE KOR'KRON
+# Elite de la Horde. Guerriers massifs en armure noire.
+# La garde personnelle du Chef de Guerre. Aucune pitie.
+hoa_ret_garde_korkron = {
+	potential = {
+		is_nomadic = no
+		culture_group = orc_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.5
+		heavy_infantry_defensive = 0.3
+		heavy_infantry_morale = 0.4
+	}
+
+	cost = 200
+	maintenance_multiplier = 2.5
+
+	compose = {
+		heavy_infantry = 150
+	}
+}
+
+# CHEVAUCHEURS DE LOUPS
+# Cavalerie rapide montee sur des loups geants de Durotar.
+# Raids eclairs, flanquements, harcelement. Insaisissables.
+hoa_ret_chevaucheurs_loups = {
+	potential = {
+		is_nomadic = no
+		culture_group = orc_group
+	}
+
+	modifier = {
+		light_cavalry_offensive = 0.4
+		light_cavalry_morale = 0.3
+		light_cavalry_defensive = 0.1
+	}
+
+	cost = 175
+	maintenance_multiplier = 2.0
+
+	compose = {
+		light_cavalry = 120
+	}
+}
+
+# GRUNTS DE LA HORDE
+# Infanterie lourde de base. Forts, endurants, disciplinés.
+# L'epine dorsale de toute armee orc. LOK'TAR OGAR.
+hoa_ret_grunts_horde = {
+	potential = {
+		is_nomadic = no
+		culture_group = orc_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.2
+		heavy_infantry_defensive = 0.2
+		heavy_infantry_morale = 0.3
+	}
+
+	cost = 100
+	maintenance_multiplier = 1.5
+
+	compose = {
+		heavy_infantry = 200
+	}
+}
+
+###############################################
+# ============================================
+# ELFE DE LA NUIT - Alliance
+# ============================================
+###############################################
+
+# SENTINELLES DE DARNASSUS
+# Archeres d'elite montees sur des sabres-de-nuit.
+# 10 000 ans d'entrainement. Tir precis depuis les ombres.
+hoa_ret_sentinelles_darnassus = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture = night_elf
+			culture = highborne
+		}
+	}
+
+	modifier = {
+		archers_offensive = 0.5
+		archers_morale = 0.3
+		light_cavalry_offensive = 0.2
+	}
+
+	cost = 225
+	maintenance_multiplier = 2.5
+
+	compose = {
+		archers = 100
+		light_cavalry = 50
+	}
+}
+
+# DRUIDES DU BOSQUET
+# Druides de guerre en forme d'ours ou de felin.
+# Metamorphes combattant au corps a corps avec fureur bestiale.
+hoa_ret_druides_bosquet = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture = night_elf
+			culture = highborne
+		}
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.4
+		heavy_infantry_defensive = 0.3
+		heavy_infantry_morale = 0.2
+	}
+
+	cost = 250
+	maintenance_multiplier = 3.0
+
+	compose = {
+		heavy_infantry = 100
+	}
+}
+
+# GUERRIERES DE LA LUNE
+# Infanterie feminine d'elite. Guerrieres de Tyrande.
+# Rapides, furtives, mortelles sous le clair de lune.
+hoa_ret_guerrieres_lune = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture = night_elf
+			culture = highborne
+		}
+	}
+
+	modifier = {
+		light_infantry_offensive = 0.3
+		light_infantry_defensive = 0.2
+		light_infantry_morale = 0.3
+	}
+
+	cost = 125
+	maintenance_multiplier = 1.8
+
+	compose = {
+		light_infantry = 150
+		archers = 50
+	}
+}
+
+###############################################
+# ============================================
+# NAIN - Alliance
+# ============================================
+###############################################
+
+# GARDES DE LA MONTAGNE
+# Infanterie lourde en armure de mithril. Mur de boucliers nain.
+# Impossibles a deplacer. Tenaces comme la pierre elle-meme.
+hoa_ret_gardes_montagne = {
+	potential = {
+		is_nomadic = no
+		culture_group = dwarf_group
+	}
+
+	modifier = {
+		heavy_infantry_defensive = 0.5
+		heavy_infantry_morale = 0.4
+		pikemen_defensive = 0.2
+	}
+
+	cost = 175
+	maintenance_multiplier = 2.0
+
+	compose = {
+		heavy_infantry = 100
+		pikemen = 75
+	}
+}
+
+# FUSILIERS DE BRISEFER
+# Tireurs d'elite nains avec des armes a poudre.
+# Mousquets et mortiers. Technologie devastatrice a distance.
+hoa_ret_fusiliers_brisefer = {
+	potential = {
+		is_nomadic = no
+		culture_group = dwarf_group
+	}
+
+	modifier = {
+		archers_offensive = 0.6
+		archers_morale = 0.2
+		archers_defensive = 0.1
+	}
+
+	cost = 200
+	maintenance_multiplier = 2.5
+
+	compose = {
+		archers = 130
+	}
+}
+
+# CAVALIERS DE BELIERS
+# Cavalerie naine montee sur des beliers de guerre blindes.
+# Charge puissante en terrain montagneux. Broyeurs de lignes.
+hoa_ret_cavaliers_beliers = {
+	potential = {
+		is_nomadic = no
+		culture_group = dwarf_group
+	}
+
+	modifier = {
+		knights_offensive = 0.3
+		knights_defensive = 0.3
+		knights_morale = 0.2
+	}
+
+	cost = 200
+	maintenance_multiplier = 2.5
+
+	compose = {
+		knights = 80
+		heavy_infantry = 50
+	}
+}
+
+###############################################
+# ============================================
+# GNOME - Alliance
+# ============================================
+###############################################
+
+# PILOTES DE MECHAS
+# Petits gnomes dans d'enormes exosquelettes mecaniques.
+# Puissance de feu demesurée. Fragile mais devastateur.
+hoa_ret_pilotes_mechas = {
+	potential = {
+		is_nomadic = no
+		culture_group = gnome_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.5
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_morale = 0.2
+	}
+
+	cost = 300
+	maintenance_multiplier = 3.5
+
+	compose = {
+		heavy_infantry = 75
+	}
+}
+
+# INGENIEURS DE COMBAT
+# Sapeurs gnomes avec bombes, mines et gadgets explosifs.
+# Destruction de fortifications et pieges mortels.
+hoa_ret_ingenieurs_combat = {
+	potential = {
+		is_nomadic = no
+		culture_group = gnome_group
+	}
+
+	modifier = {
+		light_infantry_offensive = 0.4
+		light_infantry_morale = 0.2
+		archers_offensive = 0.3
+	}
+
+	cost = 225
+	maintenance_multiplier = 2.8
+
+	compose = {
+		light_infantry = 80
+		archers = 50
+	}
+}
+
+###############################################
+# ============================================
+# TROLL - Horde
+# ============================================
+###############################################
+
+# BERSERKERS AMANI
+# Trolls en transe de combat. Regeneration surnaturelle.
+# Plus ils sont blesses, plus ils deviennent dangereux.
+hoa_ret_berserkers_amani = {
+	potential = {
+		is_nomadic = no
+		culture_group = troll_group
+	}
+
+	modifier = {
+		light_infantry_offensive = 0.5
+		light_infantry_morale = 0.4
+		light_infantry_defensive = 0.1
+	}
+
+	cost = 150
+	maintenance_multiplier = 2.0
+
+	compose = {
+		light_infantry = 175
+	}
+}
+
+# CHASSEURS DE TETES
+# Lanceurs de haches a distance. Poisons et malefices vaudou.
+# Chaque tete coupee renforce leur mojo. Terrifiants.
+hoa_ret_chasseurs_tetes = {
+	potential = {
+		is_nomadic = no
+		culture_group = troll_group
+	}
+
+	modifier = {
+		archers_offensive = 0.4
+		archers_morale = 0.3
+		light_infantry_offensive = 0.2
+	}
+
+	cost = 125
+	maintenance_multiplier = 1.8
+
+	compose = {
+		archers = 100
+		light_infantry = 75
+	}
+}
+
+# CHEVAUCHEURS DE RAPTORS
+# Cavalerie legere montee sur des raptors de la jungle.
+# Rapides, sauvages, capables de charges imprevues.
+hoa_ret_chevaucheurs_raptors = {
+	potential = {
+		is_nomadic = no
+		culture_group = troll_group
+	}
+
+	modifier = {
+		light_cavalry_offensive = 0.4
+		light_cavalry_morale = 0.3
+		light_cavalry_defensive = 0.1
+	}
+
+	cost = 175
+	maintenance_multiplier = 2.2
+
+	compose = {
+		light_cavalry = 100
+	}
+}
+
+###############################################
+# ============================================
+# TAUREN - Horde
+# ============================================
+###############################################
+
+# BRAVES DE MULGORE
+# Guerriers massifs taurens. Force brute inegalee.
+# Un seul Brave vaut trois soldats normaux.
+hoa_ret_braves_mulgore = {
+	potential = {
+		is_nomadic = no
+		culture_group = tauren_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.4
+		heavy_infantry_defensive = 0.4
+		heavy_infantry_morale = 0.3
+	}
+
+	cost = 175
+	maintenance_multiplier = 2.0
+
+	compose = {
+		heavy_infantry = 125
+	}
+}
+
+# MARCHEURS DU TONNERRE
+# Cavalerie lourde sur des kodos de guerre.
+# Les kodos ecrasent tout sur leur passage. Charge imparable.
+hoa_ret_marcheurs_tonnerre = {
+	potential = {
+		is_nomadic = no
+		culture_group = tauren_group
+	}
+
+	modifier = {
+		knights_offensive = 0.4
+		knights_defensive = 0.3
+		knights_morale = 0.3
+	}
+
+	cost = 250
+	maintenance_multiplier = 3.0
+
+	compose = {
+		knights = 60
+		heavy_infantry = 40
+	}
+}
+
+# GARDIENS DU SOLEIL
+# Druides de guerre taurens. Marient force physique et magie naturelle.
+# Guerisseurs au combat, mais aussi terribles en melee.
+hoa_ret_gardiens_soleil = {
+	potential = {
+		is_nomadic = no
+		culture_group = tauren_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.3
+		heavy_infantry_defensive = 0.2
+		heavy_infantry_morale = 0.3
+		light_infantry_morale = 0.2
+	}
+
+	cost = 200
+	maintenance_multiplier = 2.5
+
+	compose = {
+		heavy_infantry = 75
+		light_infantry = 50
+	}
+}
+
+###############################################
+# ============================================
+# REPROUVE (Forsaken) - Horde
+# ============================================
+###############################################
+
+# DEATHSTALKERS
+# Assassins morts-vivants. Ombres silencieuses et mortelles.
+# Maitres de l'infiltration, du poison et du meurtre discret.
+hoa_ret_deathstalkers = {
+	potential = {
+		is_nomadic = no
+		culture_group = undead_group
+	}
+
+	modifier = {
+		light_infantry_offensive = 0.5
+		light_infantry_morale = 0.3
+		light_infantry_defensive = 0.1
+	}
+
+	cost = 200
+	maintenance_multiplier = 2.5
+
+	compose = {
+		light_infantry = 125
+	}
+}
+
+# ABOMINATIONS
+# Monstruosites de chair cousue. Crochets et poisons.
+# Lentes mais quasi indestructibles. Terreur incarnee.
+hoa_ret_abominations = {
+	potential = {
+		is_nomadic = no
+		culture_group = undead_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.3
+		heavy_infantry_defensive = 0.5
+		heavy_infantry_morale = 0.1
+	}
+
+	cost = 250
+	maintenance_multiplier = 2.8
+
+	compose = {
+		heavy_infantry = 80
+	}
+}
+
+# ARCHERS REPROUVÉS
+# Archers squelettiques. Fleches empoisonnees et pestilentes.
+# N'ont pas besoin de dormir. Tirent sans fatigue.
+hoa_ret_archers_reprouves = {
+	potential = {
+		is_nomadic = no
+		culture_group = undead_group
+	}
+
+	modifier = {
+		archers_offensive = 0.3
+		archers_morale = 0.2
+		archers_defensive = 0.2
+	}
+
+	cost = 125
+	maintenance_multiplier = 1.5
+
+	compose = {
+		archers = 150
+	}
+}
+
+###############################################
+# ============================================
+# ELFE DE SANG - Horde
+# ============================================
+###############################################
+
+# GARDES DU SANG (Blood Knights)
+# Paladins elfes de sang. Pouvoir de la Lumiere detourne.
+# Charge devastatrice infusee de magie sacree corrompue.
+hoa_ret_gardes_sang = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture_group = highelf_group
+			culture = blood_elf
+		}
+	}
+
+	modifier = {
+		knights_offensive = 0.4
+		knights_defensive = 0.3
+		knights_morale = 0.3
+	}
+
+	cost = 250
+	maintenance_multiplier = 3.0
+
+	compose = {
+		knights = 80
+		heavy_infantry = 30
+	}
+}
+
+# MAGISTERS
+# Mages de bataille elfes de sang. Puissance arcanique brute.
+# Barrages de sorts devastateurs depuis les lignes arrieres.
+hoa_ret_magisters = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture_group = highelf_group
+			culture = blood_elf
+		}
+	}
+
+	modifier = {
+		archers_offensive = 0.6
+		archers_morale = 0.3
+		archers_defensive = 0.1
+	}
+
+	cost = 275
+	maintenance_multiplier = 3.2
+
+	compose = {
+		archers = 80
+		light_infantry = 30
+	}
+}
+
+# GARDES DU FARSTRIDER
+# Rodeuses elfes de sang. Archers d'elite de Quel'Thalas.
+# Maitresses du tir a l'arc et du camouflage en foret.
+hoa_ret_farstriders = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture_group = highelf_group
+			culture = blood_elf
+		}
+	}
+
+	modifier = {
+		archers_offensive = 0.4
+		archers_morale = 0.2
+		light_cavalry_offensive = 0.2
+		light_cavalry_morale = 0.1
+	}
+
+	cost = 175
+	maintenance_multiplier = 2.2
+
+	compose = {
+		archers = 80
+		light_cavalry = 40
+	}
+}
+
+###############################################
+# ============================================
+# DRAENEI - Alliance
+# ============================================
+###############################################
+
+# VINDICATORS
+# Paladins draenei. Guerriers sacres de la Lumiere des Naaru.
+# Anciens et sages. Des millenaires de combat contre la Legion.
+hoa_ret_vindicators = {
+	potential = {
+		is_nomadic = no
+		culture_group = draenei_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.4
+		heavy_infantry_defensive = 0.4
+		heavy_infantry_morale = 0.3
+	}
+
+	cost = 250
+	maintenance_multiplier = 3.0
+
+	compose = {
+		heavy_infantry = 100
+	}
+}
+
+# ANCHORITES
+# Pretres de combat draenei. Guerison et barriere de lumiere.
+# Soutien sacre qui maintient les lignes en vie.
+hoa_ret_anchorites = {
+	potential = {
+		is_nomadic = no
+		culture_group = draenei_group
+	}
+
+	modifier = {
+		light_infantry_defensive = 0.4
+		light_infantry_morale = 0.5
+		heavy_infantry_morale = 0.2
+	}
+
+	cost = 200
+	maintenance_multiplier = 2.5
+
+	compose = {
+		light_infantry = 75
+		heavy_infantry = 50
+	}
+}
+
+# GARDIENS DE L'EXODAR
+# Guerriers cristallins armes de technologie Naaru.
+# Lames de cristal et boucliers dimensionnels.
+hoa_ret_gardiens_exodar = {
+	potential = {
+		is_nomadic = no
+		culture_group = draenei_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.3
+		heavy_infantry_defensive = 0.3
+		heavy_infantry_morale = 0.2
+		pikemen_defensive = 0.2
+	}
+
+	cost = 200
+	maintenance_multiplier = 2.5
+
+	compose = {
+		heavy_infantry = 80
+		pikemen = 50
+	}
+}
+
+###############################################
+# ============================================
+# GOBLIN - Horde
+# ============================================
+###############################################
+
+# SAPEURS EXPLOSIFS
+# Gobelins avec des charges explosives et des bazookas.
+# Dangereusement instables. Aussi dangereux pour eux que pour l'ennemi.
+hoa_ret_sapeurs_explosifs = {
+	potential = {
+		is_nomadic = no
+		culture_group = goblin_group
+	}
+
+	modifier = {
+		archers_offensive = 0.5
+		archers_morale = 0.1
+		archers_defensive = -0.1
+	}
+
+	cost = 200
+	maintenance_multiplier = 2.5
+
+	compose = {
+		archers = 100
+		light_infantry = 25
+	}
+}
+
+# BRUTES MERCENAIRES
+# Ogres et trolls embauches par les gobelins.
+# Le muscle que l'or achete. Solides mais indisciplines.
+hoa_ret_brutes_mercenaires = {
+	potential = {
+		is_nomadic = no
+		culture_group = goblin_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.3
+		heavy_infantry_defensive = 0.2
+		heavy_infantry_morale = 0.1
+	}
+
+	cost = 125
+	maintenance_multiplier = 1.8
+
+	compose = {
+		heavy_infantry = 125
+	}
+}
+
+# ZEPPELINS DE COMBAT
+# Machines volantes gobelins armees de bombes et roquettes.
+# Superiority aerienne (representee comme cavalerie rapide).
+hoa_ret_zeppelins_combat = {
+	potential = {
+		is_nomadic = no
+		culture_group = goblin_group
+	}
+
+	modifier = {
+		light_cavalry_offensive = 0.5
+		light_cavalry_morale = 0.2
+		light_cavalry_defensive = -0.1
+	}
+
+	cost = 300
+	maintenance_multiplier = 3.5
+
+	compose = {
+		light_cavalry = 60
+	}
+}
+
+###############################################
+# ============================================
+# WORGEN - Alliance
+# ============================================
+###############################################
+
+# MEUTE DE GILNEAS
+# Worgens en forme de loup-garou. Charge bestiale.
+# Griffes et crocs accompagnes d'une fureur animale.
+hoa_ret_meute_gilneas = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture = worgen
+			culture = gilnean
+		}
+	}
+
+	modifier = {
+		light_infantry_offensive = 0.5
+		light_infantry_morale = 0.4
+		light_infantry_defensive = 0.2
+	}
+
+	cost = 175
+	maintenance_multiplier = 2.0
+
+	compose = {
+		light_infantry = 150
+	}
+}
+
+# TRAQUEURS DE GILNEAS
+# Chasseurs worgens. Combinaison de tir et d'assaut bestial.
+# Tirent a l'arbalete puis chargent en forme de loup.
+hoa_ret_traqueurs_gilneas = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture = worgen
+			culture = gilnean
+		}
+	}
+
+	modifier = {
+		archers_offensive = 0.3
+		archers_morale = 0.2
+		light_infantry_offensive = 0.3
+	}
+
+	cost = 175
+	maintenance_multiplier = 2.2
+
+	compose = {
+		archers = 75
+		light_infantry = 75
+	}
+}
+
+# GARDE ROYALE DE GREYMANE
+# Elite de Gilneas. Armure lourde + furie worgen.
+# Les meilleurs guerriers du royaume maudit.
+hoa_ret_garde_greymane = {
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture = worgen
+			culture = gilnean
+		}
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.4
+		heavy_infantry_defensive = 0.3
+		heavy_infantry_morale = 0.3
+	}
+
+	cost = 225
+	maintenance_multiplier = 2.8
+
+	compose = {
+		heavy_infantry = 100
+	}
+}
+
+###############################################
+# ============================================
+# PANDARENS - Neutres
+# ============================================
+###############################################
+
+# MAITRES BRASSEURS
+# Moines pandarens combattant avec un tonneau sur le dos.
+# Arts martiaux et alcool fortifiant. Imprévisibles.
+hoa_ret_maitres_brasseurs = {
+	potential = {
+		is_nomadic = no
+		culture_group = pandaren_group
+	}
+
+	modifier = {
+		light_infantry_offensive = 0.4
+		light_infantry_defensive = 0.3
+		light_infantry_morale = 0.4
+	}
+
+	cost = 175
+	maintenance_multiplier = 2.2
+
+	compose = {
+		light_infantry = 125
+	}
+}
+
+# GARDE SHADO-PAN
+# Elite des pandarens. Gardiens contre les Sha et les Mantides.
+# Discipline martiale supreme. Calme absolu sous le feu.
+hoa_ret_garde_shadopan = {
+	potential = {
+		is_nomadic = no
+		culture_group = pandaren_group
+	}
+
+	modifier = {
+		heavy_infantry_offensive = 0.3
+		heavy_infantry_defensive = 0.4
+		heavy_infantry_morale = 0.4
+		archers_offensive = 0.2
+	}
+
+	cost = 250
+	maintenance_multiplier = 3.0
+
+	compose = {
+		heavy_infantry = 80
+		archers = 40
+	}
+}
