@@ -1,0 +1,1283 @@
+# GoA: Improved Economy - Cultural Economic Buildings
+# Each major race/culture group gets unique economic buildings
+# These complement the existing military cultural buildings in wc_castle_culture.txt
+#
+# Pattern: 3 tiers, culture_group gated, provide tax_income + unique flavor
+
+castle = {
+
+	###############################################
+	# GOBLIN - Engineering Works & Trade Emporium
+	###############################################
+	# Goblins are the premier merchants and engineers of Azeroth
+
+	ie_ca_goblin_engineering_1 = {
+		desc = ie_ca_goblin_engineering_desc
+		potential = {
+			OR = {
+				culture_group = goblin_group
+				has_building = ie_ca_goblin_engineering_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = goblin_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = goblin_group }
+		}
+		gold_cost = 100
+		build_time = 274
+		tax_income = 3
+		economy_techpoints = 0.03
+		military_techpoints = 0.01
+		ai_creation_factor = 108
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_goblin_engineering_2 = {
+		desc = ie_ca_goblin_engineering_desc
+		potential = {
+			OR = {
+				culture_group = goblin_group
+				has_building = ie_ca_goblin_engineering_1
+				has_building = ie_ca_goblin_engineering_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = goblin_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = goblin_group }
+		}
+		upgrades_from = ie_ca_goblin_engineering_1
+		gold_cost = 250
+		build_time = 547
+		tax_income = 5
+		economy_techpoints = 0.05
+		military_techpoints = 0.02
+		tech_growth_modifier = 0.1
+		ai_creation_factor = 107
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_goblin_engineering_3 = {
+		desc = ie_ca_goblin_engineering_desc
+		potential = {
+			OR = {
+				culture_group = goblin_group
+				has_building = ie_ca_goblin_engineering_1
+				has_building = ie_ca_goblin_engineering_2
+				has_building = ie_ca_goblin_engineering_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = goblin_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = goblin_group }
+		}
+		upgrades_from = ie_ca_goblin_engineering_2
+		gold_cost = 500
+		build_time = 1095
+		tax_income = 8
+		economy_techpoints = 0.08
+		military_techpoints = 0.03
+		tech_growth_modifier = 0.2
+		local_tax_modifier = 0.1
+		ai_creation_factor = 106
+
+		extra_tech_building_start = 0.5
+	}
+
+	ie_ca_goblin_trade_emporium_1 = {
+		desc = ie_ca_goblin_trade_emporium_desc
+		potential = {
+			OR = {
+				culture_group = goblin_group
+				has_building = ie_ca_goblin_trade_emporium_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = goblin_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = goblin_group }
+		}
+		gold_cost = 80
+		build_time = 274
+		tax_income = 2
+		local_tax_modifier = 0.05
+		ai_creation_factor = 106
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_goblin_trade_emporium_2 = {
+		desc = ie_ca_goblin_trade_emporium_desc
+		potential = {
+			OR = {
+				culture_group = goblin_group
+				has_building = ie_ca_goblin_trade_emporium_1
+				has_building = ie_ca_goblin_trade_emporium_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = goblin_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = goblin_group }
+		}
+		upgrades_from = ie_ca_goblin_trade_emporium_1
+		gold_cost = 200
+		build_time = 547
+		tax_income = 4
+		local_tax_modifier = 0.1
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_goblin_trade_emporium_3 = {
+		desc = ie_ca_goblin_trade_emporium_desc
+		potential = {
+			OR = {
+				culture_group = goblin_group
+				has_building = ie_ca_goblin_trade_emporium_1
+				has_building = ie_ca_goblin_trade_emporium_2
+				has_building = ie_ca_goblin_trade_emporium_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = goblin_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = goblin_group }
+		}
+		upgrades_from = ie_ca_goblin_trade_emporium_2
+		gold_cost = 400
+		build_time = 1095
+		tax_income = 7
+		local_tax_modifier = 0.15
+		economy_techpoints = 0.03
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# DWARF - Deep Mine & Master Forge
+	###############################################
+
+	ie_ca_dwarf_deep_mine_1 = {
+		desc = ie_ca_dwarf_deep_mine_desc
+		potential = {
+			OR = {
+				culture_group = dwarf_group
+				has_building = ie_ca_dwarf_deep_mine_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = dwarf_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = dwarf_group }
+		}
+		gold_cost = 120
+		build_time = 365
+		tax_income = 3
+		economy_techpoints = 0.02
+		ai_creation_factor = 106
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_dwarf_deep_mine_2 = {
+		desc = ie_ca_dwarf_deep_mine_desc
+		potential = {
+			OR = {
+				culture_group = dwarf_group
+				has_building = ie_ca_dwarf_deep_mine_1
+				has_building = ie_ca_dwarf_deep_mine_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = dwarf_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = dwarf_group }
+		}
+		upgrades_from = ie_ca_dwarf_deep_mine_1
+		gold_cost = 250
+		build_time = 730
+		tax_income = 5
+		economy_techpoints = 0.04
+		military_techpoints = 0.02
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_dwarf_deep_mine_3 = {
+		desc = ie_ca_dwarf_deep_mine_desc
+		potential = {
+			OR = {
+				culture_group = dwarf_group
+				has_building = ie_ca_dwarf_deep_mine_1
+				has_building = ie_ca_dwarf_deep_mine_2
+				has_building = ie_ca_dwarf_deep_mine_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = dwarf_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = dwarf_group }
+		}
+		upgrades_from = ie_ca_dwarf_deep_mine_2
+		gold_cost = 450
+		build_time = 1095
+		tax_income = 8
+		economy_techpoints = 0.06
+		military_techpoints = 0.03
+		local_tax_modifier = 0.1
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.5
+	}
+
+	ie_ca_dwarf_master_forge_1 = {
+		desc = ie_ca_dwarf_master_forge_desc
+		potential = {
+			OR = {
+				culture_group = dwarf_group
+				has_building = ie_ca_dwarf_master_forge_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = dwarf_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = { culture_group = dwarf_group }
+		}
+		prerequisites = { ca_barracks_1 }
+		gold_cost = 150
+		build_time = 547
+		tax_income = 2
+		military_techpoints = 0.03
+		levy_reinforce_rate = 0.1
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_dwarf_master_forge_2 = {
+		desc = ie_ca_dwarf_master_forge_desc
+		potential = {
+			OR = {
+				culture_group = dwarf_group
+				has_building = ie_ca_dwarf_master_forge_1
+				has_building = ie_ca_dwarf_master_forge_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = dwarf_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 3
+			ROOT = { culture_group = dwarf_group }
+		}
+		upgrades_from = ie_ca_dwarf_master_forge_1
+		gold_cost = 300
+		build_time = 730
+		tax_income = 4
+		military_techpoints = 0.05
+		levy_reinforce_rate = 0.15
+		retinuesize = 20
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_dwarf_master_forge_3 = {
+		desc = ie_ca_dwarf_master_forge_desc
+		potential = {
+			OR = {
+				culture_group = dwarf_group
+				has_building = ie_ca_dwarf_master_forge_1
+				has_building = ie_ca_dwarf_master_forge_2
+				has_building = ie_ca_dwarf_master_forge_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = dwarf_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 5
+			ROOT = { culture_group = dwarf_group }
+		}
+		upgrades_from = ie_ca_dwarf_master_forge_2
+		gold_cost = 500
+		build_time = 1095
+		tax_income = 6
+		military_techpoints = 0.08
+		levy_reinforce_rate = 0.2
+		retinuesize = 40
+		land_morale = 0.05
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# HUMAN - Merchant Guild & Royal Academy
+	###############################################
+
+	ie_ca_human_merchant_guild_1 = {
+		desc = ie_ca_human_merchant_guild_desc
+		potential = {
+			OR = {
+				culture_group = human_group
+				has_building = ie_ca_human_merchant_guild_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = human_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = human_group }
+		}
+		gold_cost = 80
+		build_time = 274
+		tax_income = 2
+		local_tax_modifier = 0.03
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_human_merchant_guild_2 = {
+		desc = ie_ca_human_merchant_guild_desc
+		potential = {
+			OR = {
+				culture_group = human_group
+				has_building = ie_ca_human_merchant_guild_1
+				has_building = ie_ca_human_merchant_guild_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = human_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = human_group }
+		}
+		upgrades_from = ie_ca_human_merchant_guild_1
+		gold_cost = 200
+		build_time = 547
+		tax_income = 3.5
+		local_tax_modifier = 0.05
+		economy_techpoints = 0.02
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_human_merchant_guild_3 = {
+		desc = ie_ca_human_merchant_guild_desc
+		potential = {
+			OR = {
+				culture_group = human_group
+				has_building = ie_ca_human_merchant_guild_1
+				has_building = ie_ca_human_merchant_guild_2
+				has_building = ie_ca_human_merchant_guild_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = human_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = human_group }
+		}
+		upgrades_from = ie_ca_human_merchant_guild_2
+		gold_cost = 400
+		build_time = 1095
+		tax_income = 6
+		local_tax_modifier = 0.1
+		economy_techpoints = 0.04
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 0.5
+	}
+
+	ie_ca_human_academy_1 = {
+		desc = ie_ca_human_academy_desc
+		potential = {
+			OR = {
+				culture_group = human_group
+				has_building = ie_ca_human_academy_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = human_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = { culture_group = human_group }
+		}
+		gold_cost = 150
+		build_time = 547
+		tax_income = 1
+		culture_techpoints = 0.03
+		economy_techpoints = 0.02
+		tech_growth_modifier = 0.1
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_human_academy_2 = {
+		desc = ie_ca_human_academy_desc
+		potential = {
+			OR = {
+				culture_group = human_group
+				has_building = ie_ca_human_academy_1
+				has_building = ie_ca_human_academy_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = human_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 3
+			ROOT = { culture_group = human_group }
+		}
+		upgrades_from = ie_ca_human_academy_1
+		gold_cost = 300
+		build_time = 730
+		tax_income = 2
+		culture_techpoints = 0.05
+		economy_techpoints = 0.03
+		tech_growth_modifier = 0.15
+		ai_creation_factor = 99
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_human_academy_3 = {
+		desc = ie_ca_human_academy_desc
+		potential = {
+			OR = {
+				culture_group = human_group
+				has_building = ie_ca_human_academy_1
+				has_building = ie_ca_human_academy_2
+				has_building = ie_ca_human_academy_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = human_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 5
+			ROOT = { culture_group = human_group }
+		}
+		upgrades_from = ie_ca_human_academy_2
+		gold_cost = 500
+		build_time = 1095
+		tax_income = 3.5
+		culture_techpoints = 0.08
+		economy_techpoints = 0.05
+		tech_growth_modifier = 0.2
+		ai_creation_factor = 98
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# ORC - War Trophy Market & Peon Labor Camp
+	###############################################
+
+	ie_ca_orc_trophy_market_1 = {
+		desc = ie_ca_orc_trophy_market_desc
+		potential = {
+			OR = {
+				culture_group = orc_group
+				has_building = ie_ca_orc_trophy_market_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = orc_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = orc_group }
+		}
+		gold_cost = 60
+		build_time = 182
+		tax_income = 1.5
+		liege_prestige = 0.1
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_orc_trophy_market_2 = {
+		desc = ie_ca_orc_trophy_market_desc
+		potential = {
+			OR = {
+				culture_group = orc_group
+				has_building = ie_ca_orc_trophy_market_1
+				has_building = ie_ca_orc_trophy_market_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = orc_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = orc_group }
+		}
+		upgrades_from = ie_ca_orc_trophy_market_1
+		gold_cost = 150
+		build_time = 365
+		tax_income = 3
+		liege_prestige = 0.2
+		land_morale = 0.05
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_orc_trophy_market_3 = {
+		desc = ie_ca_orc_trophy_market_desc
+		potential = {
+			OR = {
+				culture_group = orc_group
+				has_building = ie_ca_orc_trophy_market_1
+				has_building = ie_ca_orc_trophy_market_2
+				has_building = ie_ca_orc_trophy_market_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = orc_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = orc_group }
+		}
+		upgrades_from = ie_ca_orc_trophy_market_2
+		gold_cost = 300
+		build_time = 730
+		tax_income = 5
+		liege_prestige = 0.4
+		land_morale = 0.1
+		local_tax_modifier = 0.05
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.5
+	}
+
+	ie_ca_orc_peon_camp_1 = {
+		desc = ie_ca_orc_peon_camp_desc
+		potential = {
+			OR = {
+				culture_group = orc_group
+				has_building = ie_ca_orc_peon_camp_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = orc_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = orc_group }
+		}
+		gold_cost = 50
+		build_time = 182
+		tax_income = 2
+		levy_reinforce_rate = 0.1
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_orc_peon_camp_2 = {
+		desc = ie_ca_orc_peon_camp_desc
+		potential = {
+			OR = {
+				culture_group = orc_group
+				has_building = ie_ca_orc_peon_camp_1
+				has_building = ie_ca_orc_peon_camp_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = orc_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = orc_group }
+		}
+		upgrades_from = ie_ca_orc_peon_camp_1
+		gold_cost = 120
+		build_time = 365
+		tax_income = 3.5
+		levy_reinforce_rate = 0.15
+		garrison_size = 0.1
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_orc_peon_camp_3 = {
+		desc = ie_ca_orc_peon_camp_desc
+		potential = {
+			OR = {
+				culture_group = orc_group
+				has_building = ie_ca_orc_peon_camp_1
+				has_building = ie_ca_orc_peon_camp_2
+				has_building = ie_ca_orc_peon_camp_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = orc_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = orc_group }
+		}
+		upgrades_from = ie_ca_orc_peon_camp_2
+		gold_cost = 250
+		build_time = 730
+		tax_income = 5.5
+		levy_reinforce_rate = 0.2
+		garrison_size = 0.2
+		local_tax_modifier = 0.05
+		ai_creation_factor = 101
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# NIGHT ELF - Moonwell Garden & Ancient Grove
+	###############################################
+
+	ie_ca_nightelf_moonwell_1 = {
+		desc = ie_ca_nightelf_moonwell_desc
+		potential = {
+			OR = {
+				culture = night_elf
+				culture = highborne
+				has_building = ie_ca_nightelf_moonwell_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = night_elf
+					culture = highborne
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				OR = {
+					culture = night_elf
+					culture = highborne
+				}
+			}
+		}
+		gold_cost = 100
+		build_time = 365
+		tax_income = 1.5
+		liege_piety = 0.2
+		culture_techpoints = 0.03
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_nightelf_moonwell_2 = {
+		desc = ie_ca_nightelf_moonwell_desc
+		potential = {
+			OR = {
+				culture = night_elf
+				culture = highborne
+				has_building = ie_ca_nightelf_moonwell_1
+				has_building = ie_ca_nightelf_moonwell_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = night_elf
+					culture = highborne
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = night_elf
+					culture = highborne
+				}
+			}
+		}
+		upgrades_from = ie_ca_nightelf_moonwell_1
+		gold_cost = 250
+		build_time = 547
+		tax_income = 3
+		liege_piety = 0.4
+		culture_techpoints = 0.05
+		tech_growth_modifier = 0.1
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_nightelf_moonwell_3 = {
+		desc = ie_ca_nightelf_moonwell_desc
+		potential = {
+			OR = {
+				culture = night_elf
+				culture = highborne
+				has_building = ie_ca_nightelf_moonwell_1
+				has_building = ie_ca_nightelf_moonwell_2
+				has_building = ie_ca_nightelf_moonwell_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = night_elf
+					culture = highborne
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = night_elf
+					culture = highborne
+				}
+			}
+		}
+		upgrades_from = ie_ca_nightelf_moonwell_2
+		gold_cost = 450
+		build_time = 1095
+		tax_income = 5
+		liege_piety = 0.6
+		culture_techpoints = 0.08
+		tech_growth_modifier = 0.2
+		local_tax_modifier = 0.08
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# TROLL - Voodoo Market & Spirit Lodge
+	###############################################
+
+	ie_ca_troll_voodoo_market_1 = {
+		desc = ie_ca_troll_voodoo_market_desc
+		potential = {
+			OR = {
+				culture_group = troll_group
+				has_building = ie_ca_troll_voodoo_market_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = troll_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = troll_group }
+		}
+		gold_cost = 70
+		build_time = 274
+		tax_income = 2
+		liege_piety = 0.1
+		culture_techpoints = 0.02
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_troll_voodoo_market_2 = {
+		desc = ie_ca_troll_voodoo_market_desc
+		potential = {
+			OR = {
+				culture_group = troll_group
+				has_building = ie_ca_troll_voodoo_market_1
+				has_building = ie_ca_troll_voodoo_market_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = troll_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = troll_group }
+		}
+		upgrades_from = ie_ca_troll_voodoo_market_1
+		gold_cost = 180
+		build_time = 547
+		tax_income = 3.5
+		liege_piety = 0.2
+		culture_techpoints = 0.04
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_troll_voodoo_market_3 = {
+		desc = ie_ca_troll_voodoo_market_desc
+		potential = {
+			OR = {
+				culture_group = troll_group
+				has_building = ie_ca_troll_voodoo_market_1
+				has_building = ie_ca_troll_voodoo_market_2
+				has_building = ie_ca_troll_voodoo_market_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = troll_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = troll_group }
+		}
+		upgrades_from = ie_ca_troll_voodoo_market_2
+		gold_cost = 350
+		build_time = 1095
+		tax_income = 6
+		liege_piety = 0.4
+		culture_techpoints = 0.06
+		local_tax_modifier = 0.08
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# TAUREN - Plains Ranch & Totemic Exchange
+	###############################################
+
+	ie_ca_tauren_ranch_1 = {
+		desc = ie_ca_tauren_ranch_desc
+		potential = {
+			OR = {
+				culture_group = tauren_group
+				has_building = ie_ca_tauren_ranch_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = tauren_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = tauren_group }
+		}
+		gold_cost = 60
+		build_time = 274
+		tax_income = 2
+		supply_limit = 0.5
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_tauren_ranch_2 = {
+		desc = ie_ca_tauren_ranch_desc
+		potential = {
+			OR = {
+				culture_group = tauren_group
+				has_building = ie_ca_tauren_ranch_1
+				has_building = ie_ca_tauren_ranch_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = tauren_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = tauren_group }
+		}
+		upgrades_from = ie_ca_tauren_ranch_1
+		gold_cost = 150
+		build_time = 547
+		tax_income = 3.5
+		supply_limit = 1
+		levy_reinforce_rate = 0.1
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_tauren_ranch_3 = {
+		desc = ie_ca_tauren_ranch_desc
+		potential = {
+			OR = {
+				culture_group = tauren_group
+				has_building = ie_ca_tauren_ranch_1
+				has_building = ie_ca_tauren_ranch_2
+				has_building = ie_ca_tauren_ranch_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = tauren_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = tauren_group }
+		}
+		upgrades_from = ie_ca_tauren_ranch_2
+		gold_cost = 300
+		build_time = 1095
+		tax_income = 5.5
+		supply_limit = 1.5
+		levy_reinforce_rate = 0.15
+		local_tax_modifier = 0.08
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# DRAENEI - Crystal Workshop & Exodar Beacon
+	###############################################
+
+	ie_ca_draenei_crystal_workshop_1 = {
+		desc = ie_ca_draenei_crystal_workshop_desc
+		potential = {
+			OR = {
+				culture_group = draenei_group
+				has_building = ie_ca_draenei_crystal_workshop_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = draenei_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = draenei_group }
+		}
+		gold_cost = 120
+		build_time = 365
+		tax_income = 2
+		liege_piety = 0.15
+		culture_techpoints = 0.03
+		economy_techpoints = 0.02
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_draenei_crystal_workshop_2 = {
+		desc = ie_ca_draenei_crystal_workshop_desc
+		potential = {
+			OR = {
+				culture_group = draenei_group
+				has_building = ie_ca_draenei_crystal_workshop_1
+				has_building = ie_ca_draenei_crystal_workshop_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = draenei_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = draenei_group }
+		}
+		upgrades_from = ie_ca_draenei_crystal_workshop_1
+		gold_cost = 280
+		build_time = 730
+		tax_income = 4
+		liege_piety = 0.3
+		culture_techpoints = 0.05
+		economy_techpoints = 0.03
+		tech_growth_modifier = 0.15
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_draenei_crystal_workshop_3 = {
+		desc = ie_ca_draenei_crystal_workshop_desc
+		potential = {
+			OR = {
+				culture_group = draenei_group
+				has_building = ie_ca_draenei_crystal_workshop_1
+				has_building = ie_ca_draenei_crystal_workshop_2
+				has_building = ie_ca_draenei_crystal_workshop_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = draenei_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = draenei_group }
+		}
+		upgrades_from = ie_ca_draenei_crystal_workshop_2
+		gold_cost = 500
+		build_time = 1095
+		tax_income = 7
+		liege_piety = 0.5
+		culture_techpoints = 0.08
+		economy_techpoints = 0.05
+		tech_growth_modifier = 0.25
+		local_tax_modifier = 0.1
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# GNOME - Inventor's Workshop
+	###############################################
+
+	ie_ca_gnome_inventor_1 = {
+		desc = ie_ca_gnome_inventor_desc
+		potential = {
+			OR = {
+				culture_group = gnome_group
+				has_building = ie_ca_gnome_inventor_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = gnome_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = gnome_group }
+		}
+		gold_cost = 100
+		build_time = 274
+		tax_income = 2.5
+		economy_techpoints = 0.03
+		military_techpoints = 0.02
+		culture_techpoints = 0.02
+		ai_creation_factor = 106
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_gnome_inventor_2 = {
+		desc = ie_ca_gnome_inventor_desc
+		potential = {
+			OR = {
+				culture_group = gnome_group
+				has_building = ie_ca_gnome_inventor_1
+				has_building = ie_ca_gnome_inventor_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = gnome_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = gnome_group }
+		}
+		upgrades_from = ie_ca_gnome_inventor_1
+		gold_cost = 250
+		build_time = 547
+		tax_income = 4.5
+		economy_techpoints = 0.05
+		military_techpoints = 0.03
+		culture_techpoints = 0.03
+		tech_growth_modifier = 0.15
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_gnome_inventor_3 = {
+		desc = ie_ca_gnome_inventor_desc
+		potential = {
+			OR = {
+				culture_group = gnome_group
+				has_building = ie_ca_gnome_inventor_1
+				has_building = ie_ca_gnome_inventor_2
+				has_building = ie_ca_gnome_inventor_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = gnome_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = gnome_group }
+		}
+		upgrades_from = ie_ca_gnome_inventor_2
+		gold_cost = 450
+		build_time = 1095
+		tax_income = 7
+		economy_techpoints = 0.08
+		military_techpoints = 0.05
+		culture_techpoints = 0.05
+		tech_growth_modifier = 0.25
+		local_tax_modifier = 0.1
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# HIGH ELF / BLOOD ELF - Sunwell Bazaar
+	###############################################
+
+	ie_ca_highelf_bazaar_1 = {
+		desc = ie_ca_highelf_bazaar_desc
+		potential = {
+			OR = {
+				FROM = { is_high_elf_culture_trigger = yes }
+				has_building = ie_ca_highelf_bazaar_1
+			}
+		}
+		is_active_trigger = {
+			FROM = { is_high_elf_culture_trigger = yes }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			FROM = { is_high_elf_culture_trigger = yes }
+		}
+		gold_cost = 120
+		build_time = 365
+		tax_income = 2.5
+		liege_prestige = 0.15
+		culture_techpoints = 0.03
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_highelf_bazaar_2 = {
+		desc = ie_ca_highelf_bazaar_desc
+		potential = {
+			OR = {
+				FROM = { is_high_elf_culture_trigger = yes }
+				has_building = ie_ca_highelf_bazaar_1
+				has_building = ie_ca_highelf_bazaar_2
+			}
+		}
+		is_active_trigger = {
+			FROM = { is_high_elf_culture_trigger = yes }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			FROM = { is_high_elf_culture_trigger = yes }
+		}
+		upgrades_from = ie_ca_highelf_bazaar_1
+		gold_cost = 280
+		build_time = 730
+		tax_income = 5
+		liege_prestige = 0.3
+		culture_techpoints = 0.05
+		economy_techpoints = 0.03
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_highelf_bazaar_3 = {
+		desc = ie_ca_highelf_bazaar_desc
+		potential = {
+			OR = {
+				FROM = { is_high_elf_culture_trigger = yes }
+				has_building = ie_ca_highelf_bazaar_1
+				has_building = ie_ca_highelf_bazaar_2
+				has_building = ie_ca_highelf_bazaar_3
+			}
+		}
+		is_active_trigger = {
+			FROM = { is_high_elf_culture_trigger = yes }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			FROM = { is_high_elf_culture_trigger = yes }
+		}
+		upgrades_from = ie_ca_highelf_bazaar_2
+		gold_cost = 500
+		build_time = 1095
+		tax_income = 8
+		liege_prestige = 0.5
+		culture_techpoints = 0.08
+		economy_techpoints = 0.05
+		local_tax_modifier = 0.12
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.5
+	}
+
+	###############################################
+	# UNDEAD - Apothecary Quarter & Plague Works
+	###############################################
+
+	ie_ca_undead_apothecary_1 = {
+		desc = ie_ca_undead_apothecary_desc
+		potential = {
+			OR = {
+				culture_group = undead_group
+				has_building = ie_ca_undead_apothecary_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = undead_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = { culture_group = undead_group }
+		}
+		gold_cost = 80
+		build_time = 274
+		tax_income = 2
+		military_techpoints = 0.02
+		disease_defence = 0.1
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_undead_apothecary_2 = {
+		desc = ie_ca_undead_apothecary_desc
+		potential = {
+			OR = {
+				culture_group = undead_group
+				has_building = ie_ca_undead_apothecary_1
+				has_building = ie_ca_undead_apothecary_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = undead_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture_group = undead_group }
+		}
+		upgrades_from = ie_ca_undead_apothecary_1
+		gold_cost = 200
+		build_time = 547
+		tax_income = 4
+		military_techpoints = 0.04
+		disease_defence = 0.15
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ca_undead_apothecary_3 = {
+		desc = ie_ca_undead_apothecary_desc
+		potential = {
+			OR = {
+				culture_group = undead_group
+				has_building = ie_ca_undead_apothecary_1
+				has_building = ie_ca_undead_apothecary_2
+				has_building = ie_ca_undead_apothecary_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = { culture_group = undead_group }
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture_group = undead_group }
+		}
+		upgrades_from = ie_ca_undead_apothecary_2
+		gold_cost = 400
+		build_time = 1095
+		tax_income = 6
+		military_techpoints = 0.06
+		disease_defence = 0.2
+		local_tax_modifier = 0.08
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.5
+	}
+}

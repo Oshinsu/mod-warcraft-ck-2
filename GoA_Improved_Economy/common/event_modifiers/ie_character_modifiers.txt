@@ -1,0 +1,14 @@
+# GoA: Improved Economy - Character Modifiers
+
+ie_trade_agreement_active = {
+	global_tax_modifier = 0.1
+	diplomacy = 2
+	icon = 4
+}
+
+ie_goblin_advisor_active = {
+	global_tax_modifier = 0.15
+	stewardship = 3
+	diplomacy = -1
+	icon = 4
+}

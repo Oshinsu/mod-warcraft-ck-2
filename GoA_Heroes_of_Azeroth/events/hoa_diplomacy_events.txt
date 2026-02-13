@@ -1,0 +1,406 @@
+# GoA: Heroes of Azeroth - Diplomacy Events
+# Champion Duels, Faction Pacts, Artifact Trading
+
+namespace = hoa_diplo
+
+###############################################
+# CHAMPION DUEL - Challenge another ruler
+###############################################
+# Decision triggers this event
+character_event = {
+	id = hoa_diplo.1
+	desc = hoa_diplo.1.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:hoa_duel_target = {
+			save_event_target_as = duel_opponent
+		}
+	}
+
+	# Accept the duel
+	option = {
+		name = hoa_diplo.1.a
+		event_target:duel_opponent = {
+			character_event = { id = hoa_diplo.2 days = 7 }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.2
+				trait = craven
+			}
+			modifier = {
+				factor = 1.5
+				martial >= 15
+			}
+		}
+	}
+
+	# Decline - lose prestige
+	option = {
+		name = hoa_diplo.1.b
+		prestige = -100
+		opinion = {
+			who = ROOT
+			modifier = opinion_refused_duel
+			years = 5
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 3
+				trait = craven
+			}
+		}
+	}
+}
+
+# Duel Resolution
+character_event = {
+	id = hoa_diplo.2
+	desc = hoa_diplo.2.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Compare combat ratings
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.5
+					combat_rating >= 30
+				}
+				modifier = {
+					factor = 1.3
+					martial >= 15
+				}
+				modifier = {
+					factor = 1.2
+					any_artifact = { has_artifact_flag = combat_weapon quality >= 4 }
+				}
+				set_character_flag = hoa_duel_won
+			}
+			50 = {
+				modifier = {
+					factor = 1.5
+					FROM = { combat_rating >= 30 }
+				}
+				modifier = {
+					factor = 1.3
+					FROM = { martial >= 15 }
+				}
+				set_character_flag = hoa_duel_lost
+			}
+		}
+	}
+
+	# Victory!
+	option = {
+		name = hoa_diplo.2.a
+		trigger = { has_character_flag = hoa_duel_won }
+		prestige = 200
+		FROM = {
+			prestige = -150
+			opinion = {
+				who = ROOT
+				modifier = opinion_duel_victor
+				years = 10
+			}
+		}
+		add_character_modifier = {
+			name = hoa_champion_of_honor
+			duration = 3650
+		}
+		clr_character_flag = hoa_duel_won
+	}
+
+	# Defeat
+	option = {
+		name = hoa_diplo.2.b
+		trigger = { has_character_flag = hoa_duel_lost }
+		prestige = -150
+		add_trait = wounded
+		FROM = {
+			prestige = 200
+			add_character_modifier = {
+				name = hoa_champion_of_honor
+				duration = 3650
+			}
+		}
+		clr_character_flag = hoa_duel_lost
+	}
+}
+
+###############################################
+# FACTION SUMMIT - Alliance/Horde meetings
+###############################################
+character_event = {
+	id = hoa_diplo.10
+	desc = hoa_diplo.10.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		higher_tier_than = DUKE
+		independent = yes
+		NOT = { has_character_flag = hoa_summit_cooldown }
+		war = no
+		NOT = { trait = incapable }
+	}
+
+	mean_time_to_happen = {
+		years = 15
+		modifier = {
+			factor = 0.6
+			diplomacy >= 15
+		}
+		modifier = {
+			factor = 0.7
+			trait = diplomat
+		}
+	}
+
+	# Host the summit
+	option = {
+		name = hoa_diplo.10.a
+		wealth = -150
+		prestige = 100
+		diplomacy = 1
+		any_independent_ruler = {
+			limit = {
+				NOT = { character = ROOT }
+				NOT = { war_with = ROOT }
+				is_within_diplo_range = ROOT
+				higher_tier_than = COUNT
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_hosted_summit
+				years = 5
+			}
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = hoa_diplomatic_center
+				duration = 3650
+			}
+		}
+		set_character_flag = hoa_summit_cooldown
+		ai_chance = { factor = 70 }
+	}
+
+	# Trade agreements focus
+	option = {
+		name = hoa_diplo.10.b
+		wealth = -100
+		prestige = 50
+		add_character_modifier = {
+			name = hoa_trade_summit_bonus
+			duration = 3650
+		}
+		set_character_flag = hoa_summit_cooldown
+		ai_chance = { factor = 30 }
+	}
+}
+
+###############################################
+# ARTIFACT EXCHANGE - Trade items with other rulers
+###############################################
+character_event = {
+	id = hoa_diplo.20
+	desc = hoa_diplo.20.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		is_adult = yes
+		NOT = { has_character_flag = hoa_trade_cooldown }
+		any_artifact = {
+			is_artifact_equipped = no
+			NOT = { has_artifact_flag = indestructible }
+			quality >= 2
+		}
+		any_realm_character = {
+			NOT = { character = ROOT }
+			is_ruler = yes
+			opinion = { who = ROOT value = 25 }
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 10
+		modifier = {
+			factor = 0.5
+			diplomacy >= 14
+		}
+		modifier = {
+			factor = 0.7
+			OR = {
+				culture_group = goblin_group
+				culture_group = human_group
+			}
+		}
+	}
+
+	# Trade artifact for gold
+	option = {
+		name = hoa_diplo.20.a
+		wealth = 200
+		prestige = 25
+		random_artifact = {
+			limit = {
+				is_artifact_equipped = no
+				NOT = { has_artifact_flag = indestructible }
+				quality >= 2
+			}
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_ruler = yes
+					opinion = { who = ROOT value = 25 }
+				}
+				transfer_artifact = {
+					from = ROOT
+					to = THIS
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_generous_gift
+					years = 5
+				}
+			}
+		}
+		set_character_flag = hoa_trade_cooldown
+		ai_chance = { factor = 40 }
+	}
+
+	# Trade for political favor
+	option = {
+		name = hoa_diplo.20.b
+		prestige = 100
+		random_artifact = {
+			limit = {
+				is_artifact_equipped = no
+				NOT = { has_artifact_flag = indestructible }
+				quality >= 2
+			}
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_ruler = yes
+					opinion = { who = ROOT value = 25 }
+				}
+				transfer_artifact = {
+					from = ROOT
+					to = THIS
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_generous_gift
+					years = 10
+				}
+			}
+		}
+		set_character_flag = hoa_trade_cooldown
+		ai_chance = { factor = 40 }
+	}
+
+	# Keep everything
+	option = {
+		name = hoa_diplo.20.c
+		set_character_flag = hoa_trade_cooldown
+		ai_chance = { factor = 20 }
+	}
+}
+
+###############################################
+# CLASS MENTOR - Train another character
+###############################################
+character_event = {
+	id = hoa_diplo.30
+	desc = hoa_diplo.30.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		is_adult = yes
+		NOT = { has_character_flag = hoa_mentor_cooldown }
+		has_any_class_trigger = yes
+		OR = {
+			trait = class_warrior_7
+			trait = class_warrior_8
+			trait = class_warrior_9
+			trait = class_warrior_10
+			trait = class_mage_7
+			trait = class_mage_8
+			trait = class_mage_9
+			trait = class_mage_10
+			trait = class_paladin_7
+			trait = class_paladin_8
+			trait = class_paladin_9
+			trait = class_paladin_10
+			trait = class_rogue_7
+			trait = class_rogue_8
+			trait = class_rogue_9
+			trait = class_rogue_10
+		}
+		any_courtier = {
+			is_adult = yes
+			NOT = { age >= 30 }
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 12
+		modifier = {
+			factor = 0.6
+			learning >= 12
+		}
+		modifier = {
+			factor = 0.7
+			trait = patient
+		}
+	}
+
+	# Take on apprentice
+	option = {
+		name = hoa_diplo.30.a
+		prestige = 50
+		piety = 25
+		random_courtier = {
+			limit = {
+				is_adult = yes
+				NOT = { age >= 30 }
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_grateful
+				years = 20
+			}
+			# Boost their martial or learning
+			change_martial = 2
+			change_learning = 1
+		}
+		add_character_modifier = {
+			name = hoa_wise_mentor
+			duration = 3650
+		}
+		set_character_flag = hoa_mentor_cooldown
+		ai_chance = { factor = 70 }
+	}
+
+	# Decline
+	option = {
+		name = hoa_diplo.30.b
+		set_character_flag = hoa_mentor_cooldown
+		ai_chance = { factor = 30 }
+	}
+}

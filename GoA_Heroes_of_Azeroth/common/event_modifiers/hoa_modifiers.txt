@@ -1,0 +1,93 @@
+# GoA: Heroes of Azeroth - Event Modifiers
+
+# Crafting
+hoa_crafting_cooldown = { }
+hoa_enchanting_cooldown = { }
+hoa_disenchant_cooldown = { }
+
+hoa_weapon_enchanted = {
+	combat_rating = 5
+	martial = 1
+	icon = 4
+}
+
+# Dungeon boss kill titles
+hoa_ragnaros_slayer = {
+	martial = 2
+	combat_rating = 5
+	monthly_character_prestige = 0.2
+	vassal_opinion = 5
+	icon = 14
+}
+hoa_nefarian_slayer = {
+	martial = 3
+	combat_rating = 8
+	monthly_character_prestige = 0.3
+	vassal_opinion = 8
+	icon = 14
+}
+hoa_kelthuzad_slayer = {
+	martial = 4
+	combat_rating = 12
+	monthly_character_prestige = 0.5
+	vassal_opinion = 10
+	general_opinion = 5
+	icon = 14
+}
+hoa_dungeon_cooldown = { }
+
+# Diplomacy
+hoa_champion_of_honor = {
+	martial = 2
+	combat_rating = 5
+	monthly_character_prestige = 0.3
+	vassal_opinion = 5
+	icon = 14
+}
+hoa_duel_cooldown = { }
+
+hoa_defensive_pact_active = {
+	diplomacy = 2
+	garrison_size = 0.1
+	levy_size = 0.05
+	icon = 4
+}
+
+hoa_diplomatic_center = {
+	local_tax_modifier = 0.1
+	tech_growth_modifier = 0.15
+	icon = 4
+}
+
+hoa_trade_summit_bonus = {
+	global_tax_modifier = 0.08
+	diplomacy = 1
+	icon = 4
+}
+
+hoa_wise_mentor = {
+	learning = 2
+	diplomacy = 1
+	monthly_character_piety = 0.1
+	icon = 4
+}
+
+# Opinion modifiers
+opinion_refused_duel = {
+	opinion = -25
+}
+opinion_duel_victor = {
+	opinion = 15
+}
+opinion_hosted_summit = {
+	opinion = 20
+}
+opinion_defensive_pact = {
+	opinion = 30
+}
+opinion_sent_emissary = {
+	opinion = 15
+}
+opinion_generous_gift = {
+	opinion = 25
+}
