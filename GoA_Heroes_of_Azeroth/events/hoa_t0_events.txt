@@ -1,0 +1,673 @@
+# GoA: Heroes of Azeroth - T0 Dungeon Events (5-man)
+# Multi-stage: Stage 1 (trash) → Stage 2 (mini-boss) → Stage 3 (final boss)
+
+namespace = hoa_t0
+
+###############################################
+# SHADOWFANG KEEP - 3 Stages
+###############################################
+
+# Stage 1: Enter the Keep
+character_event = {
+	id = hoa_t0.1
+	desc = hoa_t0.1.desc
+	picture = GFX_evt_castle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			70 = {
+				modifier = { factor = 1.3 martial >= 10 }
+				modifier = { factor = 1.2 trait = brave }
+				set_character_flag = hoa_sfk_s1_pass
+			}
+			30 = {
+				modifier = { factor = 0.5 martial >= 10 }
+				set_character_flag = hoa_sfk_s1_fail
+			}
+		}
+	}
+
+	option = {
+		name = hoa_t0.1.a
+		trigger = { has_character_flag = hoa_sfk_s1_pass }
+		prestige = 10
+		character_event = { id = hoa_t0.2 days = 5 }
+		clr_character_flag = hoa_sfk_s1_pass
+	}
+	option = {
+		name = hoa_t0.1.b
+		trigger = { has_character_flag = hoa_sfk_s1_fail }
+		prestige = -20
+		add_trait = wounded
+		clr_character_flag = hoa_sfk_s1_fail
+		clr_character_flag = hoa_in_shadowfang
+	}
+	option = {
+		name = hoa_t0.1.c
+		prestige = -10
+		clr_character_flag = hoa_in_shadowfang
+		clr_character_flag = hoa_sfk_s1_pass
+		clr_character_flag = hoa_sfk_s1_fail
+		ai_chance = { factor = 5 }
+	}
+}
+
+# Stage 2: Commander Springvale
+character_event = {
+	id = hoa_t0.2
+	desc = hoa_t0.2.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			60 = {
+				modifier = { factor = 1.3 martial >= 10 }
+				modifier = { factor = 1.2 is_warrior_class_trigger = yes }
+				modifier = { factor = 1.2 is_paladin_class_trigger = yes }
+				set_character_flag = hoa_sfk_s2_pass
+			}
+			40 = {
+				modifier = { factor = 0.5 martial >= 12 }
+				set_character_flag = hoa_sfk_s2_fail
+			}
+		}
+	}
+
+	option = {
+		name = hoa_t0.2.a
+		trigger = { has_character_flag = hoa_sfk_s2_pass }
+		prestige = 15
+		wealth = 25
+		character_event = { id = hoa_t0.3 days = 5 }
+		clr_character_flag = hoa_sfk_s2_pass
+	}
+	option = {
+		name = hoa_t0.2.b
+		trigger = { has_character_flag = hoa_sfk_s2_fail }
+		prestige = -25
+		wealth = 10
+		add_trait = wounded
+		clr_character_flag = hoa_sfk_s2_fail
+		clr_character_flag = hoa_in_shadowfang
+	}
+	option = {
+		name = hoa_t0.2.c
+		wealth = 10
+		clr_character_flag = hoa_in_shadowfang
+		clr_character_flag = hoa_sfk_s2_pass
+		clr_character_flag = hoa_sfk_s2_fail
+		ai_chance = { factor = 5 }
+	}
+}
+
+# Stage 3: Lord Godfrey (Final Boss)
+character_event = {
+	id = hoa_t0.3
+	desc = hoa_t0.3.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			55 = {
+				modifier = { factor = 1.4 martial >= 10 }
+				modifier = { factor = 1.3 combat_rating >= 15 }
+				modifier = { factor = 1.2 trait = brave }
+				set_character_flag = hoa_sfk_boss_win
+			}
+			45 = {
+				modifier = { factor = 0.5 martial >= 12 }
+				modifier = { factor = 1.5 trait = craven }
+				set_character_flag = hoa_sfk_boss_lose
+			}
+		}
+	}
+
+	option = {
+		name = hoa_t0.3.a
+		trigger = { has_character_flag = hoa_sfk_boss_win }
+		prestige = 50
+		wealth = 50
+		hidden_tooltip = {
+			random_list = {
+				50 = { add_artifact = hoa_shadowfang_blade }
+				50 = { add_artifact = hoa_robes_of_arugal }
+			}
+		}
+		add_character_modifier = { name = hoa_shadowfang_cleared duration = 3650 }
+		clr_character_flag = hoa_sfk_boss_win
+		clr_character_flag = hoa_in_shadowfang
+	}
+	option = {
+		name = hoa_t0.3.b
+		trigger = { has_character_flag = hoa_sfk_boss_lose }
+		prestige = -40
+		add_trait = wounded
+		clr_character_flag = hoa_sfk_boss_lose
+		clr_character_flag = hoa_in_shadowfang
+	}
+}
+
+###############################################
+# SCARLET MONASTERY - 3 Stages
+###############################################
+
+# Stage 1: Graveyard Wing
+character_event = {
+	id = hoa_t0.10
+	desc = hoa_t0.10.desc
+	picture = GFX_evt_castle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			70 = {
+				modifier = { factor = 1.3 martial >= 10 }
+				set_character_flag = hoa_sm_s1_pass
+			}
+			30 = { set_character_flag = hoa_sm_s1_fail }
+		}
+	}
+
+	option = {
+		name = hoa_t0.10.a
+		trigger = { has_character_flag = hoa_sm_s1_pass }
+		prestige = 10
+		character_event = { id = hoa_t0.11 days = 5 }
+		clr_character_flag = hoa_sm_s1_pass
+	}
+	option = {
+		name = hoa_t0.10.b
+		trigger = { has_character_flag = hoa_sm_s1_fail }
+		prestige = -20
+		add_trait = wounded
+		clr_character_flag = hoa_sm_s1_fail
+		clr_character_flag = hoa_in_scarlet_monastery
+	}
+	option = {
+		name = hoa_t0.10.c
+		prestige = -10
+		clr_character_flag = hoa_in_scarlet_monastery
+		clr_character_flag = hoa_sm_s1_pass
+		clr_character_flag = hoa_sm_s1_fail
+		ai_chance = { factor = 5 }
+	}
+}
+
+# Stage 2: High Inquisitor Whitemane
+character_event = {
+	id = hoa_t0.11
+	desc = hoa_t0.11.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			55 = {
+				modifier = { factor = 1.3 martial >= 10 }
+				modifier = { factor = 1.2 learning >= 10 }
+				set_character_flag = hoa_sm_s2_pass
+			}
+			45 = { set_character_flag = hoa_sm_s2_fail }
+		}
+	}
+
+	option = {
+		name = hoa_t0.11.a
+		trigger = { has_character_flag = hoa_sm_s2_pass }
+		prestige = 20
+		wealth = 20
+		character_event = { id = hoa_t0.12 days = 5 }
+		clr_character_flag = hoa_sm_s2_pass
+	}
+	option = {
+		name = hoa_t0.11.b
+		trigger = { has_character_flag = hoa_sm_s2_fail }
+		prestige = -30
+		add_trait = wounded
+		clr_character_flag = hoa_sm_s2_fail
+		clr_character_flag = hoa_in_scarlet_monastery
+	}
+}
+
+# Stage 3: Scarlet Commander Mograine
+character_event = {
+	id = hoa_t0.12
+	desc = hoa_t0.12.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = {
+				modifier = { factor = 1.4 martial >= 12 }
+				modifier = { factor = 1.3 combat_rating >= 15 }
+				modifier = { factor = 1.2 is_paladin_class_trigger = yes }
+				set_character_flag = hoa_sm_boss_win
+			}
+			50 = {
+				modifier = { factor = 1.5 trait = craven }
+				set_character_flag = hoa_sm_boss_lose
+			}
+		}
+	}
+
+	option = {
+		name = hoa_t0.12.a
+		trigger = { has_character_flag = hoa_sm_boss_win }
+		prestige = 60
+		wealth = 60
+		piety = 20
+		hidden_tooltip = {
+			random_list = {
+				50 = { add_artifact = hoa_scarlet_tabard }
+				50 = { add_artifact = hoa_mograine_corrupted_ashbringer }
+			}
+		}
+		add_character_modifier = { name = hoa_scarlet_monastery_cleared duration = 3650 }
+		clr_character_flag = hoa_sm_boss_win
+		clr_character_flag = hoa_in_scarlet_monastery
+	}
+	option = {
+		name = hoa_t0.12.b
+		trigger = { has_character_flag = hoa_sm_boss_lose }
+		prestige = -50
+		add_trait = wounded
+		clr_character_flag = hoa_sm_boss_lose
+		clr_character_flag = hoa_in_scarlet_monastery
+	}
+}
+
+###############################################
+# GNOMEREGAN - 3 Stages
+###############################################
+
+# Stage 1: Irradiated Corridors
+character_event = {
+	id = hoa_t0.20
+	desc = hoa_t0.20.desc
+	picture = GFX_evt_castle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			65 = {
+				modifier = { factor = 1.3 learning >= 10 }
+				modifier = { factor = 1.2 is_mage_class_trigger = yes }
+				set_character_flag = hoa_gn_s1_pass
+			}
+			35 = { set_character_flag = hoa_gn_s1_fail }
+		}
+	}
+
+	option = {
+		name = hoa_t0.20.a
+		trigger = { has_character_flag = hoa_gn_s1_pass }
+		prestige = 10
+		character_event = { id = hoa_t0.21 days = 5 }
+		clr_character_flag = hoa_gn_s1_pass
+	}
+	option = {
+		name = hoa_t0.20.b
+		trigger = { has_character_flag = hoa_gn_s1_fail }
+		prestige = -20
+		health = -0.5
+		clr_character_flag = hoa_gn_s1_fail
+		clr_character_flag = hoa_in_gnomeregan
+	}
+	option = {
+		name = hoa_t0.20.c
+		prestige = -10
+		clr_character_flag = hoa_in_gnomeregan
+		clr_character_flag = hoa_gn_s1_pass
+		clr_character_flag = hoa_gn_s1_fail
+		ai_chance = { factor = 5 }
+	}
+}
+
+# Stage 2: Electrocutioner 6000
+character_event = {
+	id = hoa_t0.21
+	desc = hoa_t0.21.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			55 = {
+				modifier = { factor = 1.3 learning >= 10 }
+				set_character_flag = hoa_gn_s2_pass
+			}
+			45 = { set_character_flag = hoa_gn_s2_fail }
+		}
+	}
+
+	option = {
+		name = hoa_t0.21.a
+		trigger = { has_character_flag = hoa_gn_s2_pass }
+		prestige = 15
+		wealth = 20
+		character_event = { id = hoa_t0.22 days = 5 }
+		clr_character_flag = hoa_gn_s2_pass
+	}
+	option = {
+		name = hoa_t0.21.b
+		trigger = { has_character_flag = hoa_gn_s2_fail }
+		prestige = -25
+		add_trait = wounded
+		clr_character_flag = hoa_gn_s2_fail
+		clr_character_flag = hoa_in_gnomeregan
+	}
+}
+
+# Stage 3: Mekgineer Thermaplugg
+character_event = {
+	id = hoa_t0.22
+	desc = hoa_t0.22.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = {
+				modifier = { factor = 1.4 learning >= 12 }
+				modifier = { factor = 1.3 OR = { culture_group = gnome_group culture_group = goblin_group } }
+				set_character_flag = hoa_gn_boss_win
+			}
+			50 = { set_character_flag = hoa_gn_boss_lose }
+		}
+	}
+
+	option = {
+		name = hoa_t0.22.a
+		trigger = { has_character_flag = hoa_gn_boss_win }
+		prestige = 50
+		wealth = 60
+		hidden_tooltip = {
+			random_list = {
+				50 = { add_artifact = hoa_gnomish_goggles }
+				50 = { add_artifact = hoa_thermaplugg_cog }
+			}
+		}
+		add_character_modifier = { name = hoa_gnomeregan_cleared duration = 3650 }
+		clr_character_flag = hoa_gn_boss_win
+		clr_character_flag = hoa_in_gnomeregan
+	}
+	option = {
+		name = hoa_t0.22.b
+		trigger = { has_character_flag = hoa_gn_boss_lose }
+		prestige = -40
+		add_trait = wounded
+		clr_character_flag = hoa_gn_boss_lose
+		clr_character_flag = hoa_in_gnomeregan
+	}
+}
+
+###############################################
+# MARAUDON - 3 Stages
+###############################################
+
+# Stage 1: Foulspore Cavern
+character_event = {
+	id = hoa_t0.30
+	desc = hoa_t0.30.desc
+	picture = GFX_evt_mysterious_stranger
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			65 = {
+				modifier = { factor = 1.3 martial >= 10 }
+				modifier = { factor = 1.2 is_druid_class_trigger = yes }
+				modifier = { factor = 1.2 is_shaman_class_trigger = yes }
+				set_character_flag = hoa_mar_s1_pass
+			}
+			35 = { set_character_flag = hoa_mar_s1_fail }
+		}
+	}
+
+	option = {
+		name = hoa_t0.30.a
+		trigger = { has_character_flag = hoa_mar_s1_pass }
+		prestige = 10
+		character_event = { id = hoa_t0.31 days = 5 }
+		clr_character_flag = hoa_mar_s1_pass
+	}
+	option = {
+		name = hoa_t0.30.b
+		trigger = { has_character_flag = hoa_mar_s1_fail }
+		prestige = -25
+		add_trait = wounded
+		clr_character_flag = hoa_mar_s1_fail
+		clr_character_flag = hoa_in_maraudon
+	}
+	option = {
+		name = hoa_t0.30.c
+		prestige = -10
+		clr_character_flag = hoa_in_maraudon
+		clr_character_flag = hoa_mar_s1_pass
+		clr_character_flag = hoa_mar_s1_fail
+		ai_chance = { factor = 5 }
+	}
+}
+
+# Stage 2: Landslide
+character_event = {
+	id = hoa_t0.31
+	desc = hoa_t0.31.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			55 = {
+				modifier = { factor = 1.3 martial >= 10 }
+				set_character_flag = hoa_mar_s2_pass
+			}
+			45 = { set_character_flag = hoa_mar_s2_fail }
+		}
+	}
+
+	option = {
+		name = hoa_t0.31.a
+		trigger = { has_character_flag = hoa_mar_s2_pass }
+		prestige = 15
+		character_event = { id = hoa_t0.32 days = 5 }
+		clr_character_flag = hoa_mar_s2_pass
+	}
+	option = {
+		name = hoa_t0.31.b
+		trigger = { has_character_flag = hoa_mar_s2_fail }
+		prestige = -30
+		add_trait = wounded
+		clr_character_flag = hoa_mar_s2_fail
+		clr_character_flag = hoa_in_maraudon
+	}
+}
+
+# Stage 3: Princess Theradras
+character_event = {
+	id = hoa_t0.32
+	desc = hoa_t0.32.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = {
+				modifier = { factor = 1.3 martial >= 10 }
+				modifier = { factor = 1.3 is_magic_class_trigger = yes }
+				set_character_flag = hoa_mar_boss_win
+			}
+			50 = { set_character_flag = hoa_mar_boss_lose }
+		}
+	}
+
+	option = {
+		name = hoa_t0.32.a
+		trigger = { has_character_flag = hoa_mar_boss_win }
+		prestige = 50
+		wealth = 50
+		piety = 15
+		hidden_tooltip = {
+			random_list = {
+				50 = { add_artifact = hoa_theradras_crystal }
+				50 = { add_artifact = hoa_celebrian_staff }
+			}
+		}
+		add_character_modifier = { name = hoa_maraudon_cleared duration = 3650 }
+		clr_character_flag = hoa_mar_boss_win
+		clr_character_flag = hoa_in_maraudon
+	}
+	option = {
+		name = hoa_t0.32.b
+		trigger = { has_character_flag = hoa_mar_boss_lose }
+		prestige = -40
+		add_trait = wounded
+		clr_character_flag = hoa_mar_boss_lose
+		clr_character_flag = hoa_in_maraudon
+	}
+}
+
+###############################################
+# DIRE MAUL - 3 Stages
+###############################################
+
+# Stage 1: Warpwood Quarter
+character_event = {
+	id = hoa_t0.40
+	desc = hoa_t0.40.desc
+	picture = GFX_evt_castle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			65 = {
+				modifier = { factor = 1.3 martial >= 10 }
+				set_character_flag = hoa_dm_s1_pass
+			}
+			35 = { set_character_flag = hoa_dm_s1_fail }
+		}
+	}
+
+	option = {
+		name = hoa_t0.40.a
+		trigger = { has_character_flag = hoa_dm_s1_pass }
+		prestige = 15
+		character_event = { id = hoa_t0.41 days = 5 }
+		clr_character_flag = hoa_dm_s1_pass
+	}
+	option = {
+		name = hoa_t0.40.b
+		trigger = { has_character_flag = hoa_dm_s1_fail }
+		prestige = -25
+		add_trait = wounded
+		clr_character_flag = hoa_dm_s1_fail
+		clr_character_flag = hoa_in_dire_maul
+	}
+	option = {
+		name = hoa_t0.40.c
+		prestige = -10
+		clr_character_flag = hoa_in_dire_maul
+		clr_character_flag = hoa_dm_s1_pass
+		clr_character_flag = hoa_dm_s1_fail
+		ai_chance = { factor = 5 }
+	}
+}
+
+# Stage 2: Immol'thar
+character_event = {
+	id = hoa_t0.41
+	desc = hoa_t0.41.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			55 = {
+				modifier = { factor = 1.3 martial >= 12 }
+				modifier = { factor = 1.2 is_magic_class_trigger = yes }
+				set_character_flag = hoa_dm_s2_pass
+			}
+			45 = { set_character_flag = hoa_dm_s2_fail }
+		}
+	}
+
+	option = {
+		name = hoa_t0.41.a
+		trigger = { has_character_flag = hoa_dm_s2_pass }
+		prestige = 20
+		wealth = 25
+		character_event = { id = hoa_t0.42 days = 5 }
+		clr_character_flag = hoa_dm_s2_pass
+	}
+	option = {
+		name = hoa_t0.41.b
+		trigger = { has_character_flag = hoa_dm_s2_fail }
+		prestige = -30
+		add_trait = wounded
+		clr_character_flag = hoa_dm_s2_fail
+		clr_character_flag = hoa_in_dire_maul
+	}
+}
+
+# Stage 3: King Gordok (Tribute Run)
+character_event = {
+	id = hoa_t0.42
+	desc = hoa_t0.42.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = {
+				modifier = { factor = 1.4 martial >= 12 }
+				modifier = { factor = 1.3 combat_rating >= 15 }
+				modifier = { factor = 1.2 trait = brave }
+				set_character_flag = hoa_dm_boss_win
+			}
+			50 = { set_character_flag = hoa_dm_boss_lose }
+		}
+	}
+
+	option = {
+		name = hoa_t0.42.a
+		trigger = { has_character_flag = hoa_dm_boss_win }
+		prestige = 60
+		wealth = 75
+		hidden_tooltip = {
+			random_list = {
+				50 = { add_artifact = hoa_gordok_shackle }
+				50 = { add_artifact = hoa_tome_of_immoleth }
+			}
+		}
+		add_character_modifier = { name = hoa_dire_maul_cleared duration = 3650 }
+		clr_character_flag = hoa_dm_boss_win
+		clr_character_flag = hoa_in_dire_maul
+	}
+	option = {
+		name = hoa_t0.42.b
+		trigger = { has_character_flag = hoa_dm_boss_lose }
+		prestige = -50
+		add_trait = wounded
+		clr_character_flag = hoa_dm_boss_lose
+		clr_character_flag = hoa_in_dire_maul
+	}
+}

@@ -1,0 +1,592 @@
+# GoA: Heroes of Azeroth - Province-Specific Economic Buildings
+# Based on Warcraft lore for each region
+
+###############################################
+# GOBLIN TRADE BUILDINGS (Gadgetzan, Ratchet, Booty Bay)
+###############################################
+
+ca_goblin_auction_house = {
+	desc = ca_goblin_auction_house_desc
+	potential = {
+		OR = {
+			culture_group = goblin_group
+			FROM = { culture_group = goblin_group }
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 1 }
+	gold_cost = 200
+	build_time = 365
+	tax_income = 2
+	monthly_character_prestige = 0.1
+	ai_creation_factor = 80
+	extra_tech_building_start = 0.5
+}
+
+ca_goblin_engineering_shop = {
+	desc = ca_goblin_engineering_shop_desc
+	potential = {
+		OR = {
+			culture_group = goblin_group
+			FROM = { culture_group = goblin_group }
+		}
+	}
+	trigger = {
+		TECH_TRADE_PRACTICES = 2
+		has_building = ca_goblin_auction_house
+	}
+	gold_cost = 350
+	build_time = 545
+	tax_income = 3
+	tech_growth_modifier = 0.15
+	economy_techpoints = 0.02
+	ai_creation_factor = 70
+}
+
+ca_goblin_bank = {
+	desc = ca_goblin_bank_desc
+	potential = {
+		OR = {
+			culture_group = goblin_group
+			FROM = { culture_group = goblin_group }
+		}
+	}
+	trigger = {
+		TECH_TRADE_PRACTICES = 3
+		has_building = ca_goblin_engineering_shop
+	}
+	gold_cost = 500
+	build_time = 730
+	tax_income = 5
+	global_tax_modifier = 0.05
+	monthly_character_prestige = 0.2
+	ai_creation_factor = 60
+}
+
+###############################################
+# DWARVEN INDUSTRY (Ironforge, Dun Morogh)
+###############################################
+
+ca_dwarven_deep_mine = {
+	desc = ca_dwarven_deep_mine_desc
+	potential = {
+		OR = {
+			culture_group = dwarf_group
+			FROM = { culture_group = dwarf_group }
+		}
+		OR = {
+			terrain = mountain
+			terrain = hills
+		}
+	}
+	trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+	gold_cost = 250
+	build_time = 545
+	tax_income = 3
+	economy_techpoints = 0.01
+	ai_creation_factor = 85
+}
+
+ca_dwarven_master_forge = {
+	desc = ca_dwarven_master_forge_desc
+	potential = {
+		OR = {
+			culture_group = dwarf_group
+			FROM = { culture_group = dwarf_group }
+		}
+	}
+	trigger = {
+		TECH_CASTLE_CONSTRUCTION = 2
+		has_building = ca_dwarven_deep_mine
+	}
+	gold_cost = 400
+	build_time = 730
+	tax_income = 3
+	military_techpoints = 0.02
+	levy_reinforce_rate = 0.5
+	ai_creation_factor = 75
+}
+
+ca_dwarven_brewery = {
+	desc = ca_dwarven_brewery_desc
+	potential = {
+		OR = {
+			culture_group = dwarf_group
+			FROM = { culture_group = dwarf_group }
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 1 }
+	gold_cost = 175
+	build_time = 365
+	tax_income = 2
+	monthly_character_prestige = 0.1
+	local_revolt_risk = -0.01
+	ai_creation_factor = 90
+}
+
+###############################################
+# NIGHT ELF NATURE BUILDINGS (Darnassus, Feralas, Ashenvale)
+###############################################
+
+ca_moonwell = {
+	desc = ca_moonwell_desc
+	potential = {
+		OR = {
+			culture_group = nightelf_group
+			FROM = { culture_group = nightelf_group }
+		}
+	}
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	gold_cost = 150
+	build_time = 365
+	tax_income = 1
+	monthly_character_piety = 0.1
+	local_revolt_risk = -0.02
+	ai_creation_factor = 90
+}
+
+ca_ancient_of_lore = {
+	desc = ca_ancient_of_lore_desc
+	potential = {
+		OR = {
+			culture_group = nightelf_group
+			FROM = { culture_group = nightelf_group }
+		}
+		OR = {
+			terrain = forest
+			terrain = jungle
+		}
+	}
+	trigger = {
+		TECH_CASTLE_CONSTRUCTION = 2
+		has_building = ca_moonwell
+	}
+	gold_cost = 350
+	build_time = 730
+	culture_techpoints = 0.03
+	tech_growth_modifier = 0.1
+	monthly_character_piety = 0.15
+	ai_creation_factor = 70
+}
+
+ca_elven_lumber_mill = {
+	desc = ca_elven_lumber_mill_desc
+	potential = {
+		OR = {
+			culture_group = nightelf_group
+			FROM = { culture_group = nightelf_group }
+		}
+		OR = {
+			terrain = forest
+			terrain = jungle
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 1 }
+	gold_cost = 200
+	build_time = 365
+	tax_income = 2
+	economy_techpoints = 0.01
+	ai_creation_factor = 85
+}
+
+###############################################
+# HUMAN TRADE & MAGIC (Stormwind, Dalaran, Theramore)
+###############################################
+
+ca_human_merchant_guild = {
+	desc = ca_human_merchant_guild_desc
+	potential = {
+		OR = {
+			culture_group = human_group
+			FROM = { culture_group = human_group }
+		}
+		OR = {
+			terrain = farmlands
+			terrain = plains
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 1 }
+	gold_cost = 200
+	build_time = 365
+	tax_income = 2
+	global_tax_modifier = 0.02
+	ai_creation_factor = 90
+}
+
+ca_human_mage_tower = {
+	desc = ca_human_mage_tower_desc
+	potential = {
+		OR = {
+			culture_group = human_group
+			FROM = { culture_group = human_group }
+		}
+	}
+	trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+	gold_cost = 400
+	build_time = 730
+	tax_income = 2
+	culture_techpoints = 0.02
+	tech_growth_modifier = 0.1
+	monthly_character_prestige = 0.15
+	ai_creation_factor = 65
+}
+
+ca_human_academy = {
+	desc = ca_human_academy_desc
+	potential = {
+		OR = {
+			culture_group = human_group
+			FROM = { culture_group = human_group }
+		}
+	}
+	trigger = {
+		TECH_TRADE_PRACTICES = 2
+		has_building = ca_human_merchant_guild
+	}
+	gold_cost = 350
+	build_time = 545
+	tax_income = 2
+	culture_techpoints = 0.02
+	economy_techpoints = 0.01
+	monthly_character_prestige = 0.1
+	ai_creation_factor = 70
+}
+
+###############################################
+# ORCISH BUILDINGS (Orgrimmar, Durotar, Barrens)
+###############################################
+
+ca_orc_war_pit = {
+	desc = ca_orc_war_pit_desc
+	potential = {
+		OR = {
+			culture_group = orc_group
+			FROM = { culture_group = orc_group }
+		}
+	}
+	trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+	gold_cost = 150
+	build_time = 270
+	tax_income = 1
+	levy_size = 0.05
+	monthly_character_prestige = 0.05
+	ai_creation_factor = 90
+}
+
+ca_orc_peon_camp = {
+	desc = ca_orc_peon_camp_desc
+	potential = {
+		OR = {
+			culture_group = orc_group
+			FROM = { culture_group = orc_group }
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 1 }
+	gold_cost = 175
+	build_time = 270
+	tax_income = 2
+	levy_reinforce_rate = 0.3
+	ai_creation_factor = 85
+}
+
+ca_orc_spirit_lodge = {
+	desc = ca_orc_spirit_lodge_desc
+	potential = {
+		OR = {
+			culture_group = orc_group
+			FROM = { culture_group = orc_group }
+		}
+	}
+	trigger = {
+		TECH_CASTLE_CONSTRUCTION = 2
+		has_building = ca_orc_war_pit
+	}
+	gold_cost = 300
+	build_time = 545
+	tax_income = 2
+	monthly_character_piety = 0.15
+	culture_techpoints = 0.02
+	ai_creation_factor = 70
+}
+
+###############################################
+# TROLL VOODOO ECONOMY (Stranglethorn, Zul'Gurub area)
+###############################################
+
+ca_troll_voodoo_market = {
+	desc = ca_troll_voodoo_market_desc
+	potential = {
+		OR = {
+			culture_group = troll_group
+			FROM = { culture_group = troll_group }
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 1 }
+	gold_cost = 175
+	build_time = 365
+	tax_income = 2
+	monthly_character_piety = 0.1
+	ai_creation_factor = 85
+}
+
+ca_troll_alchemy_hut = {
+	desc = ca_troll_alchemy_hut_desc
+	potential = {
+		OR = {
+			culture_group = troll_group
+			FROM = { culture_group = troll_group }
+		}
+		OR = {
+			terrain = jungle
+			terrain = forest
+		}
+	}
+	trigger = {
+		TECH_TRADE_PRACTICES = 2
+		has_building = ca_troll_voodoo_market
+	}
+	gold_cost = 275
+	build_time = 545
+	tax_income = 3
+	culture_techpoints = 0.02
+	monthly_character_prestige = 0.1
+	ai_creation_factor = 70
+}
+
+###############################################
+# UNDEAD / FORSAKEN INDUSTRY (Undercity, Plaguelands)
+###############################################
+
+ca_apothecary_lab = {
+	desc = ca_apothecary_lab_desc
+	potential = {
+		OR = {
+			culture_group = forsaken_group
+			FROM = { culture_group = forsaken_group }
+		}
+	}
+	trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+	gold_cost = 200
+	build_time = 365
+	tax_income = 2
+	military_techpoints = 0.01
+	culture_techpoints = 0.01
+	ai_creation_factor = 80
+}
+
+ca_plague_workshop = {
+	desc = ca_plague_workshop_desc
+	potential = {
+		OR = {
+			culture_group = forsaken_group
+			FROM = { culture_group = forsaken_group }
+		}
+	}
+	trigger = {
+		TECH_CASTLE_CONSTRUCTION = 3
+		has_building = ca_apothecary_lab
+	}
+	gold_cost = 450
+	build_time = 730
+	tax_income = 3
+	military_techpoints = 0.02
+	tech_growth_modifier = 0.1
+	ai_creation_factor = 60
+}
+
+###############################################
+# TAUREN RANCHING (Mulgore, Thunder Bluff)
+###############################################
+
+ca_tauren_ranch = {
+	desc = ca_tauren_ranch_desc
+	potential = {
+		OR = {
+			culture_group = tauren_group
+			FROM = { culture_group = tauren_group }
+		}
+		OR = {
+			terrain = plains
+			terrain = steppe
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 0 }
+	gold_cost = 125
+	build_time = 270
+	tax_income = 2
+	supply_limit = 0.5
+	ai_creation_factor = 95
+}
+
+ca_tauren_totem_grove = {
+	desc = ca_tauren_totem_grove_desc
+	potential = {
+		OR = {
+			culture_group = tauren_group
+			FROM = { culture_group = tauren_group }
+		}
+	}
+	trigger = {
+		TECH_CASTLE_CONSTRUCTION = 1
+		has_building = ca_tauren_ranch
+	}
+	gold_cost = 250
+	build_time = 545
+	tax_income = 1
+	monthly_character_piety = 0.2
+	culture_techpoints = 0.02
+	local_revolt_risk = -0.02
+	ai_creation_factor = 75
+}
+
+###############################################
+# DRAENEI CRYSTAL TECH (Exodar area)
+###############################################
+
+ca_draenei_crystal_workshop = {
+	desc = ca_draenei_crystal_workshop_desc
+	potential = {
+		OR = {
+			culture_group = draenei_group
+			FROM = { culture_group = draenei_group }
+		}
+	}
+	trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+	gold_cost = 350
+	build_time = 545
+	tax_income = 2
+	economy_techpoints = 0.02
+	culture_techpoints = 0.02
+	tech_growth_modifier = 0.1
+	ai_creation_factor = 70
+}
+
+###############################################
+# GNOMISH INVENTIONS (Gnomeregan, Dun Morogh)
+###############################################
+
+ca_gnomish_workshop = {
+	desc = ca_gnomish_workshop_desc
+	potential = {
+		OR = {
+			culture_group = gnome_group
+			FROM = { culture_group = gnome_group }
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 1 }
+	gold_cost = 225
+	build_time = 365
+	tax_income = 2
+	economy_techpoints = 0.02
+	military_techpoints = 0.01
+	tech_growth_modifier = 0.1
+	ai_creation_factor = 80
+}
+
+ca_gnomish_invention_lab = {
+	desc = ca_gnomish_invention_lab_desc
+	potential = {
+		OR = {
+			culture_group = gnome_group
+			FROM = { culture_group = gnome_group }
+		}
+	}
+	trigger = {
+		TECH_TRADE_PRACTICES = 3
+		has_building = ca_gnomish_workshop
+	}
+	gold_cost = 500
+	build_time = 730
+	tax_income = 4
+	economy_techpoints = 0.03
+	culture_techpoints = 0.03
+	tech_growth_modifier = 0.2
+	ai_creation_factor = 60
+}
+
+###############################################
+# BLOOD ELF ARCANE ECONOMY (Silvermoon, Quel'Thalas)
+###############################################
+
+ca_bloodelf_arcane_bazaar = {
+	desc = ca_bloodelf_arcane_bazaar_desc
+	potential = {
+		OR = {
+			culture_group = highelf_group
+			FROM = { culture_group = highelf_group }
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 1 }
+	gold_cost = 250
+	build_time = 365
+	tax_income = 3
+	culture_techpoints = 0.02
+	monthly_character_prestige = 0.15
+	ai_creation_factor = 80
+}
+
+ca_bloodelf_mana_forge = {
+	desc = ca_bloodelf_mana_forge_desc
+	potential = {
+		OR = {
+			culture_group = highelf_group
+			FROM = { culture_group = highelf_group }
+		}
+	}
+	trigger = {
+		TECH_CASTLE_CONSTRUCTION = 3
+		has_building = ca_bloodelf_arcane_bazaar
+	}
+	gold_cost = 500
+	build_time = 730
+	tax_income = 4
+	culture_techpoints = 0.03
+	tech_growth_modifier = 0.15
+	monthly_character_prestige = 0.2
+	ai_creation_factor = 60
+}
+
+###############################################
+# UNIVERSAL MAGIC BUILDINGS (Any culture with magic)
+###############################################
+
+ca_arcane_emporium = {
+	desc = ca_arcane_emporium_desc
+	potential = {
+		FROM = {
+			OR = {
+				is_magic_class_trigger = yes
+				learning >= 15
+			}
+		}
+	}
+	trigger = { TECH_TRADE_PRACTICES = 2 }
+	gold_cost = 300
+	build_time = 545
+	tax_income = 3
+	culture_techpoints = 0.02
+	monthly_character_prestige = 0.1
+	ai_creation_factor = 50
+}
+
+ca_enchanting_workshop = {
+	desc = ca_enchanting_workshop_desc
+	potential = {
+		FROM = {
+			OR = {
+				is_magic_class_trigger = yes
+				learning >= 12
+			}
+		}
+	}
+	trigger = {
+		TECH_CASTLE_CONSTRUCTION = 2
+		has_building = ca_arcane_emporium
+	}
+	gold_cost = 400
+	build_time = 730
+	tax_income = 3
+	economy_techpoints = 0.01
+	culture_techpoints = 0.02
+	monthly_character_prestige = 0.15
+	ai_creation_factor = 40
+}

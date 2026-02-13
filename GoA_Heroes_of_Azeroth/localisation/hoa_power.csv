@@ -1,0 +1,74 @@
+CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+hoa_walk_the_streets;Walk the Streets;Se promener dans les rues;Durch die Strassen gehen;;Caminar por las calles;;;;;;;;;x
+hoa_walk_the_streets_desc;Walk through the streets of your capital to see and be seen by your people.;Se promener dans les rues de votre capitale pour voir et etre vu par votre peuple.;Durch die Strassen Ihrer Hauptstadt gehen.;;Caminar por las calles de tu capital.;;;;;;;;;x
+hoa_visit_tavern;Visit the Tavern;Visiter la Taverne;Die Taverne besuchen;;Visitar la Taberna;;;;;;;;;x
+hoa_visit_tavern_desc;Spend an evening at the local tavern. Drink, gamble, and hear the latest rumors.;Passer une soiree a la taverne locale. Boire, jouer et ecouter les dernieres rumeurs.;Einen Abend in der Taverne verbringen.;;Pasar una noche en la taberna local.;;;;;;;;;x
+hoa_grand_feast;Host a Grand Feast;Organiser un Grand Festin;Ein grosses Fest veranstalten;;Organizar un Gran Festin;;;;;;;;;x
+hoa_grand_feast_desc;Host a grand feast for your vassals and courtiers. Strengthen bonds and enjoy your wealth.;Organiser un grand festin pour vos vassaux et courtisans. Renforcer les liens et profiter de votre richesse.;Ein grosses Fest fur Vasallen veranstalten.;;Organizar un gran festin para tus vasallos.;;;;;;;;;x
+hoa_diplomatic_tour;Go on Diplomatic Tour;Partir en Tournee Diplomatique;Diplomatische Reise unternehmen;;Hacer una Gira Diplomatica;;;;;;;;;x
+hoa_diplomatic_tour_desc;Travel to neighboring realms to strengthen alliances and improve relations.;Voyager dans les royaumes voisins pour renforcer les alliances et ameliorer les relations.;Zu benachbarten Reichen reisen.;;Viajar a reinos vecinos para fortalecer alianzas.;;;;;;;;;x
+hoa_commission_monument;Commission a Grand Monument;Commander un Grand Monument;Ein grosses Denkmal errichten;;Encargar un Gran Monumento;;;;;;;;;x
+hoa_commission_monument_desc;Commission a grand monument in your capital to immortalize your achievements.;Commander un grand monument dans votre capitale pour immortaliser vos exploits.;Ein grosses Denkmal in Ihrer Hauptstadt errichten.;;Encargar un monumento en tu capital.;;;;;;;;;x
+hoa_train_with_champions;Train with Champions;S'entrainer avec les Champions;Mit Champions trainieren;;Entrenar con Campeones;;;;;;;;;x
+hoa_train_with_champions_desc;Spar with your best warriors and mages to hone your combat skills.;S'entrainer avec vos meilleurs guerriers et mages pour affiner vos competences de combat.;Mit den besten Kriegern trainieren.;;Entrenar con tus mejores guerreros.;;;;;;;;;x
+hoa_establish_trade_company;Establish Trade Company;Fonder une Compagnie Commerciale;Handelsgesellschaft grunden;;Fundar Compania Comercial;;;;;;;;;x
+hoa_establish_trade_company_desc;Invest in a trade company that will generate ongoing wealth. Requires a keen business mind.;Investir dans une compagnie commerciale qui generera des revenus continus. Necessite un esprit d'affaires.;In eine Handelsgesellschaft investieren.;;Invertir en una compania comercial.;;;;;;;;;x
+hoa_establish_magical_enterprise;Establish Magical Enterprise;Fonder une Entreprise Magique;Magisches Unternehmen grunden;;Fundar Empresa Magica;;;;;;;;;x
+hoa_establish_magical_enterprise_desc;Create a magical enterprise that combines arcane knowledge with commerce. Enchanting, alchemy, and inscription.;Creer une entreprise magique qui combine connaissance arcanique et commerce. Enchantement, alchimie et calligraphie.;Ein magisches Unternehmen grunden.;;Crear una empresa magica.;;;;;;;;;x
+hoa_hold_arena_tournament;Hold Arena Tournament;Organiser un Tournoi d'Arene;Arenatunier veranstalten;;Organizar Torneo de Arena;;;;;;;;;x
+hoa_hold_arena_tournament_desc;Host a grand arena tournament where champions from across the realm compete for glory.;Organiser un grand tournoi d'arene ou les champions de tout le royaume s'affrontent pour la gloire.;Ein Arenatunier veranstalten.;;Organizar un torneo de arena.;;;;;;;;;x
+hoa_study_ancient_texts;Study Ancient Texts;Etudier les Textes Anciens;Alte Texte studieren;;Estudiar Textos Antiguos;;;;;;;;;x
+hoa_study_ancient_texts_desc;Spend time in your library studying ancient texts. Knowledge is power.;Passer du temps dans votre bibliotheque a etudier des textes anciens. La connaissance est le pouvoir.;Alte Texte in der Bibliothek studieren.;;Pasar tiempo estudiando textos antiguos.;;;;;;;;;x
+hoa_patronize_arts;Patronize the Arts;Patronner les Arts;Die Kunste fordern;;Patrocinar las Artes;;;;;;;;;x
+hoa_patronize_arts_desc;Become a patron of the arts, sponsoring painters, musicians, and bards across your realm.;Devenir un patron des arts, sponsorisant peintres, musiciens et bardes a travers votre royaume.;Die Kunste in Ihrem Reich fordern.;;Patrocinar pintores, musicos y bardos.;;;;;;;;;x
+hoa_invest_infrastructure;Invest in Infrastructure;Investir dans l'Infrastructure;In Infrastruktur investieren;;Invertir en Infraestructura;;;;;;;;;x
+hoa_invest_infrastructure_desc;Invest heavily in roads, bridges, and public works in your capital province.;Investir massivement dans les routes, ponts et travaux publics de votre province capitale.;Massiv in Strassen und Brucken investieren.;;Invertir en caminos, puentes y obras publicas.;;;;;;;;;x
+hoa_hire_bodyguard;Hire Personal Bodyguard;Engager un Garde du Corps;Leibwachter einstellen;;Contratar Guardaespaldas;;;;;;;;;x
+hoa_hire_bodyguard_desc;Hire an elite personal bodyguard to protect you from assassination and improve your safety.;Engager un garde du corps d'elite pour vous proteger des assassinats et ameliorer votre securite.;Einen Elite-Leibwachter einstellen.;;Contratar un guardaespaldas de elite.;;;;;;;;;x
+hoa_explore_wilds;Explore the Wilds;Explorer les Terres Sauvages;Die Wildnis erkunden;;Explorar las Tierras Salvajes;;;;;;;;;x
+hoa_explore_wilds_desc;Set out on an adventure to explore the wild lands around your realm. Fortune favors the bold.;Partir a l'aventure pour explorer les terres sauvages autour de votre royaume. La fortune sourit aux audacieux.;Die Wildnis um Ihr Reich erkunden.;;Aventurarse a explorar las tierras salvajes.;;;;;;;;;x
+hoa_streets_loved_tt;The people cheer as you walk among them! Your popularity soars.;Le peuple vous acclame! Votre popularite monte en fleche.;Das Volk jubelt!;;El pueblo te aclama!;;;;;;;;;x
+hoa_streets_merchant_tt;A merchant offers you a lucrative deal.;Un marchand vous propose une affaire lucrative.;Ein Handler macht ein Angebot.;;Un mercader te ofrece un trato.;;;;;;;;;x
+hoa_streets_beggar_tt;You help a beggar, earning the respect of the common folk.;Vous aidez un mendiant, gagnant le respect du peuple.;Einem Bettler helfen.;;Ayudas a un mendigo.;;;;;;;;;x
+hoa_streets_thief_tt;A pickpocket steals from you in the crowd!;Un pickpocket vous vole dans la foule!;Ein Taschendieb bestiehlt Sie!;;Un carterista te roba!;;;;;;;;;x
+hoa_streets_assassin_tt;An assassin strikes from the shadows! You survive, barely.;Un assassin frappe depuis les ombres! Vous survivez, de justesse.;Ein Attentater schlagt zu!;;Un asesino ataca desde las sombras!;;;;;;;;;x
+hoa_tavern_rumors_tt;You overhear valuable intelligence from loose-lipped patrons.;Vous surprenez des renseignements precieux de clients indiscrets.;Wertvolle Geruchte aufgeschnappt.;;Escuchas rumores valiosos.;;;;;;;;;x
+hoa_tavern_gamble_win_tt;Lady luck smiles upon you! You win big at the gambling table.;La chance vous sourit! Vous gagnez gros a la table de jeu.;Gluck beim Glucksspiel!;;La suerte te sonrie! Ganas mucho.;;;;;;;;;x
+hoa_tavern_gamble_lose_tt;You lose badly at the gambling table...;Vous perdez gros a la table de jeu...;Pech beim Glucksspiel...;;Pierdes mucho en el juego...;;;;;;;;;x
+hoa_tavern_brawl_tt;A brawl breaks out! You fight and earn respect, but take a hit.;Une bagarre eclate! Vous combattez et gagnez du respect, mais prenez un coup.;Eine Schlgerei bricht aus!;;Estalla una pelea!;;;;;;;;;x
+hoa_tavern_companion_tt;You bond with one of your courtiers over drinks.;Vous vous liez avec l'un de vos courtisans autour d'un verre.;Freundschaft beim Trinken.;;Te haces amigo de un cortesano.;;;;;;;;;x
+hoa_feast_great_tt;The feast is a magnificent success! Songs will be sung of it.;Le festin est un succes magnifique! Des chansons en seront chantees.;Ein praachtvolles Fest!;;El festin es un exito magnifico!;;;;;;;;;x
+hoa_feast_good_tt;A pleasant evening with good food and good company.;Une soiree agreable avec bonne nourriture et bonne compagnie.;Ein angenehmer Abend.;;Una velada agradable.;;;;;;;;;x
+hoa_feast_scandal_tt;A scandal breaks out at the feast! A vassal is offended.;Un scandale eclate au festin! Un vassal est offense.;Ein Skandal beim Fest!;;Un escandalo estalla en el festin!;;;;;;;;;x
+hoa_feast_love_tt;You catch the eye of someone special at the feast...;Vous captez le regard de quelqu'un de special au festin...;Jemand Besonderes fallt auf...;;Alguien especial te mira...;;;;;;;;;x
+hoa_train_great_tt;Excellent training session! Your skills improve noticeably.;Excellente seance d'entrainement! Vos competences s'ameliorent nettement.;Exzellentes Training!;;Excelente sesion de entrenamiento!;;;;;;;;;x
+hoa_train_good_tt;Good exercise. You feel healthier and more focused.;Bon exercice. Vous vous sentez en meilleure forme et plus concentre.;Gute Ubung.;;Buen ejercicio.;;;;;;;;;x
+hoa_train_injury_tt;A sparring accident leaves you wounded, but you learned something.;Un accident d'entrainement vous blesse, mais vous avez appris quelque chose.;Trainingsunfall, aber lehrreich.;;Un accidente te hiere, pero aprendiste.;;;;;;;;;x
+hoa_train_rival_tt;A warrior takes offense at your training style. A rivalry forms!;Un guerrier s'offense de votre style d'entrainement. Une rivalite se forme!;Ein Krieger nimmt Anstos.;;Un guerrero se ofende.;;;;;;;;;x
+hoa_trade_company_tt;Your trade company generates +10% tax and +1 stewardship.;Votre compagnie commerciale genere +10% d'impots et +1 intendance.;Handelsgesellschaft: +10% Steuern, +1 Verwaltung.;;Tu compania genera +10% impuestos y +1 administracion.;;;;;;;;;x
+hoa_magical_enterprise_tt;Your magical enterprise generates +8% tax, +1 learning, and research points.;Votre entreprise magique genere +8% d'impots, +1 erudition et des points de recherche.;Magisches Unternehmen: +8% Steuern, +1 Gelehrsamkeit.;;Tu empresa magica genera +8% impuestos y +1 erudicion.;;;;;;;;;x
+hoa_tournament_champion_tt;You emerge as the tournament champion! Glory and honor are yours!;Vous emerger comme champion du tournoi! Gloire et honneur sont votres!;Sie sind Turniersieg!;;Eres campeon del torneo!;;;;;;;;;x
+hoa_tournament_good_tt;A fine tournament. The crowd was entertained.;Un bon tournoi. La foule a ete divertie.;Ein gutes Turnier.;;Un buen torneo.;;;;;;;;;x
+hoa_tournament_injury_tt;You take a wound during the tournament melee.;Vous etes blesse pendant la melee du tournoi.;Verwundung im Turnier.;;Te hieren en el torneo.;;;;;;;;;x
+hoa_tournament_death_tt;A tragedy! One of the combatants dies in the arena.;Une tragedie! L'un des combattants meurt dans l'arene.;Ein Kampfer stirbt in der Arena!;;Un combatiente muere en la arena!;;;;;;;;;x
+hoa_study_arcane_tt;You uncover arcane secrets in the ancient texts.;Vous decouvrez des secrets arcaniques dans les textes anciens.;Arkane Geheimnisse entdeckt.;;Descubres secretos arcanos.;;;;;;;;;x
+hoa_study_history_tt;Historical insights grant you diplomatic wisdom.;Des connaissances historiques vous confrent une sagesse diplomatique.;Historische Einsichten.;;Conocimientos historicos.;;;;;;;;;x
+hoa_study_military_tt;Military treatises sharpen your tactical mind.;Des traites militaires aiguisent votre esprit tactique.;Militarische Einsichten.;;Tratados militares.;;;;;;;;;x
+hoa_study_forbidden_tt;You read forbidden texts... dark knowledge seeps in.;Vous lisez des textes interdits... une connaissance sombre s'infiltre.;Verbotene Texte gelesen...;;Lees textos prohibidos...;;;;;;;;;x
+hoa_study_madness_tt;The ancient texts are maddening, but deeply enlightening.;Les textes anciens sont rendants fou, mais profondement instructifs.;Wahnsinnig, aber erleuchtend.;;Enloquecedor, pero iluminador.;;;;;;;;;x
+hoa_explore_treasure_tt;You discover a hidden treasure cache in the wilds!;Vous decouvrez un tresor cache dans les terres sauvages!;Verborgener Schatz entdeckt!;;Descubres un tesoro escondido!;;;;;;;;;x
+hoa_explore_herbs_tt;You find rare medicinal herbs that restore your vitality.;Vous trouvez des herbes medicinales rares qui restaurent votre vitalite.;Seltene Krauter gefunden.;;Encuentras hierbas medicinales raras.;;;;;;;;;x
+hoa_explore_ruins_tt;You discover ancient ruins with inscriptions worth studying.;Vous decouvrez des ruines antiques avec des inscriptions dignes d'etude.;Alte Ruinen entdeckt.;;Descubres ruinas antiguas.;;;;;;;;;x
+hoa_explore_ambush_tt;Bandits ambush you! You fight them off but take wounds.;Des bandits vous tendent une embuscade! Vous les repoussez mais etes blesse.;Banditen-Hinterhalt!;;Bandidos te emboscan!;;;;;;;;;x
+hoa_explore_rare_find_tt;You find a lost artifact in the wilds!;Vous trouvez un artefact perdu dans les terres sauvages!;Verlorenes Artefakt gefunden!;;Encuentras un artefacto perdido!;;;;;;;;;x
+hoa_bodyguard_tt;Your bodyguard provides +3 combat rating, +0.5 health, and +1 intrigue.;Votre garde du corps fournit +3 combat, +0.5 sante et +1 intrigue.;Leibwachter: +3 Kampf, +0.5 Gesundheit, +1 Intrige.;;Guardaespaldas: +3 combate, +0.5 salud, +1 intriga.;;;;;;;;;x
+hoa_beloved_ruler;Beloved Ruler;Dirigeant Bien-Aime;Geliebter Herrscher;;Gobernante Amado;;;;;;;;;x
+hoa_grand_monument;Grand Monument;Grand Monument;Grosses Denkmal;;Gran Monumento;;;;;;;;;x
+hoa_monument_built;Monument Builder;Batisseur de Monuments;Denkmal-Erbauer;;Constructor de Monumentos;;;;;;;;;x
+hoa_trade_company_owner;Trade Company Owner;Proprietaire de Compagnie Commerciale;Handelsgesellschaft-Besitzer;;Dueno de Compania Comercial;;;;;;;;;x
+hoa_magical_enterprise_owner;Magical Enterprise Owner;Proprietaire d'Entreprise Magique;Magischer Unternehmer;;Dueno de Empresa Magica;;;;;;;;;x
+hoa_patron_of_arts;Patron of the Arts;Patron des Arts;Patron der Kunste;;Patron de las Artes;;;;;;;;;x
+hoa_cultural_renaissance;Cultural Renaissance;Renaissance Culturelle;Kulturelle Renaissance;;Renacimiento Cultural;;;;;;;;;x
+hoa_infrastructure_boom;Infrastructure Boom;Boom d'Infrastructure;Infrastruktur-Boom;;Boom de Infraestructura;;;;;;;;;x
+hoa_personal_bodyguard;Personal Bodyguard;Garde du Corps Personnel;Personlicher Leibwachter;;Guardaespaldas Personal;;;;;;;;;x
+hoa_on_diplomatic_tour;On Diplomatic Tour;En Tournee Diplomatique;Auf Diplomatischer Reise;;En Gira Diplomatica;;;;;;;;;x

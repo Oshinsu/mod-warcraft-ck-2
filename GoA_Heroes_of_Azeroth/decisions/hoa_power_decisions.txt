@@ -1,0 +1,681 @@
+# GoA: Heroes of Azeroth - "Enjoy Your Power" Decisions
+# 12+ decisions for powerful rulers to spend time/gold on flavor activities
+
+decisions = {
+
+	###############################################
+	# 1. WALK THE STREETS - Inspect your capital
+	###############################################
+	hoa_walk_the_streets = {
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_recently_walked_streets }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			wealth >= 10
+			war = no
+		}
+
+		effect = {
+			wealth = -10
+			prestige = 15
+			random_list = {
+				30 = {
+					custom_tooltip = { text = hoa_streets_loved_tt }
+					capital_scope = { add_province_modifier = { name = hoa_beloved_ruler duration = 365 } }
+				}
+				25 = {
+					custom_tooltip = { text = hoa_streets_merchant_tt }
+					wealth = 25
+				}
+				20 = {
+					custom_tooltip = { text = hoa_streets_beggar_tt }
+					piety = 15
+					change_diplomacy = 1
+				}
+				15 = {
+					custom_tooltip = { text = hoa_streets_thief_tt }
+					wealth = -15
+					add_trait = suspicious
+				}
+				10 = {
+					custom_tooltip = { text = hoa_streets_assassin_tt }
+					health = -0.5
+					prestige = 20
+				}
+			}
+			add_character_modifier = { name = hoa_recently_walked_streets duration = 90 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 100 } }
+		}
+	}
+
+	###############################################
+	# 2. VISIT THE TAVERN - Drink, gamble, hear rumors
+	###############################################
+	hoa_visit_tavern = {
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_recently_visited_tavern }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			wealth >= 20
+		}
+
+		effect = {
+			wealth = -20
+			random_list = {
+				25 = {
+					custom_tooltip = { text = hoa_tavern_rumors_tt }
+					change_intrigue = 1
+				}
+				25 = {
+					custom_tooltip = { text = hoa_tavern_gamble_win_tt }
+					wealth = 50
+					prestige = 10
+				}
+				20 = {
+					custom_tooltip = { text = hoa_tavern_gamble_lose_tt }
+					wealth = -30
+					prestige = -10
+				}
+				15 = {
+					custom_tooltip = { text = hoa_tavern_brawl_tt }
+					martial = 1
+					add_trait = wounded
+				}
+				15 = {
+					custom_tooltip = { text = hoa_tavern_companion_tt }
+					random_courtier = {
+						limit = { is_adult = yes NOT = { character = ROOT } }
+						opinion = { who = ROOT modifier = opinion_grateful years = 5 }
+					}
+				}
+			}
+			add_character_modifier = { name = hoa_recently_visited_tavern duration = 60 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 200 } }
+			modifier = { factor = 3 trait = drunkard }
+		}
+	}
+
+	###############################################
+	# 3. HOST A GRAND FEAST
+	###############################################
+	hoa_grand_feast = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			higher_tier_than = COUNT
+			NOT = { has_character_modifier = hoa_recently_feasted }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			wealth >= 100
+			prestige >= 50
+		}
+
+		effect = {
+			wealth = -100
+			prestige = 50
+			any_vassal = {
+				limit = { is_adult = yes NOT = { trait = incapable } }
+				opinion = { who = ROOT modifier = opinion_hosted_summit years = 3 }
+			}
+			random_list = {
+				40 = {
+					custom_tooltip = { text = hoa_feast_great_tt }
+					prestige = 50
+					diplomacy = 1
+				}
+				30 = {
+					custom_tooltip = { text = hoa_feast_good_tt }
+					prestige = 25
+				}
+				20 = {
+					custom_tooltip = { text = hoa_feast_scandal_tt }
+					prestige = -25
+					random_vassal = {
+						limit = { is_adult = yes }
+						opinion = { who = ROOT modifier = opinion_refused_duel years = 2 }
+					}
+				}
+				10 = {
+					custom_tooltip = { text = hoa_feast_love_tt }
+					add_lover = random
+				}
+			}
+			add_character_modifier = { name = hoa_recently_feasted duration = 365 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 400 } }
+		}
+	}
+
+	###############################################
+	# 4. DIPLOMATIC TOUR - Visit neighboring rulers
+	###############################################
+	hoa_diplomatic_tour = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			higher_tier_than = COUNT
+			independent = yes
+			NOT = { has_character_modifier = hoa_on_diplomatic_tour }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			wealth >= 150
+			diplomacy >= 10
+			war = no
+		}
+
+		effect = {
+			wealth = -150
+			prestige = 75
+			any_independent_ruler = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { war_with = ROOT }
+					is_within_diplo_range = ROOT
+					higher_tier_than = COUNT
+				}
+				opinion = { who = ROOT modifier = opinion_sent_emissary years = 5 }
+			}
+			add_character_modifier = { name = hoa_on_diplomatic_tour duration = 180 }
+			random_list = {
+				50 = {
+					change_diplomacy = 1
+				}
+				30 = {
+					change_stewardship = 1
+				}
+				20 = {
+					change_learning = 1
+				}
+			}
+			add_character_modifier = { name = hoa_recently_toured duration = 1825 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 500 } }
+		}
+	}
+
+	###############################################
+	# 5. COMMISSION A MONUMENT
+	###############################################
+	hoa_commission_monument = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			higher_tier_than = DUKE
+			NOT = { has_character_modifier = hoa_monument_built }
+			NOT = { trait = incapable }
+		}
+
+		allow = {
+			wealth >= 500
+			prestige >= 300
+		}
+
+		effect = {
+			wealth = -500
+			prestige = 200
+			capital_scope = {
+				add_province_modifier = { name = hoa_grand_monument duration = -1 }
+			}
+			add_character_modifier = { name = hoa_monument_built duration = -1 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 1500 } }
+		}
+	}
+
+	###############################################
+	# 6. TRAIN WITH YOUR CHAMPIONS
+	###############################################
+	hoa_train_with_champions = {
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			has_any_class_trigger = yes
+			NOT = { has_character_modifier = hoa_recently_trained }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			wealth >= 30
+			martial >= 8
+		}
+
+		effect = {
+			wealth = -30
+			random_list = {
+				40 = {
+					custom_tooltip = { text = hoa_train_great_tt }
+					change_martial = 1
+					prestige = 15
+				}
+				30 = {
+					custom_tooltip = { text = hoa_train_good_tt }
+					health = 0.2
+					prestige = 10
+				}
+				20 = {
+					custom_tooltip = { text = hoa_train_injury_tt }
+					add_trait = wounded
+					change_martial = 1
+				}
+				10 = {
+					custom_tooltip = { text = hoa_train_rival_tt }
+					random_courtier = {
+						limit = { is_adult = yes martial >= 10 NOT = { character = ROOT } }
+						add_rival = ROOT
+					}
+				}
+			}
+			add_character_modifier = { name = hoa_recently_trained duration = 120 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 200 } }
+		}
+	}
+
+	###############################################
+	# 7. ESTABLISH A TRADE COMPANY (Enterprise)
+	###############################################
+	hoa_establish_trade_company = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_trade_company_owner }
+			NOT = { trait = incapable }
+			stewardship >= 8
+		}
+
+		allow = {
+			wealth >= 300
+			stewardship >= 12
+		}
+
+		effect = {
+			wealth = -300
+			prestige = 50
+			add_character_modifier = { name = hoa_trade_company_owner duration = -1 }
+			custom_tooltip = { text = hoa_trade_company_tt }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 800 } }
+		}
+	}
+
+	###############################################
+	# 8. ESTABLISH A MAGICAL ENTERPRISE
+	###############################################
+	hoa_establish_magical_enterprise = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_magical_enterprise_owner }
+			NOT = { trait = incapable }
+			is_magic_class_trigger = yes
+		}
+
+		allow = {
+			wealth >= 400
+			learning >= 14
+		}
+
+		effect = {
+			wealth = -400
+			prestige = 75
+			piety = 25
+			add_character_modifier = { name = hoa_magical_enterprise_owner duration = -1 }
+			custom_tooltip = { text = hoa_magical_enterprise_tt }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 1000 } }
+		}
+	}
+
+	###############################################
+	# 9. HOLD A TOURNAMENT / ARENA
+	###############################################
+	hoa_hold_arena_tournament = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			higher_tier_than = COUNT
+			NOT = { has_character_modifier = hoa_recently_held_tournament }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			wealth >= 200
+			martial >= 8
+			war = no
+		}
+
+		effect = {
+			wealth = -200
+			prestige = 100
+			any_vassal = {
+				limit = { is_adult = yes martial >= 8 }
+				opinion = { who = ROOT modifier = opinion_hosted_summit years = 3 }
+			}
+			random_list = {
+				30 = {
+					custom_tooltip = { text = hoa_tournament_champion_tt }
+					add_character_modifier = { name = hoa_champion_of_honor duration = 1825 }
+					prestige = 100
+				}
+				30 = {
+					custom_tooltip = { text = hoa_tournament_good_tt }
+					prestige = 50
+				}
+				25 = {
+					custom_tooltip = { text = hoa_tournament_injury_tt }
+					add_trait = wounded
+					prestige = 25
+				}
+				15 = {
+					custom_tooltip = { text = hoa_tournament_death_tt }
+					random_courtier = {
+						limit = { is_adult = yes martial >= 5 NOT = { character = ROOT } }
+						death = { death_reason = death_battle }
+					}
+					prestige = -50
+				}
+			}
+			add_character_modifier = { name = hoa_recently_held_tournament duration = 730 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 600 } }
+		}
+	}
+
+	###############################################
+	# 10. STUDY ANCIENT TEXTS
+	###############################################
+	hoa_study_ancient_texts = {
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_recently_studied }
+			NOT = { trait = incapable }
+			learning >= 8
+		}
+
+		allow = {
+			wealth >= 50
+			learning >= 10
+		}
+
+		effect = {
+			wealth = -50
+			random_list = {
+				30 = {
+					custom_tooltip = { text = hoa_study_arcane_tt }
+					change_learning = 1
+					culture_techpoints = 0.1
+				}
+				25 = {
+					custom_tooltip = { text = hoa_study_history_tt }
+					change_diplomacy = 1
+					prestige = 25
+				}
+				20 = {
+					custom_tooltip = { text = hoa_study_military_tt }
+					change_martial = 1
+					military_techpoints = 0.1
+				}
+				15 = {
+					custom_tooltip = { text = hoa_study_forbidden_tt }
+					change_intrigue = 1
+					piety = -15
+				}
+				10 = {
+					custom_tooltip = { text = hoa_study_madness_tt }
+					add_trait = stressed
+					change_learning = 2
+				}
+			}
+			add_character_modifier = { name = hoa_recently_studied duration = 180 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 200 } }
+		}
+	}
+
+	###############################################
+	# 11. PATRONIZE THE ARTS
+	###############################################
+	hoa_patronize_arts = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_patron_of_arts }
+			NOT = { trait = incapable }
+			higher_tier_than = COUNT
+		}
+
+		allow = {
+			wealth >= 200
+			diplomacy >= 10
+		}
+
+		effect = {
+			wealth = -200
+			prestige = 100
+			piety = 25
+			add_character_modifier = { name = hoa_patron_of_arts duration = 3650 }
+			capital_scope = {
+				add_province_modifier = { name = hoa_cultural_renaissance duration = 3650 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 600 } }
+		}
+	}
+
+	###############################################
+	# 12. INVEST IN INFRASTRUCTURE
+	###############################################
+	hoa_invest_infrastructure = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_recently_invested }
+			NOT = { trait = incapable }
+		}
+
+		allow = {
+			wealth >= 250
+			stewardship >= 10
+		}
+
+		effect = {
+			wealth = -250
+			prestige = 50
+			capital_scope = {
+				add_province_modifier = { name = hoa_infrastructure_boom duration = 3650 }
+			}
+			add_character_modifier = { name = hoa_recently_invested duration = 1825 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 700 } }
+		}
+	}
+
+	###############################################
+	# 13. HIRE PERSONAL BODYGUARD
+	###############################################
+	hoa_hire_bodyguard = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_personal_bodyguard }
+			NOT = { trait = incapable }
+		}
+
+		allow = {
+			wealth >= 150
+		}
+
+		effect = {
+			wealth = -150
+			add_character_modifier = { name = hoa_personal_bodyguard duration = 3650 }
+			custom_tooltip = { text = hoa_bodyguard_tt }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 500 } }
+			modifier = { factor = 3 trait = craven }
+		}
+	}
+
+	###############################################
+	# 14. EXPLORE THE WILDS
+	###############################################
+	hoa_explore_wilds = {
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			has_any_class_trigger = yes
+			NOT = { has_character_modifier = hoa_recently_explored }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			wealth >= 50
+			martial >= 6
+			war = no
+		}
+
+		effect = {
+			wealth = -50
+			random_list = {
+				25 = {
+					custom_tooltip = { text = hoa_explore_treasure_tt }
+					wealth = 100
+					prestige = 25
+				}
+				25 = {
+					custom_tooltip = { text = hoa_explore_herbs_tt }
+					health = 0.5
+					piety = 10
+				}
+				20 = {
+					custom_tooltip = { text = hoa_explore_ruins_tt }
+					change_learning = 1
+					prestige = 20
+				}
+				15 = {
+					custom_tooltip = { text = hoa_explore_ambush_tt }
+					add_trait = wounded
+					change_martial = 1
+				}
+				15 = {
+					custom_tooltip = { text = hoa_explore_rare_find_tt }
+					hidden_tooltip = {
+						random_list = {
+							50 = { add_artifact = hoa_crafted_ring_uncommon }
+							50 = { add_artifact = hoa_crafted_amulet_uncommon }
+						}
+					}
+				}
+			}
+			add_character_modifier = { name = hoa_recently_explored duration = 120 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 200 } }
+			modifier = { factor = 2 trait = adventurer }
+		}
+	}
+}
