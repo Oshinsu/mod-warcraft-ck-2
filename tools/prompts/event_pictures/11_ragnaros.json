@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_ragnaros",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_ragnaros.png",
+    "ck2_gfx_name": "GFX_evt_hoa_ragnaros",
+    "final_size": "460x300",
+    "scene_intent": "Ragnaros le Seigneur du Feu émerge de son lac de magma — BY FIRE BE PURGED. Le moment le plus épique du raid WoW Classic. Un titan élémentaire colossal de feu et de lave brandit Sulfuras. L'image doit être le sommet absolu de l'épique — le joueur doit sentir la chaleur à travers l'écran."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : La Liberté guidant le peuple de Delacroix (composition pyramidale, figure colossale émergeant) + la scène du Balrog dans Moria (Gandalf face à l'impossible)",
+        "Rendu : peinture digitale maximale, chaque pixel compte, empâtements de lumière pure sur Sulfuras et le corps de Ragnaros",
+        "C'est LE moment — pas une scène d'ambiance mais un instant figé de confrontation. Les raiders sont minuscules, Ragnaros est divin",
+        "Tonalité : terreur sacrée, le sublime au sens kantien — face à une puissance qui annihile la raison humaine"
+      ],
+      "look": "maximum epic digital painting, Delacroix compositional grandeur meets Blizzard cinematic pinnacle, pure light impasto on Ragnaros body and Sulfuras hammer, volcanic inferno detail, scale contrast pushed to the absolute limit between tiny raiders and colossal fire lord, every magma tendril and flame tongue individually painted",
+      "palette": {
+        "dominant": "#FF4500 — orange-feu de Ragnaros, LE feu primordial, la couleur du monde qui brûle",
+        "secondary": "#FFD700 — or de Sulfuras et du magma le plus pur, lumière divine destructrice",
+        "accent_1": "#FFFFFF — blanc pur du coeur de Ragnaros et du point d'impact de Sulfuras, incandescence maximale",
+        "accent_2": "#1A0A00 — noir de basalte des raiders et du terrain, l'humanité face au feu",
+        "accent_3": "#4169E1 — bleu des sorts défensifs des raiders (barrières de mana, boucliers de glace), fragile résistance",
+        "highlight": "#FFFF00 — jaune vif des jets de flamme et des projections de lave"
+      },
+      "art_references": [
+        "Eugène Delacroix — La Liberté guidant le peuple (figure colossale émergeant, composition pyramidale ascendante)",
+        "John Martin — The Great Day of His Wrath (destruction divine à l'échelle cosmique)",
+        "Blizzard — Cinematic WoW Classic Ragnaros encounter (la référence directe absolue)",
+        "William Blake — The Ancient of Days (figure divine surplombant la création)"
+      ]
+    },
+    "environment": {
+      "space": "La Chambre de Ragnaros au coeur du Molten Core — une caverne circulaire de 300m de diamètre dont le sol entier est un LAC DE LAVE BOUILLONNANTE sauf un anneau de plateforme de basalte de 30m de large longeant les parois. Au centre du lac, Ragnaros émerge — son corps n'a pas de jambes, il SORT du magma comme s'il était le magma lui-même, la lave étant son corps inférieur. Le plafond est un dôme de basalte noir à 100m au-dessus, dont la surface est illuminée par le bas en orange aveuglant. Les parois sont des murs de roche noire scarifiée de coulées de lave solidifiées.",
+      "foreground": "La plateforme de basalte où se tient le RAID de 40 joueurs — mais réduit visuellement à 15-20 silhouettes minuscules sur le bord du précipice de lave. Au premier plan immédiat : le dos de 3-4 raiders face à Ragnaros, vus de derrière et en dessous — un guerrier en plate noire levant son bouclier, un mage en robe avec un bâton d'où jaillit un faisceau de givre bleu, un paladin dont l'aura dorée forme un dôme protecteur autour du groupe immédiat. Leurs silhouettes sont MINUSCULES comparées à Ragnaros — comme des figurines au pied d'un volcan. Le basalte sous leurs pieds est fissuré et rougeoie, des fragments se détachent dans la lave.",
+      "midground": "RAGNAROS LUI-MÊME. Le Seigneur du Feu est un TITAN ÉLÉMENTAIRE de 60m de hauteur visible au-dessus du lac de lave — son corps complet dépasserait les 150m. Son torse est fait de roche volcanique noire parcourue de fissures incandescentes orange-jaune, comme un homme fait de terre craquelée sur un coeur de magma. Ses bras sont massifs, faits de lave semi-solidifiée en mouvement constant — la roche noire se forme, craque, révèle l'orange en-dessous, dans un cycle perpétuel. Sa TÊTE est un crâne de basalte couronné de flammes vivantes comme une couronne — deux orbites brillant de blanc pur aveuglant, une mâchoire de lave d'où s'échappent des vagues de chaleur et de feu à chaque respiration. Il brandit SULFURAS — un marteau colossal de 40m de long, la tête du marteau est un bloc de magma solidifié et de métal sombre entouré de flammes permanentes et d'anneaux d'énergie de feu tournoyants. Le bras droit lève Sulfuras au-dessus de sa tête en un geste d'attaque — le moment avant la frappe. La surface du lac de lave autour de lui est en ÉRUPTION — des vagues de magma de 10m déferlent vers les berges, des geysers jaillissent, des tourbillons de feu spiralent autour de son corps.",
+      "background": "Le dôme de basalte noir au-dessus — illuminé en orange par Ragnaros, il semble être un second lac de feu inversé au plafond. Les parois de la caverne sont scarifiées de marques de la puissance de Ragnaros — des zones fondues, des stalactites qui dégoulinent de roche en fusion. Le lac de lave s'étend dans toutes les directions, infini dans la perspective — Ragnaros EST le centre de ce monde de feu.",
+      "atmosphere": "TERREUR SACRÉE ABSOLUE — le moment où 40 mortels font face à un dieu de feu et réalisent leur insignifiance. Le grondement est un mot trop faible — c'est le hurlement de la Terre elle-même.",
+      "weather": "L'atmosphère est du feu — l'air est si chaud qu'il brûle, des ondes de chaleur déforment tout, des cendres et des braises volent horizontalement portées par les vents de fournaise créés par Ragnaros",
+      "time_of_day": "Ragnaros EST le soleil — il illumine tout, il est le centre de toute lumière et de toute chaleur"
+    },
+    "subjects": [
+      {
+        "element": "Ragnaros le Seigneur du Feu",
+        "details": "Titan élémentaire de 60m visible (150m total). Torse de basalte noir craquelé avec magma interne orange-jaune. Bras de lave semi-solidifiée en mouvement constant. Tête : crâne de basalte couronné de flammes vives, orbites blanc pur aveuglant, mâchoire de lave crachant feu. Brandit SULFURAS à 40m — un marteau dont la tête est un bloc de magma avec des anneaux de feu tournoyants. Bras droit levé au-dessus de la tête, moment avant la frappe. Son corps inférieur est le lac de lave lui-même — pas de jambes, il ÉMERGE du magma. Vagues de 10m autour de lui, geysers, tourbillons de feu spiralant. Il est rage et puissance incarnées.",
+        "importance": "LE sujet — 80% de l'image devrait être dominée par sa présence ou son influence directe"
+      },
+      {
+        "element": "Les raiders minuscules",
+        "details": "15-20 silhouettes sur la plateforme de basalte. Au premier plan, 3-4 vus de dos : guerrier avec bouclier levé (silhouette noire), mage avec faisceau de givre bleu (seule couleur froide de l'image), paladin avec aura dorée protectrice. Leur taille = 1/30e de Ragnaros. Ils sont le repère d'échelle qui rend Ragnaros incompréhensible. Certains lancent des sorts (traînées bleues, blanches), d'autres lèvent des boucliers, l'un recule en se protégeant le visage de la chaleur.",
+        "importance": "Essentiels pour l'échelle — sans eux, Ragnaros pourrait faire n'importe quelle taille"
+      }
+    ],
+    "camera": {
+      "shot_type": "Contre-plongée dramatique extrême — regardant vers le haut depuis la plateforme des raiders",
+      "angle": "Contre-plongée de 40° — Ragnaros domine TOUT le cadre, vu d'en bas comme un dieu de destruction",
+      "lens_equivalent": "20mm ultra-grand angle — pour capturer toute la hauteur de Ragnaros ET les raiders au premier plan, exagérant la différence de taille",
+      "focal_point": "Sulfuras brandis au-dessus de la tête de Ragnaros — le point culminant de l'action, la menace ultime au sommet de la composition",
+      "depth_of_field": "Raiders nets au premier plan, Ragnaros net au centre, la chaleur et la fumée dissolvent les bords de l'image",
+      "composition_rules": [
+        "COMPOSITION PYRAMIDALE ASCENDANTE : les raiders à la base, le torse de Ragnaros au centre, Sulfuras au sommet — triangle de puissance classique",
+        "Ragnaros occupe le centre vertical et le tiers supérieur — il domine l'espace comme il domine les mortels",
+        "Les raiders sont compressés dans le quart inférieur — écrasés par la composition elle-même",
+        "Les bras étendus de Ragnaros et les vagues de lave créent un V inversé encadrant l'image entière",
+        "Le faisceau de givre bleu du mage crée la SEULE ligne diagonale froide — un acte de défi dans l'enfer"
+      ]
+    },
+    "lighting": {
+      "key_light": "Ragnaros lui-même — il est la source lumineuse principale. Son corps émet une lumière orange-blanche de l'intérieur, illuminant la caverne entière. L'intensité est maximale au torse (fissures incandescentes) et aux orbites (blanc pur). C'est un éclairage frontal sur les raiders (ils sont face à la lumière) et un rétroéclairage sur la paroi derrière le spectateur.",
+      "fill_light": "Le lac de lave — illumination permanente par en dessous (uplighting) baignant toutes les surfaces inférieures et les visages d'une lueur orange",
+      "accent_lights": [
+        "SULFURAS : la tête du marteau est le second point lumineux le plus intense — des anneaux de feu tournoyants et des flammes concentrées créent un halo blanc-or au sommet de l'image",
+        "Orbites de Ragnaros : deux projecteurs blanc-aveuglant pointant vers le bas sur les raiders, comme les phares d'un dieu en colère",
+        "Sorts des raiders : le faisceau de givre bleu est la seule lumière froide — il tranche visuellement dans l'enfer orange. L'aura dorée du paladin crée un minuscule dôme de lumière tiède protectrice.",
+        "Explosions de lave : les geysers et les vagues créent des éclairs orange aléatoires qui flashent sur les surfaces"
+      ],
+      "shadows": "Les ombres des raiders sont projetées VERS le spectateur par la lumière de Ragnaros — elles s'étirent démesurément sur la plateforme de basalte, transformant les silhouettes minuscules en formes géantes au sol. L'ombre de Ragnaros n'existe pas — il EST la lumière. L'ombre de Sulfuras balaie la caverne comme l'ombre d'un pendule apocalyptique.",
+      "atmospheric_fx": [
+        "ÉRUPTION TOTALE : des éclaboussures de lave, des fragments de roche en fusion, des traînées de feu volent dans toutes les directions autour de Ragnaros — un chaos de particules incandescentes",
+        "Anneaux de feu : des cercles d'énergie de feu rayonnent depuis Ragnaros comme des ondes de choc concentriques, ondulant dans l'air brûlant",
+        "Distorsion thermique extrême : l'air autour de Ragnaros est si chaud que sa silhouette ondule et flamboie aux bords, rendant ses contours vivants et instables",
+        "Cendres et braises en tempête : un blizzard de particules incandescentes soufflé par les vents de fournaise de Ragnaros, horizontal et chaotique"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Maximum epic digital painting, Delacroix compositional grandeur meets Blizzard cinematic pinnacle, pure light impasto, volcanic inferno, scale contrast pushed to absolute limit. THE MOMENT RAGNAROS EMERGES — BY FIRE BE PURGED. A circular cavern 300m diameter, floor entirely a BOILING LAVA LAKE except a 30m basalt platform ring at the edges. RAGNAROS THE FIRELORD — a 60m TALL COLOSSAL FIRE TITAN ELEMENTAL emerging from the lava lake center, NO LEGS, his lower body IS the magma itself rising seamlessly from the lake. Torso of cracked black volcanic basalt with internal INCANDESCENT ORANGE-YELLOW magma visible through fissures in constant movement — black crust forming, cracking, revealing orange underneath in perpetual cycle. Massive arms of semi-solidified lava in constant motion. HEAD: a basalt skull CROWNED WITH LIVING FLAMES as a crown, two eye sockets blazing PURE BLINDING WHITE, a lava jaw releasing waves of heat and fire with each breath. RIGHT ARM RAISED HIGH brandishing SULFURAS — a 40m COLOSSAL HAMMER, the hammer head a block of solidified magma and dark metal surrounded by PERMANENT FLAMES AND ROTATING FIRE ENERGY RINGS. The moment BEFORE THE STRIKE — maximum tension. The lava lake surface around him in ERUPTION — 10m magma waves crashing toward shores, geysers erupting, fire whirlwinds spiraling around his body. FOREGROUND: basalt platform where TINY RAIDERS stand. 3-4 seen from behind: a warrior in black plate RAISING HIS SHIELD against the heat, a mage in robes with a staff shooting a FROST BLUE BEAM (the ONLY cold color in the entire image — a defiant act), a paladin whose GOLDEN PROTECTIVE AURA forms a small dome around the immediate group. Their height is 1/30th of Ragnaros. 15-20 more silhouettes on the platform, some casting spells (blue and white trails), others raising shields, one stumbling back shielding face from heat. Cracked glowing basalt under their feet with fragments falling into lava. BACKGROUND: black basalt dome ceiling 100m above illuminated orange from below looking like an inverted fire lake. Cavern walls scarified with melted zones and dripping molten stalactites. Lava lake extending in all directions. LIGHTING: RAGNAROS IS THE LIGHT SOURCE — his body emits orange-white light from within illuminating the entire cavern. Maximum intensity at torso fissures and eye sockets (pure white). Frontal lighting on raiders, backlighting on rear walls. Lava lake as permanent uplighting. SULFURAS as second brightest point — rotating fire rings and concentrated flames creating a white-gold halo at composition summit. Ragnaros eye sockets as two white-blinding searchlights aimed down at raiders like the headlights of an angry god. Mage frost beam as THE ONLY COLD LIGHT cutting through orange inferno. Paladin golden aura as tiny warm protective dome. Random orange flashes from lava explosions. Raider shadows stretched ENORMOUSLY toward viewer by Ragnaros light — tiny figures casting giant shadows. No shadow from Ragnaros — he IS light. ATMOSPHERIC: TOTAL ERUPTION around Ragnaros — lava splashes, molten rock fragments, fire trails flying in all directions. Fire energy rings radiating outward from Ragnaros like concentric shockwaves rippling through burning air. Extreme thermal distortion making his silhouette shimmer and flicker at edges, contours alive and unstable. Horizontal blizzard of incandescent embers and ash blown by Ragnaros furnace winds. PYRAMIDAL ASCENDING COMPOSITION: raiders at base, Ragnaros torso center, Sulfuras at summit — classic power triangle. Raiders compressed in lower quarter, crushed by composition itself. Color palette: primordial fire orange, divine destructive gold, pure white incandescence, mortal basalt black, defiant frost blue, protective paladin gold. Mood: ABSOLUTE SACRED TERROR — 40 mortals facing a fire god realizing their insignificance, the Earth's own scream.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, cute, friendly, small scale, equal sized figures, daylight, blue sky, green, vegetation, water, ice dominant, snow, technology, sci-fi, blurry, low quality, flat composition, split frame, panels, border, peaceful, calm"
+  }
+}

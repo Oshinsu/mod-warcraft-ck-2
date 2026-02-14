@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_shield_epic",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_shield_epic.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background. A massive Alliance tower shield of polished steel and gold. The front face bears a magnificent golden lion emblem in high relief \u2014 the Alliance crest \u2014 on a field of deep blue enamel. Silver rivets line the entire border. The lion emblem radiates faint holy light. Battle damage: scratches and dents adding character without diminishing grandeur. Heavy, defensive, the wall between order and chaos. Purple epic quality (#a335ee) glow with holy golden accents from the lion emblem. Front-facing view, slight angle to show depth and curvature. No hands, single item, dark background.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

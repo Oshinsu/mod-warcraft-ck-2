@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_axe_epic",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_axe_epic.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background with vignette. A brutal orcish double-headed battle axe with massive dark iron crescent blades etched with tribal Horde engravings and war glyphs. Two red gems set at the junction of blade and haft, glowing with inner fire. Bloodstained cutting edges showing recent battle. Thick wooden haft wrapped in leather strips and adorned with bone fetishes, animal teeth, and red war paint. Purple epic quality (#a335ee) glow with crimson red accents. Diagonal orientation. Savage, imposing, tribal. No hands, single item, dark background, readable at 80x80.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

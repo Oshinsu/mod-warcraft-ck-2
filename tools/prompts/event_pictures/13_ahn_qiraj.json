@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_ahn_qiraj",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_ahn_qiraj.png",
+    "ck2_gfx_name": "GFX_evt_hoa_ahn_qiraj",
+    "final_size": "460x300",
+    "scene_intent": "Temple d'Ahn'Qiraj (AQ40) — la prison millénaire du Dieu Ancien C'Thun sous les sables de Silithus. Architecture alien insectoïde qiraji, l'Oeil de C'Thun observant depuis les ténèbres, une horreur cosmique lovecraftienne à l'échelle de Warcraft."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : HR Giger (Alien) + les temples de Petra (architecture taillée dans la roche) + horreur cosmique de Lovecraft",
+        "Rendu : peinture organique alien — surfaces qui semblent vivantes et humides, ni minéral ni animal, entre les deux",
+        "Le malaise est le medium : chaque forme doit être presque reconnaissable mais fondamentalement FAUSSE",
+        "Tonalité : horreur cosmique, l'incompréhensible, ce qui ne devrait pas exister, le regard qui vient d'avant le temps"
+      ],
+      "look": "HR Giger bio-mechanical aesthetic merged with ancient Egyptian underground temple, surfaces that seem alive and wet, alien organic architecture, Lovecraftian cosmic horror at Warcraft scale, Blizzard Ahn'Qiraj concept art, every chitinous surface and tentacle rendered with disturbing anatomical accuracy, Zdzislaw Beksinski nightmare landscapes",
+      "palette": {
+        "dominant": "#4B0082 — indigo profond de la corruption des Dieux Anciens, la couleur de l'espace entre les étoiles",
+        "secondary": "#DAA520 — or sombre de la carapace qiraji, du grès du désert, de l'Egypte corrompue",
+        "accent_1": "#FF0000 — rouge sang de l'Oeil de C'Thun, la pupille qui voit tout",
+        "accent_2": "#556B2F — vert-olive de la corruption organique, des excroissances tentaculaires",
+        "accent_3": "#2F4F4F — gris-bleu sombre des ombres les plus profondes, l'abîme",
+        "highlight": "#FFD700 — or vif des hiéroglyphes qiraji actifs, des yeux d'insectes"
+      },
+      "art_references": [
+        "HR Giger — biomécanique d'Alien (architecture organique-alien, le malaise des surfaces vivantes)",
+        "Zdzisław Beksiński — paysages cauchemardesques (formes presque reconnaissables mais fondamentalement fausses)",
+        "Temples souterrains d'Abou Simbel et Petra (architecture taillée dans la roche, échelle inhumaine)",
+        "HP Lovecraft — descriptions architecturales de R'lyeh et de la Cité des Dieux Anciens"
+      ]
+    },
+    "environment": {
+      "space": "La Chambre de C'Thun — le coeur du Temple d'Ahn'Qiraj, 2km sous les sables de Silithus. Un espace IMPOSSIBLE : une caverne organique de 500m de diamètre dont les parois ne sont pas de la roche mais de la CHAIR PÉTRIFIÉE — des surfaces lisses, ondulantes, parcourues de veines violettes pulsantes, couvertes de protubérances chitineuses dorées qui ressemblent à des yeux fermés ou à des cocons. Le sol est un mélange de grès ancien (dalles qiraji gravées de hiéroglyphes insectoïdes) et d'excroissances organiques tentaculaires qui percent les dalles par en dessous. Au fond de la caverne, dans l'obscurité la plus profonde : L'OEIL DE C'THUN — un oeil unique de 30m de diamètre, enchâssé dans la paroi vivante. Iris rouge sang, pupille noire verticale d'une profondeur infinie, sclère jaune-verdâtre parcourue de veines violettes. Il regarde. Il a toujours regardé.",
+      "foreground": "Le sol qiraji au premier plan : dalles de grès doré gravées de hiéroglyphes insectoïdes (scarabées, mandibules, yeux, spirales) qui émettent une faible lueur dorée — le langage d'une civilisation non-humaine. Les dalles sont soulevées et fissurées par des TENTACULES semi-organiques semi-minéraux qui émergent du sol — violets sombres, couverts de ventouses chitineuses dorées, certains immobiles (pétrifiés), d'autres visiblement en lent mouvement. Des scarabées qiraji (insectes de 30cm, carapace dorée) grouillent sur les dalles en flux continus — un tapis vivant de chitine. Un pilier qiraji au premier plan — colonne de grès doré sculptée comme un empilement de scarabées géants, haute de 8m, penchée, ses hiéroglyphes encore lumineux.",
+      "midground": "L'espace entre le sol et l'Oeil. Des STRUCTURES QIRAJI s'élèvent du sol comme des termitières architecturales — tours organiques de 20-40m, moitié grès gravé moitié excroissance biologique, reliées par des ponts de chitine. Des guerriers qiraji (humanoïdes insectoïdes de 3m, carapace dorée, quatre bras, mandibules) sont visibles en silhouettes sur les structures — immobiles, en veille, attendant l'ordre de C'Thun. Des nuages de scarabées volants forment des essaims sombres entre les structures. Au centre de l'espace, un OBELISQUE NOIR de 30m — une pierre lisse, parfaitement géométrique (octogonale), d'un noir absolu qui semble absorber la lumière. C'est un résonateur psychique de C'Thun — les chuchotements du Dieu Ancien émanent de cette pierre.",
+      "background": "L'OEIL DE C'THUN. 30m de diamètre, enchâssé dans la paroi organique du fond de la caverne comme un oeil dans son orbite. L'iris est rouge sang avec des motifs fractals qui semblent contenir des galaxies miniatures. La pupille est un noir plus noir que le noir — un trou dans la réalité, une absence qui regarde. La sclère est jaune-verdâtre, parcourue de veines violettes épaisses qui pulsent. Des TENTACULES massifs (2m de diamètre) irradient depuis l'orbite de l'Oeil, s'enfonçant dans les murs et le sol comme des racines d'un arbre-dieu. Autour de l'Oeil, la paroi est couverte d'yeux plus petits (de 1 à 5m), tous fermés sauf l'Oeil principal — mais on sent qu'ils pourraient s'ouvrir.",
+      "atmosphere": "Horreur cosmique pure — le sentiment que quelque chose d'infiniment ancien et infiniment puissant SAIT que vous êtes là, les chuchotements qui ne sont pas des sons mais des pensées imposées, l'architecture qui respire",
+      "weather": "L'air est épais, presque liquide — une humidité alien, des spores violettes en suspension, une pression atmosphérique anormalement élevée qui compresse les pensées",
+      "time_of_day": "Sans objet — le temps n'existe pas ici comme il existe ailleurs. C'Thun existait avant les soleils."
+    },
+    "subjects": [
+      {
+        "element": "L'Oeil de C'Thun",
+        "details": "30m de diamètre. Iris : rouge sang profond avec motifs fractals contenant des micro-galaxies spirales. Pupille : noir absolu non pas comme une couleur mais comme une ABSENCE — un trou dans la réalité visible, une profondeur infinie qui aspire le regard. Sclère : jaune-verdâtre malade, veines violettes épaisses pulsant lentement. L'orbite : enchâssée dans de la chair pétrifiée violette-grise, tentacules de 2m de diamètre irradiant comme des racines. Autour de l'Oeil principal : 20-30 yeux secondaires de 1-5m dans la paroi, tous fermés, paupières organiques recouvertes de chitine dorée. L'Oeil ne fixe pas — il ABSORBE le regard.",
+        "importance": "Point focal absolu et unique — tout le reste n'existe que par rapport à lui"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plan large de la chambre avec l'Oeil au fond — cadrage de l'approche inexorable",
+      "angle": "Léger 0° — le spectateur est au niveau du sol qiraji, face à l'Oeil. Pas de contre-plongée, pas de plongée — un face-à-face avec le divin alien",
+      "lens_equivalent": "24mm grand angle — légère distorsion aux bords qui ajoute au malaise, l'espace semble courbé vers l'Oeil",
+      "focal_point": "La pupille de C'Thun — le point noir absolu qui attire irrésistiblement le regard et ne le lâche plus",
+      "depth_of_field": "Le premier plan est net, puis la netteté fluctue de façon anormale — l'Oeil est plus net qu'il ne devrait être pour sa distance, comme s'il était plus proche qu'il n'y paraît",
+      "composition_rules": [
+        "L'Oeil au centre exact de l'image — non pas au tiers mais au CENTRE, car C'Thun est le centre de tout ici",
+        "Les tentacules irradiant depuis l'orbite créent des lignes radiales qui attirent TOUT vers l'Oeil — rien n'échappe",
+        "Les structures qiraji et l'obélisque créent une perspective atmosphérique vers l'Oeil — guidage inévitable",
+        "Le grouilllement de scarabées au premier plan vs l'immobilité terrifiante de l'Oeil crée un contraste de mouvement"
+      ]
+    },
+    "lighting": {
+      "key_light": "L'Oeil de C'Thun lui-même — une lumière ROUGE sombre émanant de l'iris, froide et malade, qui éclaire la caverne d'un rougeoiement de crépuscule alien. Ce n'est pas une lumière chaude comme le feu — c'est une lumière qui semble aspirer plutôt que diffuser",
+      "fill_light": "Les hiéroglyphes qiraji au sol et sur les piliers — lueur dorée faible et stable, seul éclairage 'normal' de la scène, contrastant avec le rouge malade de C'Thun",
+      "accent_lights": [
+        "Veines violettes pulsantes : réseau de lignes de lumière violette parcourant les murs organiques, pulsant au rythme lent du battement de coeur de C'Thun",
+        "Carapaces de scarabées : chaque scarabée qiraji reflète les lumières en minuscules points dorés — le sol scintille de milliers de reflets mobiles",
+        "Obélisque noir : ne produit pas de lumière mais ABSORBE celle autour — une zone plus sombre que possible autour de lui, anti-lumière",
+        "Yeux fermés secondaires : lueur orange très faible filtrant sous les paupières chitineuses — ils rêvent"
+      ],
+      "shadows": "Les ombres ne se comportent pas normalement. Elles ne suivent pas les règles de la géométrie euclidienne — elles semblent attirées vers l'Oeil, comme si la gravité affectait la lumière elle-même. Les ombres des structures qiraji s'étirent vers l'Oeil plutôt que de fuir la source lumineuse. L'ombre de l'obélisque tombe dans TOUTES les directions simultanément.",
+      "atmospheric_fx": [
+        "Spores violettes en suspension : l'air est rempli de particules organiques violettes qui dérivent lentement, chacune reflétant la lumière de l'Oeil en un minuscule point rouge",
+        "Brume organique : une brume basse, dense et presque vivante rampe au niveau du sol, se retirant devant les pas comme si elle était sensible",
+        "Chuchotements visuels : les hiéroglyphes qiraji semblent bouger et se reconfigurer quand on ne les regarde pas directement — illusion d'optique ou réalité alien",
+        "Distorsion gravitationnelle : l'espace autour de l'Oeil est subtilement déformé — les lignes droites s'incurvent vers lui comme la lumière autour d'un trou noir"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "HR Giger bio-mechanical aesthetic merged with underground Egyptian temple, surfaces alive and wet, Lovecraftian cosmic horror at Warcraft scale, Beksinski nightmare landscapes, disturbing anatomical accuracy. THE CHAMBER OF C'THUN — heart of the Temple of Ahn'Qiraj, 2km beneath Silithus sands. An IMPOSSIBLE organic cavern 500m diameter with walls not of rock but of PETRIFIED FLESH — smooth undulating surfaces with pulsing violet veins, covered in golden chitinous protuberances resembling closed eyes or cocoons. Floor: ancient golden sandstone QIRAJI SLABS engraved with insectoid hieroglyphs (scarabs, mandibles, eyes, spirals) emitting faint golden glow — a non-human civilization's language. Slabs heaved and cracked by SEMI-ORGANIC SEMI-MINERAL TENTACLES emerging from below — dark violet covered in golden chitinous suckers, some petrified motionless, others in slow visible movement. Qiraji scarab beetles (30cm, golden carapace) swarming in continuous flows across the slabs — a living carpet of chitin. A QIRAJI PILLAR in foreground — 8m golden sandstone column sculpted as stacked giant scarabs, leaning, hieroglyphs still luminous. MIDGROUND: QIRAJI STRUCTURES rising from the floor like architectural termite mounds — 20-40m organic towers half carved sandstone half biological growth connected by chitin bridges. Qiraji warrior silhouettes (3m insectoid humanoids, golden carapace, four arms, mandibles) on structures — motionless, dormant, awaiting C'Thun's command. Dark swarms of flying scarabs between structures. CENTER: a 30m BLACK OBELISK — smooth, perfectly geometric octagonal, absolute black that seems to absorb light. C'Thun's psychic resonator — the Old God's whispers emanate from this stone. BACKGROUND: THE EYE OF C'THUN. 30m diameter, embedded in the organic rear wall like an eye in its socket. Iris: DEEP BLOOD RED with fractal patterns containing miniature spiral galaxies. Pupil: a black blacker than black — not a color but an ABSENCE, a hole in reality, infinite depth that draws the gaze inescapably. Sclera: sickly yellow-green, thick violet veins pulsing slowly. Socket: embedded in petrified violet-grey flesh, 2m diameter TENTACLES radiating from the orbit plunging into walls and floor like roots of a god-tree. Around the main Eye: 20-30 SECONDARY EYES of 1-5m in the wall, all CLOSED, organic lids covered in golden chitin — but they feel ready to open. LIGHTING: C'Thun's Eye as main light — DARK RED sick light emanating from the iris, cold and diseased, illuminating the cavern in an alien twilight red that seems to draw rather than diffuse. Golden qiraji hieroglyphs as faint stable fill — the only normal light contrasting C'Thun's sick red. Pulsing violet vein network on organic walls beating at C'Thun's slow heartbeat rhythm. Scarab carapaces reflecting light in thousands of tiny mobile golden points — floor glittering. Black obelisk ABSORBING surrounding light — a zone darker than possible around it, anti-light. Faint orange glow filtering from under closed secondary eye chitin lids — they dream. SHADOWS BEHAVE ABNORMALLY — attracted toward the Eye as if gravity affects light, structure shadows stretching toward the Eye rather than away from the light source, obelisk shadow falling in ALL directions simultaneously. ATMOSPHERIC: violet organic spores drifting in the air each reflecting the Eye as a tiny red point, dense almost-alive ground mist recoiling from footsteps as if sentient, qiraji hieroglyphs seeming to move and reconfigure when not viewed directly, subtle gravitational distortion — straight lines curving toward the Eye like light around a black hole. Eye at EXACT CENTER of composition — not at thirds but at center because C'Thun IS the center. Tentacles from the orbit creating radial lines pulling EVERYTHING toward the Eye. Color palette: deep Old God indigo, corrupt golden chitin, blood-red iris, organic olive-green corruption, abyssal dark grey, active hieroglyph gold. Mood: pure cosmic horror, something infinitely ancient KNOWS you are here, whispers that are imposed thoughts, architecture that breathes.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, faces close-up, daylight, blue sky, green grass, outdoor nature, cheerful, bright colors, cute insects, friendly atmosphere, technology, sci-fi ships, blurry, low quality, flat lighting, split frame, panels, border, humans in foreground, recognizable Earth architecture"
+  }
+}

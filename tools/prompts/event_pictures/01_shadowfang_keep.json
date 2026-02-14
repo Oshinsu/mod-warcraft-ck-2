@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_shadowfang_keep",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_shadowfang_keep.png",
+    "ck2_gfx_name": "GFX_evt_hoa_shadowfang_keep",
+    "final_size": "460x300",
+    "scene_intent": "Shadowfang Keep — forteresse hantée des worgens sur les falaises de Silverpine. Le joueur voit cette image au lancement du donjon. Elle doit évoquer la terreur gothique, l'isolement, la malédiction worgen."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence directe : concept art WoW Classic de Shadowfang Keep par Peter Lee et Jimmy Lo",
+        "Rendu : digital matte painting haut de gamme, coups de pinceau visibles façon huile sur toile",
+        "Cadrage CK2 : illustration narrative en plan large, comme une miniature médiévale enrichie",
+        "Tonalité : horreur gothique victorienne, pas gore — plutôt oppressant, spectral, tragique"
+      ],
+      "look": "hyper-detailed digital matte painting, visible oil brushstrokes, atmospheric perspective, concept art quality matching Blizzard cinematics team, painterly realism with fantasy elements, rich texture layering",
+      "palette": {
+        "dominant": "#0d1b2a — bleu nuit profond pour le ciel et les ombres",
+        "secondary": "#2d5a27 — vert forêt morte de Silverpine",
+        "accent_1": "#39ff14 — vert spectral néon pour les fenêtres hantées (point focal)",
+        "accent_2": "#c0c0c0 — pierre grise de la forteresse au clair de lune",
+        "accent_3": "#4a0e4e — violet nécromantique pour les ombres profondes",
+        "highlight": "#e6e6fa — blanc bleuté lunaire pour les reflets de pierre"
+      },
+      "art_references": [
+        "Caspar David Friedrich — Abbey in the Oakwood (composition, ambiance ruine gothique)",
+        "John Martin — Pandemonium (échelle monumentale, ciel dramatique)",
+        "Blizzard Entertainment — WoW Classic login screen (qualité de rendu cible)",
+        "Simon Stålenhag (intégration architecturale dans un paysage hostile)"
+      ]
+    },
+    "environment": {
+      "space": "La forteresse de Shadowfang Keep se dresse sur un éperon rocheux déchiqueté surplombant un précipice vertigineux. Cinq tours de pierre grise s'élèvent en formation irrégulière, la plus haute percée de fenêtres étroites d'où émane une lueur verdâtre surnaturelle. Le portail principal — une herse de fer forgé noir ornée de têtes de loup — est entrouverte, révélant un couloir plongé dans les ténèbres. Des contreforts en arc-boutant relient les tours comme des côtes de pierre. La maçonnerie est fissurée, envahie de lierre mort et noirci.",
+      "foreground": "Un chemin de terre sinueux monte vers le portail à travers une forêt de pins morts aux troncs tordus et blanchis. Deux torches mourantes flanquent le chemin, leur flamme verdâtre luttant contre le vent. Des pierres tombales brisées et penchées bordent le sentier — le cimetière des anciens seigneurs de la maison. Un corbeau perché sur une croix de pierre observe le spectateur.",
+      "midground": "La masse imposante du donjon principal domine le plan intermédiaire. Les murs portent les cicatrices de sièges anciens — traces d'impacts de projectiles, pierre noircie par le feu. Une passerelle de pierre suspendue entre deux tours est partiellement effondrée. Des silhouettes lupines (worgens maudits) se découpent dans trois fenêtres différentes, figées dans des poses d'observation. Une brume spectrale verdâtre s'écoule par les meurtrières comme de la fumée.",
+      "background": "Au-delà de la forteresse, les falaises plongent dans un abîme de brouillard blanc. La forêt de Silverpine s'étend en vagues sombres jusqu'à l'horizon. Un croissant de lune pâle perce un ciel de nuages tourmentés — éclairant juste assez pour révéler l'échelle terrifiante de l'édifice. Des éclairs de chaleur lointains illuminent sporadiquement la ligne d'horizon.",
+      "atmosphere": "Terreur ancestrale, isolement total, malédiction éternelle, silence oppressant brisé uniquement par le vent et les hurlements lointains",
+      "weather": "Brouillard bas rampant depuis le précipice, vent fort visible dans le mouvement des flammes et des branches mortes, ciel partiellement couvert avec trouées lunaires",
+      "time_of_day": "Nuit profonde, 2-3h du matin, lune décroissante à 30 degrés au-dessus de l'horizon"
+    },
+    "subjects": [
+      {
+        "element": "La forteresse elle-même",
+        "details": "Architecture romane militaire corrompue par la nécromancie — arcs en plein cintre, créneaux, mâchicoulis. Mais les gargouilles sont des loups déformés, les ferronneries portent des motifs de griffes. La pierre semble suinter un liquide sombre par endroits. Chaque fenêtre éclairée en vert suggère une activité sinistre à l'intérieur.",
+        "scale": "Massive — la tour principale fait 60m de haut minimum, les personnages au pied seraient minuscules"
+      },
+      {
+        "element": "Worgens dans les fenêtres",
+        "details": "3 silhouettes distinctes de worgens (loups-garous) visibles par rétroéclairage vert. L'un est debout, griffes sur le rebord de la fenêtre. Un autre semble hurler. Le troisième observe le chemin en contrebas. Ce sont des ombres — on ne voit pas les détails, juste les silhouettes terrifiantes.",
+        "scale": "Proportionnels aux fenêtres — humanoïdes de 2m+, massifs"
+      }
+    ],
+    "camera": {
+      "shot_type": "Extreme wide establishing shot — plan d'ensemble très large",
+      "angle": "Légère contre-plongée (15°) depuis le chemin d'approche, pour accentuer la dominance de la forteresse",
+      "lens_equivalent": "28mm — grand angle modéré pour embrasser toute la scène sans distorsion excessive",
+      "focal_point": "Le portail principal avec sa lueur verte et la herse entrouverte — c'est là que le regard doit aller en premier",
+      "depth_of_field": "Profondeur de champ étendue, très légèrement adoucie en arrière-plan lointain pour la perspective atmosphérique",
+      "composition_rules": [
+        "Règle des tiers : forteresse placée au tiers supérieur droit",
+        "Le chemin sinueux crée une ligne directrice depuis le coin inférieur gauche vers le portail",
+        "Le corbeau au premier plan et la lune en arrière-plan créent un axe vertical de lecture secondaire",
+        "Espace négatif (ciel) en haut à gauche pour équilibrer la masse du donjon à droite"
+      ]
+    },
+    "lighting": {
+      "key_light": "Clair de lune froid (5500K tirant bleu) venant du coin supérieur gauche à 45°, créant des ombres longues et dramatiques sur la façade du donjon",
+      "fill_light": "Luminescence spectrale verte (520nm) depuis les fenêtres du donjon — c'est le second éclairage principal, il dessine des cônes de lumière verte sur la brume et les murs extérieurs",
+      "accent_lights": [
+        "Torches verdâtres au sol — lumière chaude corrompue, flammes vertes-jaunes, éclairant le chemin d'approche et les pierres tombales proches",
+        "Éclairs de chaleur lointains — flash blanc-bleu très bref illuminant la silhouette du donjon par l'arrière"
+      ],
+      "shadows": "Ombres profondes et tranchantes — les arcs-boutants projettent des ombres de barreaux sur les murs adjacents. L'intérieur du portail est un noir absolu. Les ombres des arbres morts créent un réseau de griffures sur le chemin.",
+      "atmospheric_fx": [
+        "Brouillard volumétrique : dense au niveau du sol, s'écoulant par-dessus le précipice comme une cascade de vapeur",
+        "Particules spectrales : minuscules points de lumière verte flottant dans l'air autour des fenêtres éclairées",
+        "God rays inversés : la lumière verte des fenêtres projette des faisceaux coniques dans la brume nocturne",
+        "Halo lunaire : cercle diffus autour de la lune, signe d'humidité atmosphérique"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hyper-detailed digital matte painting, oil paint brushstrokes visible, concept art quality. A massive gothic fortress (Shadowfang Keep) perched on jagged cliff edges overlooking a misty abyss, Silverpine Forest. Five grey stone towers of irregular height, the tallest with narrow windows emanating eerie supernatural green glow. Main gate: black wrought-iron portcullis with wolf-head motifs, half-open revealing pitch darkness within. Buttresses connecting towers like stone ribs. Cracked masonry invaded by dead blackened ivy. Foreground: winding dirt path through dead twisted white pine trees, two dying greenish torches flanking the path, broken tilted gravestones of ancient lords, a raven perched on a stone cross watching the viewer. Midground: imposing main keep scarred by ancient sieges, impact marks, fire-blackened stone. Partially collapsed stone walkway between two towers. Three werewolf (worgen) silhouettes backlit green in different windows — one with claws on the sill, one howling, one observing the path below. Spectral green mist flowing from arrow slits like smoke. Background: cliffs plunging into white fog abyss, Silverpine Forest extending in dark waves to horizon, pale crescent moon piercing turbulent cloud sky, distant heat lightning illuminating horizon. Lighting: cold moonlight (blue-white) from upper left at 45 degrees casting long dramatic shadows, spectral green luminescence from windows creating light cones in mist, greenish torch flames struggling in the wind, deep sharp shadows from buttresses creating cage patterns on adjacent walls. Atmospheric effects: dense volumetric ground fog cascading over the precipice like a vapor waterfall, tiny green spectral particles floating near windows, inverted god rays of green light projecting into night mist, lunar halo. Color palette: deep night blue, dead forest green, spectral neon green accents, grey moonlit stone, necromantic purple shadows, blue-white lunar highlights. Mood: ancestral terror, total isolation, eternal curse, oppressive silence. Composition: rule of thirds with fortress upper-right, winding path as leading line from lower-left to gate, raven and moon creating secondary vertical reading axis, negative sky space upper-left balancing fortress mass.",
+    "negative": "text, watermark, signature, UI elements, HUD, modern elements, cars, electricity poles, bright cheerful colors, anime style, cartoon, chibi, photorealistic close-up faces, oversaturated, neon cyberpunk, sci-fi elements, guns, technology, blurry, low quality, deformed architecture, floating objects without support, extra limbs, split frame, multiple panels, comic book panels, collage, border frame"
+  }
+}

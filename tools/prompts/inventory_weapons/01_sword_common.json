@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_sword_common",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_sword_common.png",
+    "ck2_gfx_name": "GFX_inv_hoa_sword_common",
+    "final_size": "80x80",
+    "scene_intent": "Common quality iron longsword inventory icon. A simple, unremarkable weapon — the kind found on any footman's corpse or sold cheaply at a village blacksmith. No enchantment, no embellishment. The grey border and muted tones must instantly communicate 'vendor trash' to any WoW player. Readable as a sword silhouette even at 80x80 pixels."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Direct reference: World of Warcraft inventory icon art style — single item rendered in painterly digital style on dark gradient background",
+        "Quality tier: Common (grey) — item border glow color #9d9d9d, the dullest tier in WoW's item quality spectrum",
+        "Rendering: hand-painted digital icon with subtle brushwork, slight texture grain, matching Blizzard item icon art pipeline circa 2004-2024",
+        "Readability: weapon silhouette must be instantly identifiable as a longsword at 80x80 pixel display size"
+      ],
+      "look": "hand-painted digital game icon, painterly brushstrokes, slight canvas texture, Blizzard Entertainment WoW inventory icon quality, rich material rendering on a single isolated object, dark atmospheric background with subtle vignette, no photorealism — stylized realism consistent with Warcraft aesthetic",
+      "palette": {
+        "dominant": "#4a4a4a — dark iron grey for the blade body, cold and unpolished",
+        "secondary": "#6b5b3d — worn brown leather for the grip wrapping",
+        "accent_1": "#9d9d9d — common quality grey for the faint border glow and blade highlights",
+        "accent_2": "#2a2a2a — near-black for the dark gradient background center",
+        "accent_3": "#7a7a6e — slightly warm grey for the steel edge where light catches",
+        "highlight": "#b0b0b0 — dull silver for the single brightest specular reflection on the blade edge"
+      },
+      "art_references": [
+        "Blizzard Entertainment WoW item icon team — standard common weapon icons (Worn Shortsword, Militia Shortsword, Infantry Sword)",
+        "Twincruiser (WoW icon artist) — clean silhouette readability on dark backgrounds",
+        "Medieval European arming sword reference — simple cruciform hilt, straight double-edged blade, disc pommel",
+        "Frazetta-school weapon rendering — painterly metal with visible brushwork, not photorealistic"
+      ]
+    },
+    "subjects": [
+      {
+        "element": "Iron longsword — common quality",
+        "details": "A plain iron longsword approximately 90cm in total length. The blade is straight, double-edged, with a very shallow fuller running two-thirds of its length. The metal is dark grey iron — not polished steel — with visible hammer marks from rough forging, minor surface pitting, and a few nicks along the cutting edges from prior use. No engravings, no runes, no magical effects whatsoever. The crossguard is a simple straight bar of the same dark iron, slightly wider than the blade, with squared-off ends — purely functional, zero ornamentation. The grip is wrapped in cracked, worn brown leather with visible stitching coming undone at one end, revealing the wooden core beneath. The pommel is a plain disc of iron, slightly dented, serving only as a counterweight. There is a faint patina of age on all metal surfaces. The blade has no sheen beyond a single dull specular highlight along the edge where a whetstone was last applied — suggesting the weapon is maintained but unexceptional.",
+        "scale": "Weapon fills approximately 80% of the square frame, oriented diagonally from lower-left to upper-right at roughly 30-40 degrees from vertical"
+      }
+    ],
+    "camera": {
+      "shot_type": "Flat icon view with slight 3/4 angle — standard WoW inventory icon perspective",
+      "angle": "Very slight 3/4 rotation (approximately 10-15 degrees from perfectly flat) to give minimal depth perception to the crossguard and grip while keeping the blade largely in profile",
+      "lens_equivalent": "Orthographic / flat projection — no perspective distortion, consistent with game UI icon conventions",
+      "focal_point": "Center of the blade where the fuller runs — the eye should track along the blade edge naturally",
+      "depth_of_field": "Infinite — everything in perfect focus, this is a UI icon not a photograph",
+      "composition_rules": [
+        "Weapon centered in frame, filling approximately 80% of the square canvas",
+        "Diagonal orientation lower-left to upper-right (blade tip upper-right, pommel lower-left) — standard WoW weapon icon layout",
+        "Dark gradient background: darkest at center directly behind weapon, slightly lighter at edges to create depth",
+        "Clear negative space around weapon — no overlapping elements, clean silhouette",
+        "Single weapon only — no secondary objects, no hands, no environmental context"
+      ]
+    },
+    "lighting": {
+      "key_light": "Soft directional light from the upper-left at 45 degrees, cool white (6500K), creating a gentle highlight along the blade's left edge and the top surface of the crossguard — intensity is muted to maintain the 'common item dullness'",
+      "fill_light": "Very dim ambient fill from below-right, warm grey (#8a8a7a), barely lifting the shadows — just enough to prevent the grip and pommel from disappearing into the background",
+      "accent_lights": [
+        "Single thin specular edge-catch along the blade's sharpened edge — a hair-thin line of #b0b0b0 silver, suggesting the blade is at least functional even if unremarkable",
+        "Faint common-quality grey glow (#9d9d9d) emanating from behind the weapon as a very subtle backlight halo — barely visible, just enough to separate the weapon silhouette from the dark background"
+      ],
+      "shadows": "Minimal — a very soft drop shadow directly beneath and slightly right of the weapon, blending into the dark gradient background. No hard cast shadows. The weapon appears to float in iconic presentation space.",
+      "atmospheric_fx": [
+        "Dark gradient background: radial gradient from #1a1a1a at center to #0d0d0d at corners, creating a subtle vignette spotlight effect behind the weapon",
+        "No magical particles, no glow effects, no enchantment visuals — this is a mundane weapon",
+        "Very subtle dust motes or grain texture in the background to prevent it from looking like flat digital black — adds painterly warmth",
+        "Faint grey border glow (#9d9d9d at 15-20% opacity) around the weapon's silhouette edge — the common quality 'aura' that WoW icons use to indicate item tier"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hand-painted digital game icon, World of Warcraft inventory icon style, painterly brushstrokes, single weapon on dark background. A plain iron longsword oriented diagonally from lower-left to upper-right, filling 80% of the square frame. Straight double-edged blade of dark grey unpolished iron with visible hammer marks, minor surface pitting, small nicks along cutting edges. Shallow fuller running two-thirds of the blade length. Simple straight iron crossguard with squared ends, no ornamentation. Grip wrapped in cracked worn brown leather with visible fraying stitching revealing wooden core beneath. Plain dented iron disc pommel. Single dull specular highlight along the blade edge where a whetstone was last applied. No runes, no enchantments, no magical glow. Faint patina of age on all metal surfaces. Dark radial gradient background from #1a1a1a center to #0d0d0d corners. Soft directional lighting from upper-left, cool white, creating gentle highlight along blade edge. Very faint grey quality glow (#9d9d9d) around weapon silhouette indicating common item tier. Painterly material rendering, subtle canvas texture grain, Blizzard WoW icon art quality, rich detail readable at small size, clear weapon silhouette, stylized realism.",
+    "negative": "text, watermark, signature, UI frame, item border overlay, numbers, stats, tooltip, hands holding weapon, fingers, character, person, arm, environmental background, ground, table, wall, grass, sky, bright colors, saturated colors, neon, magical glow, enchantment effects, runes glowing, particles, sparkles, anime style, cartoon, chibi, photorealistic, 3D render, cel-shaded, multiple weapons, dual wield, shield, second object, split frame, multiple panels, collage, border frame, ornate decoration, gems, jewels, gold filigree, blurry, low quality, deformed proportions, bent blade, extra crossguards"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_zulgurub",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_zulgurub.png",
+    "ck2_gfx_name": "GFX_evt_hoa_zulgurub",
+    "final_size": "460x300",
+    "scene_intent": "Zul'Gurub — l'ancienne capitale troll de l'Empire Gurubashi dans la jungle de Stranglethorn. Temple du Dieu Sang Hakkar. Rituels vaudou, totems d'os, ziggourats de pierre envahis par la jungle. L'image doit transpirer le danger primal — la magie du sang, les esprits Loa, la jungle qui dévore tout."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : Tikal et Copán (ruines mayas) dans la jungle du Guatemala + rituels vaudou haïtiens authentiques",
+        "Rendu : peinture expressionniste tropicale, coups de pinceau vigoureux, couleurs saturées et humides, texture de feuillage obsessionnelle",
+        "Contraste thématique : la beauté luxuriante de la jungle tropicale vs la brutalité sanguinaire des rituels Gurubashi",
+        "Tonalité : danger primal, magie ancestrale, le sang et la sève, les tambours dans la nuit"
+      ],
+      "look": "expressionist tropical painting with vigorous brushwork, Henri Rousseau jungle density meets Mesoamerican archaeological illustration, saturated humid colors, obsessive foliage texture, every vine and fern rendered, Blizzard troll concept art channeling authentic Mesoamerican temple aesthetics with voodoo supernatural elements",
+      "palette": {
+        "dominant": "#006400 — vert jungle profond et saturé, la canopée éternelle de Stranglethorn",
+        "secondary": "#8B4513 — brun-roux de la pierre de temple vieillie, de la boue, du bois de totem",
+        "accent_1": "#DC143C — rouge crimson du sang rituel sur les autels, des peintures de guerre trolles",
+        "accent_2": "#FF8C00 — orange des flammes de torches tiki et des braseros rituels",
+        "accent_3": "#9ACD32 — vert-jaune des feux vaudou surnaturels, de l'énergie des Loa",
+        "highlight": "#FFD700 — or des ornements trolls anciens, des yeux de serpent, des idoles de Hakkar"
+      },
+      "art_references": [
+        "Henri Rousseau — Le Rêve et La Jungle (jungle dense naïve, feuillage obsessionnel, prédateurs cachés)",
+        "Frederick Edwin Church — Paysages d'Amérique centrale (lumière tropicale dramatique, végétation luxuriante)",
+        "Art précolombien Maya/Aztèque (iconographie de temple, serpents à plumes, hiéroglyphes)",
+        "Blizzard — Concept art de Zul'Aman et Zul'Gurub (esthétique troll Warcraft)"
+      ]
+    },
+    "environment": {
+      "space": "La Grande Place Cérémonielle de Zul'Gurub — un espace ouvert ovale de 80m sur 50m au coeur du complexe de temples. Entouré de trois ziggurats à gradins (pyramides tronquées à 7 niveaux) de pierre gris-brun, les plus grands s'élevant à 40m. Les escaliers des ziggurats sont raides et étroits, flanqués de serpents sculptés à chaque palier. Au sommet du ziggourat central : un autel de sacrifice surélevé d'où s'élève une STATUE DE HAKKAR LE DIEU SANG — un serpent ailé de 15m, ailes de chauve-souris déployées, crocs de vipère, yeux de rubis. La jungle de Stranglethorn encercle et envahit le complexe — des arbres géants (kapokiers, acajous) poussent entre les temples, leurs racines éventrant les murs de pierre, leurs canopées formant une voûte végétale au-dessus de la place.",
+      "foreground": "Le bord de la place cérémonielle — sol de dalles de pierre irrégulières, fissurées, envahies de mousse et d'herbe tropicale. Un TOTEM VAUDOU de 4m de hauteur se dresse au premier plan : un poteau de bois sculpté empilant des crânes d'animaux et d'humanoïdes (trolls, humains), peints en rouge et bleu, ornés de plumes colorées, de perles d'os et de petits sacs de tissu (gris-gris). Des torches tiki allumées flanquent le totem — flammes vives orange avec des étincelles. Au sol autour du totem : un cercle rituel tracé dans le sang séché (brun-rouge foncé), des bougies de cire noire disposées en motifs géométriques, des os arrangés en étoiles. Un serpent vivant (anaconda/boa) s'enroule paresseusement autour de la base du totem, sa peau brillante reflétant les flammes.",
+      "midground": "La place elle-même et les trois ziggurats. Le ziggourat central (le plus grand) se dresse en face — ses 7 niveaux de gradins en pierre portent les traces de siècles de rituels : taches sombres sur les marches (sang séché), glyphes Gurubashi gravés et peints en rouge et or. L'escalier central monte directement vers la statue de Hakkar au sommet. Des TORCHES RITUELLES brûlent de chaque côté de l'escalier — des braseros en pierre remplis de combustible rituel émettant une flamme verdâtre surnaturelle (énergie des Loa). Des trolls Gurubashi (silhouettes bleues, grandes, longilignes) sont visibles sur les gradins : certains en position de prière devant des petits autels, d'autres en sentinelle avec des lances. Un GRAND PRÊTRE TROLL au milieu de l'escalier central — dressé de toute sa hauteur (2.5m), coiffure de plumes, peintures de guerre rouge sang, bras levés vers Hakkar, des traînées d'énergie verte spiralant autour de ses mains — un rituel en cours.",
+      "background": "La jungle de Stranglethorn qui enserre le temple. Des arbres géants (troncs de 3-5m de diamètre) encadrent la scène, leurs canopées se rejoignant 50m au-dessus pour former un plafond de feuillage percé de trouées laissant filtrer une lumière de soleil couchant en faisceaux dorés obliques. Des lianes épaisses pendent comme des rideaux entre les arbres. Des fougères arborescentes de 8m flanquent les ziggurats. Des oiseaux tropicaux (aras, toucans) sont perchés en silhouettes colorées dans la canopée. Le ciel visible à travers les trouées de la canopée est un crépuscule tropical dramatique — orange, pourpre, magenta. L'humidité ambiante crée des nappes de brume basse entre les troncs d'arbres.",
+      "atmosphere": "Danger primal, chaleur humide oppressante, le battement de tambours imaginé résonnant entre les temples, l'odeur imaginée d'encens, de sang séché et de fleurs tropicales",
+      "weather": "Crépuscule tropical humide — air saturé d'humidité, brume basse entre les arbres, derniers rayons de soleil perçant la canopée",
+      "time_of_day": "Crépuscule avancé — le soleil touche l'horizon, ses derniers rayons obliques transforment la canopée en vitrail vert et or"
+    },
+    "subjects": [
+      {
+        "element": "La statue de Hakkar le Dieu Sang",
+        "details": "Serpent ailé de 15m au sommet du ziggourat central. Corps de serpent torsadé en spirale ascendante, surface de pierre sculptée avec des écailles individuelles visibles. Deux ailes membraneuses de chauve-souris déployées (10m d'envergure chaque). Tête de vipère avec des crocs de 1m et une mâchoire articulée (les prêtres versent le sang dans la bouche ouverte). Les yeux sont deux rubis massifs taillés qui reflètent la lumière des torches rituelles — ils semblent briller d'une vie propre. Des traînées de sang séché coulent depuis la bouche le long du corps de pierre.",
+        "importance": "Point focal vertical dominant — le dieu maléfique qui surplombe tout"
+      },
+      {
+        "element": "Le Grand Prêtre Troll ritualiste",
+        "details": "Un troll mâle de 2.5m de hauteur, peau bleu-gris, longs bras, deux défenses (tusks) proéminentes de la mâchoire supérieure. Coiffure cérémonielle massive de plumes rouges, vertes et or montées sur un cadre d'os. Torse nu peint de motifs géométriques en rouge sang. Colliers d'os et de crocs autour du cou. Pagne de tissu violet et or. Bras levés vers Hakkar — des spirales d'énergie vert-or des Loa tourbillonnent autour de ses mains et de ses avant-bras, montant vers la statue. Pieds nus sur la pierre de l'escalier sacré.",
+        "importance": "Point focal narratif humain — le canal entre le monde mortel et le divin"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plan d'ensemble avec contre-plongée modérée — depuis la place cérémonielle regardant vers le ziggourat central et Hakkar",
+      "angle": "Contre-plongée de 20° — le spectateur est au pied du ziggourat, dominé par la masse du temple et la statue de Hakkar au sommet",
+      "lens_equivalent": "24mm grand angle — pour capturer la hauteur du ziggourat, la jungle encadrante et l'espace de la place",
+      "focal_point": "Les yeux de rubis de Hakkar au sommet du ziggourat — le regard descend ensuite le long de l'escalier jusqu'au Grand Prêtre, puis vers le totem vaudou au premier plan",
+      "depth_of_field": "Grande profondeur de champ — tout est net, la brume et la fumée créent la séparation des plans",
+      "composition_rules": [
+        "Axe vertical puissant : totem (bas) → Grand Prêtre (milieu) → Hakkar (haut) — l'axe du rituel, du terrestre au divin",
+        "L'escalier du ziggourat crée une ligne directrice diagonale montante irrésistible",
+        "La jungle encadrante crée un vignettage naturel de verdure — on regarde le temple à travers un écrin de nature",
+        "Les faisceaux de lumière du soleil couchant perçant la canopée ajoutent des diagonales dorées dynamiques"
+      ]
+    },
+    "lighting": {
+      "key_light": "Soleil couchant filtrant par les trouées de la canopée — faisceaux obliques dorés (2500K) qui frappent sélectivement la pierre du ziggourat, illuminant Hakkar d'une lumière dramatique d'or et de sang, laissant des zones d'ombre profonde entre les faisceaux",
+      "fill_light": "Torches tiki et braseros rituels — flammes orange vives (2000K) réparties le long de l'escalier et autour de la place, créant un éclairage chaud dansant qui complète les ombres du soleil couchant",
+      "accent_lights": [
+        "Énergie vaudou/Loa : spirales vert-or surnaturelles autour des mains du Grand Prêtre, seule source de lumière non-naturelle, créant des ombres vertes sur les marches",
+        "Rubis de Hakkar : deux points de lumière rouge concentrée au sommet de la composition — yeux qui regardent le spectateur",
+        "Flammes vertes des braseros rituels : lumière verte surnaturelle qui teinte la fumée et la brume environnantes",
+        "Bioluminescence de la jungle : champignons et insectes lumineux (points blanc-bleu) dans l'ombre de la canopée"
+      ],
+      "shadows": "Ombres dramatiques projetées par les ziggurats — la masse pyramidale crée des ombres triangulaires géantes sur la place. Les arbres projettent des ombres en réseau de branches sur les temples. L'éclairage multi-source (soleil + torches + magie) crée des ombres multiples colorées — l'ombre solaire est bleue, l'ombre des torches est violette, l'ombre de la magie Loa est rouge.",
+      "atmospheric_fx": [
+        "Brume tropicale basse : nappe de brouillard entre les troncs d'arbres géants, traversée par les faisceaux solaires en god rays dorés spectaculaires",
+        "Fumée rituelle : les braseros et les bougies émettent une fumée d'encens qui monte en volutes lentes, se mêlant à la brume",
+        "Poussière dorée : particules tropicales en suspension illuminées par les rayons du soleil couchant, créant des colonnes de lumière visible",
+        "Énergie Loa : traînées d'énergie verte spiralant depuis les mains du prêtre vers Hakkar, créant un tube de lumière surnaturelle le long de l'escalier"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Expressionist tropical painting with vigorous brushwork, Henri Rousseau jungle density meets Mesoamerican archaeological illustration, saturated humid colors, obsessive foliage texture, Blizzard troll concept art with authentic Mesoamerican aesthetics and voodoo supernatural elements. THE GREAT CEREMONIAL PLAZA OF ZUL'GURUB — oval open space 80x50m at the heart of the Gurubashi troll temple complex in Stranglethorn jungle. Surrounded by THREE STEPPED ZIGGURATS (truncated pyramids, 7 levels) of grey-brown stone, the largest rising 40m. Steep narrow stairs flanked by carved serpents at each level. At the summit of the CENTRAL ZIGGURAT: a raised sacrifice altar above which rises a 15M STATUE OF HAKKAR THE SOULFLAYER — a winged serpent, bat-membrane wings deployed (10m wingspan each), viper head with 1m fangs and articulated jaw (priests pour blood into the open mouth), body of spiraling stone serpent coils with individually carved scales, eyes are two MASSIVE CUT RUBIES reflecting torchlight seeming to glow with life of their own, dried blood trails running from the mouth down the stone body. Stranglethorn jungle ENCIRCLES AND INVADES the complex — giant trees (kapok, mahogany, 3-5m diameter trunks) growing between temples, roots splitting stone walls, canopy forming a vegetable vault 50m above pierced by sunset light shafts. FOREGROUND: plaza edge with cracked irregular stone slabs invaded by tropical moss and grass. A 4M TALL VOODOO TOTEM — carved wood pole stacking animal and humanoid skulls (troll, human), painted red and blue, adorned with colored feathers, bone beads, small cloth gris-gris bags. Lit tiki torches flanking the totem — vivid orange flames with sparks. Around the totem base: a ritual circle traced in dried blood (dark brown-red), black wax candles in geometric patterns, bones arranged in star shapes. A living snake (anaconda/boa) lazily coiling around the totem base, shiny skin reflecting firelight. MIDGROUND: the central ziggurat rising ahead — 7 levels bearing centuries of ritual traces, dark stains on steps (dried blood), Gurubashi glyphs carved and painted red and gold. Central staircase ascending directly to Hakkar statue. RITUAL TORCHES on both sides of stairway — stone braziers with supernatural greenish Loa-energy flame. Gurubashi troll silhouettes (blue-skinned, tall, lanky) on the tiers: some praying before small altars, others standing sentinel with spears. A GRAND TROLL PRIEST mid-stairway — standing full 2.5m height, massive ceremonial headdress of red green and gold feathers mounted on bone frame, bare torso painted with geometric blood-red patterns, necklaces of bone and fangs, purple and gold loincloth, bare feet on sacred stone, arms raised toward Hakkar with GREEN-GOLD LOA ENERGY SPIRALS swirling around hands and forearms rising toward the statue — an active ritual. BACKGROUND: Stranglethorn jungle enclosing the temples, tree trunks 3-5m diameter framing the scene, canopy meeting 50m above as a foliage ceiling with openings letting through oblique golden sunset light shafts, thick lianas hanging like curtains, 8m tree ferns flanking ziggurats, tropical bird silhouettes (macaws, toucans) perched in canopy, twilight sky through canopy gaps: orange, purple, magenta. Low mist between tree trunks. LIGHTING: setting sun through canopy gaps — oblique golden shafts (2500K) selectively striking ziggurat stone, illuminating Hakkar in dramatic gold-and-blood light with deep shadow zones between beams. Tiki torches and ritual braziers as warm orange (2000K) dancing firelight across the plaza. Supernatural green-gold Loa energy spirals around priest's hands as the only non-natural light creating green shadows on steps. Ruby eyes of Hakkar as two concentrated red light points. Green supernatural ritual brazier flames tinting nearby smoke and mist. Jungle bioluminescence (fungi, insects) as white-blue points in canopy shadow. Dramatic ziggurat shadows as giant triangles across plaza. Multi-source lighting creating colored multiple shadows: solar shadow blue, torch shadow purple, Loa magic shadow red. ATMOSPHERIC: low tropical mist between giant tree trunks crossed by solar shafts in spectacular golden god rays, ritual incense smoke rising in slow volutes mixing with mist, golden suspended tropical particles creating visible light columns, Loa energy trails spiraling from priest to Hakkar creating a supernatural light tube along the stairway. Color palette: deep jungle green, aged temple brown, crimson ritual blood, orange tiki flame, supernatural yellow-green Loa, ruby gold Hakkar eyes. Mood: primal danger, oppressive humid heat, imagined drumbeats echoing between temples, the blood and the sap, drums in the night.",
+    "negative": "text, watermark, signature, UI elements, modern elements, anime style, cartoon, photorealistic close-up faces, winter scene, snow, ice, desert, arid landscape, European architecture, technology, sci-fi, blurry, low quality, sparse vegetation, deforested, split frame, multiple panels, border frame, cheerful bright atmosphere, cute friendly creatures"
+  }
+}

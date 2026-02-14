@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_molten_core",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_molten_core.png",
+    "ck2_gfx_name": "GFX_evt_hoa_molten_core",
+    "final_size": "460x300",
+    "scene_intent": "Molten Core — le coeur en fusion sous Blackrock Mountain, domaine des élémentaires de feu. Immense caverne volcanique souterraine avec des rivières de magma, des piliers d'obsidienne, et des élémentaires de feu errant. L'enfer géologique absolu."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : les peintures du Vésuve par Joseph Wright of Derby + la Porte de l'Enfer de Rodin",
+        "Rendu : matte painting cinématique, noir et orange extrêmes, empâtements incandescents sur la lave",
+        "L'échelle est le personnage principal : chaque élément doit communiquer l'immensité inhumaine de l'espace",
+        "Tonalité : le sublime terrible — une beauté naturelle si intense qu'elle terrif ie, la Terre vivante et en colère"
+      ],
+      "look": "cinematic digital matte painting, extreme black-and-orange contrast, thick luminous impasto on lava surfaces, geological accuracy at mythic scale, J.M.W. Turner volcanic seascapes intensity meets Blizzard raid environment concept art, every obsidian facet and magma current rendered with fluid dynamics accuracy",
+      "palette": {
+        "dominant": "#FF4500 — orange lave incandescent, la couleur de la roche en fusion à 1200°C",
+        "secondary": "#0A0A0A — noir obsidienne absolue, le vide entre les rivières de feu",
+        "accent_1": "#FFD700 — jaune-or du magma le plus chaud, les points à 1500°C+",
+        "accent_2": "#8B0000 — rouge sombre de la lave refroidissante, croûtes de basalte rouge",
+        "accent_3": "#FF6347 — rouge-orange des élémentaires de feu, la forme vivante du magma",
+        "highlight": "#FFFFF0 — blanc pur du coeur du magma et des explosions de vapeur"
+      },
+      "art_references": [
+        "J.M.W. Turner — Eruption du Vésuve (lumière volcanique, puissance atmosphérique)",
+        "Joseph Wright of Derby — Vesuvius in Eruption (le volcan comme spectacle sublime)",
+        "Frederic Edwin Church — Cotopaxi (volcan à l'échelle panoramique, lumière dramatique)",
+        "Blizzard — Molten Core raid environment art (référence directe, proportions mythiques)"
+      ]
+    },
+    "environment": {
+      "space": "La Caverne Principale du Molten Core — un espace géologique impossible de 800m de diamètre et 200m de plafond, situé à 3km sous la surface de Blackrock Mountain. Le sol est un réseau de plateformes d'obsidienne noire solide séparées par des RIVIÈRES DE MAGMA de 10 à 50m de large, coulant lentement avec des courants visibles en surface (lignes de flux orange vif sur fond rouge sombre). Des PILIERS D'OBSIDIENNE naturels (colonnes de basalte hexagonales géantes, 5-30m de diamètre, certaines de 150m de haut) soutiennent la voûte — ils brillent d'un orange interne, le magma circulant encore dans leurs veines de roche. Au centre de la caverne : un LAC DE LAVE de 200m de diamètre, surface bouillonnante et ondulante, d'où émerge par intermittence des GEYSERS DE MAGMA de 30m de haut.",
+      "foreground": "Une plateforme d'obsidienne noire sur laquelle le spectateur se tient — la surface est vitreuse, réfléchissante, craquelée de fissures d'où émane une lueur orange. Le bord de la plateforme plonge abruptement vers une rivière de lave de 20m de large qui coule de gauche à droite. Un pont de pierre naturel (arche basaltique) enjambe la rivière au milieu du premier plan — étroit, sans rampe, la lave léchant ses fondations. Des cristaux de soufre jaune se sont formés en grappes sur les arêtes de la plateforme. Des empreintes massives sont fondues dans l'obsidienne — les pas d'un élémentaire géant.",
+      "midground": "Au-delà de la rivière : un champ de formation géologiques — des colonnes de basalte hexagonales de tailles variées créant un paysage de piliers comme un orgue géant. Entre les colonnes, 3-4 ÉLÉMENTAIRES DE FEU sont visibles : des formes humanoïdes de 8-12m faites de magma vivant et de flammes, leur corps un tourbillon permanent de roche fondue et de feu. L'un marche lentement, laissant des empreintes de lave derrière lui. Un autre est immobile, bras levés, alimentant un courant de feu ascendant. Leurs formes sont semi-transparentes — on voit à travers eux la roche derrière, teintée d'orange. Plus loin, la courbe d'un PONT DE CHAÎNES EN FER SOMBRE enjambant le lac de lave central — les chaînes rougissent à mi-portée sous la chaleur.",
+      "background": "Le lac de lave central occupe le fond de l'image — une mer de feu orange-jaune-blanc d'une luminosité aveuglante au centre, s'assombrissant en rouge vers les berges. Des geysers de magma jaillissent sporadiquement — colonnes de roche fondue projetées à 30m, retombant en fontaines incandescentes. La paroi opposée de la caverne est à peine visible à travers la distorsion thermique — un mur de roche noire percé d'ouvertures rougeoyantes (d'autres galeries, d'autres chambres de feu). Le plafond de la voûte est invisible — perdu dans les fumées sulfureuses et la distorsion de chaleur. On devine seulement des stalactites noires massives qui s'effilochent dans la brume de soufre.",
+      "atmosphere": "Le sublime volcanique absolu — une puissance géologique si immense qu'elle efface le concept même d'humanité, la chaleur est un personnage physique, le grondement permanent de la Terre",
+      "weather": "Pas de météo — un environnement de fournaise permanent : 800°C ambiant, émanations sulfureuses, zéro humidité, courants convectifs violents créant des micro-tornades de flammes",
+      "time_of_day": "Sans objet — la lave EST le soleil ici, illuminant tout d'en bas en un jour éternel orange"
+    },
+    "subjects": [
+      {
+        "element": "Les Élémentaires de Feu",
+        "details": "3-4 formes humanoïdes de 8-12m faites de lave en fusion et de flammes. Pas de traits faciaux distinguables — juste des yeux qui sont des points blancs incandescents dans un visage de magma tourbillonnant. Leurs corps sont semi-transparents, un mélange de roche fondue rouge sombre, de magma orange vif et de flammes jaunes. Ils laissent des traînées de lave derrière eux en marchant. L'un d'eux alimente un pilier de feu vertical — canalisant l'énergie de la Terre.",
+        "importance": "Donnent l'échelle (les humains sont des fourmis à côté) et la vie à la scène"
+      }
+    ],
+    "camera": {
+      "shot_type": "Ultra wide panoramique — vue depuis une plateforme surélevée embrassant l'immensité de la caverne",
+      "angle": "Légère plongée de 10° — regardant vers le lac de lave central et les élémentaires",
+      "lens_equivalent": "16mm ultra-grand angle — pour capturer l'échelle impossible de l'espace",
+      "focal_point": "Le lac de lave central et les geysers — le coeur incandescent de la scène",
+      "depth_of_field": "Tout est techniquement net mais la distorsion thermique et les fumées créent une perte progressive naturelle",
+      "composition_rules": [
+        "La rivière de lave au premier plan coupe l'image horizontalement — barrière de feu entre le spectateur et l'enfer",
+        "Les piliers d'obsidienne créent un rythme vertical régulier guidant l'oeil vers la profondeur",
+        "Les élémentaires sont positionnés sur la ligne du tiers — assez proches pour être lisibles, assez loin pour montrer leur taille par rapport aux piliers",
+        "Le lac de lave crée un gradient de luminosité du fond vers l'avant — l'oeil est attiré vers la source de lumière la plus intense"
+      ]
+    },
+    "lighting": {
+      "key_light": "La lave elle-même — TOUTE la lumière vient du magma (rivières, lac, élémentaires). C'est un monde éclairé uniquement par en bas et par le sol. Température 1500-2000K, orange dominant, intensité variable selon la distance à la lave (éblouissante près des rivières, plus sombre entre les plateformes d'obsidienne)",
+      "fill_light": "Les élémentaires de feu — chacun est une source lumineuse mobile projetant des ombres mouvantes, comme des phares ambulants de magma",
+      "accent_lights": [
+        "Geysers de lave : éclairs de lumière blanche quand le magma jaillit — illumination brève mais intense, flash de 2-3 secondes",
+        "Fissures dans l'obsidienne : réseau de lignes orange fines parcourant le sol comme des veines lumineuses",
+        "Veines de magma dans les piliers : les colonnes de basalte pulsent d'une lueur interne irrégulière",
+        "Cristaux de soufre : points jaune vif, réfléchissant la lumière de lave en concentré"
+      ],
+      "shadows": "Les ombres sont projetées VERS LE HAUT car la lumière vient du sol — inversion totale. Les plafonds des surplombs sont éclairés, les surfaces supérieures des objets sont dans l'ombre. Les piliers projettent des ombres radiales vers le haut sur la voûte. Les élémentaires projettent des ombres ondulantes dans toutes les directions. Il n'y a pas de noir absolu — la lueur omniprésente de la lave teinte tout d'orange sombre.",
+      "atmospheric_fx": [
+        "Distorsion thermique massive : l'air au-dessus de chaque source de lave ondule violemment, les structures lointaines sont méconnaissables",
+        "Fumées sulfureuses : nappes jaune-gris s'accumulant sous la voûte, traversées par la lumière ascendante de la lave",
+        "Particules incandescentes : milliers de braises et de gouttelettes de lave en suspension dans les courants convectifs, comme une voie lactée de feu",
+        "Fontaines de lave : les geysers créent des arcs paraboliques de gouttelettes incandescentes retombant en pluie dorée"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Cinematic digital matte painting, extreme black-and-orange contrast, luminous impasto on lava, Turner volcanic intensity meets Blizzard raid concept art. THE MOLTEN CORE — impossible geological space 800m diameter 200m ceiling, 3km beneath Blackrock Mountain. Floor is a network of solid BLACK OBSIDIAN PLATFORMS separated by 10-50m wide RIVERS OF FLOWING MAGMA with visible surface flow lines (bright orange currents on dark red). GIANT HEXAGONAL BASALT COLUMNS (5-30m diameter, up to 150m tall) supporting the vault, glowing internal orange as magma circulates in their rock veins. Center: a 200m LAVA LAKE, bubbling undulating surface, intermittent 30m MAGMA GEYSERS erupting as incandescent fountains. FOREGROUND: glassy reflective obsidian platform cracked with fissures emanating orange glow. Edge drops abruptly to a 20m wide lava river flowing left to right. A NATURAL STONE ARCH BRIDGE spanning the river — narrow, no rails, lava licking its foundations. Yellow sulfur crystal clusters on platform edges. Massive footprints MELTED into obsidian — the steps of a giant fire elemental. MIDGROUND: beyond the river, a field of varied hexagonal basalt columns like a giant organ pipe landscape. Between columns: 3-4 FIRE ELEMENTALS visible — 8-12m tall humanoid forms made of LIVING MAGMA AND FLAME, bodies a permanent swirl of molten red rock, bright orange magma, and yellow flames. Semi-transparent, rock visible through their bodies tinted orange. One walks slowly leaving lava footprints. Another stands motionless, arms raised, feeding a vertical fire column channeling Earth energy. White incandescent dots for eyes in swirling magma faces. Further: a DARK IRON CHAIN BRIDGE curving over the central lava lake — chains glowing red at mid-span from heat. BACKGROUND: central lava lake — a SEA OF FIRE, blinding orange-yellow-white at center darkening to red at shores. Magma geysers erupting sporadically as 30m columns of molten rock falling back as incandescent fountains. Opposite cavern wall barely visible through thermal distortion — black rock pierced with glowing red openings. Vault ceiling invisible — lost in sulfurous smoke and heat distortion, only massive black stalactites trailing off into sulfur haze. LIGHTING: ALL LIGHT FROM MAGMA BELOW — world illuminated entirely from ground up. Temperature 1500-2000K orange dominant. Fire elementals as mobile light sources casting moving shadows like ambulant magma headlights. Geyser flashes of white light during eruptions. Fine orange fissure network on obsidian floor as luminous veins. Pulsing internal glow in basalt pillars. Bright yellow sulfur crystal reflections. SHADOWS PROJECTED UPWARD — total inversion, ceilings lit, upper surfaces in shadow. Pillar shadows radiate upward on vault. No absolute black — omnipresent lava glow tints everything deep orange. ATMOSPHERIC: massive thermal distortion above every lava source warping distant structures beyond recognition, yellow-grey sulfurous smoke accumulating under vault crossed by ascending lava light, thousands of incandescent embers and lava droplets suspended in convective currents like a fire Milky Way, geyser parabolic arcs of droplets falling as golden rain. Color palette: incandescent orange, absolute obsidian black, molten gold-yellow, cooling basalt dark red, fire elemental red-orange, pure white magma cores. Mood: absolute volcanic sublime, geological power erasing the concept of humanity, heat as a physical character, the Earth's permanent rumble.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, faces close-up, blue tones, green vegetation, water, ice, snow, sky, clouds, outdoor daylight, characters in foreground, people, buildings, architecture, technology, sci-fi, blurry, low quality, flat lighting, split frame, panels, border, cheerful"
+  }
+}

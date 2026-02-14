@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_helm_paladin_t1",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_helm_paladin_t1.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background. Paladin Tier 1 Lawbringer Helm \u2014 a noble full plate helmet in polished silver and gold. Prominent golden cross symbol on the forehead, emanating faint holy light. White cloth drape hanging from the back of the helm. Narrow eye slits with soft golden-white glow within suggesting divine vision. Clean crusader aesthetic, ceremonial yet battle-ready. Blue rare quality (#0070dd) divine glow. Front-facing view centered in frame. No person wearing it, single item, dark background.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

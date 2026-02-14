@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_mace_legendary",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_mace_legendary.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background with vignette. Sulfuras, Hand of Ragnaros \u2014 a colossal flaming warhammer of mythic power. The hammer head is forged from living magma and dark iron, its surface a churning mix of solidified black volcanic rock cracking open to reveal blindingly bright molten orange-yellow magma beneath. Eternal flames wreath the striking surface, with concentric rings of fire energy orbiting the head. The haft is dark iron wrapped in fiery chains that glow red-hot. Lava drips and ember particles trail from the weapon. Intense orange legendary quality (#ff8000) fire glow radiating massively. Diagonal orientation. The weapon of a Fire God. No hands, single item, dark background, readable at 80x80.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

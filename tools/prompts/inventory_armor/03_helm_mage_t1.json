@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_helm_mage_t1",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_helm_mage_t1.png",
+    "ck2_gfx_name": "GFX_inv_hoa_helm_mage_t1",
+    "final_size": "64x64",
+    "scene_intent": "Arcanist Crown — Tier 1 Mage headpiece from Molten Core, an elegant purple and gold circlet with an arcane gemstone centerpiece and flowing cloth side drapes. Rendered as a World of Warcraft inventory icon with a rare-quality blue glow. The crown must convey scholarly arcane mastery, Kirin Tor elegance, and the refined power of a practiced spellcaster."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Direct reference: World of Warcraft Classic — Arcanist Crown (Tier 1 Mage set from Molten Core)",
+        "Render: hand-painted digital icon art, delicate brushwork for cloth and gem surfaces, rich jewel tones",
+        "Framing: single isolated item, centered on dark gradient, WoW inventory icon composition",
+        "Quality border: rare item blue glow (#0070dd) framing the icon edges, arcane radiant bloom",
+        "Tonality: scholarly elegance, arcane authority, Dalaran high-mage sophistication"
+      ],
+      "look": "hand-painted WoW inventory icon style, stylized realism with fine detail work on gems and cloth textures, rich saturated jewel tones, luminous gemstone rendering, concept art quality matching Blizzard item artists",
+      "palette": {
+        "dominant": "#4a1a6b — deep royal purple of the cloth drapes and circlet band padding",
+        "secondary": "#c8a832 — warm burnished gold of the circlet metalwork and filigree",
+        "accent_1": "#7b3fa0 — brighter violet-purple of the arcane gem's internal glow",
+        "accent_2": "#0070dd — rare quality blue glow and the gem's surface reflection color",
+        "accent_3": "#e8d584 — bright gold highlights on the filigree peaks and metal edges",
+        "highlight": "#d4b8ff — pale lavender-white sparkle on the gemstone facets"
+      },
+      "art_references": [
+        "World of Warcraft — Arcanist Crown (Tier 1 Mage, Molten Core)",
+        "Blizzard Entertainment — WoW Classic inventory icon style for cloth armor headpieces",
+        "Art Nouveau jewelry design — flowing organic metalwork with central gemstone (Lalique, Mucha)",
+        "Kirin Tor aesthetic from WoW — purple and gold scholarly wizard motif",
+        "Byzantine imperial crowns — low-profile circlet with hanging pendilia cloth drapes"
+      ]
+    },
+    "environment": {
+      "space": "Pure inventory icon presentation. The circlet floats centered against a smooth dark radial gradient background from near-black (#18141e) at edges to a slightly lighter dark purple-grey (#221e2a) behind the item. The rare blue glow mixes subtly with the crown's own purple emanation.",
+      "foreground": "The circlet occupies approximately 65-70% of the frame, presented at a slight downward tilt to show the top surface of the band and the gemstone setting, as if viewed on a velvet display.",
+      "midground": "Not applicable — single item icon composition",
+      "background": "Smooth dark gradient with a faint purple-dark undertone complementing the crown's color scheme. Clean inventory presentation.",
+      "atmosphere": "The quiet power of arcane scholarship — this crown was earned through knowledge, not brute force. It radiates calm magical authority.",
+      "weather": "Not applicable — interior inventory icon",
+      "time_of_day": "Not applicable — inventory icon with controlled lighting"
+    },
+    "subjects": [
+      {
+        "element": "Arcanist Crown — Tier 1 Mage circlet headpiece",
+        "details": "An exquisite open circlet designed for a mage of the highest arcane order, blending precious metalwork with enchanted cloth and a centerpiece gemstone. STRUCTURE: The circlet is a curved band of burnished gold that wraps around the head in a gentle arc — not a full enclosed helm but an open crown. The band is approximately two fingers wide, with a slight upward peak at the center front where the gem is mounted. The band tapers gently toward the sides where it would connect behind the head (the rear is not visible in this presentation angle). CENTRAL GEMSTONE: The crown's focal point is a large oval-cut arcane gemstone mounted in an elaborate gold setting at the forehead center. The gem is a deep violet-purple with an internal glow — light seems to come from within the stone, creating a luminous depth effect. The gem's facets catch light in pale lavender-white sparkles across its surface, while the core radiates a soft purple luminescence. The setting around the gem features four gold prongs and an ornate gold bezel with tiny engraved arcane rune marks. Above the gem, the gold band rises into a small pointed peak or finial. FILIGREE: The gold band is decorated with intricate filigree work — scrolling vine-like patterns of thin gold wire soldered onto the band surface, with tiny gold bead accents at the scroll terminals. The filigree has a slightly three-dimensional raised quality, catching light differently from the smooth band beneath. CLOTH DRAPES: From each side of the circlet, hanging from small gold rings at the temple positions, are cloth side drapes made of rich royal purple silk. These drapes are approximately the same length as the circlet's height, hanging down in gentle folds. The cloth is luxurious — smooth with subtle sheen, the folds creating light and dark purple gradations. The bottom edges of the drapes are trimmed with a thin gold thread border and terminate in tiny gold tassel points. The cloth suggests this is a scholar's crown, not a warrior's helm — elegant, refined, deliberately unwieldy in combat.",
+        "scale": "The circlet fills the frame width generously with the cloth drapes adding vertical extent — overall a wide, low-profile silhouette distinct from the tall warrior helms"
+      },
+      {
+        "element": "Rare quality blue glow effect",
+        "details": "A soft blue glow (#0070dd) emanates from the crown, concentrating particularly around the gemstone where it blends with the gem's own purple radiance to create a blue-violet aura. The glow outlines the gold metalwork edges and the tips of the cloth drapes. The interaction between the blue item-quality glow and the purple arcane energy of the crown itself creates a layered luminous effect — blue on the outer edge, transitioning to purple closer to the item.",
+        "scale": "Glow extends 5-8% beyond the item's silhouette into the dark background"
+      }
+    ],
+    "camera": {
+      "shot_type": "Flat frontal icon view with very slight top-down tilt to show the circlet's band surface and gem setting",
+      "angle": "Nearly straight-on, 5-10 degree downward tilt to reveal the top of the circlet band, very slight left rotation for depth",
+      "lens_equivalent": "85mm equivalent — flat presentation, no perspective distortion",
+      "focal_point": "The central arcane gemstone — the viewer's eye should go to the glowing purple gem first, then trace along the gold band and down the cloth drapes",
+      "depth_of_field": "Infinite — entire item in sharp focus, only glow effects are soft",
+      "composition_rules": [
+        "Circlet centered horizontally, positioned slightly above vertical center to allow cloth drapes to hang downward",
+        "Gemstone at the visual center, serving as the brightest and most detailed focal point",
+        "Gold filigree band extends toward frame edges, defining horizontal spread",
+        "Cloth drapes add vertical weight below the band, balancing the composition",
+        "Rare blue glow creates a soft luminous frame around the entire piece"
+      ]
+    },
+    "lighting": {
+      "key_light": "Moderate directional light from upper-left at 40 degrees, neutral warm white (5200K), designed to catch the gold filigree and create sparkles across the gemstone facets. The gold responds with rich warm reflections while the purple cloth shows subtle sheen variations.",
+      "fill_light": "Cool blue-purple ambient fill from below and right, 30% intensity, simulating reflected light from the gem's own glow onto the underside of the gold band and the lower portions of the cloth drapes.",
+      "accent_lights": [
+        "Rare-quality blue rim light (#0070dd at 35% intensity) outlining the circlet's silhouette — the gold band edges and cloth drape hems",
+        "Gemstone internal illumination: the arcane gem radiates its own purple light, casting a faint violet wash on the gold setting and the upper portion of the cloth drapes",
+        "Gold specular highlights: sharp warm points on the filigree peaks, the prong tips of the gem setting, and the tassel points of the drapes"
+      ],
+      "shadows": "Gentle shadows beneath the circlet band suggesting depth, soft shadows in the cloth folds creating rich purple gradations from bright violet-purple in the light to deep grape-purple in the recesses. The gem setting casts a tiny shadow on the band below it. Shadows are generally softer than the warrior helms — befitting the lighter, more delicate construction.",
+      "atmospheric_fx": [
+        "Rare blue glow aura: diffuse bloom around the item, blending with the purple gem radiance at the center",
+        "Gemstone internal luminosity: the arcane gem appears to contain a tiny swirling light source, creating depth within the faceted surface",
+        "Faint arcane motes: 2-3 tiny pale purple-blue sparkle particles near the gem, suggesting ambient arcane energy leaking from the enchantment",
+        "Gold filigree micro-glints: the raised filigree catches light in tiny scattered highlights across the band surface"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hand-painted World of Warcraft inventory icon style, single item on dark background, stylized realism with fine painterly detail. An elegant purple and gold mage circlet crown (Arcanist Crown, Tier 1) centered on a smooth dark gradient background. Open curved gold band with intricate scrolling filigree, slightly peaked at center front. Large oval-cut deep violet-purple arcane gemstone in elaborate gold prong setting at the forehead, gem glowing with internal purple luminescence, facets catching pale lavender-white sparkles. Engraved arcane rune marks on the gold bezel. Royal purple silk cloth side drapes hanging from gold rings at the temples, luxurious folds with subtle sheen, gold thread trim and tiny gold tassel points at the bottom edges. Rich burnished gold metalwork with fine wire filigree scrollwork and gold bead accents. Rare quality blue glow (#0070dd) emanating as a soft aura blending with the gem's purple radiance. Faint purple-blue arcane sparkle motes floating near the gem. Upper-left warm directional lighting catching gold filigree, cool purple fill from below. Jewel-tone palette of royal purple and burnished gold. Concept art quality, Blizzard inventory icon style, scholarly arcane elegance, clear readable silhouette.",
+    "negative": "person wearing armor, full body, mannequin, armor stand, text, watermark, signature, multiple items, busy background, environmental scene, photorealistic, photograph, 3D render, anime, cartoon, chibi, neon, sci-fi, modern elements, blurry, low quality, oversaturated, split frame, multiple panels, border frame, UI elements, HUD, tooltip, item name overlay"
+  }
+}

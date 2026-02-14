@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_blackrock_spire",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_blackrock_spire.png",
+    "ck2_gfx_name": "GFX_evt_hoa_blackrock_spire",
+    "final_size": "460x300",
+    "scene_intent": "Upper Blackrock Spire — la forteresse volcanique de la Dark Horde et des dragons noirs. L'intérieur de Blackrock Mountain : une salle du trône taillée dans l'obsidienne au-dessus d'une caldera de lave. Architecture orque militariste combinée à un repaire de dragons. Puissance brute, chaleur infernale, domination."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : la forge de Saruman dans Le Seigneur des Anneaux (Isengard) croisée avec le nid de Smaug",
+        "Rendu : peinture numérique hyper-contrastée, palette restreinte noir-rouge-or, textures métalliques et volcaniques",
+        "Contraste thématique : la brutalité militariste orque (fer, pointes, crânes) construite au-dessus d'une beauté géologique terrifiante (lave, obsidienne, basalte cristallin)",
+        "Tonalité : oppression militaire, chaleur de fournaise, domination par la force et le feu"
+      ],
+      "look": "ultra high contrast digital painting, limited palette black-red-gold, obsidian and molten metal textures, John Howe and Alan Lee Mordor concept art meets Blizzard Blackrock Mountain designs, volcanic geological formations rendered with scientific accuracy then scaled to mythic proportions",
+      "palette": {
+        "dominant": "#1A0A00 — noir d'obsidienne, la roche volcanique vitreuse qui compose murs et sol",
+        "secondary": "#FF4500 — orange-rouge de la lave en fusion, présente partout comme une menace permanente",
+        "accent_1": "#2F2F2F — fer brut de la Dark Horde, sombre, fonctionnel, brutalement forgé",
+        "accent_2": "#FFD700 — or du trésor de dragon, reflets sur le métal chauffé, yeux de dragons",
+        "accent_3": "#8B0000 — rouge sang des bannières de la Dark Horde et des écailles de dragon noir",
+        "highlight": "#FFFF00 — jaune pur du coeur de la lave et des points d'incandescence maximale"
+      },
+      "art_references": [
+        "John Howe — Illustrations de la Porte Noire et de Barad-dûr (architecture du Mal industriel)",
+        "Alan Lee — Intérieur de la Montagne du Destin (lave + architecture volcanique)",
+        "Blizzard — Cinematic de la fondation de Blackrock Foundry (WoD) — référence directe",
+        "Caspar David Friedrich — Le Voyageur au-dessus de la mer de nuages (sensation vertigineuse de domination sur un abîme)"
+      ]
+    },
+    "environment": {
+      "space": "La Salle du Trône du Général Drakkisath — le commandant du Upper Blackrock Spire — située au sommet d'une tour d'obsidienne surplombant la caldera intérieure de Blackrock Mountain. La salle est creusée dans la roche volcanique vitreuse noire — les murs sont d'obsidienne polie reflétant la lueur de la lave en contrebas. Un balcon ouvert au fond donne sur le vide intérieur de la montagne — un gouffre de 500m de profondeur au fond duquel le Molten Core bouillonne. Des colonnes de basalte naturel (orgues basaltiques hexagonales) soutiennent un plafond de roche irrégulier d'où pendent des stalactites noires comme des crocs.",
+      "foreground": "Le sol de la salle : dalles d'obsidienne noire polie comme un miroir, dans lesquelles se reflètent les lueurs de lave venant du gouffre. Des canaux creusés dans le sol permettent à des ruisseaux de lave de circuler — irrigation infernale qui chauffe la salle et la baigne d'une lumière orange par en-dessous. Des boucliers de fer noir et des armes orques (haches, masses d'armes) sont accrochés aux murs comme trophées. Au premier plan, un brasero de fer massif contenant des charbons incandescents — les manches de deux épées dépassent, chauffées au blanc pour la forge. Des empreintes de griffes de dragon sont visibles dans le sol d'obsidienne — trois traits parallèles profonds, la marque d'une bête colossale.",
+      "midground": "Le trône de Drakkisath et le perchoir de dragon. Un trône massif taillé dans un seul bloc de basalte noir, orné de crânes de taureaux et de rivets de fer — c'est un siège de commandement, pas de confort. Derrière le trône, un perchoir de dragon : une plateforme de fer et de pierre où un DRAGON NOIR est accroupi. Le dragon est partiellement visible — une aile repliée de 15m d'envergure visible, le long cou terminé par une tête aux yeux or fondu, des volutes de fumée noire s'échappant de ses naseaux. Son corps est recouvert d'écailles noires aux reflets rouges. Des oeufs de dragon noir — sphères de 50cm, noires avec des veines rouge-orange pulsantes — sont disposés dans un nid de cendres chaudes à côté du perchoir. Des bannières de la Dark Horde (noir et rouge, symbole du crâne et des haches croisées) pendent des colonnes de basalte.",
+      "background": "Le gouffre intérieur de Blackrock Mountain visible par le balcon ouvert — un abîme vertigineux. Les parois intérieures de la montagne sont percées de niveaux d'habitation, de passerelles de chaînes et de fer reliant les parois opposées, de forges dont les cheminées crachent de la fumée noire. Tout en bas, visible mais lointain : la surface du Molten Core — un lac de lave d'un orange aveuglant d'où montent des colonnes de fumée noire. La chaleur déforme l'air au-dessus du gouffre, faisant onduler les structures lointaines. Tout en haut, un puits de lumière naturelle — l'ouverture du sommet de la montagne — laisse filtrer un disque de ciel bleu pâle incongru au milieu de cet enfer.",
+      "atmosphere": "Fournaise permanente, domination militaire absolue, la puissance brute du feu et du fer, le grondement sourd de la montagne vivante",
+      "weather": "Intérieur volcanique — chaleur sèche extrême (60°C+), courants d'air chaud ascendants, particules de cendres et de soufre en suspension, aucune humidité",
+      "time_of_day": "Sans objet — éclairage permanent par la lave et les forges"
+    },
+    "subjects": [
+      {
+        "element": "Le Dragon Noir sur le perchoir",
+        "details": "Dragon adulte de la Dragonflight Noire, accroupi sur une plateforme de fer. Écailles noir profond avec des reflets rouge-sang quand la lumière de lave les frappe. Yeux : or fondu liquide, avec une pupille verticale de reptile. Aile droite repliée le long du corps, aile gauche partiellement étendue (15m visible). Fumée noire s'écoule des naseaux comme une respiration paresseuse. La posture est celle d'un prédateur au repos — détendu mais prêt. La queue serpente hors du cadre. Des cicatrices de bataille sur le museau.",
+        "importance": "Point focal principal — le pouvoir ultime de la Dark Horde réside dans son alliance avec les dragons noirs"
+      },
+      {
+        "element": "Les oeufs de dragon",
+        "details": "5-7 oeufs de dragon noir dans un nid de cendres incandescentes. Sphères de 50cm, surface noir mat avec des veines internes rouge-orange qui pulsent lentement — on voit la vie se développer à l'intérieur. Chaque oeuf est légèrement différent (stade de développement). L'un a une micro-fissure d'où s'échappe une faible lueur. Ils représentent l'avenir de la menace — le danger qui grandit.",
+        "importance": "Élément narratif clé — ces oeufs sont la raison stratégique du raid sur UBRS"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plan large intérieur — cadrage dramatique depuis l'entrée de la salle vers le trône et le balcon sur le gouffre",
+      "angle": "Légère contre-plongée de 10° — le trône et le dragon sont en position élevée par rapport à l'entrée",
+      "lens_equivalent": "24mm grand angle — pour capturer la salle, le dragon, ET le gouffre visible derrière",
+      "focal_point": "Les yeux d'or du dragon noir — le premier contact visuel, la menace qui vous regarde en retour",
+      "depth_of_field": "Profondeur étendue au premier plan et midground, légère perte de netteté dans le gouffre (chaleur + distance)",
+      "composition_rules": [
+        "Triangle de puissance : le dragon au sommet, le trône au centre, les oeufs à la base — pyramide de menace",
+        "Le gouffre visible derrière crée une profondeur vertigineuse — on comprend la hauteur",
+        "Les canaux de lave au sol créent des lignes directrices convergentes vers le trône",
+        "Les bannières de la Dark Horde tombant des colonnes encadrent la scène comme un rideau de théâtre sinistre"
+      ]
+    },
+    "lighting": {
+      "key_light": "La lave du gouffre en arrière-plan — lumière orange-rouge intense (1500K) venant par le balcon ouvert, éclairant la salle par l'arrière et les côtés, créant des silhouettes dramatiques du trône et du dragon",
+      "fill_light": "Les canaux de lave au sol — uplighting orange qui éclaire les surfaces par en-dessous, inversant les ombres habituelles (visages éclairés par le bas = menaçant instinctivement)",
+      "accent_lights": [
+        "Yeux du dragon : deux points d'or fondu intenses, la source lumineuse la plus concentrée de la scène",
+        "Oeufs pulsants : chaque oeuf émet sa propre lueur rouge-orange intermittente, comme des battements de coeur asynchrones",
+        "Brasero de forge au premier plan : braises blanc-jaune avec des épées chauffées, lumière localisée très chaude",
+        "Reflets d'obsidienne : les murs polis reflètent et multiplient toutes les sources de lumière, comme un palais de miroirs noirs",
+        "Veines de lave dans la roche : fissures naturelles dans les murs d'obsidienne laissant filtrer de minces lignes de lumière orange"
+      ],
+      "shadows": "Les ombres sont profondes et chaudes (pas noires mais brun-rouge très sombre) car la lumière omniprésente de la lave empêche le noir absolu. Le dragon projette une ombre massive sur le plafond — une forme ailée menaçante. Les colonnes de basalte projettent des ombres régulières hexagonales au sol. L'ombre du trône est projetée vers le spectateur par le backlight de lave.",
+      "atmospheric_fx": [
+        "Distorsion thermique : l'air au-dessus du gouffre et des canaux de lave ondule visiblement, déformant les structures en arrière-plan",
+        "Particules de cendres et braises : points incandescents flottant paresseusement dans les courants ascendants chauds",
+        "Fumée du dragon : volutes de fumée noire dense s'écoulant des naseaux, rampant le long du plafond avant de se dissiper",
+        "Lueur pulsante : la lave du gouffre pulse lentement (cycle de 10s), faisant onduler l'éclairage de toute la salle comme un battement de coeur volcanique"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Ultra high contrast digital painting, limited black-red-gold palette, John Howe Mordor art meets Blizzard Blackrock Mountain concept art, volcanic geological formations at mythic scale. GENERAL DRAKKISATH'S THRONE ROOM — Upper Blackrock Spire. A chamber carved from volcanic obsidian glass inside Blackrock Mountain, overlooking the interior caldera. Walls of polished obsidian reflecting lava glow. An open balcony at the rear revealing a 500m deep VOLCANIC ABYSS — the interior of the mountain — with the Molten Core visible far below as a blindingly orange lava lake with black smoke columns. Natural hexagonal basalt organ-pipe columns supporting an irregular rock ceiling with black stalactite fangs. FOREGROUND: obsidian floor polished mirror-black reflecting lava glow from below, channels carved in the floor carrying STREAMS OF LAVA as infernal irrigation heating the room and bathing it in orange underglow. Black iron shields and orcish weapons (axes, maces) mounted on walls as trophies. A massive iron brazier with incandescent coals, two sword hilts protruding heated white-hot for forging. Dragon claw marks scored deep into the obsidian floor — three parallel gouges from a colossal beast. MIDGROUND: DRAKKISATH'S THRONE — massive seat carved from single basalt block adorned with bull skulls and iron rivets, a command seat not comfort. Behind the throne: a DRAGON PERCH — an iron and stone platform where a BLACK DRAGON crouches. The dragon partially visible — one folded wing 15m span visible, long neck ending in a head with MOLTEN GOLD EYES with vertical reptile pupils, wisps of black smoke streaming from nostrils like lazy breathing. Body covered in deep black scales with blood-red reflections when lava light hits them. Battle scars on the snout. The posture of a resting predator — relaxed but ready, tail serpenting out of frame. Beside the perch: 5-7 BLACK DRAGON EGGS in a nest of hot ashes — 50cm spheres, matte black surface with internal red-orange veins pulsing slowly, life developing within, one egg with a micro-crack leaking faint glow. DARK HORDE BANNERS (black and red, skull and crossed axes symbol) hanging from basalt columns. BACKGROUND: the interior ABYSS of Blackrock Mountain through the open balcony — vertiginous depths with habitation levels carved into walls, chain-and-iron walkways spanning the void, forge chimneys belching black smoke. At the very bottom: Molten Core lava surface blinding orange. Heat distortion warping distant structures. At the very top: a natural skylight — the mountain summit opening showing an incongruous pale blue sky disc amid this inferno. LIGHTING: lava from the abyss as backlight — intense orange-red (1500K) through the balcony creating dramatic throne and dragon silhouettes. Floor lava channels as sinister orange UPLIGHTING illuminating surfaces from below (instinctively threatening inverted shadows). Dragon eyes as two concentrated molten gold light points — the most intense focused light source. Pulsing eggs each emitting intermittent red-orange heartbeat glow. Forge brazier with white-yellow embers. Polished obsidian walls reflecting and multiplying all light sources like a hall of black mirrors. Lava veins in rock walls filtering thin orange light lines through natural fissures. Deep warm shadows (dark brown-red not black) — omnipresent lava light prevents absolute darkness. Dragon shadow projected massively on ceiling as a winged menacing shape. ATMOSPHERIC: thermal distortion — visible air shimmer above abyss and lava channels warping background. Floating ash and ember particles in lazy hot updrafts. Dragon smoke — dense black wisps from nostrils crawling along ceiling. Pulsing lava glow cycling slowly making entire room lighting undulate like a volcanic heartbeat. Color palette: obsidian black, molten orange-red, crude dark iron, dragon gold, blood-red banners, pure yellow incandescence. Mood: permanent furnace, absolute military domination, brute power of fire and iron, the living mountain's rumble.",
+    "negative": "text, watermark, signature, UI elements, modern elements, anime style, cartoon, photorealistic faces close-up, cold blue tones, green vegetation, water, ice, snow, outdoor daylight, bright sky, cheerful, cute dragon, friendly atmosphere, blurry, low quality, split frame, multiple panels, border frame, sci-fi technology"
+  }
+}

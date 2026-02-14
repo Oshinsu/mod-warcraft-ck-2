@@ -1,0 +1,327 @@
+# GoA: Heroes of Azeroth - Batiments Speciaux Legendaires
+# Merveilles et sites uniques lies a des lieux specifiques d'Azeroth
+# Un seul constructible par province, effets puissants
+
+castle = {
+
+	###############################################
+	# TOUR DE KARAZHAN (Deadwind Pass)
+	# Tour du Gardien Medivh - savoir arcanique supreme
+	###############################################
+	hoa_tour_karazhan = {
+		desc = hoa_tour_karazhan_desc
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_karazhan
+					title = b_deadwind_pass
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		gold_cost = 1000
+		build_time = 1825
+		tax_income = 10
+		culture_techpoints = 0.15
+		economy_techpoints = 0.08
+		military_techpoints = 0.05
+		tech_growth_modifier = 0.3
+		monthly_character_prestige = 0.5
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# FORGE DU PUITS DE SOLEIL (Quel'Thalas)
+	# Source de pouvoir arcanique des elfes de sang
+	###############################################
+	hoa_forge_puits_soleil = {
+		desc = hoa_forge_puits_soleil_desc
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_silvermoon
+					title = b_sunwell
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		gold_cost = 800
+		build_time = 1460
+		tax_income = 8
+		culture_techpoints = 0.12
+		economy_techpoints = 0.06
+		local_tax_modifier = 0.2
+		monthly_character_prestige = 0.4
+		monthly_character_piety = 0.2
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# PUITS DE LUNE D'ELUNE (Teldrassil/Darnassus)
+	# Le plus sacre des puits de lune
+	###############################################
+	hoa_puits_lune_elune = {
+		desc = hoa_puits_lune_elune_desc
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_darnassus
+					title = b_teldrassil
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 600
+		build_time = 1095
+		tax_income = 5
+		culture_techpoints = 0.1
+		monthly_character_piety = 0.5
+		disease_defence = 0.3
+		local_revolt_risk = -0.05
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# GRANDE FORGE D'IRONFORGE (Ironforge)
+	# Le coeur volcanique de la montagne naine
+	###############################################
+	hoa_grande_forge_ironforge = {
+		desc = hoa_grande_forge_ironforge_desc
+		potential = {
+			FROMFROM = { title = b_ironforge }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 700
+		build_time = 1095
+		tax_income = 8
+		economy_techpoints = 0.1
+		military_techpoints = 0.08
+		levy_reinforce_rate = 0.25
+		retinuesize = 100
+		land_morale = 0.1
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# DRAENOR DIMENSIONAL ANCHOR (Exodar)
+	# Technologie Naaru de stabilisation dimensionnelle
+	###############################################
+	hoa_ancre_dimensionnelle = {
+		desc = hoa_ancre_dimensionnelle_desc
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_exodar
+					title = b_the_exodar
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		gold_cost = 900
+		build_time = 1460
+		tax_income = 7
+		culture_techpoints = 0.12
+		economy_techpoints = 0.08
+		military_techpoints = 0.06
+		tech_growth_modifier = 0.25
+		monthly_character_piety = 0.3
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# SALLE DU TRONE DE STORMWIND (Stormwind)
+	# Le coeur politique de l'Alliance
+	###############################################
+	hoa_salle_trone_stormwind = {
+		desc = hoa_salle_trone_stormwind_desc
+		potential = {
+			FROMFROM = {
+				OR = {
+					title = b_stormwind
+					title = b_stormcliff
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 600
+		build_time = 1095
+		tax_income = 6
+		global_tax_modifier = 0.08
+		economy_techpoints = 0.05
+		monthly_character_prestige = 0.5
+		levy_size = 0.1
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# GROMMASH HOLD (Orgrimmar)
+	# Le bastion du Chef de Guerre
+	###############################################
+	hoa_grommash_hold = {
+		desc = hoa_grommash_hold_desc
+		potential = {
+			FROMFROM = { title = b_orgrimmar }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 500
+		build_time = 730
+		tax_income = 5
+		military_techpoints = 0.1
+		levy_size = 0.15
+		levy_reinforce_rate = 0.2
+		land_morale = 0.15
+		retinuesize = 75
+		monthly_character_prestige = 0.5
+		ai_creation_factor = 110
+		add_number_to_name = no
+	}
+
+	###############################################
+	# TEMPLE DE LA LUMIERE (Chapelle de l'Espoir)
+	# Cathedrale sacree des paladins et pretres
+	###############################################
+	hoa_temple_lumiere = {
+		desc = hoa_temple_lumiere_desc
+		potential = {
+			FROM = {
+				OR = {
+					is_paladin_class_trigger = yes
+					is_priest_class_trigger = yes
+					trait = zealous
+				}
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 3
+			NOT = { has_building = hoa_academie_demonologie_1 }
+		}
+		gold_cost = 500
+		build_time = 1095
+		tax_income = 4
+		monthly_character_piety = 0.4
+		monthly_character_prestige = 0.2
+		disease_defence = 0.2
+		local_revolt_risk = -0.04
+		levy_size = 0.05
+		ai_creation_factor = 60
+		add_number_to_name = no
+	}
+
+	###############################################
+	# BAZAR DES OMBRES (Marche noir souterrain)
+	# Commerce illicite et contrebande
+	###############################################
+	hoa_bazar_ombres = {
+		desc = hoa_bazar_ombres_desc
+		potential = {
+			FROM = {
+				OR = {
+					is_rogue_class_trigger = yes
+					intrigue >= 15
+					culture_group = goblin_group
+					culture_group = forsaken_group
+				}
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 2 }
+		gold_cost = 300
+		build_time = 365
+		tax_income = 5
+		local_tax_modifier = 0.1
+		local_revolt_risk = 0.02
+		monthly_character_prestige = -0.1
+		ai_creation_factor = 55
+		add_number_to_name = no
+	}
+
+	###############################################
+	# ARENE DES GLADIATEURS (Combat spectacle)
+	# Combats de gladiateurs pour le divertissement
+	###############################################
+	hoa_arene_gladiateurs = {
+		desc = hoa_arene_gladiateurs_desc
+		potential = {
+			FROM = {
+				OR = {
+					is_warrior_class_trigger = yes
+					martial >= 15
+					culture_group = orc_group
+					culture_group = human_group
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 400
+		build_time = 730
+		tax_income = 5
+		monthly_character_prestige = 0.3
+		local_revolt_risk = -0.02
+		military_techpoints = 0.03
+		ai_creation_factor = 65
+		add_number_to_name = no
+	}
+
+	###############################################
+	# FERME DE MANA-VERS (Agriculture magique)
+	# Elevage de vers de mana et cultures enchantees
+	###############################################
+	hoa_ferme_mana = {
+		desc = hoa_ferme_mana_desc
+		potential = {
+			FROM = {
+				OR = {
+					is_magic_class_trigger = yes
+					culture_group = highelf_group
+					culture_group = draenei_group
+				}
+			}
+			OR = {
+				terrain = farmlands
+				terrain = plains
+				terrain = forest
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 1 }
+		gold_cost = 250
+		build_time = 547
+		tax_income = 4
+		supply_limit = 1.0
+		economy_techpoints = 0.02
+		local_tax_modifier = 0.05
+		ai_creation_factor = 70
+		add_number_to_name = no
+	}
+
+	###############################################
+	# OBSERVATOIRE ASTRAL (Astronomie magique)
+	# Observation des etoiles et divination
+	###############################################
+	hoa_observatoire_astral = {
+		desc = hoa_observatoire_astral_desc
+		potential = {
+			FROM = {
+				OR = {
+					is_magic_class_trigger = yes
+					learning >= 18
+				}
+			}
+			terrain = mountain
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		gold_cost = 500
+		build_time = 1095
+		tax_income = 3
+		culture_techpoints = 0.08
+		tech_growth_modifier = 0.2
+		monthly_character_prestige = 0.2
+		monthly_character_piety = 0.15
+		ai_creation_factor = 55
+		add_number_to_name = no
+	}
+}

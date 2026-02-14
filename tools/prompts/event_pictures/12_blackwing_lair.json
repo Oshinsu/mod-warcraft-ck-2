@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_blackwing_lair",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_blackwing_lair.png",
+    "ck2_gfx_name": "GFX_evt_hoa_blackwing_lair",
+    "final_size": "460x300",
+    "scene_intent": "Blackwing Lair — le laboratoire de Nefarian au sommet de Blackrock Mountain. Un dragon noir sur un trône de fer, entouré de cuves d'expérimentations chromatiques, des oeufs de dragon, une salle du trône draconique combinant la majesté du vol noir et l'horreur de l'eugénisme draconique."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : Le Cabinet du Dr Caligari (laboratoire de savant fou) + le trésor de Smaug dans le Hobbit",
+        "Rendu : peinture sombre et lustrée, surfaces métalliques et écailles réfléchissantes, clair-obscur profond",
+        "Contraste thématique : intelligence froide et cruelle (science draconique) dans un écrin de puissance brute (volcan, fer, flammes)",
+        "Tonalité : majesté terrifiante, le génie au service du mal, l'arrogance divine du dragon"
+      ],
+      "look": "dark lustrous digital painting, reflective metallic and scale surfaces, deep chiaroscuro, dragon anatomy rendered with reptilian accuracy, Blizzard dragon concept art meets classical dragon painting tradition of Gustave Moreau, laboratory equipment blending medieval alchemy with draconic bio-engineering",
+      "palette": {
+        "dominant": "#1a1a2e — bleu-noir très sombre des profondeurs de la montagne et de l'écaille de dragon noir",
+        "secondary": "#8B0000 — rouge sombre des cuves d'expérience, du sang de dragon, des yeux de Nefarian",
+        "accent_1": "#7B68EE — violet des expériences chromatiques, de la magie draconique corrompue",
+        "accent_2": "#FFD700 — or des trésors, des ornements, des yeux des dragons",
+        "accent_3": "#FF4500 — orange de la lave visible en contrebas et des forges de fer noir",
+        "highlight": "#E6E6FA — reflets froids sur les écailles de dragon et les surfaces métalliques"
+      },
+      "art_references": [
+        "Gustave Moreau — Jupiter et Sémélé (figure divine oppressante dans un décor opulent et sombre)",
+        "John Howe — Smaug dans la Montagne Solitaire (dragon sur son trésor, clair-obscur magistral)",
+        "HR Giger — bio-mécanique (le mélange organique-industriel des cuves d'expérience)",
+        "Blizzard — Cinematic de Nefarian et Onyxia, WoW Classic"
+      ]
+    },
+    "environment": {
+      "space": "La Salle du Trône de Nefarian — le sommet de Blackrock Spire aménagé comme un laboratoire-palais draconique. Salle ovale de 100m sur 60m, haute de 40m. Les murs sont des parois de roche volcanique noire renforcées de fer forgé noir. Au fond, un TRÔNE DE FER massif surélevé de 5m sur une plateforme — pas un trône pour humanoïde mais pour DRAGON : une structure de fer noir et d'obsidienne sur laquelle un dragon peut se percher. Les côtés de la salle sont bordés de CUVES D'EXPÉRIENCE — des cylindres de verre de 3m de haut remplis de liquides de couleurs variées (vert, violet, rouge) contenant des spécimens draconiques en développement.",
+      "foreground": "Le sol de la salle : dalles de fer noir rivé, comme le pont d'un cuirassé. Au premier plan, une TABLE DE TRAVAIL en fer et pierre — couverte de parchemins avec des diagrammes d'anatomie draconique (ailes, mâchoires, glandes à feu), de fioles contenant des liquides chromatiques (rouge, vert, bleu, bronze, noir — les 5 vols), d'instruments chirurgicaux draconiques (scalpels géants, pinces d'écailles). Un crâne de dragon chromé (un prototype raté) est posé sur la table — taille d'un cheval, mâchoire ouverte, des cristaux violets poussent dans les orbites comme une tumeur. Un oeuf de dragon noir repose dans un berceau de fer chauffé — sa coquille noire est parcourue de veines rouge-orange pulsantes.",
+      "midground": "NEFARIAN sous forme de dragon. Un DRAGON NOIR COLOSSAL perché sur le trône de fer — pas dans le sens de 'assis' mais dans celui d'un rapace sur son promontoire. Son corps est massif (20m de long visible), entièrement recouvert d'écailles noir d'encre avec des reflets bleu-violet dans les zones d'ombre. Ses ailes sont repliées mais la membrane est visible — noire translucide avec un réseau de veines rouge sombre. Sa tête est tournée vers le spectateur avec une expression d'intelligence malveillante calculatrice — les yeux sont des fentes dorées verticales brillant d'une lumière interne. Sa mâchoire est légèrement entrouverte, une fumée noire s'en échappe. Une des griffes avant repose possessivement sur le bord du trône. De chaque côté du trône, les cuves d'expérience chromatique : cylindres de verre épais contenant des formes embryonnaires draconiques dans des liquides de couleur — l'un vert avec un embryon de dragon vert, un autre violet avec quelque chose qui n'est ni dragon ni humain.",
+      "background": "Derrière le trône, une immense baie ouverte sur le ciel — l'ouverture du sommet de Blackrock Mountain. Le ciel nocturne est visible, étoilé, avec la lune d'Azeroth. Des draconides (humanoïdes dragons, les serviteurs) sont alignés en rangs le long des murs latéraux comme des gardes, armés de hallebardes. Le plafond de la salle est décoré d'ossements de dragons vaincus — crânes, ailes, épines dorsales — montés comme des trophées ou des avertissements.",
+      "atmosphere": "Majesté terrifiante et intelligence cruelle, le laboratoire comme salle du trône, la science comme domination, l'arrogance de celui qui se croit au-dessus des dieux",
+      "weather": "Intérieur — air chaud et sec montant de la montagne volcanique, léger courant d'air froid depuis la baie ouverte sur le ciel nocturne",
+      "time_of_day": "Nuit — visible par la baie ouverte, lune et étoiles au-dessus de la montagne"
+    },
+    "subjects": [
+      {
+        "element": "Nefarian sous forme de dragon",
+        "details": "Dragon noir adulte de 20m, écailles noir d'encre avec reflets bleu-violet. Perché sur un trône de fer comme un rapace. Tête tournée vers le spectateur — expression d'intelligence calculatrice malveillante. Yeux : fentes verticales dorées brillant de lumière interne. Mâchoire légèrement ouverte avec fumée noire. Griffe avant possessive sur le bord du trône. Ailes repliées montrant membrane noire translucide avec veines rouge sombre. Cicatrices anciennes sur le museau. Posture de souverain — relaxée mais totalement en contrôle.",
+        "importance": "Point focal absolu — le maître des lieux"
+      },
+      {
+        "element": "Les cuves d'expérience chromatique",
+        "details": "6-8 cylindres de verre de 3m remplis de liquides de couleurs (un par vol draconique : noir, rouge, vert, bleu, bronze + mélanges violets et chromatiques). Chaque cuve contient une forme embryonnaire ou un spécimen — un embryon de dragon, un organe isolé, une chimère ratée. Des tubes et tuyaux relient les cuves entre elles. Des runes de contention gravées sur le verre. Chaque cuve émet sa propre couleur de lumière, créant un arc-en-ciel malsain.",
+        "importance": "Racontent l'histoire — Nefarian ne domine pas seulement, il CRÉE"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plan large frontal avec légère contre-plongée — face au trône de Nefarian",
+      "angle": "Contre-plongée de 15° — le spectateur est au niveau du sol, Nefarian sur son trône surélevé domine",
+      "lens_equivalent": "28mm — assez large pour capturer le trône et les cuves latérales sans distorsion excessive",
+      "focal_point": "Les yeux dorés de Nefarian — le contact visuel direct avec le prédateur suprême",
+      "depth_of_field": "Profondeur étendue — table de travail nette au premier plan, Nefarian net au centre, ciel nocturne doux au fond",
+      "composition_rules": [
+        "Nefarian au centre exact de l'image — symétrie de pouvoir, le dragon est le point d'ancrage",
+        "Les cuves d'expérience alignées de chaque côté créent un corridor visuel menant au trône",
+        "La table de travail au premier plan crée un premier plan narratif riche avant le dragon",
+        "L'ouverture sur le ciel nocturne derrière crée un cadre dans le cadre — Nefarian silhouetté contre les étoiles"
+      ]
+    },
+    "lighting": {
+      "key_light": "Lumière de la lune par la baie ouverte — froide (7000K) et argentée, éclairant Nefarian par l'arrière et les côtés, créant un rim light surnaturel sur ses écailles et le contour de ses ailes",
+      "fill_light": "Les cuves d'expérience — chacune émet sa propre couleur (rouge, vert, bleu, violet), créant un éclairage multicolore qui baigne les côtés de la salle d'un arc-en-ciel malade",
+      "accent_lights": [
+        "Yeux de Nefarian : deux fentes dorées intenses projetant de faibles faisceaux lumineux dans la fumée — les yeux d'un prédateur dans l'obscurité",
+        "Veines pulsantes de l'oeuf de dragon : lumière rouge-orange battante au premier plan, proche et menaçante",
+        "Cristaux violets dans le crâne de prototype : lueur violette malade émanant des orbites du crâne raté",
+        "Forges distantes : lueur orange diffuse venant d'en dessous (la montagne volcanique), réchauffant les dalles de fer",
+        "Runes de contention sur les cuves : lignes de lumière blanche-bleu gravées dans le verre, barrières magiques"
+      ],
+      "shadows": "Ombre massive de Nefarian projetée VERS le spectateur par la lumière lunaire arrière — l'ombre d'ailes déployées couvrant le sol de la salle. Les cuves projettent des ombres colorées qui se mélangent au sol. La fumée de la mâchoire de Nefarian crée des ombres mouvantes sur le plafond.",
+      "atmospheric_fx": [
+        "Fumée de dragon : volutes noires épaisses sortant de la mâchoire de Nefarian, rampant le long du plafond",
+        "Vapeurs des cuves : chaque cuve émet de la vapeur colorée correspondant à son contenu, créant une brume multicolore au niveau du sol",
+        "Poussière de lave : fines particules oranges en suspension montant du plancher de fer chauffé",
+        "Lueur d'oeuf pulsante : la lumière rouge-orange de l'oeuf pulse comme un battement de coeur au premier plan"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Dark lustrous digital painting, reflective metallic and dragon scale surfaces, deep chiaroscuro, reptilian anatomy accuracy, Blizzard dragon concept art meets Gustave Moreau divine oppression, bio-engineering laboratory aesthetic. NEFARIAN'S THRONE ROOM — Blackwing Lair atop Blackrock Mountain. Oval chamber 100x60m, 40m ceiling. Black volcanic rock walls reinforced with black wrought iron. CENTER: a massive IRON AND OBSIDIAN THRONE elevated 5m on a platform — designed for a DRAGON not a humanoid. NEFARIAN IN DRAGON FORM perched on the throne like a raptor on a promontory — 20m long BLACK DRAGON, scales ink-black with blue-violet sheen in shadow areas. Wings folded showing black translucent membrane with dark red vein network. Head turned toward the viewer with an expression of CALCULATING MALEVOLENT INTELLIGENCE — eyes are vertical golden slits glowing with internal light. Jaw slightly open with black smoke escaping. One front claw resting possessively on the throne edge. Ancient battle scars on the snout. Sovereign posture — relaxed but in total control. Both sides flanked by CHROMATIC EXPERIMENT VATS — 6-8 thick glass cylinders 3m tall filled with colored liquids (one per dragonflight: black, red, green, blue, bronze + purple and chromatic mixtures), each containing embryonic dragon forms or specimens — an embryo, an isolated organ, a failed chimera. Tubes and pipes connecting vats. Containment runes engraved on glass. Each vat emitting its own color light creating a sickly rainbow. FOREGROUND: riveted black iron floor plates like a battleship deck. An iron-and-stone WORK TABLE covered with draconic anatomy diagrams on parchment (wings, jaws, fire glands), vials of chromatic liquids (red, green, blue, bronze, black — the 5 flights), giant draconic surgical instruments (oversized scalpels, scale clamps). A FAILED PROTOTYPE CHROME DRAGON SKULL on the table — horse-sized, jaw open, violet crystals growing tumor-like from its eye sockets. A BLACK DRAGON EGG in a heated iron cradle — black shell with pulsing red-orange veins. BACKGROUND: behind the throne a massive OPEN BAY onto the night sky — the summit opening of Blackrock Mountain. Starry night sky with Azeroth moon visible. Dragonkin humanoid servants in ranks along lateral walls as guards with halberds. Ceiling decorated with mounted dragon bone trophies — skulls, wings, spines. LIGHTING: moonlight through the open bay — cold silver (7000K) backlighting Nefarian creating supernatural rim light on scales and wing edges. Experiment vats each emitting their own color (red, green, blue, violet) bathing the sides in a sickly rainbow multicolored fill light. Nefarian golden eye slits projecting faint light beams through smoke — predator eyes in darkness. Pulsing red-orange egg veins as close foreground heartbeat light. Violet glow from crystal tumors in prototype skull. Distant forge orange glow from below heating iron floor. White-blue containment rune lines engraved on vat glass. Nefarian's MASSIVE SHADOW projected toward viewer by moonlit backlight — wing-spread shadow covering the chamber floor. ATMOSPHERIC: thick black smoke from Nefarian's jaw crawling along ceiling, colored vapor from each vat creating multicolor ground-level mist, fine orange lava dust rising from heated iron floor, egg heartbeat pulse. Color palette: ink-black dragon scales, blood-dark experiment red, chromatic violation violet, treasure gold, volcanic orange undertone, cold moonlight silver. Mood: terrifying majesty, cruel intelligence, the laboratory as throne room, science as domination, the arrogance of one who believes himself above the gods.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, cute friendly dragon, daylight interior, bright cheerful, green grass, outdoor landscape, technology screens, sci-fi hologram, blurry, low quality, flat lighting, split frame, panels, border, peaceful calm"
+  }
+}

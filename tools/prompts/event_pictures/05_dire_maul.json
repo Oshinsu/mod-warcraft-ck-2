@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_dire_maul",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_dire_maul.png",
+    "ck2_gfx_name": "GFX_evt_hoa_dire_maul",
+    "final_size": "460x300",
+    "scene_intent": "Dire Maul (Hache-Tripes) — cité elfe ancienne d'Eldre'Thalas, joyau de l'Empire Kaldorei, abandonnée depuis 10 000 ans et reconquise par la jungle et les ogres. L'image doit capturer la mélancolie de la grandeur perdue — des colonnes elfiques de marbre blanc envahies par les lianes tropicales, une civilisation éteinte dont l'écho résonne encore."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : Angkor Wat englouti par la jungle rencontre le Rivendell de Tolkien — splendeur elfique mangée par le temps",
+        "Rendu : peinture académique romantique du XIXe siècle (ruines antiques dans la nature), exécution numérique moderne",
+        "Contraste thématique : la perfection géométrique elfique vs le chaos organique de la jungle reconquérante",
+        "Tonalité : mélancolie majestueuse, le sublime romantique, la beauté de la décrépitude"
+      ],
+      "look": "romantic academic ruin painting in the tradition of Hubert Robert and Giovanni Piranesi, lush tropical vegetation with obsessive botanical detail, moonlit marble surfaces, Blizzard concept art level of fantasy architectural detail, every carved rune and moss-covered capital rendered with archaeological love",
+      "palette": {
+        "dominant": "#F5F5F5 — blanc-gris du marbre elfique Kaldorei, adouci par 10 000 ans d'intempéries",
+        "secondary": "#228B22 — vert jungle profond et vivant, les lianes et fougères qui dévorent les ruines",
+        "accent_1": "#C0C0C0 — argent des incrustations et runes elfiques encore visibles, éclat lunaire",
+        "accent_2": "#4169E1 — bleu royal des protections magiques arcanes encore actives, lueur résiduelle",
+        "accent_3": "#8B4513 — brun-roux de la terre, du bois pourrissant et des feux de camp ogres",
+        "highlight": "#E6E6FA — lavande lunaire, lumière de la lune sur le marbre humide"
+      },
+      "art_references": [
+        "Hubert Robert — Ruines romaines avec figures (la poésie des ruines antiques dans la nature)",
+        "Giovanni Piranesi — Vues de Rome (architecture monumentale en déclin, gravure dramatique)",
+        "Alan Lee — illustrations du Seigneur des Anneaux (architecture elfique féerique et mélancolique)",
+        "Henri Mouhot — premières esquisses d'Angkor Wat (la stupéfaction devant la civilisation perdue)"
+      ]
+    },
+    "environment": {
+      "space": "La Cour du Pylône Ouest d'Eldre'Thalas — un espace ouvert de 100m sur 60m entouré de colonnades elfiques. C'est une cour intérieure à ciel ouvert, autrefois un jardin de méditation des Shen'dralar (elfes de la nuit érudits). Les colonnes sont en marbre blanc veiné de bleu, cannelées dans le style ionique elfique — couronnées de chapiteaux en forme de feuilles de chêne lunaire stylisées. La plupart sont encore debout mais certaines gisent brisées au sol, envahies de mousse. Un arbre colossal (un chêne millénaire) a poussé au centre de la cour, ses racines soulevant les dalles de marbre, son tronc de 5m de diamètre embrassant une colonne comme un amant de bois et de pierre.",
+      "foreground": "Sol dallé de marbre blanc et gris, les dalles soulevées et fissurées par les racines. Des fougères tropicales géantes poussent dans chaque fissure — frondes de 2m, d'un vert intense. Un escalier de marbre descend vers la cour, ses marches couvertes de mousse humide. Une fontaine elfique brisée — vasque hexagonale en argent terni, l'eau ne coule plus mais un bassin de pluie s'est formé, reflétant la lune et les colonnes avec une clarté de miroir. Des lucioles bleu-argent dansent autour de la fontaine — probablement des restes de magie elfique plutôt que des insectes.",
+      "midground": "La colonnade principale : 12 colonnes encore debout sur les 20 originales, reliées par un entablement orné de frises narratives elfiques (scènes de la Guerre des Anciens, à peine lisibles sous la mousse). L'arbre central domine — sa canopée s'étale à 30m de haut, filtrant la lumière lunaire en motifs mouvants sur le sol. Des lianes pendent des branches comme des rideaux végétaux. Entre deux colonnes du fond, un grossier campement ogre est visible — foyer de pierres avec braises rouges, peaux de bêtes tendues comme auvent, un totem primitif fait d'os et de pierres grossièrement empilées. Le contraste entre la finesse elfique et la brutalité ogre est saisissant.",
+      "background": "Au-delà de la colonnade, la jungle de Feralas se presse contre les murs extérieurs, visible par les arches. Des palmiers et des arbres tropicaux géants dépassent les murs. Le ciel nocturne est visible à travers la canopée de l'arbre central — une lune pleine argentée d'Azeroth brille entre les branches, entourée d'étoiles dans un ciel bleu-nuit profond. Au loin, la silhouette d'une tour elfique encore intacte s'élève au-dessus de la canopée — le donjon de la bibliothèque Athenaeum, dernier bastion de connaissance Shen'dralar.",
+      "atmosphere": "Mélancolie majestueuse, silence sacré brisé par les cris d'oiseaux nocturnes et le crépitement du feu ogre, l'odeur imaginée de mousse humide, de fleurs nocturnes et de pierre ancienne",
+      "weather": "Nuit tropicale claire après une pluie récente — tout est humide et brillant, les surfaces reflètent, l'air est saturé d'humidité avec de légers voiles de brume basse entre les colonnes",
+      "time_of_day": "Nuit, 22h environ — lune pleine haute dans le ciel, visibilité excellente grâce à la lumière lunaire et aux résidus magiques"
+    },
+    "subjects": [
+      {
+        "element": "L'arbre central embrassant la colonne",
+        "details": "Un chêne millénaire de 5m de diamètre de tronc dont les racines massives ont soulevé les dalles de marbre en une vague de pierre brisée. L'une de ses racines principales enlace une colonne de marbre — le bois et la pierre fusionnent, la racine a lentement enveloppé la colonne sur 10 000 ans. C'est à la fois une destruction et un acte d'amour de la nature — l'arbre ne détruit pas la colonne, il la tient. Sa canopée vaste filtre la lumière de la lune en milliers de points lumineux mobiles.",
+        "importance": "Point focal principal — incarne la thématique temps/nature/civilisation perdue"
+      },
+      {
+        "element": "Le campement ogre entre les colonnes",
+        "details": "Un campement grossier coincé entre deux colonnes de marbre exquis. Foyer de pierres empilées (pas taillées), braises rouges fumantes, une peau de worg séchant sur une corde tendue entre les colonnes (sacrilège visuel), un totem primitif de crânes et os liés. Quelques fragments de vaisselle elfique en argent utilisés comme gamelles. La brutalité primitive occupant l'espace de la beauté ancienne.",
+        "importance": "Second point focal — incarne la dégradation et l'occupation barbare de la perfection"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plan large à hauteur d'homme — vue depuis l'escalier d'entrée de la cour plongeant légèrement vers l'intérieur",
+      "angle": "Très légère plongée de 5° — le spectateur est sur les dernières marches de l'escalier, regardant la cour en contrebas",
+      "lens_equivalent": "28mm — grand angle modéré pour embrasser la colonnade et l'arbre central sans distorsion",
+      "focal_point": "Le point de fusion entre la racine de l'arbre et la colonne de marbre — là où la nature embrasse la civilisation",
+      "depth_of_field": "Profondeur étendue — net du premier plan au fond, brume atmosphérique pour la perspective",
+      "composition_rules": [
+        "L'arbre central à l'intersection des tiers — légèrement à gauche du centre",
+        "Les colonnes créent un rythme de cadrage naturel — le spectateur 'regarde entre les colonnes' comme entre les pages d'un livre ancien",
+        "La fontaine brisée au premier plan crée une invitation à entrer dans l'espace",
+        "La diagonale escalier (premier plan bas gauche) → arbre (centre) → tour lointaine (haut droite) guide le regard",
+        "Le campement ogre est positionné à droite, secondaire mais impossible à ignorer — comme une blessure"
+      ]
+    },
+    "lighting": {
+      "key_light": "Lune pleine argentée filtrant à travers la canopée de l'arbre — créant un motif de taches lumineuses mouvantes (dappled moonlight) sur le sol de marbre humide. Lumière froide 7000K, douce et diffuse, faisant briller le marbre mouillé comme de la soie",
+      "fill_light": "Résidus magiques elfiques — les runes sur les colonnes émettent encore une très faible lueur bleu-argent, comme des étoiles mourantes dans la pierre. La fontaine brisée conserve un noyau de magie — l'eau de pluie dans la vasque brille faiblement de l'intérieur",
+      "accent_lights": [
+        "Braises du camp ogre — lumière chaude rouge-orange (2200K), localisée, créant un cercle de chaleur brutale au milieu de la fraîcheur lunaire elfique",
+        "Lucioles magiques — minuscules points de lumière bleu-argent dansant autour de la fontaine et le long des colonnes, comme la mémoire vivante de la magie Shen'dralar",
+        "Bioluminescence des mousses et champignons — très faible lueur vert-bleu sur les surfaces les plus humides des colonnes tombées",
+        "Reflets lunaires sur l'eau — la flaque dans la fontaine et les flaques sur le sol reflètent la lune et les colonnes comme des miroirs"
+      ],
+      "shadows": "Ombres des colonnes : longues lignes parallèles bleu-nuit sur le sol de marbre, interrompues par les fougères. Ombre de l'arbre : réseau complexe de branches projeté au sol, se déplaçant imperceptiblement avec la brise. Ombre du campement ogre : chaude et rouge, contrastant violemment avec les ombres froides bleues environnantes.",
+      "atmospheric_fx": [
+        "Brume basse nocturne : nappes de brouillard translucide à 30cm du sol entre les colonnes, traversées par les rayons de lune, créant des faisceaux visibles",
+        "Gouttelettes post-pluie : minuscules gouttes suspendues aux feuilles et aux arêtes de pierre, chacune reflétant la lune comme un minuscule diamant",
+        "Lucioles magiques : particules bleu-argent en mouvement brownien lent autour des éléments elfiques les plus anciens",
+        "Fumée du foyer ogre : un filet de fumée gris-bleu montant paresseusement, traversant un rayon de lune"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Romantic academic ruin painting tradition of Hubert Robert and Piranesi, lush tropical vegetation with obsessive botanical detail, moonlit marble, Blizzard concept art fantasy architecture, every carved rune and moss-covered capital rendered with archaeological love. The West Pylon Court of Eldre'Thalas (Dire Maul) — an open-air interior courtyard 100x60m surrounded by night elf colonnades. White blue-veined marble fluted columns in elven ionic style crowned with stylized moon-oak leaf capitals. Most columns still standing, some fallen and moss-covered. A COLOSSAL MILLENNIAL OAK TREE grown at the center, 5m diameter trunk, its massive roots heaving marble flagstones in waves of broken stone, one main root EMBRACING AND ENTWINING A MARBLE COLUMN — wood and stone fusing over 10,000 years, the root does not destroy the column it holds it, nature embracing civilization. Vast canopy at 30m filtering moonlight into thousands of moving luminous spots on wet marble. Lianas hanging from branches like vegetal curtains. Foreground: marble flagstone floor heaved and cracked by roots, giant tropical ferns growing from every crack (2m fronds, intense green), a moss-covered marble staircase descending into the court, a BROKEN ELVEN FOUNTAIN — hexagonal tarnished silver basin, water no longer flowing but a rainwater pool formed inside reflecting the moon and columns with mirror clarity. Blue-silver fireflies (remnant elven magic) dancing around the fountain. Midground: main colonnade of 12 standing columns of original 20, connected by an entablature with narrative friezes (War of the Ancients scenes barely readable under moss). Between two rear columns: a CRUDE OGRE ENCAMPMENT — rough stacked stone firepit with red-orange embers smoking, worg skin drying on a cord strung between sacred columns (visual sacrilege), a primitive totem of skulls and bones roughly piled, stolen elven silver dishes used as bowls. The contrast between elven refinement and ogre brutality is stark and heartbreaking. Background: Feralas jungle pressing against outer walls visible through arches, giant tropical palms and trees overtopping the walls. Night sky visible through the central oak canopy — full silver Azeroth moon shining between branches surrounded by stars in deep blue-night sky. Distant silhouette of an intact elven tower rising above the canopy — the Athenaeum library keep, last bastion of Shen'dralar knowledge. Lighting: full silver moon filtering through oak canopy creating dappled moonlight pattern on wet marble (cold 7000K soft diffuse making wet marble gleam like silk). Residual elven magic — runes on columns emitting very faint blue-silver glow like dying stars in stone. Fountain rainwater pool glowing faintly from within. Ogre camp embers warm red-orange (2200K) creating a circle of brutal warmth amid cool lunar elven freshness. Magical fireflies as tiny blue-silver dancing light points. Bioluminescent moss and fungi on fallen columns. Lunar reflections in water puddles as mirrors. Atmospheric: low nocturnal mist 30cm above ground between columns crossed by moonbeams creating visible shafts, post-rain droplets suspended on every leaf edge and stone corner each reflecting moon like tiny diamonds, magical particles in slow Brownian motion around oldest elven elements, grey-blue campfire smoke curling lazily through a moonbeam. Color palette: weathered white marble, deep jungle green, elven silver, arcane royal blue, earth brown ogre warmth, moonlit lavender. Mood: majestic melancholy, sacred silence, the beauty of decay, 10,000 years of loss.",
+    "negative": "text, watermark, signature, UI elements, modern elements, anime style, cartoon, photorealistic close-up faces, daytime bright sun, desert, snow, sci-fi, technology, blurry, low quality, deformed columns, split frame, multiple panels, border frame, cheerful happy atmosphere, clean pristine architecture, symmetrical perfection, no damage"
+  }
+}
