@@ -1,0 +1,412 @@
+# =====================================================
+# Heroes of Azeroth - Advisor Consultation Events
+# =====================================================
+# Detailed advisor reports and policy discussions
+# Each advisor provides unique insights and bonuses
+# =====================================================
+
+namespace = hoa_advisor
+
+# ========================================
+# CHANCELLOR REPORT (hoa_advisor.1-5)
+# ========================================
+character_event = {
+	id = hoa_advisor.1
+	title = hoa_advisor_1_title
+	desc = hoa_advisor_1_desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Diplomatic situation analysis
+	option = {
+		name = hoa_advisor_1_a
+		custom_tooltip = { text = hoa_chancellor_analysis_tt }
+		change_diplomacy = 1
+		prestige = 20
+		random_list = {
+			40 = {
+				any_neighbor_independent_ruler = {
+					limit = {
+						NOT = { war_with = ROOT }
+						NOT = { opinion = { who = ROOT value = 50 } }
+					}
+					opinion = { who = ROOT modifier = opinion_sent_emissary years = 3 }
+				}
+			}
+			30 = {
+				culture_techpoints = 0.1
+			}
+			30 = {
+				prestige = 25
+			}
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_chancellor
+			add_character_modifier = { name = hoa_chancellor_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_chancellor
+		}
+
+		ai_chance = { factor = 50 }
+	}
+
+	# Propose alliance strategy
+	option = {
+		name = hoa_advisor_1_b
+		custom_tooltip = { text = hoa_chancellor_alliance_tt }
+		prestige = 30
+		add_character_modifier = { name = hoa_diplomatic_insight duration = 365 }
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_chancellor
+			add_character_modifier = { name = hoa_chancellor_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_chancellor
+		}
+
+		ai_chance = { factor = 30 }
+	}
+
+	# Crisis management briefing
+	option = {
+		name = hoa_advisor_1_c
+		custom_tooltip = { text = hoa_chancellor_crisis_tt }
+		change_intrigue = 1
+		prestige = 15
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_chancellor
+			add_character_modifier = { name = hoa_chancellor_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_chancellor
+		}
+
+		ai_chance = { factor = 20 }
+	}
+}
+
+# ========================================
+# STEWARD REPORT (hoa_advisor.10-15)
+# ========================================
+character_event = {
+	id = hoa_advisor.10
+	title = hoa_advisor_10_title
+	desc = hoa_advisor_10_desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Economic audit - detailed tax report
+	option = {
+		name = hoa_advisor_10_a
+		custom_tooltip = { text = hoa_steward_audit_tt }
+		change_stewardship = 1
+		wealth = 50
+		economy_techpoints = 0.1
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_steward
+			add_character_modifier = { name = hoa_steward_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_steward
+		}
+
+		ai_chance = { factor = 40 }
+	}
+
+	# Tax reform proposal
+	option = {
+		name = hoa_advisor_10_b
+		custom_tooltip = { text = hoa_steward_reform_tt }
+		capital_scope = {
+			add_province_modifier = { name = hoa_tax_reform duration = 730 }
+		}
+		prestige = 15
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_steward
+			add_character_modifier = { name = hoa_steward_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_steward
+		}
+
+		ai_chance = { factor = 35 }
+	}
+
+	# Investment recommendations
+	option = {
+		name = hoa_advisor_10_c
+		custom_tooltip = { text = hoa_steward_invest_tt }
+		add_character_modifier = { name = hoa_economic_insight duration = 365 }
+		add_trait = hoa_merchant_prince
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_steward
+			add_character_modifier = { name = hoa_steward_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_steward
+		}
+
+		ai_chance = { factor = 25 }
+	}
+}
+
+# ========================================
+# MARSHAL REPORT (hoa_advisor.20-25)
+# ========================================
+character_event = {
+	id = hoa_advisor.20
+	title = hoa_advisor_20_title
+	desc = hoa_advisor_20_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	# Military readiness report
+	option = {
+		name = hoa_advisor_20_a
+		custom_tooltip = { text = hoa_marshal_readiness_tt }
+		change_martial = 1
+		military_techpoints = 0.1
+		prestige = 15
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_marshal
+			add_character_modifier = { name = hoa_marshal_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_marshal
+		}
+
+		ai_chance = { factor = 40 }
+	}
+
+	# Propose military campaign
+	option = {
+		name = hoa_advisor_20_b
+		custom_tooltip = { text = hoa_marshal_campaign_tt }
+		add_character_modifier = { name = hoa_military_insight duration = 365 }
+		prestige = 25
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_marshal
+			add_character_modifier = { name = hoa_marshal_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_marshal
+		}
+
+		ai_chance = { factor = 35 }
+	}
+
+	# Border security assessment
+	option = {
+		name = hoa_advisor_20_c
+		custom_tooltip = { text = hoa_marshal_border_tt }
+		capital_scope = {
+			add_province_modifier = { name = hoa_border_patrol duration = 730 }
+		}
+		add_trait = hoa_battle_tested
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_marshal
+			add_character_modifier = { name = hoa_marshal_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_marshal
+		}
+
+		ai_chance = { factor = 25 }
+	}
+}
+
+# ========================================
+# SPYMASTER REPORT (hoa_advisor.30-35)
+# ========================================
+character_event = {
+	id = hoa_advisor.30
+	title = hoa_advisor_30_title
+	desc = hoa_advisor_30_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	# Intelligence briefing - reveal threats
+	option = {
+		name = hoa_advisor_30_a
+		custom_tooltip = { text = hoa_spymaster_intel_tt }
+		change_intrigue = 1
+		prestige = 10
+		random_list = {
+			40 = {
+				add_trait = hoa_shadow_agent
+			}
+			30 = {
+				wealth = 25
+			}
+			30 = {
+				change_intrigue = 1
+			}
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_spymaster
+			add_character_modifier = { name = hoa_spymaster_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_spymaster
+		}
+
+		ai_chance = { factor = 40 }
+	}
+
+	# Counter-espionage operations
+	option = {
+		name = hoa_advisor_30_b
+		custom_tooltip = { text = hoa_spymaster_counter_tt }
+		add_character_modifier = { name = hoa_counter_intelligence duration = 730 }
+		prestige = 15
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_spymaster
+			add_character_modifier = { name = hoa_spymaster_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_spymaster
+		}
+
+		ai_chance = { factor = 35 }
+	}
+
+	# Identify internal threats
+	option = {
+		name = hoa_advisor_30_c
+		custom_tooltip = { text = hoa_spymaster_threats_tt }
+		random_vassal = {
+			limit = {
+				is_adult = yes
+				NOT = { opinion = { who = ROOT value = 0 } }
+			}
+			opinion = { who = ROOT modifier = hoa_opinion_watched years = 5 }
+		}
+		change_intrigue = 1
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_spymaster
+			add_character_modifier = { name = hoa_spymaster_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_spymaster
+		}
+
+		ai_chance = { factor = 25 }
+	}
+}
+
+# ========================================
+# CHAPLAIN COUNSEL (hoa_advisor.40-45)
+# ========================================
+character_event = {
+	id = hoa_advisor.40
+	title = hoa_advisor_40_title
+	desc = hoa_advisor_40_desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Spiritual guidance
+	option = {
+		name = hoa_advisor_40_a
+		custom_tooltip = { text = hoa_chaplain_guidance_tt }
+		piety = 30
+		change_learning = 1
+		if = {
+			limit = { trait = stressed }
+			remove_trait = stressed
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_chaplain
+			add_character_modifier = { name = hoa_chaplain_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_chaplain
+		}
+
+		ai_chance = { factor = 40 }
+	}
+
+	# Faction analysis through moral lens
+	option = {
+		name = hoa_advisor_40_b
+		custom_tooltip = { text = hoa_chaplain_faction_tt }
+		piety = 15
+		prestige = 15
+		any_vassal = {
+			limit = {
+				is_adult = yes
+				NOT = { opinion = { who = ROOT value = -25 } }
+			}
+			opinion = { who = ROOT modifier = opinion_pious_ruler years = 3 }
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_chaplain
+			add_character_modifier = { name = hoa_chaplain_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_chaplain
+		}
+
+		ai_chance = { factor = 35 }
+	}
+
+	# Blessing ceremony
+	option = {
+		name = hoa_advisor_40_c
+		custom_tooltip = { text = hoa_chaplain_blessing_tt }
+		piety = 25
+		health = 0.3
+		add_character_modifier = { name = hoa_blessed duration = 365 }
+		hidden_tooltip = {
+			clr_character_flag = hoa_consulted_chaplain
+			add_character_modifier = { name = hoa_chaplain_consult_cd duration = 180 hidden = yes }
+			set_character_flag = hoa_consulted_chaplain
+		}
+
+		ai_chance = { factor = 25 }
+	}
+}
+
+# ========================================
+# POLICY CHANGE (hoa_advisor.50-55)
+# ========================================
+character_event = {
+	id = hoa_advisor.50
+	title = hoa_advisor_50_title
+	desc = hoa_advisor_50_desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Economic reform
+	option = {
+		name = hoa_advisor_50_a
+		custom_tooltip = { text = hoa_policy_economic_tt }
+		capital_scope = {
+			add_province_modifier = { name = hoa_economic_reform duration = 1825 }
+		}
+		prestige = 25
+		add_trait = hoa_merchant_prince
+		hidden_tooltip = {
+			clr_character_flag = hoa_policy_change_cooldown
+			add_character_modifier = { name = hoa_policy_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_policy_change_cooldown
+		}
+
+		ai_chance = { factor = 40 }
+	}
+
+	# Military reform
+	option = {
+		name = hoa_advisor_50_b
+		custom_tooltip = { text = hoa_policy_military_tt }
+		capital_scope = {
+			add_province_modifier = { name = hoa_military_reform duration = 1825 }
+		}
+		prestige = 25
+		military_techpoints = 0.1
+		hidden_tooltip = {
+			clr_character_flag = hoa_policy_change_cooldown
+			add_character_modifier = { name = hoa_policy_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_policy_change_cooldown
+		}
+
+		ai_chance = { factor = 30 }
+	}
+
+	# Cultural reform
+	option = {
+		name = hoa_advisor_50_c
+		custom_tooltip = { text = hoa_policy_cultural_tt }
+		capital_scope = {
+			add_province_modifier = { name = hoa_cultural_reform duration = 1825 }
+		}
+		prestige = 30
+		piety = 15
+		culture_techpoints = 0.1
+		hidden_tooltip = {
+			clr_character_flag = hoa_policy_change_cooldown
+			add_character_modifier = { name = hoa_policy_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_policy_change_cooldown
+		}
+
+		ai_chance = { factor = 30 }
+	}
+}

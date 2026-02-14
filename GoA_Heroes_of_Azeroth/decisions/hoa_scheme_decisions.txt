@@ -1,0 +1,554 @@
+# =====================================================
+# Heroes of Azeroth - Intrigue Schemes & Plots
+# =====================================================
+# 8 scheme types: targeted decisions for political intrigue
+# These represent complex plots that unfold over time
+# =====================================================
+
+targetted_decisions = {
+
+	# ========================
+	# STEAL ARTIFACT
+	# ========================
+	# Plot to steal a target's equipped artifact
+	hoa_scheme_steal_artifact = {
+		only_playable = yes
+		ai_target_filter = realm
+		ai_check_interval = 365
+
+		from_potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { has_character_flag = hoa_scheme_steal_cooldown }
+			prisoner = no
+			intrigue >= 8
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_ruler = yes
+			any_artifact = {
+				is_artifact_equipped = yes
+			}
+			NOT = { is_friend = FROM }
+		}
+
+		allow = {
+			FROM = {
+				wealth >= 100
+				intrigue >= 10
+			}
+			NOT = { reverse_opinion = { who = FROM value = 50 } }
+		}
+
+		effect = {
+			FROM = {
+				wealth = -100
+				set_character_flag = hoa_scheme_steal_cooldown
+				hidden_tooltip = {
+					character_event = { id = hoa_scheme.1 days = 30 }
+					set_character_flag = hoa_scheme_target_@ROOT
+				}
+			}
+			hidden_tooltip = {
+				save_event_target_as = hoa_theft_target
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 3 is_rogue_class_trigger = yes }
+			modifier = { factor = 0 opinion = { who = FROM value = 0 } }
+			modifier = { factor = 0 FROM = { wealth < 300 } }
+		}
+	}
+
+	# ========================
+	# FABRICATE SCANDAL
+	# ========================
+	# Spread false rumors to destroy a rival's reputation
+	hoa_scheme_fabricate_scandal = {
+		only_playable = yes
+		ai_target_filter = realm
+		ai_check_interval = 365
+
+		from_potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { has_character_flag = hoa_scheme_scandal_cooldown }
+			prisoner = no
+			intrigue >= 10
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_ruler = yes
+			NOT = { is_friend = FROM }
+			higher_tier_than = BARON
+		}
+
+		allow = {
+			FROM = {
+				wealth >= 150
+				intrigue >= 12
+			}
+		}
+
+		effect = {
+			FROM = {
+				wealth = -150
+				set_character_flag = hoa_scheme_scandal_cooldown
+				hidden_tooltip = {
+					character_event = { id = hoa_scheme.10 days = 45 }
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.3
+			modifier = { factor = 3 is_rival = FROM }
+			modifier = { factor = 2 trait = deceitful }
+			modifier = { factor = 0 FROM = { wealth < 400 } }
+		}
+	}
+
+	# ========================
+	# INCITE REBELLION
+	# ========================
+	# Turn a ruler's vassals against them
+	hoa_scheme_incite_rebellion = {
+		only_playable = yes
+		ai_target_filter = all
+		ai_check_interval = 730
+
+		from_potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { has_character_flag = hoa_scheme_rebellion_cooldown }
+			prisoner = no
+			intrigue >= 14
+			higher_tier_than = COUNT
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_ruler = yes
+			higher_tier_than = COUNT
+			independent = yes
+			num_of_vassals >= 3
+			NOT = { is_friend = FROM }
+			NOT = { alliance_with = FROM }
+		}
+
+		allow = {
+			FROM = {
+				wealth >= 300
+				intrigue >= 16
+			}
+			any_vassal = {
+				NOT = { opinion = { who = LIEGE value = 0 } }
+			}
+		}
+
+		effect = {
+			FROM = {
+				wealth = -300
+				set_character_flag = hoa_scheme_rebellion_cooldown
+				hidden_tooltip = {
+					character_event = { id = hoa_scheme.20 days = 90 }
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.1
+			modifier = { factor = 5 is_rival = FROM }
+			modifier = { factor = 3 war_with = FROM }
+			modifier = { factor = 0 FROM = { wealth < 600 } }
+		}
+	}
+
+	# ========================
+	# BLACKMAIL
+	# ========================
+	# Gather compromising information for leverage
+	hoa_scheme_blackmail = {
+		only_playable = yes
+		ai_target_filter = realm
+		ai_check_interval = 365
+
+		from_potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { has_character_flag = hoa_scheme_blackmail_cooldown }
+			prisoner = no
+			intrigue >= 10
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_adult = yes
+			OR = {
+				is_ruler = yes
+				any_claim = { always = yes }
+			}
+			NOT = { is_friend = FROM }
+			# Must have something to hide
+			OR = {
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = deceitful
+				trait = envious
+				trait = wroth
+				trait = cruel
+				is_lover = yes
+				num_of_lovers >= 1
+			}
+		}
+
+		allow = {
+			FROM = {
+				wealth >= 75
+				intrigue >= 12
+			}
+		}
+
+		effect = {
+			FROM = {
+				wealth = -75
+				set_character_flag = hoa_scheme_blackmail_cooldown
+				hidden_tooltip = {
+					character_event = { id = hoa_scheme.30 days = 20 }
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.4
+			modifier = { factor = 2 trait = deceitful }
+			modifier = { factor = 2 is_rogue_class_trigger = yes }
+			modifier = { factor = 0 FROM = { wealth < 200 } }
+		}
+	}
+
+	# ========================
+	# POISON RIVAL
+	# ========================
+	# Slow-acting poison for a discreet elimination
+	hoa_scheme_poison = {
+		only_playable = yes
+		ai_target_filter = realm
+		ai_check_interval = 730
+
+		from_potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { trait = just }
+			NOT = { has_character_flag = hoa_scheme_poison_cooldown }
+			prisoner = no
+			intrigue >= 12
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_adult = yes
+			NOT = { is_friend = FROM }
+			OR = {
+				is_rival = FROM
+				NOT = { opinion = { who = FROM value = -25 } }
+			}
+		}
+
+		allow = {
+			FROM = {
+				wealth >= 200
+				intrigue >= 14
+			}
+		}
+
+		effect = {
+			FROM = {
+				wealth = -200
+				set_character_flag = hoa_scheme_poison_cooldown
+				piety = -25
+				hidden_tooltip = {
+					character_event = { id = hoa_scheme.40 days = 60 }
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.1
+			modifier = { factor = 5 is_rival = FROM }
+			modifier = { factor = 3 is_warlock_class_trigger = yes }
+			modifier = { factor = 0 trait = kind }
+			modifier = { factor = 0 FROM = { wealth < 500 } }
+		}
+	}
+
+	# ========================
+	# KIDNAP TARGET
+	# ========================
+	# Abduct a character for ransom or leverage
+	hoa_scheme_kidnap = {
+		only_playable = yes
+		ai_target_filter = realm
+		ai_check_interval = 730
+
+		from_potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { has_character_flag = hoa_scheme_kidnap_cooldown }
+			prisoner = no
+			intrigue >= 12
+			martial >= 8
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_adult = yes
+			prisoner = no
+			NOT = { is_friend = FROM }
+		}
+
+		allow = {
+			FROM = {
+				wealth >= 250
+				intrigue >= 14
+			}
+		}
+
+		effect = {
+			FROM = {
+				wealth = -250
+				set_character_flag = hoa_scheme_kidnap_cooldown
+				hidden_tooltip = {
+					character_event = { id = hoa_scheme.50 days = 45 }
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.1
+			modifier = { factor = 3 is_rival = FROM }
+			modifier = { factor = 2 is_rogue_class_trigger = yes }
+			modifier = { factor = 0 FROM = { wealth < 500 } }
+		}
+	}
+
+	# ========================
+	# DARK RITUAL (Magic Classes Only)
+	# ========================
+	# Forbidden magical scheme against a target
+	hoa_scheme_dark_ritual = {
+		only_playable = yes
+		ai_target_filter = all
+		ai_check_interval = 730
+
+		from_potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { has_character_flag = hoa_scheme_ritual_cooldown }
+			prisoner = no
+			is_magic_class_trigger = yes
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_adult = yes
+			is_ruler = yes
+			NOT = { is_friend = FROM }
+		}
+
+		allow = {
+			FROM = {
+				wealth >= 300
+				learning >= 14
+			}
+		}
+
+		effect = {
+			FROM = {
+				wealth = -300
+				piety = -50
+				set_character_flag = hoa_scheme_ritual_cooldown
+				hidden_tooltip = {
+					character_event = { id = hoa_scheme.60 days = 90 }
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.2
+			modifier = { factor = 3 is_warlock_class_trigger = yes }
+			modifier = { factor = 0 trait = kind }
+			modifier = { factor = 0 FROM = { wealth < 600 } }
+		}
+	}
+
+	# ========================
+	# PRIVATE DISCUSSION
+	# ========================
+	# Have a private conversation with any character
+	hoa_private_discussion = {
+		only_playable = yes
+		ai_target_filter = court
+		ai_check_interval = 90
+
+		from_potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { has_character_flag = hoa_discussion_cooldown }
+			prisoner = no
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_adult = yes
+			OR = {
+				host = { character = FROM }
+				is_vassal_or_below = FROM
+				is_close_relative = FROM
+			}
+		}
+
+		allow = {
+			FROM = { prisoner = no }
+			prisoner = no
+		}
+
+		effect = {
+			FROM = {
+				set_character_flag = hoa_discussion_cooldown
+				hidden_tooltip = {
+					character_event = { id = hoa_personal.50 days = 3 }
+				}
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = { factor = 2 FROM = { trait = gregarious } }
+			modifier = { factor = 2 is_friend = FROM }
+		}
+	}
+}
+
+# =====================================================
+# REGULAR SCHEME DECISIONS (self-targeted)
+# =====================================================
+decisions = {
+
+	# ========================
+	# SMUGGLING NETWORK
+	# ========================
+	# Establish illegal trade routes for extra income
+	hoa_scheme_smuggling = {
+		only_playable = yes
+		ai_check_interval = 365
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { has_character_modifier = hoa_smuggling_network }
+			NOT = { has_character_flag = hoa_scheme_smuggle_cooldown }
+			intrigue >= 8
+		}
+
+		allow = {
+			wealth >= 200
+			intrigue >= 12
+			NOT = { trait = just }
+			NOT = { trait = honest }
+		}
+
+		effect = {
+			wealth = -200
+			hidden_tooltip = {
+				character_event = { id = hoa_scheme.70 days = 60 }
+			}
+			custom_tooltip = { text = hoa_smuggling_setup_tt }
+		}
+
+		ai_will_do = {
+			factor = 0.3
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 3 is_rogue_class_trigger = yes }
+			modifier = { factor = 0 NOT = { wealth >= 500 } }
+		}
+	}
+
+	# ========================
+	# COUP D'ETAT
+	# ========================
+	# Plot to overthrow your liege
+	hoa_scheme_coup = {
+		only_playable = yes
+		ai_check_interval = 730
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			NOT = { independent = yes }
+			NOT = { has_character_flag = hoa_scheme_coup_cooldown }
+			prisoner = no
+			higher_tier_than = COUNT
+		}
+
+		allow = {
+			wealth >= 500
+			intrigue >= 14
+			martial >= 10
+			NOT = { opinion = { who = liege value = -10 } }
+			any_vassal = {
+				count = 2
+				NOT = { opinion = { who = PREV value = -20 } }
+			}
+		}
+
+		effect = {
+			wealth = -500
+			set_character_flag = hoa_scheme_coup_cooldown
+			hidden_tooltip = {
+				character_event = { id = hoa_scheme.80 days = 120 }
+			}
+			custom_tooltip = { text = hoa_coup_planning_tt }
+		}
+
+		ai_will_do = {
+			factor = 0.05
+			modifier = { factor = 5 trait = ambitious }
+			modifier = { factor = 3 NOT = { opinion = { who = liege value = -50 } } }
+			modifier = { factor = 0 opinion = { who = liege value = 0 } }
+			modifier = { factor = 0 NOT = { wealth >= 1000 } }
+		}
+	}
+}

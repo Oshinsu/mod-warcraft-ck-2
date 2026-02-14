@@ -1,0 +1,57 @@
+CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+ie_ct_marketplace_1;Marketplace;Marche;;;;;;;;;;;;x
+ie_ct_marketplace_2;Grand Marketplace;Grand Marche;;;;;;;;;;;;x
+ie_ct_marketplace_3;Trade District;Quartier Commercial;;;;;;;;;;;;x
+ie_ct_marketplace_4;Grand Bazaar;Grand Bazar;;;;;;;;;;;;x
+ie_ct_marketplace_desc;A bustling marketplace where merchants hawk their wares.;Un marche anime ou les marchands vendent leurs marchandises.;;;;;;;;;;;;x
+ie_ct_marketplace_grand_desc;A magnificent bazaar attracting traders from across the realm.;Un magnifique bazar attirant les commercants de tout le royaume.;;;;;;;;;;;;x
+ie_ct_artisan_guild_1;Artisan Workshop;Atelier d'Artisan;;;;;;;;;;;;x
+ie_ct_artisan_guild_2;Artisan Quarter;Quartier des Artisans;;;;;;;;;;;;x
+ie_ct_artisan_guild_3;Master Craftsmen Guild;Guilde des Maitres Artisans;;;;;;;;;;;;x
+ie_ct_artisan_guild_4;Grand Artisan Consortium;Grand Consortium Artisanal;;;;;;;;;;;;x
+ie_ct_artisan_guild_desc;Skilled craftsmen producing quality goods for trade.;Des artisans qualifies produisant des biens de qualite pour le commerce.;;;;;;;;;;;;x
+ie_ct_artisan_guild_master_desc;The finest craftsmen in the land, producing masterwork items.;Les meilleurs artisans du pays, produisant des objets d'exception.;;;;;;;;;;;;x
+ie_ct_harbor_1;Fishing Harbor;Port de Peche;;;;;;;;;;;;x
+ie_ct_harbor_2;Trade Harbor;Port Commercial;;;;;;;;;;;;x
+ie_ct_harbor_3;Grand Harbor;Grand Port;;;;;;;;;;;;x
+ie_ct_harbor_4;Maritime Trade Hub;Centre de Commerce Maritime;;;;;;;;;;;;x
+ie_ct_harbor_desc;A harbor facilitating coastal trade and fishing.;Un port facilitant le commerce cotier et la peche.;;;;;;;;;;;;x
+ie_ct_harbor_grand_desc;A magnificent port connecting your realm to distant markets.;Un magnifique port connectant votre royaume a des marches lointains.;;;;;;;;;;;;x
+ie_ct_academy_1;Academy;Academie;;;;;;;;;;;;x
+ie_ct_academy_2;College of Arts;College des Arts;;;;;;;;;;;;x
+ie_ct_academy_3;Grand Academy;Grande Academie;;;;;;;;;;;;x
+ie_ct_academy_4;University;Universite;;;;;;;;;;;;x
+ie_ct_academy_desc;An institution of learning producing educated citizens.;Une institution d'apprentissage produisant des citoyens eduques.;;;;;;;;;;;;x
+ie_ct_academy_grand_desc;A prestigious university attracting scholars from across Azeroth.;Une universite prestigieuse attirant des savants de tout Azeroth.;;;;;;;;;;;;x
+ie_ct_goblin_bank_1;Goblin Counting House;Comptoir Gobelin;;;;;;;;;;;;x
+ie_ct_goblin_bank_2;Goblin Banking Branch;Succursale Bancaire Gobeline;;;;;;;;;;;;x
+ie_ct_goblin_bank_3;Goblin Grand Bank;Grande Banque Gobeline;;;;;;;;;;;;x
+ie_ct_goblin_bank_desc;Goblin financiers managing money lending and investment services.;Des financiers gobelins gerant les services de pret et d'investissement.;;;;;;;;;;;;x
+ie_tp_sacred_grove_1;Sacred Grove;Bosquet Sacre;;;;;;;;;;;;x
+ie_tp_sacred_grove_2;Blessed Grove;Bosquet Beni;;;;;;;;;;;;x
+ie_tp_sacred_grove_3;Holy Sanctuary;Sanctuaire Sacre;;;;;;;;;;;;x
+ie_tp_sacred_grove_4;Grand Temple Grove;Grand Bosquet du Temple;;;;;;;;;;;;x
+ie_tp_sacred_grove_desc;A natural holy site blessed by divine power.;Un site naturel sacre beni par le pouvoir divin.;;;;;;;;;;;;x
+ie_tp_sacred_grove_blessed_desc;A deeply sacred place radiating divine energy, drawing pilgrims.;Un lieu profondement sacre irradiant l'energie divine.;;;;;;;;;;;;x
+ie_tp_scriptorium_1;Scriptorium;Scriptorium;;;;;;;;;;;;x
+ie_tp_scriptorium_2;Library Scriptorium;Scriptorium de Bibliotheque;;;;;;;;;;;;x
+ie_tp_scriptorium_3;Archive Hall;Salle des Archives;;;;;;;;;;;;x
+ie_tp_scriptorium_4;Grand Archives;Grandes Archives;;;;;;;;;;;;x
+ie_tp_scriptorium_desc;Monks and scholars copying and preserving ancient texts.;Des moines et des savants copiant et preservant des textes anciens.;;;;;;;;;;;;x
+ie_tp_scriptorium_grand_desc;A vast repository of knowledge rivaling the greatest libraries.;Un vaste depot de savoir rivalisant avec les plus grandes bibliotheques.;;;;;;;;;;;;x
+ie_tp_reliquary_1;Reliquary;Reliquaire;;;;;;;;;;;;x
+ie_tp_reliquary_2;Grand Reliquary;Grand Reliquaire;;;;;;;;;;;;x
+ie_tp_reliquary_3;Hall of Sacred Relics;Salle des Reliques Sacrees;;;;;;;;;;;;x
+ie_tp_reliquary_desc;A chamber housing sacred relics that inspire the faithful.;Une chambre abritant des reliques sacrees qui inspirent les fideles.;;;;;;;;;;;;x
+ie_tp_healing_ward_1;Healing Ward;Pavillon de Guerison;;;;;;;;;;;;x
+ie_tp_healing_ward_2;Hospital;Hopital;;;;;;;;;;;;x
+ie_tp_healing_ward_3;Grand Hospital;Grand Hopital;;;;;;;;;;;;x
+ie_tp_healing_ward_4;Cathedral of Healing;Cathedrale de Guerison;;;;;;;;;;;;x
+ie_tp_healing_ward_desc;A place where the sick and wounded receive care and healing.;Un lieu ou les malades et les blesses recoivent soins et guerison.;;;;;;;;;;;;x
+ie_tp_healing_ward_grand_desc;A magnificent healing center staffed by the finest healers.;Un magnifique centre de guerison dote des meilleurs guerisseurs.;;;;;;;;;;;;x
+ie_tp_pilgrims_rest_1;Pilgrim's Rest;Repos du Pelerin;;;;;;;;;;;;x
+ie_tp_pilgrims_rest_2;Pilgrim's Inn;Auberge du Pelerin;;;;;;;;;;;;x
+ie_tp_pilgrims_rest_3;Grand Hospice;Grand Hospice;;;;;;;;;;;;x
+ie_tp_pilgrims_rest_4;Cathedral Hospice;Hospice de la Cathedrale;;;;;;;;;;;;x
+ie_tp_pilgrims_rest_desc;An inn providing shelter and food for religious travelers.;Une auberge fournissant abri et nourriture aux voyageurs religieux.;;;;;;;;;;;;x
+ie_tp_pilgrims_rest_grand_desc;A grand hospice drawing pilgrims from across the continent.;Un grand hospice attirant des pelerins de tout le continent.;;;;;;;;;;;;x

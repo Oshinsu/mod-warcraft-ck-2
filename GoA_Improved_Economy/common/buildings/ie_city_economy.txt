@@ -1,0 +1,302 @@
+# GoA: Improved Economy - City Economic Buildings
+# New building chains for cities (mayors/burghers)
+#
+# Building chains:
+# - Marketplace (general trade income)
+# - Artisan Guild (crafting/production)
+# - Harbor (coastal trade, terrain-gated)
+# - Academy (learning/tech generation)
+
+city = {
+
+	###############################################
+	# MARKETPLACE - Commercial hub
+	###############################################
+	# Main income generator for cities, represents shops and bazaars
+
+	ie_ct_marketplace_1 = {
+		desc = ie_ct_marketplace_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 75
+		build_time = 274
+		tax_income = 2
+		ai_creation_factor = 110
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ct_marketplace_2 = {
+		desc = ie_ct_marketplace_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+		upgrades_from = ie_ct_marketplace_1
+		gold_cost = 150
+		build_time = 365
+		tax_income = 3.5
+		economy_techpoints = 0.02
+		ai_creation_factor = 109
+
+		extra_tech_building_start = 1.0
+	}
+	ie_ct_marketplace_3 = {
+		desc = ie_ct_marketplace_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+		upgrades_from = ie_ct_marketplace_2
+		gold_cost = 300
+		build_time = 547
+		tax_income = 5
+		economy_techpoints = 0.03
+		local_tax_modifier = 0.05
+		ai_creation_factor = 108
+
+		extra_tech_building_start = 1.0
+	}
+	ie_ct_marketplace_4 = {
+		desc = ie_ct_marketplace_grand_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+		upgrades_from = ie_ct_marketplace_3
+		gold_cost = 500
+		build_time = 730
+		tax_income = 7
+		economy_techpoints = 0.05
+		local_tax_modifier = 0.08
+		ai_creation_factor = 107
+
+		extra_tech_building_start = 0.8
+	}
+
+	###############################################
+	# ARTISAN GUILD - Crafting & production
+	###############################################
+	# Represents skilled craftsmen: blacksmiths, leatherworkers, tailors
+
+	ie_ct_artisan_guild_1 = {
+		desc = ie_ct_artisan_guild_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 100
+		build_time = 365
+		tax_income = 1.5
+		culture_techpoints = 0.02
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 0.5
+	}
+	ie_ct_artisan_guild_2 = {
+		desc = ie_ct_artisan_guild_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 2 }
+		upgrades_from = ie_ct_artisan_guild_1
+		gold_cost = 200
+		build_time = 547
+		tax_income = 2.5
+		culture_techpoints = 0.03
+		economy_techpoints = 0.01
+		ai_creation_factor = 99
+
+		extra_tech_building_start = 1.0
+	}
+	ie_ct_artisan_guild_3 = {
+		desc = ie_ct_artisan_guild_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 4 }
+		upgrades_from = ie_ct_artisan_guild_2
+		gold_cost = 350
+		build_time = 730
+		tax_income = 4
+		culture_techpoints = 0.05
+		economy_techpoints = 0.02
+		ai_creation_factor = 98
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ct_artisan_guild_4 = {
+		desc = ie_ct_artisan_guild_master_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 6 }
+		upgrades_from = ie_ct_artisan_guild_3
+		gold_cost = 500
+		build_time = 1095
+		tax_income = 6
+		culture_techpoints = 0.08
+		economy_techpoints = 0.03
+		local_tax_modifier = 0.05
+		ai_creation_factor = 97
+
+		extra_tech_building_start = 0.4
+	}
+
+	###############################################
+	# HARBOR - Coastal trade hub
+	###############################################
+	# Terrain-gated: only coastal provinces
+
+	ie_ct_harbor_1 = {
+		desc = ie_ct_harbor_desc
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 0
+			OR = {
+				terrain = coastal_desert
+				is_coastal = yes
+			}
+		}
+		gold_cost = 100
+		build_time = 365
+		tax_income = 2
+		economy_techpoints = 0.01
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ct_harbor_2 = {
+		desc = ie_ct_harbor_desc
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 2
+			OR = {
+				terrain = coastal_desert
+				is_coastal = yes
+			}
+		}
+		upgrades_from = ie_ct_harbor_1
+		gold_cost = 200
+		build_time = 547
+		tax_income = 3.5
+		economy_techpoints = 0.02
+		ai_creation_factor = 104
+
+		extra_tech_building_start = 1.0
+	}
+	ie_ct_harbor_3 = {
+		desc = ie_ct_harbor_desc
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 4
+			OR = {
+				terrain = coastal_desert
+				is_coastal = yes
+			}
+		}
+		upgrades_from = ie_ct_harbor_2
+		gold_cost = 350
+		build_time = 730
+		tax_income = 5.5
+		economy_techpoints = 0.04
+		local_tax_modifier = 0.05
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ct_harbor_4 = {
+		desc = ie_ct_harbor_grand_desc
+		trigger = {
+			TECH_CITY_CONSTRUCTION = 6
+			OR = {
+				terrain = coastal_desert
+				is_coastal = yes
+			}
+		}
+		upgrades_from = ie_ct_harbor_3
+		gold_cost = 600
+		build_time = 1095
+		tax_income = 8
+		economy_techpoints = 0.06
+		local_tax_modifier = 0.1
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 0.4
+	}
+
+	###############################################
+	# ACADEMY - Learning & technology
+	###############################################
+	# Represents schools, libraries, research institutions
+
+	ie_ct_academy_1 = {
+		desc = ie_ct_academy_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+		gold_cost = 125
+		build_time = 365
+		tax_income = 1
+		culture_techpoints = 0.03
+		ai_creation_factor = 95
+
+		extra_tech_building_start = 0.5
+	}
+	ie_ct_academy_2 = {
+		desc = ie_ct_academy_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+		upgrades_from = ie_ct_academy_1
+		gold_cost = 250
+		build_time = 547
+		tax_income = 2
+		culture_techpoints = 0.05
+		economy_techpoints = 0.01
+		ai_creation_factor = 94
+
+		extra_tech_building_start = 1.0
+	}
+	ie_ct_academy_3 = {
+		desc = ie_ct_academy_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+		upgrades_from = ie_ct_academy_2
+		gold_cost = 400
+		build_time = 730
+		tax_income = 3
+		culture_techpoints = 0.08
+		economy_techpoints = 0.02
+		tech_growth_modifier = 0.1
+		ai_creation_factor = 93
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ct_academy_4 = {
+		desc = ie_ct_academy_grand_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 7 }
+		upgrades_from = ie_ct_academy_3
+		gold_cost = 600
+		build_time = 1095
+		tax_income = 4
+		culture_techpoints = 0.12
+		economy_techpoints = 0.04
+		tech_growth_modifier = 0.15
+		ai_creation_factor = 92
+
+		extra_tech_building_start = 0.4
+	}
+
+	###############################################
+	# GOBLIN BANK - Financial services
+	###############################################
+	# Warcraft-themed banking/money lending
+
+	ie_ct_goblin_bank_1 = {
+		desc = ie_ct_goblin_bank_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+		gold_cost = 150
+		build_time = 365
+		tax_income = 2.5
+		local_tax_modifier = 0.03
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 0.8
+	}
+	ie_ct_goblin_bank_2 = {
+		desc = ie_ct_goblin_bank_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+		upgrades_from = ie_ct_goblin_bank_1
+		gold_cost = 300
+		build_time = 547
+		tax_income = 4
+		local_tax_modifier = 0.06
+		economy_techpoints = 0.02
+		ai_creation_factor = 101
+
+		extra_tech_building_start = 1.0
+	}
+	ie_ct_goblin_bank_3 = {
+		desc = ie_ct_goblin_bank_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+		upgrades_from = ie_ct_goblin_bank_2
+		gold_cost = 500
+		build_time = 730
+		tax_income = 6
+		local_tax_modifier = 0.1
+		economy_techpoints = 0.04
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 0.4
+	}
+}

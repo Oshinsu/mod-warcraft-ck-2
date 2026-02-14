@@ -1,0 +1,43 @@
+CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+hoa_loot_1_title;Prisoner's Possessions;Possessions du Prisonnier;;;;;;;;;;;;x
+hoa_loot_1_desc;Your prisoner possesses valuable artifacts. As their captor, you have the right to claim their belongings.;Votre prisonnier possede des artefacts precieux. En tant que ravisseur, vous avez le droit de reclamer ses biens.;;;;;;;;;;;;x
+hoa_loot_1_a;Confiscate everything;Tout confisquer;;;;;;;;;;;;x
+hoa_loot_1_b;Take only their weapons;Ne prendre que leurs armes;;;;;;;;;;;;x
+hoa_loot_1_c;Show mercy - take nothing;Montrer de la clemence - ne rien prendre;;;;;;;;;;;;x
+hoa_loot_2_title;Prisoner's Wealth;Richesse du Prisonnier;;;;;;;;;;;;x
+hoa_loot_2_desc;Your prisoner carries significant gold. You could seize it or demand ongoing tribute.;Votre prisonnier porte un or significatif. Vous pourriez le saisir ou exiger un tribut.;;;;;;;;;;;;x
+hoa_loot_2_a;Seize their gold;Saisir leur or;;;;;;;;;;;;x
+hoa_loot_2_b;Demand ongoing tribute;Exiger un tribut continu;;;;;;;;;;;;x
+hoa_loot_3_title;Battlefield Spoils;Butin du Champ de Bataille;;;;;;;;;;;;x
+hoa_loot_3_desc;The battle is won! Your soldiers report finding valuable items among the fallen enemy.;La bataille est gagnee! Vos soldats rapportent avoir trouve des objets precieux parmi les ennemis tombes.;;;;;;;;;;;;x
+hoa_loot_3_a;Search the battlefield;Fouiller le champ de bataille;;;;;;;;;;;;x
+hoa_loot_3_b;Leave the dead in peace;Laisser les morts en paix;;;;;;;;;;;;x
+hoa_loot_gold_tt;Your soldiers find gold and valuables scattered across the field.;Vos soldats trouvent de l'or et des objets de valeur eparpilles.;;;;;;;;;;;;x
+hoa_loot_weapon_tt;A fine weapon is recovered from the battlefield!;Une belle arme est recuperee du champ de bataille!;;;;;;;;;;;;x
+hoa_loot_armor_tt;Serviceable armor is found among the fallen.;Une armure utilisable est trouvee parmi les tombes.;;;;;;;;;;;;x
+hoa_loot_trinket_tt;A curious trinket is found on a fallen enemy officer.;Un curieux bijou est trouve sur un officier ennemi tombe.;;;;;;;;;;;;x
+hoa_loot_nothing_tt;The battlefield yields nothing of value.;Le champ de bataille ne donne rien de valeur.;;;;;;;;;;;;x
+hoa_loot_4_title;Enemy Commander's Equipment;Equipement du Commandant Ennemi;;;;;;;;;;;;x
+hoa_loot_4_desc;The enemy commander has been defeated. Their personal equipment could be claimed as a trophy.;Le commandant ennemi a ete vaincu. Son equipement personnel pourrait etre reclame comme trophee.;;;;;;;;;;;;x
+hoa_loot_4_a;Claim their weapons;Reclamer leurs armes;;;;;;;;;;;;x
+hoa_loot_4_b;Return their effects with honor;Retourner leurs effets avec honneur;;;;;;;;;;;;x
+hoa_loot_commander_epic_tt;The commander carried a magnificent weapon!;Le commandant portait une arme magnifique!;;;;;;;;;;;;x
+hoa_loot_commander_good_tt;You find gold and valuables on the fallen commander.;Vous trouvez de l'or et des objets de valeur sur le commandant tombe.;;;;;;;;;;;;x
+hoa_loot_commander_fled_tt;The commander fled before you could claim their gear.;Le commandant a fui avant que vous ne puissiez reclamer son equipement.;;;;;;;;;;;;x
+hoa_loot_5_title;Stripping Prisoners;Depouillement des Prisonniers;;;;;;;;;;;;x
+hoa_loot_5_desc;Your jailers report that several prisoners possess valuable artifacts and equipment.;Vos geoliers rapportent que plusieurs prisonniers possedent des artefacts precieux.;;;;;;;;;;;;x
+hoa_loot_5_a;Take everything;Tout prendre;;;;;;;;;;;;x
+hoa_loot_6_title;Fallen Enemy's Possessions;Possessions de l'Ennemi Tombe;;;;;;;;;;;;x
+hoa_loot_6_desc;The deceased carried artifacts of value. Do you claim them as spoils?;Le defunt portait des artefacts de valeur. Les reclamez-vous comme butin?;;;;;;;;;;;;x
+hoa_loot_6_a;Claim their possessions;Reclamer leurs possessions;;;;;;;;;;;;x
+hoa_loot_6_b;Bury them with their belongings;Les enterrer avec leurs biens;;;;;;;;;;;;x
+hoa_loot_7_title;Tribute from the Vanquished;Tribut du Vaincu;;;;;;;;;;;;x
+hoa_loot_7_desc;With victory secured, you can demand that the defeated ruler surrender their finest treasures as tribute.;Avec la victoire assuree, vous pouvez exiger que le dirigeant vaincu remette ses plus beaux tresors.;;;;;;;;;;;;x
+hoa_loot_7_a;Demand their finest artifact;Exiger leur plus bel artefact;;;;;;;;;;;;x
+hoa_loot_7_b;Demand gold instead;Exiger de l'or a la place;;;;;;;;;;;;x
+hoa_loot_7_c;Be magnanimous in victory;Etre magnanime dans la victoire;;;;;;;;;;;;x
+hoa_loot_8_title;Confiscate Prisoner Goods;Confisquer les Biens des Prisonniers;;;;;;;;;;;;x
+hoa_loot_8_desc;You order your jailers to strip all prisoners of their valuable artifacts and equipment.;Vous ordonnez a vos geoliers de depouiller tous les prisonniers de leurs artefacts.;;;;;;;;;;;;x
+hoa_loot_8_a;Proceed with confiscation;Proceder a la confiscation;;;;;;;;;;;;x
+hoa_loot_8_b;On second thought, no;A la reflexion, non;;;;;;;;;;;;x
+hoa_confiscate_all_tt;All prisoner artifacts are transferred to your possession.;Tous les artefacts des prisonniers sont transferes en votre possession.;;;;;;;;;;;;x

@@ -1,0 +1,396 @@
+# =====================================================
+# Heroes of Azeroth - Personal & Self-Click Decisions
+# =====================================================
+# Decisions available when clicking on yourself
+# Includes personal activities, meditation, and self-improvement
+# Also includes prisoner management and advisor consultations
+# =====================================================
+
+decisions = {
+
+	###############################################
+	# MEDITATE / PRAY
+	###############################################
+	hoa_meditate = {
+		only_playable = yes
+		ai_check_interval = 90
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_recently_meditated }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			NOT = { trait = incapable }
+		}
+
+		effect = {
+			random_list = {
+				30 = {
+					custom_tooltip = { text = hoa_meditate_peace_tt }
+					piety = 25
+					health = 0.3
+					if = {
+						limit = { trait = stressed }
+						remove_trait = stressed
+					}
+				}
+				25 = {
+					custom_tooltip = { text = hoa_meditate_wisdom_tt }
+					change_learning = 1
+					piety = 15
+				}
+				20 = {
+					custom_tooltip = { text = hoa_meditate_vision_tt }
+					prestige = 20
+					change_intrigue = 1
+					add_trait = hoa_spirit_touched
+				}
+				15 = {
+					custom_tooltip = { text = hoa_meditate_restless_tt }
+					prestige = 5
+				}
+				10 = {
+					custom_tooltip = { text = hoa_meditate_nightmare_tt }
+					add_trait = stressed
+					change_learning = 1
+				}
+			}
+			add_character_modifier = { name = hoa_recently_meditated duration = 120 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = { factor = 2 trait = zealous }
+			modifier = { factor = 2 is_priest_class_trigger = yes }
+			modifier = { factor = 3 trait = stressed }
+		}
+	}
+
+	###############################################
+	# HOLD PRIVATE COURT
+	###############################################
+	hoa_hold_private_court = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			higher_tier_than = BARON
+			NOT = { has_character_modifier = hoa_recently_held_court }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			wealth >= 25
+			war = no
+		}
+
+		effect = {
+			wealth = -25
+			hidden_tooltip = {
+				character_event = { id = hoa_personal.1 days = 3 }
+			}
+			add_character_modifier = { name = hoa_recently_held_court duration = 180 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 200 } }
+		}
+	}
+
+	###############################################
+	# WRITE MEMOIRS
+	###############################################
+	hoa_write_memoirs = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			age >= 35
+			NOT = { has_character_modifier = hoa_writing_memoirs }
+			NOT = { trait = incapable }
+			learning >= 8
+		}
+
+		allow = {
+			wealth >= 50
+			learning >= 10
+		}
+
+		effect = {
+			wealth = -50
+			add_character_modifier = { name = hoa_writing_memoirs duration = 365 }
+			hidden_tooltip = {
+				character_event = { id = hoa_personal.10 days = 180 }
+			}
+			custom_tooltip = { text = hoa_memoirs_started_tt }
+		}
+
+		ai_will_do = {
+			factor = 0.3
+			modifier = { factor = 2 learning >= 14 }
+			modifier = { factor = 0 NOT = { wealth >= 300 } }
+		}
+	}
+
+	###############################################
+	# SEEK HEALING
+	###############################################
+	hoa_seek_healing = {
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_recently_sought_healing }
+			NOT = { trait = incapable }
+			OR = {
+				trait = wounded
+				trait = maimed
+				trait = infirm
+				health_traits >= 1
+			}
+		}
+
+		allow = {
+			wealth >= 100
+		}
+
+		effect = {
+			wealth = -100
+			hidden_tooltip = {
+				character_event = { id = hoa_personal.20 days = 14 }
+			}
+			add_character_modifier = { name = hoa_recently_sought_healing duration = 365 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = { factor = 2 trait = wounded }
+			modifier = { factor = 3 trait = maimed }
+		}
+	}
+
+	###############################################
+	# NIGHT PATROL
+	###############################################
+	hoa_night_patrol = {
+		only_playable = yes
+		ai_check_interval = 90
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_recently_patrolled }
+			NOT = { trait = incapable }
+			prisoner = no
+			martial >= 6
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			random_list = {
+				25 = {
+					custom_tooltip = { text = hoa_patrol_thief_tt }
+					change_intrigue = 1
+					prestige = 15
+				}
+				25 = {
+					custom_tooltip = { text = hoa_patrol_quiet_tt }
+					prestige = 10
+					capital_scope = {
+						add_province_modifier = { name = hoa_vigilant_rule duration = 180 }
+					}
+				}
+				20 = {
+					custom_tooltip = { text = hoa_patrol_ambush_tt }
+					add_trait = wounded
+					change_martial = 1
+					prestige = 25
+				}
+				15 = {
+					custom_tooltip = { text = hoa_patrol_spy_tt }
+					change_intrigue = 1
+					add_trait = hoa_shadow_agent
+				}
+				15 = {
+					custom_tooltip = { text = hoa_patrol_people_tt }
+					change_diplomacy = 1
+					any_courtier = {
+						limit = { is_adult = yes NOT = { character = ROOT } }
+						opinion = { who = ROOT modifier = opinion_loyal_servant years = 3 }
+					}
+				}
+			}
+			add_character_modifier = { name = hoa_recently_patrolled duration = 90 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = { factor = 2 trait = diligent }
+			modifier = { factor = 2 is_rogue_class_trigger = yes }
+		}
+	}
+
+	###############################################
+	# VISIT THE LIBRARY
+	###############################################
+	hoa_visit_library = {
+		only_playable = yes
+		ai_check_interval = 90
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_recently_visited_library }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			learning >= 6
+		}
+
+		effect = {
+			random_list = {
+				30 = {
+					custom_tooltip = { text = hoa_library_lore_tt }
+					change_learning = 1
+					prestige = 10
+				}
+				25 = {
+					custom_tooltip = { text = hoa_library_strategy_tt }
+					change_martial = 1
+					military_techpoints = 0.05
+				}
+				20 = {
+					custom_tooltip = { text = hoa_library_politics_tt }
+					change_diplomacy = 1
+					culture_techpoints = 0.05
+				}
+				15 = {
+					custom_tooltip = { text = hoa_library_secrets_tt }
+					change_intrigue = 1
+					add_trait = hoa_arcane_scholar
+				}
+				10 = {
+					custom_tooltip = { text = hoa_library_boring_tt }
+					prestige = 5
+				}
+			}
+			add_character_modifier = { name = hoa_recently_visited_library duration = 120 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = { factor = 2 trait = scholar }
+			modifier = { factor = 2 is_mage_class_trigger = yes }
+		}
+	}
+
+	###############################################
+	# CONFISCATE PRISONER GOODS
+	###############################################
+	hoa_confiscate_prisoner_goods = {
+		only_playable = yes
+		ai_check_interval = 180
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			any_courtier = {
+				prisoner = yes
+				host = { character = ROOT }
+				any_artifact = { always = yes }
+			}
+		}
+
+		allow = {
+			any_courtier = {
+				prisoner = yes
+				host = { character = ROOT }
+				any_artifact = { always = yes }
+			}
+		}
+
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = hoa_loot.8 }
+			}
+			custom_tooltip = { text = hoa_confiscate_tt }
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 0 trait = just }
+		}
+	}
+
+	###############################################
+	# INSPECT ARMORY
+	###############################################
+	hoa_inspect_armory = {
+		only_playable = yes
+		ai_check_interval = 180
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_recently_inspected_armory }
+			NOT = { trait = incapable }
+			prisoner = no
+			any_artifact = { always = yes }
+		}
+
+		allow = {
+			wealth >= 25
+		}
+
+		effect = {
+			wealth = -25
+			random_list = {
+				40 = {
+					custom_tooltip = { text = hoa_armory_maintained_tt }
+					prestige = 15
+					add_character_modifier = { name = hoa_well_equipped duration = 365 }
+				}
+				30 = {
+					custom_tooltip = { text = hoa_armory_upgrade_tt }
+					wealth = -50
+					change_martial = 1
+				}
+				30 = {
+					custom_tooltip = { text = hoa_armory_discovery_tt }
+					prestige = 20
+					hidden_tooltip = {
+						random_list = {
+							50 = { add_artifact = hoa_crafted_ring_uncommon }
+							50 = { add_artifact = hoa_crafted_amulet_uncommon }
+						}
+					}
+				}
+			}
+			add_character_modifier = { name = hoa_recently_inspected_armory duration = 365 hidden = yes }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = { factor = 0 NOT = { wealth >= 200 } }
+		}
+	}
+}
