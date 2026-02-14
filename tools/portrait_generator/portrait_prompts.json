@@ -1,0 +1,493 @@
+{
+  "_meta": {
+    "version": "2.0",
+    "description": "CK2 Portrait Layer Generation Prompts for GoA: Heroes of Azeroth",
+    "target_model": "black-forest-labs/flux-1.1-pro-ultra",
+    "fallback_model": "black-forest-labs/flux-1.1-pro",
+    "frame_size": { "width": 176, "height": 176 },
+    "sprite_sheet_frames": {
+      "base": 6,
+      "eyes": 6,
+      "nose": 6,
+      "mouth": 6,
+      "ears": 4,
+      "hair": 8,
+      "beard": 6,
+      "clothes": 5,
+      "headgear": 5
+    },
+    "rank_labels": ["courtier", "count", "duke", "king", "emperor"],
+    "output_format": "png",
+    "final_format": "dds_dxt5"
+  },
+
+  "style_prefix": "CK2 medieval fantasy character portrait, 3/4 view facing slightly left, soft directional light from upper-left, painterly digital art style, muted earth tones with vibrant accents, visible brushstrokes, oil painting aesthetic matching Crusader Kings 2 art direction, dark vignette background",
+
+  "style_suffix": "extremely detailed face, sharp eyes, high contrast lighting, masterwork fantasy illustration, no text, no watermark, no frame, no border, professional game asset quality",
+
+  "layer_instructions": {
+    "base": "Head and neck only, neutral expression, bare skin visible, NO hair NO clothing NO accessories, plain dark background, centered portrait crop from chest up",
+    "eyes": "Close-up of eyes region only, transparent/dark background around eyes, varied eye shapes and colors per frame, expressive gaze",
+    "hair": "Hair only on transparent background, no face visible underneath, various styles from short to long, culturally appropriate hairstyles",
+    "beard": "Facial hair only on transparent background, various styles from stubble to full beard, matching racial aesthetic",
+    "clothes": "Clothing and armor from neck to chest only, no head/face, transparent background above neckline, rank-appropriate outfit",
+    "headgear": "Head covering/crown/helmet only, transparent background, rank-appropriate headwear, viewed from 3/4 angle"
+  },
+
+  "races": {
+    "human": {
+      "id": "human",
+      "gfx_culture": "humangfx",
+      "creature_trait": "creature_human",
+      "description": "Warcraft human, Alliance race, medieval European aesthetic with Warcraft fantasy flair",
+      "skin_tones": ["fair caucasian", "light tan", "olive", "warm brown", "dark brown", "pale nordic"],
+      "eye_colors": ["blue", "green", "brown", "hazel", "grey", "amber"],
+      "hair_colors": ["black", "dark brown", "auburn", "blonde", "grey", "white", "red", "light brown"],
+
+      "layers": {
+        "male_base": {
+          "prompt": "{style_prefix}, adult human male warrior-king face, {skin_tone} skin, strong jawline, weathered battle-scarred features, thick neck, prominent brow, {base_instructions}, {style_suffix}",
+          "negative": "feminine, childish, cartoon, anime, orc, elf, pointed ears, green skin, tusks, horns",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "female_base": {
+          "prompt": "{style_prefix}, adult human female noble face, {skin_tone} skin, elegant but strong features, high cheekbones, determined expression, {base_instructions}, {style_suffix}",
+          "negative": "masculine, childish, cartoon, anime, orc, elf, pointed ears, green skin, tusks",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "male_hair": {
+          "prompt": "{style_prefix}, medieval human male {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, Warcraft Stormwind knight aesthetic, {style_suffix}",
+          "negative": "face, skin, body, clothing, pointed ears, bald",
+          "styles": ["short cropped military", "medium swept back", "long flowing noble", "braided warrior", "receding mature", "thick curly", "ponytail tied back", "shaved sides mohawk"],
+          "variants": 8
+        },
+        "female_hair": {
+          "prompt": "{style_prefix}, medieval human female {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, Warcraft Stormwind noble aesthetic, {style_suffix}",
+          "negative": "face, skin, body, clothing, pointed ears",
+          "styles": ["long flowing straight", "braided crown", "elegant updo", "loose curls", "short bob", "half-up with braids", "warrior ponytail", "loose waves"],
+          "variants": 8
+        },
+        "male_beard": {
+          "prompt": "{style_prefix}, medieval human male {beard_style} facial hair, {hair_color} colored, on pure black background, facial hair only no face underneath, Warcraft knight aesthetic, {style_suffix}",
+          "negative": "face, skin, full head, hair on head, body",
+          "styles": ["clean stubble", "short trimmed goatee", "full thick beard", "handlebar mustache with beard", "long wizard beard", "mutton chops sideburns"],
+          "variants": 6
+        },
+        "male_clothes": {
+          "prompt": "{style_prefix}, medieval human male {rank_outfit}, from neck to mid-chest only, no head or face visible, on pure black background, Warcraft Stormwind Alliance aesthetic, gold and blue colors, lion crest, {style_suffix}",
+          "negative": "face, head, hair, full body, legs",
+          "rank_outfits": {
+            "courtier": "simple linen tunic with leather vest, commoner clothing, plain fabric",
+            "count": "fine wool surcoat with silver chain, minor noble attire, modest embroidery",
+            "duke": "rich velvet doublet with gold trim, fur-lined collar, jeweled brooch, Alliance blue",
+            "king": "ornate plate gorget with royal blue cape, gold lion pauldrons, Stormwind royal regalia",
+            "emperor": "full ceremonial plate with flowing royal cape, massive gold lion shoulderguards, jewel-encrusted collar, High King of the Alliance regalia"
+          },
+          "variants": 5
+        },
+        "female_clothes": {
+          "prompt": "{style_prefix}, medieval human female {rank_outfit}, from neck to mid-chest only, no head or face visible, on pure black background, Warcraft Stormwind Alliance aesthetic, gold and blue, {style_suffix}",
+          "negative": "face, head, hair, full body, legs, revealing, cleavage",
+          "rank_outfits": {
+            "courtier": "simple linen dress with modest neckline, commoner clothing",
+            "count": "fine silk dress with silver embroidery, minor noble lady attire",
+            "duke": "rich velvet gown with gold trim, fur collar, jeweled necklace, Alliance blue",
+            "king": "royal blue gown with gold filigree, ermine trim, Stormwind queen regalia",
+            "emperor": "imperial ceremonial gown with flowing cape, massive gold jewelry, High Queen regalia"
+          },
+          "variants": 5
+        },
+        "male_headgear": {
+          "prompt": "{style_prefix}, medieval human male {rank_headgear}, headwear only on pure black background, no face underneath, 3/4 view, Warcraft Stormwind Alliance aesthetic, {style_suffix}",
+          "negative": "face, skin, hair underneath, body, full portrait",
+          "rank_headgear": {
+            "courtier": "no headwear, empty transparent frame",
+            "count": "simple iron circlet with single gem",
+            "duke": "ornate silver coronet with blue gems, Alliance lion motif",
+            "king": "golden crown with sapphires, Stormwind lion crest, fur trim",
+            "emperor": "massive imperial crown with glowing gems, lion sculpture, radiant gold, High King crown of the Alliance"
+          },
+          "variants": 5
+        },
+        "female_headgear": {
+          "prompt": "{style_prefix}, medieval human female {rank_headgear}, headwear only on pure black background, no face underneath, 3/4 view, Warcraft Stormwind aesthetic, {style_suffix}",
+          "negative": "face, skin, body, full portrait",
+          "rank_headgear": {
+            "courtier": "simple cloth headband or no headwear",
+            "count": "delicate silver tiara with small gem",
+            "duke": "ornate gold and silver diadem with blue gems",
+            "king": "elegant golden crown with sapphires and diamonds, Stormwind queen crown",
+            "emperor": "grand imperial diadem with flowing veil, massive gems, radiant gold"
+          },
+          "variants": 5
+        }
+      }
+    },
+
+    "orc": {
+      "id": "orc",
+      "gfx_culture": "orcgfx",
+      "creature_trait": "creature_orc",
+      "description": "Warcraft orc, Horde race, massive green-skinned warriors with tusks and fierce features",
+      "skin_tones": ["dark green", "olive green", "brown-green", "grey-green", "pale green", "dark olive"],
+      "eye_colors": ["red", "amber", "yellow", "orange", "brown", "glowing red"],
+      "hair_colors": ["black", "dark brown", "grey", "white", "dark red", "braided black"],
+
+      "layers": {
+        "male_base": {
+          "prompt": "{style_prefix}, adult male Warcraft orc face, {skin_tone} skin, massive jaw with two prominent lower tusks protruding upward, broad flat nose, heavy brow ridge, thick muscular neck, small beady {eye_color} eyes, brutal savage appearance, {base_instructions}, {style_suffix}",
+          "negative": "human, elf, pretty, delicate, no tusks, smooth skin, pointed ears, thin, slim",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "female_base": {
+          "prompt": "{style_prefix}, adult female Warcraft orc face, {skin_tone} skin, strong jaw with small tusks, broad nose, pronounced brow, muscular neck, fierce determined expression, orc female warrior beauty, {base_instructions}, {style_suffix}",
+          "negative": "human, elf, delicate, tiny tusks missing, smooth pretty face, pointed ears",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "male_hair": {
+          "prompt": "{style_prefix}, Warcraft male orc {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, savage Horde warrior aesthetic, tribal braids and topknots, {style_suffix}",
+          "negative": "face, skin, body, elegant, refined, elvish",
+          "styles": ["shaved mohawk topknot", "long wild braids", "short spiked", "bald with side braids", "thick dreadlocks", "warrior ponytail with shaved sides", "wild mane", "tribal braided mohawk"],
+          "variants": 8
+        },
+        "female_hair": {
+          "prompt": "{style_prefix}, Warcraft female orc {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, Horde warrior woman aesthetic, {style_suffix}",
+          "negative": "face, skin, body, elegant, refined",
+          "styles": ["long braided warrior", "wild untamed mane", "short fierce crop", "braided mohawk", "tribal dreadlocks", "half-shaved with long side", "thick braids with beads", "flowing wild"],
+          "variants": 8
+        },
+        "male_beard": {
+          "prompt": "{style_prefix}, Warcraft male orc {beard_style} facial hair, on pure black background, facial hair only, savage tribal aesthetic with bone decorations, {style_suffix}",
+          "negative": "face, skin, full head, body, human, refined",
+          "styles": ["thick braided chin beard", "wild bushy beard with bone rings", "thin goatee around tusks", "massive war beard with iron rings", "stubble and sideburns", "long braided beard with trophies"],
+          "variants": 6
+        },
+        "male_clothes": {
+          "prompt": "{style_prefix}, Warcraft male orc {rank_outfit}, from neck to mid-chest only, no head, pure black background, Horde red and black aesthetic, spikes and bone decorations, {style_suffix}",
+          "negative": "face, head, hair, full body, Alliance, blue, gold lion",
+          "rank_outfits": {
+            "courtier": "rough leather harness with bone necklace, savage tribal wear, animal hide shoulders",
+            "count": "studded leather armor with wolf pelt shoulders, iron chain necklace, Horde grunt sergeant",
+            "duke": "heavy mail and plate mix with massive wolf skull pauldrons, Horde chieftain armor, red war paint",
+            "king": "black iron plate armor with massive spiked pauldrons, Warchief battle armor, Horde banner cape, glowing red accents",
+            "emperor": "legendary dark iron full plate with enormous skull pauldrons, flowing blood-red cape, Warchief supreme armor, Doomhammer-style legendary gear"
+          },
+          "variants": 5
+        },
+        "female_clothes": {
+          "prompt": "{style_prefix}, Warcraft female orc {rank_outfit}, from neck to mid-chest only, no head, pure black background, Horde aesthetic, {style_suffix}",
+          "negative": "face, head, hair, full body, revealing, bikini armor",
+          "rank_outfits": {
+            "courtier": "leather vest with fur trim, bone jewelry, tribal warrior woman",
+            "count": "studded leather with wolf pelt mantle, iron accessories, Horde warrior",
+            "duke": "heavy mail armor with wolf skull shoulders, war shaman regalia",
+            "king": "ornate dark plate with spiked shoulders, blood-red cape, Horde queen armor",
+            "emperor": "legendary plate armor with massive pauldrons, flowing red cape, supreme war matron regalia"
+          },
+          "variants": 5
+        },
+        "male_headgear": {
+          "prompt": "{style_prefix}, Warcraft male orc {rank_headgear}, headwear only on pure black background, no face, 3/4 view, Horde savage aesthetic, {style_suffix}",
+          "negative": "face, skin, body, human, elegant crown",
+          "rank_headgear": {
+            "courtier": "no headwear, maybe a bone earring",
+            "count": "iron jaw guard with tusks, simple war helm nose guard",
+            "duke": "wolf skull helmet, iron war helm with horns, Horde chieftain helm",
+            "king": "massive horned war crown, black iron with red gems, Warchief crown with tusks",
+            "emperor": "legendary skull crown with enormous horns, glowing red gems, dark iron masterwork, supreme Warchief helm"
+          },
+          "variants": 5
+        },
+        "female_headgear": {
+          "prompt": "{style_prefix}, Warcraft female orc {rank_headgear}, headwear only on pure black background, no face, Horde aesthetic, {style_suffix}",
+          "negative": "face, skin, body, human, delicate tiara",
+          "rank_headgear": {
+            "courtier": "bone and feather hair ornament",
+            "count": "iron circlet with wolf teeth",
+            "duke": "war helm with small horns, iron and bone crown",
+            "king": "horned iron crown with red gems, Horde queen helm",
+            "emperor": "massive horned war diadem, dark iron and blood gems, supreme war matron crown"
+          },
+          "variants": 5
+        }
+      }
+    },
+
+    "nightelf": {
+      "id": "nightelf",
+      "gfx_culture": "nightelfgfx",
+      "creature_trait": "creature_nightelf",
+      "description": "Warcraft night elf (kaldorei), Alliance race, purple/blue skin, long pointed ears, glowing silver eyes, ancient druidic culture",
+      "skin_tones": ["deep purple", "lavender blue", "pale violet", "dark indigo", "silvery purple", "blue-grey"],
+      "eye_colors": ["glowing silver-white", "glowing amber-gold", "pale moonlight", "luminous silver", "bright amber", "soft white glow"],
+      "hair_colors": ["dark blue", "forest green", "silver-white", "deep purple", "teal", "midnight blue", "seafoam green", "violet"],
+
+      "layers": {
+        "male_base": {
+          "prompt": "{style_prefix}, adult male Warcraft night elf (kaldorei) face, {skin_tone} skin, extremely long pointed ears extending past head, glowing {eye_color} eyes with no visible pupil, sharp angular features, strong brow with leaf-shaped markings, tall elongated face, ancient wisdom in expression, {base_instructions}, {style_suffix}",
+          "negative": "human ears, round ears, short ears, green skin, tusks, orc, normal human eyes, brown skin, tan skin",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "female_base": {
+          "prompt": "{style_prefix}, adult female Warcraft night elf (kaldorei) face, {skin_tone} skin, extremely long pointed ears extending far past head, glowing {eye_color} eyes with no pupil, ethereal otherworldly beauty, high angular cheekbones, leaf-shaped facial markings, elegant elongated face, {base_instructions}, {style_suffix}",
+          "negative": "human ears, round ears, short ears, green skin, tusks, orc, normal eyes, human skin tone",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "male_hair": {
+          "prompt": "{style_prefix}, Warcraft male night elf {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, ancient druidic kaldorei aesthetic, nature-themed, {style_suffix}",
+          "negative": "face, skin, body, human hair, orc",
+          "styles": ["long flowing past shoulders", "wild druid mane with leaves", "short spiked mohawk", "braided with nature ornaments", "long pulled back warrior style", "thick wild with vines", "elegant straight long", "dreadlocks with wooden beads"],
+          "variants": 8
+        },
+        "female_hair": {
+          "prompt": "{style_prefix}, Warcraft female night elf {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, kaldorei priestess aesthetic, moonlight shimmer, {style_suffix}",
+          "negative": "face, skin, body, human, short",
+          "styles": ["extremely long flowing straight", "elaborate braids with moonstone", "wild druid curls", "elegant updo with silver pins", "twin long braids", "loose waves with flower crown", "warrior ponytail", "cascading curls with leaf ornaments"],
+          "variants": 8
+        },
+        "male_beard": {
+          "prompt": "{style_prefix}, Warcraft male night elf {beard_style} facial hair, {hair_color} colored, on pure black background, facial hair only, elegant druidic kaldorei aesthetic, {style_suffix}",
+          "negative": "face, skin, full head, body, human, orc, thick barbaric",
+          "styles": ["thin elegant goatee", "long flowing elder beard with silver", "short trimmed chin beard", "mutton chops with nature style", "long thin braided beard", "clean mustache only"],
+          "variants": 6
+        },
+        "male_clothes": {
+          "prompt": "{style_prefix}, Warcraft male night elf {rank_outfit}, from neck to mid-chest only, no head, pure black background, kaldorei ancient druidic aesthetic, purple silver and moonlight colors, nature motifs, {style_suffix}",
+          "negative": "face, head, hair, full body, orc, human, red, Horde",
+          "rank_outfits": {
+            "courtier": "simple leather tunic with leaf patterns, druidic commoner, natural fabric",
+            "count": "fine leather and silk robe with silver leaf brooch, sentinel guard attire, purple accent",
+            "duke": "ornate mooncloth and leather armor with silver filigree, ancient kaldorei noble regalia, owl feather mantle",
+            "king": "magnificent purple and silver robes with living wood pauldrons, crescent moon motifs, Darnassus royal regalia, starlight gems",
+            "emperor": "legendary ancient kaldorei ceremonial armor, living wood and moonstone plate, Elune's blessing glow, World Tree bark mantle, celestial silver crown-collar"
+          },
+          "variants": 5
+        },
+        "female_clothes": {
+          "prompt": "{style_prefix}, Warcraft female night elf {rank_outfit}, from neck to mid-chest only, no head, pure black background, kaldorei priestess aesthetic, moonlight silver and purple, {style_suffix}",
+          "negative": "face, head, hair, full body, revealing, bikini, orc",
+          "rank_outfits": {
+            "courtier": "simple mooncloth tunic with leaf patterns, druidic commoner",
+            "count": "fine silk robe with silver embroidery, sentinel priestess attire",
+            "duke": "ornate mooncloth gown with silver and amethyst jewelry, high priestess vestments",
+            "king": "magnificent purple and silver ceremonial robes, crescent moon jewelry, Darnassus queen regalia",
+            "emperor": "legendary Elune priestess raiment, glowing moonstone and starlight fabric, celestial empress gown"
+          },
+          "variants": 5
+        },
+        "male_headgear": {
+          "prompt": "{style_prefix}, Warcraft male night elf {rank_headgear}, headwear only on pure black background, no face, kaldorei aesthetic, {style_suffix}",
+          "negative": "face, skin, body, human crown, iron, steel",
+          "rank_headgear": {
+            "courtier": "simple leather headband with leaf",
+            "count": "silver circlet with crescent moon gem",
+            "duke": "ornate silver and amethyst crown with antler motifs, living wood",
+            "king": "magnificent crescent moon crown with moonstones, silver and living wood, Darnassus king crown",
+            "emperor": "legendary ancient kaldorei crown of stars, living wood antlers with glowing moonstones, celestial silver"
+          },
+          "variants": 5
+        },
+        "female_headgear": {
+          "prompt": "{style_prefix}, Warcraft female night elf {rank_headgear}, headwear only on pure black background, no face, kaldorei priestess aesthetic, {style_suffix}",
+          "negative": "face, skin, body, human, iron crown",
+          "rank_headgear": {
+            "courtier": "silver leaf hair pin",
+            "count": "delicate crescent moon tiara",
+            "duke": "ornate moonstone diadem with silver filigree",
+            "king": "magnificent Elune crescent crown with moonstones, high priestess crown",
+            "emperor": "legendary crown of stars and moonlight, celestial tiara with living silver vines"
+          },
+          "variants": 5
+        }
+      }
+    },
+
+    "bloodelf": {
+      "id": "bloodelf",
+      "gfx_culture": "bloodelfgfx",
+      "creature_trait": "creature_bloodelf",
+      "description": "Warcraft blood elf (sin'dorei), Horde race, fair pale skin, long pointed ears, glowing green fel eyes, elegant aristocratic culture",
+      "skin_tones": ["pale porcelain", "fair ivory", "light peach", "golden fair", "warm cream", "pale rose"],
+      "eye_colors": ["glowing fel green", "bright emerald glow", "luminous green", "golden-green glow", "intense jade glow", "pale green luminescence"],
+      "hair_colors": ["golden blonde", "platinum white", "fiery red", "dark auburn", "black", "strawberry blonde", "silver", "copper"],
+
+      "layers": {
+        "male_base": {
+          "prompt": "{style_prefix}, adult male Warcraft blood elf (sin'dorei) face, {skin_tone} skin, very long pointed ears angled upward, glowing {eye_color} eyes radiating fel energy, extremely handsome angular aristocratic features, high cheekbones, thin elegant nose, arrogant refined expression, {base_instructions}, {style_suffix}",
+          "negative": "human ears, round ears, purple skin, tusks, orc, normal eyes, rough features, barbaric, dark skin",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "female_base": {
+          "prompt": "{style_prefix}, adult female Warcraft blood elf (sin'dorei) face, {skin_tone} skin, very long pointed ears angled upward, glowing {eye_color} eyes with fel energy, stunningly beautiful sharp aristocratic features, high cheekbones, full lips, elegant and haughty expression, {base_instructions}, {style_suffix}",
+          "negative": "human ears, round ears, purple skin, tusks, orc, normal eyes, rough features, dark skin",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "male_hair": {
+          "prompt": "{style_prefix}, Warcraft male blood elf {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, sin'dorei aristocratic aesthetic, perfectly groomed, {style_suffix}",
+          "negative": "face, skin, body, messy, wild, savage, orc",
+          "styles": ["long flowing straight past shoulders", "elegant swept back", "short aristocratic", "long with ornate silver clips", "ponytail with golden bands", "spiky styled upward", "shoulder-length layered", "braided with gold thread"],
+          "variants": 8
+        },
+        "female_hair": {
+          "prompt": "{style_prefix}, Warcraft female blood elf {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, sin'dorei high elf aristocratic beauty, {style_suffix}",
+          "negative": "face, skin, body, messy, savage",
+          "styles": ["extremely long straight flowing", "elaborate updo with jeweled pins", "twin tails with ribbons", "elegant side-swept", "cascading curls", "high ponytail with gold bands", "braided crown with gems", "loose waves with tiara"],
+          "variants": 8
+        },
+        "male_beard": {
+          "prompt": "{style_prefix}, Warcraft male blood elf {beard_style} facial hair, {hair_color} colored, on pure black background, facial hair only, elegant aristocratic sin'dorei aesthetic, perfectly groomed, {style_suffix}",
+          "negative": "face, skin, full head, body, wild, bushy, savage, orc",
+          "styles": ["thin elegant goatee", "perfectly trimmed van dyke", "thin mustache only", "small soul patch", "clean angular sideburns", "thin chin strap beard"],
+          "variants": 6
+        },
+        "male_clothes": {
+          "prompt": "{style_prefix}, Warcraft male blood elf {rank_outfit}, from neck to mid-chest only, no head, pure black background, sin'dorei Silvermoon aesthetic, red and gold colors, phoenix and sun motifs, {style_suffix}",
+          "negative": "face, head, hair, full body, orc, savage, bone, skull",
+          "rank_outfits": {
+            "courtier": "fine silk tunic with gold embroidery, minor sin'dorei noble, subtle arcane patterns",
+            "count": "rich magister robe with gold trim, red silk with arcane runes, jeweled collar",
+            "duke": "ornate enchanted robes with phoenix embroidery, gold and ruby accessories, Silvermoon magistrix attire",
+            "king": "magnificent royal robes with floating arcane crystals, gold-threaded crimson cape, Sunstrider dynasty regalia",
+            "emperor": "legendary ceremonial armor with sunwell-infused crystals, flowing golden cape, supreme sin'dorei regent plate, phoenix crown collar"
+          },
+          "variants": 5
+        },
+        "female_clothes": {
+          "prompt": "{style_prefix}, Warcraft female blood elf {rank_outfit}, from neck to mid-chest only, no head, pure black background, sin'dorei elegant aesthetic, red and gold, {style_suffix}",
+          "negative": "face, head, hair, full body, revealing, orc, savage",
+          "rank_outfits": {
+            "courtier": "fine silk dress with delicate gold embroidery, minor noble lady",
+            "count": "rich magistrix robe with arcane patterns, ruby brooch, elegant",
+            "duke": "ornate enchanted gown with phoenix motifs, gold and ruby jewelry, high magistrix",
+            "king": "magnificent royal gown with arcane crystal accents, Silvermoon queen regalia",
+            "emperor": "legendary sunwell-blessed ceremonial gown, floating crystals, golden empress raiment"
+          },
+          "variants": 5
+        },
+        "male_headgear": {
+          "prompt": "{style_prefix}, Warcraft male blood elf {rank_headgear}, headwear only on pure black background, no face, sin'dorei Silvermoon aesthetic, {style_suffix}",
+          "negative": "face, skin, body, iron, barbaric, skull, bone, orc",
+          "rank_headgear": {
+            "courtier": "simple gold ear cuff or no headwear",
+            "count": "elegant gold circlet with small ruby",
+            "duke": "ornate gold and ruby crown with phoenix wings, arcane crystal",
+            "king": "magnificent Silvermoon crown with glowing sunwell crystal, gold phoenix",
+            "emperor": "legendary sun crown with floating arcane crystals, gold and ruby masterwork, supreme sin'dorei regent crown"
+          },
+          "variants": 5
+        },
+        "female_headgear": {
+          "prompt": "{style_prefix}, Warcraft female blood elf {rank_headgear}, headwear only on pure black background, no face, sin'dorei aesthetic, {style_suffix}",
+          "negative": "face, skin, body, iron, barbaric, orc",
+          "rank_headgear": {
+            "courtier": "delicate gold hair pin with ruby",
+            "count": "elegant gold tiara with phoenix motif",
+            "duke": "ornate gold and ruby diadem with arcane glow",
+            "king": "magnificent Silvermoon queen crown with sunwell crystal",
+            "emperor": "legendary sun diadem with floating arcane gems, supreme golden tiara"
+          },
+          "variants": 5
+        }
+      }
+    },
+
+    "troll": {
+      "id": "troll",
+      "gfx_culture": "trollgfx",
+      "creature_trait": "creature_troll",
+      "description": "Warcraft jungle troll (Darkspear), Horde race, blue/cyan skin, extremely long ears, tusks, tall lean, tribal voodoo culture",
+      "skin_tones": ["deep blue", "teal cyan", "dark indigo blue", "pale blue-grey", "turquoise", "dark navy blue"],
+      "eye_colors": ["glowing yellow", "fiery orange", "red", "amber", "golden", "burning yellow"],
+      "hair_colors": ["bright red", "orange", "white", "blue", "purple", "green", "fiery red-orange", "black"],
+
+      "layers": {
+        "male_base": {
+          "prompt": "{style_prefix}, adult male Warcraft jungle troll (Darkspear) face, {skin_tone} skin, two large tusks curving upward from lower jaw, extremely long pointed ears drooping downward, {eye_color} eyes, long thin face with pronounced nose, tribal scarification marks, lean angular jawline, fierce wild expression, {base_instructions}, {style_suffix}",
+          "negative": "human, elf, orc, green skin, short ears, no tusks, fat, round face, pretty",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "female_base": {
+          "prompt": "{style_prefix}, adult female Warcraft jungle troll (Darkspear) face, {skin_tone} skin, two small tusks from lower lip, extremely long pointed ears drooping slightly, {eye_color} eyes, exotic tribal beauty with facial paint, lean angular features, fierce but alluring expression, {base_instructions}, {style_suffix}",
+          "negative": "human, elf, orc, green skin, short ears, no tusks, round face",
+          "variants": 6,
+          "vary_by": "skin_tones"
+        },
+        "male_hair": {
+          "prompt": "{style_prefix}, Warcraft male jungle troll {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, Darkspear tribal voodoo aesthetic, wild and fierce, {style_suffix}",
+          "negative": "face, skin, body, elegant, refined, human",
+          "styles": ["tall wild mohawk", "long dreadlocks with bone beads", "spiked upward flame style", "shaved with topknot", "wild mane with feathers", "braided with voodoo charms", "massive spiked mohawk", "long flowing wild"],
+          "variants": 8
+        },
+        "female_hair": {
+          "prompt": "{style_prefix}, Warcraft female jungle troll {hair_style} hair, {hair_color} colored, on pure black background, hair only no face, Darkspear tribal aesthetic, exotic, {style_suffix}",
+          "negative": "face, skin, body, refined, human, elegant",
+          "styles": ["tall wild mohawk", "long braids with beads and feathers", "wild curls", "shaved sides with long top", "dreadlocks with bone ornaments", "flowing with tribal braids", "spiked punk style", "elaborate tribal updo"],
+          "variants": 8
+        },
+        "male_beard": {
+          "prompt": "{style_prefix}, Warcraft male jungle troll {beard_style} facial hair around tusks, on pure black background, facial hair only, tribal voodoo aesthetic with bone decorations, {style_suffix}",
+          "negative": "face, skin, full head, body, human, clean",
+          "styles": ["thin chin beard between tusks", "wild scraggly goatee", "long braided chin hair with beads", "tribal painted stubble", "thin mustache above tusks", "long sage beard with bone rings"],
+          "variants": 6
+        },
+        "male_clothes": {
+          "prompt": "{style_prefix}, Warcraft male jungle troll {rank_outfit}, from neck to mid-chest only, no head, pure black background, Darkspear Horde tribal aesthetic, feathers bones and voodoo, {style_suffix}",
+          "negative": "face, head, hair, full body, human, elegant, Alliance",
+          "rank_outfits": {
+            "courtier": "bare chest with bone necklace and tribal paint, simple leather straps, Darkspear commoner",
+            "count": "leather vest with feather and bone decorations, tribal war paint, voodoo charms",
+            "duke": "elaborate leather and mail with massive feathered shoulders, bone and tusk pauldrons, witch doctor aesthetic",
+            "king": "ornate ceremonial armor with huge feathered and bone shoulders, voodoo mask elements, tribal king regalia, Darkspear chieftain",
+            "emperor": "legendary voodoo king ceremonial armor, massive feathered mantle, glowing hexed bones, supreme tribal warlord plate with tusk crown collar"
+          },
+          "variants": 5
+        },
+        "female_clothes": {
+          "prompt": "{style_prefix}, Warcraft female jungle troll {rank_outfit}, from neck to mid-chest only, no head, pure black background, Darkspear tribal aesthetic, {style_suffix}",
+          "negative": "face, head, hair, full body, revealing bikini, human",
+          "rank_outfits": {
+            "courtier": "leather top with bone necklace, tribal paint, simple Darkspear clothing",
+            "count": "decorated leather vest with feathers and bone beads, tribal warrior woman",
+            "duke": "elaborate leather and chain with feathered shoulders, voodoo priestess aesthetic",
+            "king": "ornate ceremonial armor with feathered mantle, Darkspear queen regalia",
+            "emperor": "legendary voodoo queen raiment, massive feathered and bone armor, hexed ceremonial plate"
+          },
+          "variants": 5
+        },
+        "male_headgear": {
+          "prompt": "{style_prefix}, Warcraft male jungle troll {rank_headgear}, headwear only on pure black background, no face, Darkspear tribal voodoo aesthetic, {style_suffix}",
+          "negative": "face, skin, body, human, elegant crown, iron",
+          "rank_headgear": {
+            "courtier": "simple bone earring and nose ring, no headwear",
+            "count": "wooden tribal mask pushed up on forehead, feathers",
+            "duke": "elaborate voodoo mask with feathers and bones, witch doctor headdress",
+            "king": "massive feathered headdress with voodoo mask, bone crown, Darkspear king crown",
+            "emperor": "legendary voodoo king headdress with enormous feathers, glowing hexed skull crown, supreme tribal helm"
+          },
+          "variants": 5
+        },
+        "female_headgear": {
+          "prompt": "{style_prefix}, Warcraft female jungle troll {rank_headgear}, headwear only on pure black background, no face, Darkspear aesthetic, {style_suffix}",
+          "negative": "face, skin, body, human, elegant tiara, iron",
+          "rank_headgear": {
+            "courtier": "feather and bone hair ornament",
+            "count": "beaded headband with feathers",
+            "duke": "elaborate feathered headdress with voodoo charms",
+            "king": "magnificent feathered and bone crown, Darkspear queen headdress",
+            "emperor": "legendary voodoo queen crown with enormous plumage, hexed bone diadem"
+          },
+          "variants": 5
+        }
+      }
+    }
+  }
+}
