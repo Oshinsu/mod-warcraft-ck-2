@@ -1,0 +1,342 @@
+# GoA: Heroes of Azeroth - Commander Events
+# Rivalries, defections, and command politics among your military leaders.
+
+namespace = hoa_commander
+
+###############################################
+# COMMANDER RIVALRY
+# Two of your commanders develop a rivalry over
+# military strategy or glory. You must decide
+# how to handle the conflict.
+# MTTH flavor event - fires organically.
+###############################################
+character_event = {
+	id = hoa_commander.1
+	desc = hoa_commander.1.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		prisoner = no
+		NOT = { has_character_flag = hoa_rivalry_cooldown }
+		# Must have at least 2 capable commanders
+		any_courtier = {
+			martial >= 12
+			is_adult = yes
+			prisoner = no
+			count >= 2
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 0.7
+			any_courtier = {
+				martial >= 16
+				trait = ambitious
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_courtier = {
+				martial >= 12
+				trait = proud
+			}
+		}
+		modifier = {
+			factor = 1.5
+			diplomacy >= 16
+		}
+	}
+
+	immediate = {
+		# Save two rival commanders as event targets
+		random_courtier = {
+			limit = {
+				martial >= 12
+				is_adult = yes
+				prisoner = no
+			}
+			save_event_target_as = hoa_rival_commander_a
+		}
+		random_courtier = {
+			limit = {
+				martial >= 12
+				is_adult = yes
+				prisoner = no
+				NOT = { character = event_target:hoa_rival_commander_a }
+			}
+			save_event_target_as = hoa_rival_commander_b
+		}
+	}
+
+	# Support Commander A - the more aggressive strategist
+	option = {
+		name = hoa_commander.1.a
+		event_target:hoa_rival_commander_a = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_grateful
+				years = 5
+			}
+			change_martial = 1
+		}
+		event_target:hoa_rival_commander_b = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_disappointed
+				years = 5
+			}
+		}
+		# The spurned commander may threaten to leave
+		hidden_tooltip = {
+			random_list = {
+				40 = {
+					# Commander B threatens defection
+					character_event = { id = hoa_commander.2 days = 30 }
+				}
+				60 = {
+					# Commander B accepts the decision grudgingly
+				}
+			}
+		}
+		set_character_flag = hoa_rivalry_cooldown
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 1.5
+				event_target:hoa_rival_commander_a = { martial >= 16 }
+			}
+		}
+	}
+
+	# Support Commander B - the more cautious tactician
+	option = {
+		name = hoa_commander.1.b
+		event_target:hoa_rival_commander_b = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_grateful
+				years = 5
+			}
+			change_martial = 1
+		}
+		event_target:hoa_rival_commander_a = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_disappointed
+				years = 5
+			}
+		}
+		# The spurned commander may threaten to leave
+		hidden_tooltip = {
+			random_list = {
+				40 = {
+					# Commander A threatens defection
+					character_event = { id = hoa_commander.2 days = 30 }
+				}
+				60 = {
+					# Commander A accepts the decision grudgingly
+				}
+			}
+		}
+		set_character_flag = hoa_rivalry_cooldown
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 1.5
+				event_target:hoa_rival_commander_b = { martial >= 16 }
+			}
+		}
+	}
+
+	# Mediate the dispute - costly but preserves both
+	option = {
+		name = hoa_commander.1.c
+		wealth = -50
+		custom_tooltip = { text = hoa_commander_mediate_tt }
+		event_target:hoa_rival_commander_a = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_grateful
+				years = 3
+			}
+		}
+		event_target:hoa_rival_commander_b = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_grateful
+				years = 3
+			}
+		}
+		set_character_flag = hoa_rivalry_cooldown
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				diplomacy >= 14
+			}
+			modifier = {
+				factor = 1.5
+				trait = just
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { wealth >= 100 }
+			}
+		}
+	}
+}
+
+###############################################
+# COMMANDER DEFECTION THREAT
+# The unsupported commander threatens to defect
+# to a rival realm. You must decide how to handle
+# this crisis.
+# Triggered from hoa_commander.1
+###############################################
+character_event = {
+	id = hoa_commander.2
+	desc = hoa_commander.2.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Find the disgruntled commander (the one with negative opinion)
+		random_courtier = {
+			limit = {
+				martial >= 12
+				is_adult = yes
+				prisoner = no
+				NOT = {
+					opinion = { who = ROOT value = 0 }
+				}
+			}
+			save_event_target_as = hoa_defecting_commander
+		}
+	}
+
+	# Bribe to stay - offer gold and position
+	option = {
+		name = hoa_commander.2.a
+		wealth = -100
+		custom_tooltip = { text = hoa_commander_bribe_stay_tt }
+		event_target:hoa_defecting_commander = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_grateful
+				years = 3
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				wealth >= 300
+			}
+			modifier = {
+				factor = 1.5
+				event_target:hoa_defecting_commander = { martial >= 16 }
+			}
+			modifier = {
+				factor = 0.3
+				NOT = { wealth >= 150 }
+			}
+		}
+	}
+
+	# Let them go - lose the courtier
+	option = {
+		name = hoa_commander.2.b
+		custom_tooltip = { text = hoa_commander_let_go_tt }
+		event_target:hoa_defecting_commander = {
+			# Commander leaves your court
+			random_neighbor_independent_ruler = {
+				limit = {
+					NOT = { character = ROOT }
+				}
+				event_target:hoa_defecting_commander = {
+					move_character = PREV
+				}
+			}
+		}
+		prestige = -25
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				NOT = { wealth >= 100 }
+			}
+			modifier = {
+				factor = 0.5
+				event_target:hoa_defecting_commander = { martial >= 18 }
+			}
+		}
+	}
+
+	# Imprison - risky and tyrannical
+	option = {
+		name = hoa_commander.2.c
+		custom_tooltip = { text = hoa_commander_imprison_tt }
+		hidden_tooltip = {
+			random_list = {
+				# Successful imprisonment (intrigue check)
+				50 = {
+					modifier = {
+						factor = 1.5
+						intrigue >= 14
+					}
+					modifier = {
+						factor = 1.3
+						intrigue >= 18
+					}
+					event_target:hoa_defecting_commander = {
+						imprison = ROOT
+					}
+				}
+				# Failed attempt - commander escapes and defects
+				50 = {
+					modifier = {
+						factor = 1.5
+						NOT = { intrigue >= 12 }
+					}
+					prestige = -50
+					event_target:hoa_defecting_commander = {
+						random_neighbor_independent_ruler = {
+							limit = {
+								NOT = { character = ROOT }
+							}
+							event_target:hoa_defecting_commander = {
+								move_character = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+		piety = -25
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 2
+				trait = cruel
+			}
+			modifier = {
+				factor = 2
+				intrigue >= 16
+			}
+			modifier = {
+				factor = 0.3
+				trait = just
+			}
+			modifier = {
+				factor = 0
+				trait = kind
+			}
+		}
+	}
+}

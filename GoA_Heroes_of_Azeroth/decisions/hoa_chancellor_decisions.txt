@@ -1,0 +1,217 @@
+# GoA: Heroes of Azeroth - Chancellor Active Decisions
+# Makes the Chancellor (job_chancellor) an active gameplay element
+# with treaty negotiation, diplomatic summits, and intelligence networks.
+
+decisions = {
+
+	###############################################
+	# NEGOTIATE TREATY
+	# Send your chancellor to negotiate a trade treaty
+	# with a neighboring realm. Outcome depends on
+	# chancellor's diplomacy skill.
+	###############################################
+	hoa_chancellor_negotiate_treaty = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+			# Must have a chancellor
+			job_chancellor = {
+				always = yes
+			}
+			war = no
+			NOT = { has_character_modifier = hoa_chancellor_mission_cooldown }
+		}
+
+		allow = {
+			war = no
+			wealth >= 100
+			# Chancellor must be skilled enough
+			job_chancellor = {
+				diplomacy >= 12
+			}
+			custom_tooltip = {
+				text = hoa_chancellor_negotiate_tooltip
+				job_chancellor = {
+					diplomacy >= 12
+				}
+			}
+		}
+
+		effect = {
+			wealth = -100
+			custom_tooltip = { text = hoa_chancellor_sent_negotiate_tt }
+			hidden_tooltip = {
+				character_event = { id = hoa_council.1 days = 90 }
+			}
+			add_character_modifier = {
+				name = hoa_chancellor_mission_cooldown
+				duration = 730
+				hidden = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { wealth >= 300 }
+			}
+			modifier = {
+				factor = 2
+				diplomacy >= 14
+			}
+			modifier = {
+				factor = 1.5
+				job_chancellor = { diplomacy >= 16 }
+			}
+			modifier = {
+				factor = 0.5
+				trait = paranoid
+			}
+		}
+	}
+
+	###############################################
+	# ORGANIZE DIPLOMATIC SUMMIT
+	# A grand gathering of rulers, organized by your
+	# chancellor. Very prestigious but expensive and
+	# requires independence. Long cooldown.
+	###############################################
+	hoa_chancellor_organize_summit = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+			# Must have a chancellor
+			job_chancellor = {
+				always = yes
+			}
+			NOT = { has_character_modifier = hoa_summit_cooldown }
+			prestige >= 200
+		}
+
+		allow = {
+			independent = yes
+			wealth >= 150
+			# Chancellor must be highly skilled
+			job_chancellor = {
+				diplomacy >= 15
+			}
+			custom_tooltip = {
+				text = hoa_chancellor_summit_tooltip
+				job_chancellor = {
+					diplomacy >= 15
+				}
+			}
+		}
+
+		effect = {
+			wealth = -150
+			prestige = -100
+			custom_tooltip = { text = hoa_chancellor_organizing_summit_tt }
+			hidden_tooltip = {
+				character_event = { id = hoa_council.10 days = 60 }
+			}
+			add_character_modifier = {
+				name = hoa_summit_cooldown
+				duration = 1825
+				hidden = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { wealth >= 500 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { prestige >= 500 }
+			}
+			modifier = {
+				factor = 2
+				diplomacy >= 16
+			}
+			modifier = {
+				factor = 1.5
+				higher_tier_than = DUKE
+			}
+			modifier = {
+				factor = 0
+				trait = shy
+			}
+		}
+	}
+
+	###############################################
+	# ESTABLISH DIPLOMATIC NETWORK
+	# Your chancellor builds a lasting network of
+	# contacts and informants across neighboring realms.
+	# Provides a passive diplomacy bonus for 5 years.
+	###############################################
+	hoa_chancellor_diplomatic_network = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+			# Must have a skilled chancellor
+			job_chancellor = {
+				diplomacy >= 16
+			}
+			# Cannot already have the network active
+			NOT = { has_character_modifier = hoa_diplomatic_network }
+		}
+
+		allow = {
+			wealth >= 50
+			job_chancellor = {
+				diplomacy >= 16
+			}
+			custom_tooltip = {
+				text = hoa_chancellor_network_tooltip
+				job_chancellor = {
+					diplomacy >= 16
+				}
+			}
+		}
+
+		effect = {
+			wealth = -50
+			custom_tooltip = { text = hoa_chancellor_building_network_tt }
+			add_character_modifier = {
+				name = hoa_diplomatic_network
+				duration = 1825
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { wealth >= 200 }
+			}
+			modifier = {
+				factor = 2
+				diplomacy >= 14
+			}
+			modifier = {
+				factor = 1.5
+				independent = yes
+			}
+		}
+	}
+}

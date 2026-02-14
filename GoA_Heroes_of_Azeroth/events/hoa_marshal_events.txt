@@ -1,0 +1,423 @@
+# GoA: Heroes of Azeroth - Marshal Events
+# Campaign planning outcomes, battlefield assaults, and commander glory.
+
+namespace = hoa_marshal
+
+###############################################
+# CAMPAIGN PLAN RESULTS
+# Fired 90 days after the marshal begins planning.
+# Outcome quality depends on marshal's martial skill
+# and strategic traits.
+###############################################
+character_event = {
+	id = hoa_marshal.1
+	desc = hoa_marshal.1.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			# Excellent plan - comprehensive strategy
+			25 = {
+				modifier = {
+					factor = 1.5
+					job_marshal = { martial >= 18 }
+				}
+				modifier = {
+					factor = 1.3
+					job_marshal = { martial >= 22 }
+				}
+				modifier = {
+					factor = 1.4
+					job_marshal = { trait = brilliant_strategist }
+				}
+				modifier = {
+					factor = 1.2
+					job_marshal = { has_any_class_trigger = yes }
+				}
+				set_character_flag = hoa_campaign_excellent
+			}
+			# Good plan - solid strategy
+			40 = {
+				modifier = {
+					factor = 1.3
+					job_marshal = { martial >= 16 }
+				}
+				modifier = {
+					factor = 1.2
+					job_marshal = { trait = brave }
+				}
+				set_character_flag = hoa_campaign_good
+			}
+			# Average plan - basic strategy
+			25 = {
+				modifier = {
+					factor = 1.3
+					job_marshal = { martial < 14 }
+				}
+				set_character_flag = hoa_campaign_average
+			}
+			# Poor plan - flawed strategy
+			10 = {
+				modifier = {
+					factor = 1.5
+					job_marshal = { martial < 12 }
+				}
+				modifier = {
+					factor = 1.3
+					job_marshal = { trait = slothful }
+				}
+				modifier = {
+					factor = 0.5
+					job_marshal = { martial >= 18 }
+				}
+				set_character_flag = hoa_campaign_poor
+			}
+		}
+	}
+
+	# Excellent - The plan is a masterwork of strategy
+	option = {
+		name = hoa_marshal.1.a
+		trigger = { has_character_flag = hoa_campaign_excellent }
+		custom_tooltip = { text = hoa_marshal_excellent_plan_tt }
+		add_character_modifier = {
+			name = hoa_campaign_plan_excellent
+			duration = 730
+		}
+		prestige = 50
+		job_marshal = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_grateful
+				years = 5
+			}
+		}
+		clr_character_flag = hoa_campaign_excellent
+	}
+
+	# Good - A solid campaign plan
+	option = {
+		name = hoa_marshal.1.b
+		trigger = { has_character_flag = hoa_campaign_good }
+		custom_tooltip = { text = hoa_marshal_good_plan_tt }
+		add_character_modifier = {
+			name = hoa_campaign_plan_good
+			duration = 730
+		}
+		prestige = 25
+		clr_character_flag = hoa_campaign_good
+	}
+
+	# Average - A workable but unremarkable plan
+	option = {
+		name = hoa_marshal.1.c
+		trigger = { has_character_flag = hoa_campaign_average }
+		custom_tooltip = { text = hoa_marshal_average_plan_tt }
+		add_character_modifier = {
+			name = hoa_campaign_plan_average
+			duration = 365
+		}
+		clr_character_flag = hoa_campaign_average
+	}
+
+	# Poor - The plan is deeply flawed
+	option = {
+		name = hoa_marshal.1.d
+		trigger = { has_character_flag = hoa_campaign_poor }
+		custom_tooltip = { text = hoa_marshal_poor_plan_tt }
+		prestige = -25
+		job_marshal = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_disappointed
+				years = 3
+			}
+		}
+		clr_character_flag = hoa_campaign_poor
+	}
+}
+
+###############################################
+# MARSHAL PROPOSES DECISIVE ASSAULT
+# During wartime, the marshal may propose a bold
+# military maneuver that could turn the tide.
+# MTTH flavor event - fires organically during war.
+###############################################
+character_event = {
+	id = hoa_marshal.10
+	desc = hoa_marshal.10.desc
+	picture = GFX_evt_battle
+
+	trigger = {
+		is_ruler = yes
+		war = yes
+		NOT = { has_character_flag = hoa_assault_proposed }
+		NOT = { trait = incapable }
+		job_marshal = {
+			martial >= 15
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 2
+		modifier = {
+			factor = 0.7
+			job_marshal = { martial >= 18 }
+		}
+		modifier = {
+			factor = 0.8
+			job_marshal = { trait = brilliant_strategist }
+		}
+		modifier = {
+			factor = 0.8
+			job_marshal = { trait = brave }
+		}
+		modifier = {
+			factor = 1.5
+			job_marshal = { trait = craven }
+		}
+	}
+
+	# Accept the marshal's bold assault plan
+	option = {
+		name = hoa_marshal.10.a
+		custom_tooltip = { text = hoa_marshal_assault_accept_tt }
+		hidden_tooltip = {
+			random_list = {
+				60 = {
+					modifier = {
+						factor = 1.3
+						job_marshal = { martial >= 18 }
+					}
+					modifier = {
+						factor = 1.2
+						martial >= 14
+					}
+					modifier = {
+						factor = 1.2
+						job_marshal = { is_warrior_class_trigger = yes }
+					}
+					# Assault succeeds - significant morale and prestige
+					prestige = 150
+					wealth = 100
+					job_marshal = {
+						prestige = 50
+						opinion = {
+							who = ROOT
+							modifier = opinion_grateful
+							years = 5
+						}
+					}
+				}
+				40 = {
+					modifier = {
+						factor = 1.3
+						job_marshal = { martial < 15 }
+					}
+					# Assault fails - losses and dishonor
+					prestige = -100
+					wealth = -50
+					job_marshal = {
+						prestige = -30
+					}
+				}
+			}
+		}
+		set_character_flag = hoa_assault_proposed
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 1.5
+				job_marshal = { martial >= 18 }
+			}
+			modifier = {
+				factor = 0.3
+				trait = craven
+			}
+		}
+	}
+
+	# Refuse - too risky
+	option = {
+		name = hoa_marshal.10.b
+		prestige = -10
+		job_marshal = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_disappointed
+				years = 2
+			}
+		}
+		set_character_flag = hoa_assault_proposed
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = craven
+			}
+			modifier = {
+				factor = 1.5
+				trait = patient
+			}
+		}
+	}
+
+	# Counter-proposal - diplomatic solution via the chancellor
+	option = {
+		name = hoa_marshal.10.c
+		trigger = {
+			job_chancellor = {
+				diplomacy >= 14
+			}
+		}
+		custom_tooltip = { text = hoa_marshal_counter_proposal_tt }
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 1.3
+						job_chancellor = { diplomacy >= 18 }
+					}
+					# Diplomatic resolution bears fruit
+					prestige = 100
+					piety = 25
+					job_chancellor = {
+						opinion = {
+							who = ROOT
+							modifier = opinion_grateful
+							years = 5
+						}
+					}
+				}
+				50 = {
+					# Diplomacy fails, should have attacked
+					prestige = -50
+					job_marshal = {
+						opinion = {
+							who = ROOT
+							modifier = opinion_disappointed
+							years = 3
+						}
+					}
+				}
+			}
+		}
+		set_character_flag = hoa_assault_proposed
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				diplomacy >= 15
+			}
+			modifier = {
+				factor = 1.5
+				trait = diplomat
+			}
+		}
+	}
+}
+
+###############################################
+# BATTLE AFTERMATH: COMMANDER GLORY
+# Triggered after winning a battle (via on_action).
+# A commander may gain renown from their valor.
+# 20% chance per battle won.
+###############################################
+character_event = {
+	id = hoa_marshal.11
+	desc = hoa_marshal.11.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ruler = yes
+		# Must have at least one commander (courtier with martial)
+		any_courtier = {
+			is_adult = yes
+			martial >= 10
+			prisoner = no
+		}
+	}
+
+	immediate = {
+		random_list = {
+			# Commander gains renown (20% chance)
+			20 = {
+				modifier = {
+					factor = 1.3
+					martial >= 16
+				}
+				modifier = {
+					factor = 1.2
+					any_courtier = {
+						martial >= 16
+						trait = brave
+					}
+				}
+				set_character_flag = hoa_commander_glory
+			}
+			# Nothing special (80%)
+			80 = {
+				# No glory this time
+			}
+		}
+	}
+
+	# A commander distinguished themselves in battle
+	option = {
+		name = hoa_marshal.11.a
+		trigger = { has_character_flag = hoa_commander_glory }
+		random_courtier = {
+			limit = {
+				is_adult = yes
+				martial >= 10
+				prisoner = no
+				NOT = { trait = hoa_war_hero }
+			}
+			# If already battle_tested, upgrade to war_hero
+			if = {
+				limit = { trait = hoa_battle_tested }
+				remove_trait = hoa_battle_tested
+				add_trait = hoa_war_hero
+				prestige = 100
+				opinion = {
+					who = ROOT
+					modifier = opinion_grateful
+					years = 10
+				}
+			}
+			# If no commander trait yet, gain battle_tested
+			if = {
+				limit = {
+					NOT = { trait = hoa_battle_tested }
+					NOT = { trait = hoa_war_hero }
+				}
+				add_trait = hoa_battle_tested
+				prestige = 50
+				opinion = {
+					who = ROOT
+					modifier = opinion_grateful
+					years = 5
+				}
+			}
+		}
+		clr_character_flag = hoa_commander_glory
+	}
+
+	# No one stood out (fallback for no glory)
+	option = {
+		name = hoa_marshal.11.b
+		trigger = {
+			NOT = { has_character_flag = hoa_commander_glory }
+		}
+		# Battle won, but no individual glory
+		prestige = 10
+	}
+}

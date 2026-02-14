@@ -1,0 +1,423 @@
+# GoA: Heroes of Azeroth - Spymaster Events
+# Infiltration, spy capture, sabotage operations
+
+namespace = hoa_spymaster
+
+###############################################
+# INFILTRATION RESULTS (triggered by hoa_spy_infiltrate_court decision)
+###############################################
+character_event = {
+	id = hoa_spymaster.1
+	desc = hoa_spymaster.1.desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			25 = {
+				# Great: full intel report
+				modifier = {
+					factor = 1.5
+					any_courtier = {
+						has_job_title = job_spymaster
+						intrigue >= 16
+					}
+				}
+				modifier = {
+					factor = 1.3
+					is_rogue_class_trigger = yes
+				}
+				set_character_flag = hoa_infiltrate_great
+			}
+			35 = {
+				# Good: partial intel
+				modifier = {
+					factor = 1.3
+					any_courtier = {
+						has_job_title = job_spymaster
+						intrigue >= 16
+					}
+				}
+				set_character_flag = hoa_infiltrate_good
+			}
+			25 = {
+				# Fail: nothing found
+				set_character_flag = hoa_infiltrate_fail
+			}
+			15 = {
+				# Catastrophe: spymaster captured
+				modifier = {
+					factor = 0.7
+					any_courtier = {
+						has_job_title = job_spymaster
+						intrigue >= 18
+					}
+				}
+				modifier = {
+					factor = 1.5
+					any_courtier = {
+						has_job_title = job_spymaster
+						NOT = { intrigue >= 14 }
+					}
+				}
+				set_character_flag = hoa_infiltrate_catastrophe
+			}
+		}
+	}
+
+	# Great: Full intel - +2 intrigue modifier, +50 prestige, discover plot
+	option = {
+		name = hoa_spymaster.1.a
+		trigger = { has_character_flag = hoa_infiltrate_great }
+		custom_tooltip = { text = hoa_infiltrate_great_tt }
+		add_character_modifier = {
+			name = hoa_full_intel_report
+			duration = 730
+		}
+		prestige = 50
+		hidden_tooltip = {
+			# Discover a plot against us if any exists
+			any_known_plotter = {
+				limit = {
+					has_plot = yes
+					plot_target_char = {
+						character = ROOT
+					}
+				}
+				reveal_plot = yes
+			}
+		}
+		clr_character_flag = hoa_infiltrate_great
+	}
+
+	# Good: Partial intel - +1 intrigue modifier, +25 prestige
+	option = {
+		name = hoa_spymaster.1.b
+		trigger = { has_character_flag = hoa_infiltrate_good }
+		custom_tooltip = { text = hoa_infiltrate_good_tt }
+		add_character_modifier = {
+			name = hoa_partial_intel_report
+			duration = 365
+		}
+		prestige = 25
+		clr_character_flag = hoa_infiltrate_good
+	}
+
+	# Fail: Nothing found
+	option = {
+		name = hoa_spymaster.1.c
+		trigger = { has_character_flag = hoa_infiltrate_fail }
+		custom_tooltip = { text = hoa_infiltrate_fail_tt }
+		clr_character_flag = hoa_infiltrate_fail
+	}
+
+	# Catastrophe: Spymaster captured - fire rescue event
+	option = {
+		name = hoa_spymaster.1.d
+		trigger = { has_character_flag = hoa_infiltrate_catastrophe }
+		custom_tooltip = { text = hoa_infiltrate_catastrophe_tt }
+		character_event = { id = hoa_spymaster.2 days = 7 }
+		clr_character_flag = hoa_infiltrate_catastrophe
+	}
+}
+
+###############################################
+# SPY CAPTURED - Ransom, deny, or rescue
+###############################################
+character_event = {
+	id = hoa_spymaster.2
+	desc = hoa_spymaster.2.desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	# Option A: Pay 200 gold ransom
+	option = {
+		name = hoa_spymaster.2.a
+		trigger = { wealth >= 200 }
+		wealth = -200
+		custom_tooltip = { text = hoa_spy_ransom_tt }
+		prestige = -25
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				wealth >= 500
+			}
+		}
+	}
+
+	# Option B: Deny involvement - spymaster dies
+	option = {
+		name = hoa_spymaster.2.b
+		custom_tooltip = { text = hoa_spy_deny_tt }
+		prestige = -50
+		hidden_tooltip = {
+			random_courtier = {
+				limit = { has_job_title = job_spymaster }
+				death = { death_reason = death_execution }
+			}
+			# 10% chance the target ruler gets a CB or opinion hit
+			random_list = {
+				10 = {
+					event_target:hoa_spy_target_ruler = {
+						limit = { always = yes }
+						opinion = {
+							who = ROOT
+							modifier = opinion_caught_spying
+							years = 10
+						}
+					}
+				}
+				90 = {
+					# Nothing further happens
+				}
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				NOT = { wealth >= 200 }
+			}
+		}
+	}
+
+	# Option C: Rescue mission with marshal
+	option = {
+		name = hoa_spymaster.2.c
+		trigger = {
+			any_courtier = {
+				has_job_title = job_marshal
+				martial >= 14
+			}
+		}
+		custom_tooltip = { text = hoa_spy_rescue_tt }
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					# Rescue succeeds
+					modifier = {
+						factor = 1.5
+						any_courtier = {
+							has_job_title = job_marshal
+							martial >= 18
+						}
+					}
+					modifier = {
+						factor = 1.3
+						martial >= 16
+					}
+					character_event = { id = hoa_spymaster.3 days = 14 }
+				}
+				50 = {
+					# Rescue fails
+					modifier = {
+						factor = 1.5
+						NOT = {
+							any_courtier = {
+								has_job_title = job_marshal
+								martial >= 16
+							}
+						}
+					}
+					character_event = { id = hoa_spymaster.4 days = 14 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 3
+				any_courtier = {
+					has_job_title = job_marshal
+					martial >= 18
+				}
+			}
+		}
+	}
+}
+
+###############################################
+# RESCUE SUCCESS
+###############################################
+character_event = {
+	id = hoa_spymaster.3
+	desc = hoa_spymaster.3.desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_spymaster.3.a
+		custom_tooltip = { text = hoa_spy_rescue_success_tt }
+		prestige = 25
+		# Marshal gains opinion
+		any_courtier = {
+			limit = { has_job_title = job_marshal }
+			opinion = {
+				who = ROOT
+				modifier = opinion_grateful
+				years = 5
+			}
+		}
+	}
+}
+
+###############################################
+# RESCUE FAILED - Spymaster dies, marshal wounded
+###############################################
+character_event = {
+	id = hoa_spymaster.4
+	desc = hoa_spymaster.4.desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_spymaster.4.a
+		custom_tooltip = { text = hoa_spy_rescue_fail_tt }
+		prestige = -75
+		hidden_tooltip = {
+			random_courtier = {
+				limit = { has_job_title = job_spymaster }
+				death = { death_reason = death_execution }
+			}
+			random_courtier = {
+				limit = { has_job_title = job_marshal }
+				add_trait = wounded
+			}
+		}
+		# The target ruler now knows about us
+		hidden_tooltip = {
+			event_target:hoa_spy_target_ruler = {
+				limit = { always = yes }
+				opinion = {
+					who = ROOT
+					modifier = opinion_caught_spying
+					years = 10
+				}
+			}
+		}
+	}
+}
+
+###############################################
+# SABOTAGE RESULTS (triggered by hoa_spy_sabotage_economy decision)
+###############################################
+character_event = {
+	id = hoa_spymaster.10
+	desc = hoa_spymaster.10.desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			40 = {
+				# Success: target economy crippled
+				modifier = {
+					factor = 1.5
+					any_courtier = {
+						has_job_title = job_spymaster
+						intrigue >= 18
+					}
+				}
+				modifier = {
+					factor = 1.3
+					is_rogue_class_trigger = yes
+				}
+				set_character_flag = hoa_sabotage_success
+			}
+			30 = {
+				# Partial success
+				modifier = {
+					factor = 1.3
+					any_courtier = {
+						has_job_title = job_spymaster
+						intrigue >= 16
+					}
+				}
+				set_character_flag = hoa_sabotage_partial
+			}
+			30 = {
+				# Failure
+				modifier = {
+					factor = 1.5
+					NOT = {
+						any_courtier = {
+							has_job_title = job_spymaster
+							intrigue >= 14
+						}
+					}
+				}
+				set_character_flag = hoa_sabotage_fail
+			}
+		}
+	}
+
+	# Success: Target province -30% tax for 2 years
+	option = {
+		name = hoa_spymaster.10.a
+		trigger = { has_character_flag = hoa_sabotage_success }
+		custom_tooltip = { text = hoa_sabotage_success_tt }
+		prestige = 50
+		hidden_tooltip = {
+			event_target:hoa_sabotage_target = {
+				limit = { always = yes }
+				capital_scope = {
+					add_province_modifier = {
+						name = hoa_sabotaged_economy
+						duration = 730
+					}
+				}
+			}
+			# 30% sub-chance of being detected
+			random_list = {
+				30 = {
+					event_target:hoa_sabotage_target = {
+						limit = { always = yes }
+						opinion = {
+							who = ROOT
+							modifier = opinion_caught_spying
+							years = 10
+						}
+					}
+				}
+				70 = {
+					# Undetected
+				}
+			}
+		}
+		clr_character_flag = hoa_sabotage_success
+	}
+
+	# Partial: Target -15% tax for 1 year
+	option = {
+		name = hoa_spymaster.10.b
+		trigger = { has_character_flag = hoa_sabotage_partial }
+		custom_tooltip = { text = hoa_sabotage_partial_tt }
+		hidden_tooltip = {
+			event_target:hoa_sabotage_target = {
+				limit = { always = yes }
+				capital_scope = {
+					add_province_modifier = {
+						name = hoa_sabotaged_economy_minor
+						duration = 365
+					}
+				}
+			}
+		}
+		clr_character_flag = hoa_sabotage_partial
+	}
+
+	# Failure: Nothing happens
+	option = {
+		name = hoa_spymaster.10.c
+		trigger = { has_character_flag = hoa_sabotage_fail }
+		custom_tooltip = { text = hoa_sabotage_fail_tt }
+		prestige = -25
+		clr_character_flag = hoa_sabotage_fail
+	}
+}

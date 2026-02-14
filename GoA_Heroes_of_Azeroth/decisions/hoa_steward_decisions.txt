@@ -1,0 +1,160 @@
+# GoA: Heroes of Azeroth - Steward Active Decisions
+# Use your steward (job_treasurer) for audits, special taxes, and treasury optimization
+
+decisions = {
+
+	###############################################
+	# 1. AUDIT THE REALM - Steward inspects provinces
+	###############################################
+	hoa_steward_audit_realm = {
+		only_playable = yes
+		ai_check_interval = 180
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+			any_courtier = {
+				has_job_title = job_treasurer
+			}
+			NOT = { has_character_modifier = hoa_steward_audit_cooldown }
+		}
+
+		allow = {
+			wealth >= 50
+			custom_tooltip = {
+				text = hoa_steward_audit_need_skilled_tt
+				any_courtier = {
+					has_job_title = job_treasurer
+					stewardship >= 12
+				}
+			}
+		}
+
+		effect = {
+			wealth = -50
+			custom_tooltip = { text = hoa_steward_audit_effect_tt }
+			hidden_tooltip = {
+				character_event = { id = hoa_steward.1 days = 180 }
+			}
+			add_character_modifier = {
+				name = hoa_steward_audit_cooldown
+				duration = 1095
+				hidden = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 200 } }
+			modifier = {
+				factor = 2
+				any_courtier = {
+					has_job_title = job_treasurer
+					stewardship >= 16
+				}
+			}
+		}
+	}
+
+	###############################################
+	# 2. SPECIAL TAX COLLECTION - Extract extra gold from vassals
+	###############################################
+	hoa_steward_special_tax = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+			any_courtier = {
+				has_job_title = job_treasurer
+			}
+			num_of_vassals >= 2
+			NOT = { has_character_modifier = hoa_recent_special_tax }
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = hoa_steward_tax_need_steward_tt
+				any_courtier = {
+					has_job_title = job_treasurer
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = { text = hoa_steward_special_tax_effect_tt }
+			hidden_tooltip = {
+				character_event = { id = hoa_steward.10 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 50 } }
+			modifier = {
+				factor = 0.5
+				any_vassal = {
+					NOT = { opinion = { who = ROOT value = 0 } }
+				}
+			}
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+	}
+
+	###############################################
+	# 3. EFFICIENT TREASURY - Long-term tax boost
+	###############################################
+	hoa_steward_efficient_treasury = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+			NOT = { has_character_modifier = hoa_efficient_treasury }
+			any_courtier = {
+				has_job_title = job_treasurer
+				stewardship >= 16
+			}
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = hoa_steward_efficient_need_skilled_tt
+				any_courtier = {
+					has_job_title = job_treasurer
+					stewardship >= 16
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = { text = hoa_steward_efficient_effect_tt }
+			add_character_modifier = {
+				name = hoa_efficient_treasury
+				duration = 1825
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				any_courtier = {
+					has_job_title = job_treasurer
+					stewardship >= 20
+				}
+			}
+		}
+	}
+}

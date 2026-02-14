@@ -1,0 +1,463 @@
+# GoA: Heroes of Azeroth - Steward Events
+# Audits, tax collection, investment proposals
+
+namespace = hoa_steward
+
+###############################################
+# AUDIT RESULTS (triggered by hoa_steward_audit_realm decision)
+###############################################
+character_event = {
+	id = hoa_steward.1
+	desc = hoa_steward.1.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			35 = {
+				# Great result: discovered underdeveloped province
+				modifier = {
+					factor = 1.5
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 16
+					}
+				}
+				modifier = {
+					factor = 1.3
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 20
+					}
+				}
+				set_character_flag = hoa_audit_great
+			}
+			35 = {
+				# Good result: discovered tax fraud by a vassal
+				modifier = {
+					factor = 1.3
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 16
+					}
+				}
+				set_character_flag = hoa_audit_good
+			}
+			20 = {
+				# Fair result: minor findings
+				set_character_flag = hoa_audit_fair
+			}
+			10 = {
+				# Bad result: steward was bribed
+				modifier = {
+					factor = 1.5
+					any_courtier = {
+						has_job_title = job_treasurer
+						trait = greedy
+					}
+				}
+				set_character_flag = hoa_audit_bad
+			}
+		}
+	}
+
+	# Great: Building cost discount
+	option = {
+		name = hoa_steward.1.a
+		trigger = { has_character_flag = hoa_audit_great }
+		custom_tooltip = { text = hoa_audit_great_tt }
+		capital_scope = {
+			add_province_modifier = {
+				name = hoa_audit_discount
+				duration = 730
+			}
+		}
+		prestige = 50
+		clr_character_flag = hoa_audit_great
+	}
+
+	# Good: Discovered tax fraud
+	option = {
+		name = hoa_steward.1.b
+		trigger = { has_character_flag = hoa_audit_good }
+		custom_tooltip = { text = hoa_audit_fraud_tt }
+		wealth = 150
+		hidden_tooltip = {
+			random_vassal = {
+				limit = { is_adult = yes }
+				opinion = {
+					who = ROOT
+					modifier = opinion_audit_caught_fraud
+					years = 5
+				}
+			}
+		}
+		clr_character_flag = hoa_audit_good
+	}
+
+	# Fair: Minor findings
+	option = {
+		name = hoa_steward.1.c
+		trigger = { has_character_flag = hoa_audit_fair }
+		custom_tooltip = { text = hoa_audit_fair_tt }
+		prestige = 25
+		clr_character_flag = hoa_audit_fair
+	}
+
+	# Bad: Steward was bribed
+	option = {
+		name = hoa_steward.1.d
+		trigger = { has_character_flag = hoa_audit_bad }
+		custom_tooltip = { text = hoa_audit_bribed_tt }
+		wealth = -50
+		prestige = -10
+		clr_character_flag = hoa_audit_bad
+	}
+}
+
+###############################################
+# SPECIAL TAX COLLECTION (triggered by hoa_steward_special_tax decision)
+###############################################
+character_event = {
+	id = hoa_steward.10
+	desc = hoa_steward.10.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Calculate tax based on steward's stewardship tiers
+		# Also check if steward is greedy and skimming
+		random_list = {
+			75 = {
+				# Honest collection
+				set_character_flag = hoa_tax_honest
+			}
+			25 = {
+				# Steward skimmed some (only if greedy)
+				modifier = {
+					factor = 0
+					NOT = {
+						any_courtier = {
+							has_job_title = job_treasurer
+							trait = greedy
+						}
+					}
+				}
+				set_character_flag = hoa_tax_skimmed
+			}
+		}
+	}
+
+	# Honest collection - full amount
+	option = {
+		name = hoa_steward.10.a
+		trigger = { has_character_flag = hoa_tax_honest }
+		custom_tooltip = { text = hoa_tax_collection_honest_tt }
+		hidden_tooltip = {
+			# Base tax: steward's stewardship x 10
+			# Tiered approach since CK2 can't do dynamic math easily
+			if = {
+				limit = {
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 20
+					}
+				}
+				wealth = 200
+			}
+			else_if = {
+				limit = {
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 16
+					}
+				}
+				wealth = 160
+			}
+			else_if = {
+				limit = {
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 12
+					}
+				}
+				wealth = 120
+			}
+			else = {
+				wealth = 80
+			}
+		}
+		# Vassal opinion penalty
+		any_vassal = {
+			limit = { is_adult = yes }
+			opinion = {
+				who = ROOT
+				modifier = opinion_special_tax_levied
+				years = 5
+			}
+		}
+		# Reduced penalty if steward has "just" trait
+		hidden_tooltip = {
+			if = {
+				limit = {
+					any_courtier = {
+						has_job_title = job_treasurer
+						trait = just
+					}
+				}
+				any_vassal = {
+					limit = { is_adult = yes }
+					opinion = {
+						who = ROOT
+						modifier = opinion_just_tax_offset
+						years = 5
+					}
+				}
+			}
+		}
+		add_character_modifier = {
+			name = hoa_recent_special_tax
+			duration = 1825
+			hidden = yes
+		}
+		clr_character_flag = hoa_tax_honest
+	}
+
+	# Steward skimmed some of the taxes (greedy steward only)
+	option = {
+		name = hoa_steward.10.b
+		trigger = { has_character_flag = hoa_tax_skimmed }
+		custom_tooltip = { text = hoa_tax_collection_skimmed_tt }
+		hidden_tooltip = {
+			# Reduced amount (steward took 20%)
+			if = {
+				limit = {
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 20
+					}
+				}
+				wealth = 160
+			}
+			else_if = {
+				limit = {
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 16
+					}
+				}
+				wealth = 128
+			}
+			else_if = {
+				limit = {
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 12
+					}
+				}
+				wealth = 96
+			}
+			else = {
+				wealth = 64
+			}
+		}
+		# Vassal opinion penalty (full since steward is greedy, not just)
+		any_vassal = {
+			limit = { is_adult = yes }
+			opinion = {
+				who = ROOT
+				modifier = opinion_special_tax_levied
+				years = 5
+			}
+		}
+		add_character_modifier = {
+			name = hoa_recent_special_tax
+			duration = 1825
+			hidden = yes
+		}
+		# Fire flavor event about discovering the skim
+		character_event = { id = hoa_steward.12 days = 30 }
+		clr_character_flag = hoa_tax_skimmed
+	}
+}
+
+###############################################
+# STEWARD INVESTMENT PROPOSAL (MTTH flavor event)
+###############################################
+character_event = {
+	id = hoa_steward.11
+	desc = hoa_steward.11.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		prisoner = no
+		wealth >= 200
+		NOT = { has_character_flag = hoa_investment_cooldown }
+		any_courtier = {
+			has_job_title = job_treasurer
+			stewardship >= 14
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 0.7
+			any_courtier = {
+				has_job_title = job_treasurer
+				stewardship >= 18
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_courtier = {
+				has_job_title = job_treasurer
+				stewardship >= 22
+			}
+		}
+		modifier = {
+			factor = 0.8
+			stewardship >= 14
+		}
+	}
+
+	# Option A: Invest 200 gold
+	option = {
+		name = hoa_steward.11.a
+		wealth = -200
+		custom_tooltip = { text = hoa_steward_invest_tt }
+		hidden_tooltip = {
+			character_event = { id = hoa_steward.13 days = 730 }
+		}
+		set_character_flag = hoa_investment_cooldown
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				wealth >= 500
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { wealth >= 300 }
+			}
+		}
+	}
+
+	# Option B: Decline
+	option = {
+		name = hoa_steward.11.b
+		prestige = -10
+		set_character_flag = hoa_investment_cooldown
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { wealth >= 300 }
+			}
+		}
+	}
+}
+
+###############################################
+# GREEDY STEWARD DISCOVERED (flavor follow-up to hoa_steward.10)
+###############################################
+character_event = {
+	id = hoa_steward.12
+	desc = hoa_steward.12.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Confront the steward
+	option = {
+		name = hoa_steward.12.a
+		custom_tooltip = { text = hoa_steward_confront_tt }
+		any_courtier = {
+			limit = {
+				has_job_title = job_treasurer
+				trait = greedy
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_confronted_corruption
+				years = 3
+			}
+		}
+		prestige = 10
+		ai_chance = { factor = 70 }
+	}
+
+	# Ignore it
+	option = {
+		name = hoa_steward.12.b
+		custom_tooltip = { text = hoa_steward_ignore_skim_tt }
+		prestige = -5
+		ai_chance = { factor = 30 }
+	}
+}
+
+###############################################
+# INVESTMENT RETURNS (delayed result of hoa_steward.11)
+###############################################
+character_event = {
+	id = hoa_steward.13
+	desc = hoa_steward.13.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			60 = {
+				# Investment paid off
+				modifier = {
+					factor = 1.3
+					any_courtier = {
+						has_job_title = job_treasurer
+						stewardship >= 18
+					}
+				}
+				set_character_flag = hoa_invest_success
+			}
+			40 = {
+				# Investment failed
+				modifier = {
+					factor = 1.3
+					NOT = {
+						any_courtier = {
+							has_job_title = job_treasurer
+							stewardship >= 14
+						}
+					}
+				}
+				set_character_flag = hoa_invest_fail
+			}
+		}
+	}
+
+	# Success: 350 gold return
+	option = {
+		name = hoa_steward.13.a
+		trigger = { has_character_flag = hoa_invest_success }
+		custom_tooltip = { text = hoa_steward_invest_success_tt }
+		wealth = 350
+		prestige = 50
+		clr_character_flag = hoa_invest_success
+		clr_character_flag = hoa_investment_cooldown
+	}
+
+	# Failure: nothing returned
+	option = {
+		name = hoa_steward.13.b
+		trigger = { has_character_flag = hoa_invest_fail }
+		custom_tooltip = { text = hoa_steward_invest_fail_tt }
+		prestige = -25
+		clr_character_flag = hoa_invest_fail
+		clr_character_flag = hoa_investment_cooldown
+	}
+}

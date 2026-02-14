@@ -1,0 +1,703 @@
+# GoA: Heroes of Azeroth - Class Diplomacy Events
+# One event per class, triggered by class-specific decisions.
+
+namespace = hoa_class_diplo
+
+###############################################
+# 1. WARRIOR ULTIMATUM
+# Compare martial stats to determine outcome
+###############################################
+character_event = {
+	id = hoa_class_diplo.1
+	desc = hoa_class_diplo.1.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_neighbor_independent_ruler = {
+			limit = {
+				is_ruler = yes
+				NOT = { character = ROOT }
+			}
+			save_event_target_as = hoa_ultimatum_target
+		}
+	}
+
+	# Deliver the ultimatum
+	option = {
+		name = hoa_class_diplo.1.a
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 1.5
+					martial >= 22
+				}
+				modifier = {
+					factor = 1.3
+					trait = brave
+				}
+				prestige = 200
+				event_target:hoa_ultimatum_target = {
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_intimidated
+						years = 10
+					}
+				}
+				custom_tooltip = { text = hoa_ultimatum_success_tt }
+			}
+			40 = {
+				modifier = {
+					factor = 1.5
+					event_target:hoa_ultimatum_target = { martial >= 18 }
+				}
+				prestige = -100
+				event_target:hoa_ultimatum_target = {
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_ultimatum_rejected
+						years = 5
+					}
+				}
+				custom_tooltip = { text = hoa_ultimatum_fail_tt }
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+
+	# Reconsider - back down
+	option = {
+		name = hoa_class_diplo.1.b
+		prestige = -50
+		ai_chance = { factor = 0 }
+	}
+}
+
+###############################################
+# 3. PALADIN HOLY JUDGMENT
+# Accuse a tyrant ruler publicly
+###############################################
+character_event = {
+	id = hoa_class_diplo.3
+	desc = hoa_class_diplo.3.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_neighbor_independent_ruler = {
+			limit = {
+				is_ruler = yes
+				NOT = { character = ROOT }
+			}
+			save_event_target_as = hoa_judgment_target
+		}
+	}
+
+	# Pass judgment
+	option = {
+		name = hoa_class_diplo.3.a
+		trigger = {
+			event_target:hoa_judgment_target = {
+				OR = {
+					trait = cruel
+					trait = impaler
+					trait = tyrant
+				}
+			}
+		}
+		prestige = 100
+		piety = 50
+		event_target:hoa_judgment_target = {
+			prestige = -200
+			any_vassal = {
+				limit = { is_ruler = yes }
+				opinion = {
+					who = PREVPREV
+					modifier = hoa_opinion_judged_tyrant
+					years = 10
+				}
+			}
+		}
+		custom_tooltip = { text = hoa_judgment_success_tt }
+		ai_chance = { factor = 80 }
+	}
+
+	# Judgment backfires - target is virtuous
+	option = {
+		name = hoa_class_diplo.3.b
+		trigger = {
+			event_target:hoa_judgment_target = {
+				NOR = {
+					trait = cruel
+					trait = impaler
+					trait = tyrant
+				}
+			}
+		}
+		prestige = -50
+		piety = -25
+		event_target:hoa_judgment_target = {
+			opinion = {
+				who = ROOT
+				modifier = hoa_opinion_false_accusation
+				years = 10
+			}
+		}
+		custom_tooltip = { text = hoa_judgment_backfire_tt }
+		ai_chance = { factor = 80 }
+	}
+
+	# Withdraw accusation
+	option = {
+		name = hoa_class_diplo.3.c
+		prestige = -25
+		ai_chance = { factor = 20 }
+	}
+}
+
+###############################################
+# 4. ROGUE SMUGGLING NETWORK
+# Establish illicit trade routes
+###############################################
+character_event = {
+	id = hoa_class_diplo.4
+	desc = hoa_class_diplo.4.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Set up the network
+	option = {
+		name = hoa_class_diplo.4.a
+		random_list = {
+			80 = {
+				modifier = {
+					factor = 1.3
+					intrigue >= 18
+				}
+				modifier = {
+					factor = 1.2
+					trait = deceitful
+				}
+				add_character_modifier = {
+					name = hoa_smuggling_network
+					duration = 1825
+				}
+				prestige = 25
+				custom_tooltip = { text = hoa_smuggling_success_tt }
+			}
+			20 = {
+				modifier = {
+					factor = 1.5
+					trait = honest
+				}
+				prestige = -50
+				any_neighbor_independent_ruler = {
+					limit = { is_ruler = yes }
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_caught_smuggling
+						years = 5
+					}
+				}
+				custom_tooltip = { text = hoa_smuggling_detected_tt }
+			}
+		}
+		ai_chance = { factor = 80 }
+	}
+
+	# Too risky, abort
+	option = {
+		name = hoa_class_diplo.4.b
+		prestige = -10
+		ai_chance = { factor = 20 }
+	}
+}
+
+###############################################
+# 5. HUNTER TRACKING EXPERTISE
+# Track fugitives and discover hidden things
+###############################################
+character_event = {
+	id = hoa_class_diplo.5
+	desc = hoa_class_diplo.5.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	# Begin the hunt
+	option = {
+		name = hoa_class_diplo.5.a
+		add_character_modifier = {
+			name = hoa_tracker_instinct
+			duration = 730
+		}
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.5
+					martial >= 15
+				}
+				prestige = 75
+				wealth = 50
+				custom_tooltip = { text = hoa_tracking_found_fugitive_tt }
+			}
+			30 = {
+				modifier = {
+					factor = 1.3
+					learning >= 14
+				}
+				prestige = 50
+				wealth = 100
+				custom_tooltip = { text = hoa_tracking_found_treasure_tt }
+			}
+			20 = {
+				prestige = 25
+				custom_tooltip = { text = hoa_tracking_trail_cold_tt }
+			}
+		}
+		ai_chance = { factor = 90 }
+	}
+
+	# Not worth pursuing
+	option = {
+		name = hoa_class_diplo.5.b
+		prestige = -10
+		ai_chance = { factor = 10 }
+	}
+}
+
+###############################################
+# 6. SHAMAN ELEMENTAL BLESSING
+# Choose an element for province blessing
+###############################################
+character_event = {
+	id = hoa_class_diplo.6
+	desc = hoa_class_diplo.6.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	# Fire - Offensive power
+	option = {
+		name = hoa_class_diplo.6.a
+		capital_scope = {
+			add_province_modifier = {
+				name = hoa_blessing_fire
+				duration = 1825
+			}
+		}
+		prestige = 25
+		custom_tooltip = { text = hoa_blessing_fire_tt }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				martial >= 16
+			}
+		}
+	}
+
+	# Earth - Defensive fortification
+	option = {
+		name = hoa_class_diplo.6.b
+		capital_scope = {
+			add_province_modifier = {
+				name = hoa_blessing_earth
+				duration = 1825
+			}
+		}
+		prestige = 25
+		custom_tooltip = { text = hoa_blessing_earth_tt }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				war = yes
+			}
+		}
+	}
+
+	# Water - Disease protection
+	option = {
+		name = hoa_class_diplo.6.c
+		capital_scope = {
+			add_province_modifier = {
+				name = hoa_blessing_water
+				duration = 1825
+			}
+		}
+		prestige = 25
+		custom_tooltip = { text = hoa_blessing_water_tt }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				capital_scope = { has_disease = yes }
+			}
+		}
+	}
+
+	# Air - Movement and skirmishing
+	option = {
+		name = hoa_class_diplo.6.d
+		capital_scope = {
+			add_province_modifier = {
+				name = hoa_blessing_air
+				duration = 1825
+			}
+		}
+		prestige = 25
+		custom_tooltip = { text = hoa_blessing_air_tt }
+		ai_chance = { factor = 25 }
+	}
+}
+
+###############################################
+# 7. PRIEST SPIRITUAL EXCOMMUNICATION
+# Declare a ruler spiritually corrupt
+###############################################
+character_event = {
+	id = hoa_class_diplo.7
+	desc = hoa_class_diplo.7.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_neighbor_independent_ruler = {
+			limit = {
+				is_ruler = yes
+				NOT = { character = ROOT }
+			}
+			save_event_target_as = hoa_excomm_target
+		}
+	}
+
+	# Pronounce spiritual corruption
+	option = {
+		name = hoa_class_diplo.7.a
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 1.5
+					piety >= 500
+				}
+				modifier = {
+					factor = 1.3
+					learning >= 20
+				}
+				prestige = 100
+				piety = 50
+				event_target:hoa_excomm_target = {
+					prestige = -200
+					any_vassal = {
+						limit = { is_ruler = yes }
+						opinion = {
+							who = PREVPREV
+							modifier = hoa_opinion_spiritually_corrupt
+							years = 10
+						}
+					}
+				}
+				custom_tooltip = { text = hoa_excomm_success_tt }
+			}
+			40 = {
+				modifier = {
+					factor = 1.5
+					event_target:hoa_excomm_target = { piety >= 300 }
+				}
+				prestige = -100
+				piety = -50
+				event_target:hoa_excomm_target = {
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_false_excomm
+						years = 10
+					}
+				}
+				custom_tooltip = { text = hoa_excomm_fail_tt }
+			}
+		}
+		ai_chance = { factor = 80 }
+	}
+
+	# Reconsider
+	option = {
+		name = hoa_class_diplo.7.b
+		piety = 25
+		prestige = -25
+		ai_chance = { factor = 20 }
+	}
+}
+
+###############################################
+# 8. WARLOCK DARK PACT
+# Unbreakable alliance at a health cost
+###############################################
+character_event = {
+	id = hoa_class_diplo.8
+	desc = hoa_class_diplo.8.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_neighbor_independent_ruler = {
+			limit = {
+				is_ruler = yes
+				NOT = { character = ROOT }
+				NOT = { war_with = ROOT }
+			}
+			save_event_target_as = hoa_pact_target
+		}
+	}
+
+	# Seal the pact in blood
+	option = {
+		name = hoa_class_diplo.8.a
+		add_character_modifier = {
+			name = hoa_dark_pact_bound
+			duration = 1825
+		}
+		event_target:hoa_pact_target = {
+			opinion = {
+				who = ROOT
+				modifier = hoa_opinion_dark_pact
+				years = 20
+			}
+			add_character_modifier = {
+				name = hoa_dark_pact_bound
+				duration = 1825
+			}
+		}
+		prestige = 50
+		custom_tooltip = { text = hoa_dark_pact_sealed_tt }
+		ai_chance = { factor = 70 }
+	}
+
+	# Demand more favorable terms
+	option = {
+		name = hoa_class_diplo.8.b
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.5
+					intrigue >= 18
+				}
+				add_character_modifier = {
+					name = hoa_dark_pact_master
+					duration = 1825
+				}
+				event_target:hoa_pact_target = {
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_dark_pact
+						years = 20
+					}
+					add_character_modifier = {
+						name = hoa_dark_pact_bound
+						duration = 1825
+					}
+				}
+				prestige = 100
+			}
+			50 = {
+				prestige = -50
+				event_target:hoa_pact_target = {
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_pact_rejected
+						years = 5
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 30 }
+	}
+}
+
+###############################################
+# 9. DRUID NATURE'S PREDICTION
+# Predict war outcomes through visions
+###############################################
+character_event = {
+	id = hoa_class_diplo.9
+	desc = hoa_class_diplo.9.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Commune with nature
+	option = {
+		name = hoa_class_diplo.9.a
+		random_list = {
+			70 = {
+				modifier = {
+					factor = 1.2
+					learning >= 20
+				}
+				modifier = {
+					factor = 1.2
+					piety >= 300
+				}
+				add_character_modifier = {
+					name = hoa_natures_foresight
+					duration = 1825
+				}
+				prestige = 100
+				piety = 50
+				custom_tooltip = { text = hoa_prediction_clear_tt }
+			}
+			30 = {
+				prestige = 25
+				add_character_modifier = {
+					name = hoa_clouded_vision
+					duration = 365
+				}
+				custom_tooltip = { text = hoa_prediction_clouded_tt }
+			}
+		}
+		ai_chance = { factor = 90 }
+	}
+
+	# The spirits are unwilling
+	option = {
+		name = hoa_class_diplo.9.b
+		piety = 25
+		ai_chance = { factor = 10 }
+	}
+}
+
+###############################################
+# 10. DEATH KNIGHT AURA OF TERROR
+# Unleash terror to weaken enemy provinces
+###############################################
+character_event = {
+	id = hoa_class_diplo.10
+	desc = hoa_class_diplo.10.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	# Unleash the terror aura
+	option = {
+		name = hoa_class_diplo.10.a
+		any_neighbor_independent_ruler = {
+			limit = {
+				is_ruler = yes
+				NOT = { character = ROOT }
+			}
+			opinion = {
+				who = ROOT
+				modifier = hoa_opinion_terror_aura
+				years = 10
+			}
+			any_demesne_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { character = ROOT }
+					}
+				}
+				add_province_modifier = {
+					name = hoa_terror_aura_province
+					duration = 730
+				}
+			}
+		}
+		add_character_modifier = {
+			name = hoa_death_knight_terror
+			duration = 730
+		}
+		prestige = 75
+		custom_tooltip = { text = hoa_terror_unleashed_tt }
+		ai_chance = { factor = 80 }
+	}
+
+	# Restrain the darkness
+	option = {
+		name = hoa_class_diplo.10.b
+		prestige = 25
+		piety = 10
+		ai_chance = { factor = 20 }
+	}
+}
+
+###############################################
+# 11. MONK MEDITATION FOR PEACE
+# Seek peaceful resolution with a neighbor
+###############################################
+character_event = {
+	id = hoa_class_diplo.11
+	desc = hoa_class_diplo.11.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_neighbor_independent_ruler = {
+			limit = {
+				is_ruler = yes
+				NOT = { character = ROOT }
+			}
+			save_event_target_as = hoa_peace_target
+		}
+	}
+
+	# Offer meditation and peace
+	option = {
+		name = hoa_class_diplo.11.a
+		random_list = {
+			65 = {
+				modifier = {
+					factor = 1.3
+					diplomacy >= 18
+				}
+				modifier = {
+					factor = 1.2
+					trait = patient
+				}
+				event_target:hoa_peace_target = {
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_inner_peace
+						years = 10
+					}
+				}
+				prestige = 100
+				piety = 50
+				add_character_modifier = {
+					name = hoa_monks_serenity
+					duration = 1825
+				}
+				custom_tooltip = { text = hoa_meditation_success_tt }
+			}
+			35 = {
+				modifier = {
+					factor = 1.5
+					event_target:hoa_peace_target = { trait = wroth }
+				}
+				prestige = -25
+				event_target:hoa_peace_target = {
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_meditation_rejected
+						years = 3
+					}
+				}
+				custom_tooltip = { text = hoa_meditation_rejected_tt }
+			}
+		}
+		ai_chance = { factor = 85 }
+	}
+
+	# Meditate alone instead
+	option = {
+		name = hoa_class_diplo.11.b
+		piety = 25
+		learning = 1
+		ai_chance = { factor = 15 }
+	}
+}

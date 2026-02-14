@@ -1,0 +1,190 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+hoa_chancellor_negotiate_treaty;Send Chancellor to Negotiate Treaty;Envoyer le Chancelier negocier un traite;Kanzler zur Vertragsverhandlung entsenden;;Enviar al Canciller a negociar un tratado;;;;;;;;;x
+hoa_chancellor_negotiate_treaty_desc;Order your chancellor to negotiate a trade treaty with a neighboring realm. Success depends on the chancellor's diplomacy skill.;Ordonnez a votre chancelier de negocier un traite commercial avec un royaume voisin.;Befehlt eurem Kanzler, einen Handelsvertrag mit einem Nachbarreich auszuhandeln.;;Ordena a tu canciller negociar un tratado comercial con un reino vecino.;;;;;;;;;x
+hoa_chancellor_organize_summit;Organize Diplomatic Summit;Organiser un Sommet Diplomatique;Diplomatischen Gipfel organisieren;;Organizar Cumbre Diplomatica;;;;;;;;;x
+hoa_chancellor_organize_summit_desc;Host a grand diplomatic summit. Your chancellor invites rulers from neighboring realms.;Organisez un grand sommet diplomatique. Votre chancelier invite les dirigeants voisins.;Veranstaltet einen grossen diplomatischen Gipfel.;;Organiza una gran cumbre diplomatica.;;;;;;;;;x
+hoa_chancellor_diplomatic_network;Establish Diplomatic Network;Etablir un Reseau Diplomatique;Diplomatisches Netzwerk aufbauen;;Establecer Red Diplomatica;;;;;;;;;x
+hoa_chancellor_diplomatic_network_desc;Your skilled chancellor establishes a network of diplomatic contacts across the realm.;Votre chancelier talentueux etablit un reseau de contacts diplomatiques.;Euer geschickter Kanzler baut ein Netzwerk diplomatischer Kontakte auf.;;Tu habil canciller establece una red de contactos diplomaticos.;;;;;;;;;x
+hoa_steward_audit_realm;Order Realm Audit;Ordonner un Audit du Royaume;Reichsaudit anordnen;;Ordenar Auditoria del Reino;;;;;;;;;x
+hoa_steward_audit_realm_desc;Send your steward to audit the realm's provinces, uncovering opportunities and corruption.;Envoyez votre intendant auditer les provinces du royaume.;Schickt euren Verwalter, um die Provinzen des Reiches zu prufen.;;Envia a tu administrador a auditar las provincias del reino.;;;;;;;;;x
+hoa_steward_special_tax;Levy Special Tax;Lever un Impot Special;Sondersteuer erheben;;Recaudar Impuesto Especial;;;;;;;;;x
+hoa_steward_special_tax_desc;Your steward collects a one-time special tax from all vassals.;Votre intendant collecte un impot exceptionnel aupres des vassaux.;Euer Verwalter erhebt eine einmalige Sondersteuer.;;Tu administrador recauda un impuesto especial de los vasallos.;;;;;;;;;x
+hoa_steward_efficient_treasury;Reorganize Treasury;Reorganiser le Tresor;Schatzkammer reorganisieren;;Reorganizar el Tesoro;;;;;;;;;x
+hoa_steward_efficient_treasury_desc;Your skilled steward streamlines the realm's finances for greater efficiency.;Votre intendant competent optimise les finances du royaume.;Euer geschickter Verwalter optimiert die Finanzen.;;Tu habil administrador optimiza las finanzas del reino.;;;;;;;;;x
+hoa_spy_infiltrate_court;Infiltrate Foreign Court;Infiltrer une Cour Etrangere;Fremden Hof infiltrieren;;Infiltrar Corte Extranjera;;;;;;;;;x
+hoa_spy_infiltrate_court_desc;Send your spymaster to infiltrate a neighboring ruler's court and gather intelligence.;Envoyez votre maitre-espion infiltrer la cour d'un voisin.;Schickt euren Spionagemeister in einen Nachbarhof.;;Envia a tu maestro de espias a infiltrar la corte de un vecino.;;;;;;;;;x
+hoa_spy_sabotage_economy;Sabotage Enemy Economy;Saboter l'Economie Ennemie;Feindliche Wirtschaft sabotieren;;Sabotear Economia Enemiga;;;;;;;;;x
+hoa_spy_sabotage_economy_desc;Your spymaster conducts covert operations to disrupt a rival's economic infrastructure.;Votre maitre-espion conduit des operations pour perturber l'economie ennemie.;Euer Spionagemeister fuhrt verdeckte Operationen durch.;;Tu maestro de espias conduce operaciones contra la economia enemiga.;;;;;;;;;x
+hoa_spy_shadow_network;Build Shadow Network;Construire un Reseau d'Ombres;Schattennetzwerk aufbauen;;Construir Red de Sombras;;;;;;;;;x
+hoa_spy_shadow_network_desc;Your skilled spymaster establishes a network of informants and agents across the realm.;Votre maitre-espion cree un reseau d'informateurs.;Euer Spionagemeister baut ein Informantennetzwerk auf.;;Tu maestro de espias crea una red de informantes.;;;;;;;;;x
+hoa_marshal_plan_campaign;Plan Military Campaign;Planifier une Campagne Militaire;Militarkampagne planen;;Planificar Campana Militar;;;;;;;;;x
+hoa_marshal_plan_campaign_desc;Your marshal devises a strategic military plan for the next war.;Votre marechal elabore un plan strategique pour la prochaine guerre.;Euer Marschall entwirft einen Strategieplan.;;Tu mariscal elabora un plan estrategico militar.;;;;;;;;;x
+hoa_marshal_fortify_border;Fortify Borders;Fortifier les Frontieres;Grenzen befestigen;;Fortificar Fronteras;;;;;;;;;x
+hoa_marshal_fortify_border_desc;Your marshal oversees the construction of fortifications along the realm's borders.;Votre marechal supervise la construction de fortifications frontieres.;Euer Marschall uberwacht den Bau von Grenzbefestigungen.;;Tu mariscal supervisa la construccion de fortificaciones fronterizas.;;;;;;;;;x
+hoa_marshal_military_doctrine;Establish Military Doctrine;Etablir une Doctrine Militaire;Militardoktrin aufstellen;;Establecer Doctrina Militar;;;;;;;;;x
+hoa_marshal_military_doctrine_desc;Your experienced marshal develops a military doctrine tailored to your forces.;Votre marechal experimente developpe une doctrine militaire adaptee.;Euer erfahrener Marschall entwickelt eine Militardoktrin.;;Tu experimentado mariscal desarrolla una doctrina militar.;;;;;;;;;x
+hoa_class_warrior_ultimatum;Martial Ultimatum;Ultimatum Martial;Kriegerisches Ultimatum;;Ultimatum Marcial;;;;;;;;;x
+hoa_class_warrior_ultimatum_desc;Use your martial ultimatum abilities for diplomatic advantage.;Utilisez vos capacites de ultimatum martial a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de ultimatum marcial para ventaja diplomatica.;;;;;;;;;x
+hoa_class_mage_portal;Arcane Portal Network;Reseau de Portails Arcaniques;Arkanportal-Netzwerk;;Red de Portales Arcanos;;;;;;;;;x
+hoa_class_mage_portal_desc;Use your arcane portal network abilities for diplomatic advantage.;Utilisez vos capacites de reseau de portails arcaniques a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de red de portales arcanos para ventaja diplomatica.;;;;;;;;;x
+hoa_class_paladin_judgment;Judgment of the Light;Jugement de la Lumiere;Urteil des Lichts;;Juicio de la Luz;;;;;;;;;x
+hoa_class_paladin_judgment_desc;Use your judgment of the light abilities for diplomatic advantage.;Utilisez vos capacites de jugement de la lumiere a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de juicio de la luz para ventaja diplomatica.;;;;;;;;;x
+hoa_class_rogue_smuggling;Smuggling Network;Reseau de Contrebande;Schmugglernetzwerk;;Red de Contrabando;;;;;;;;;x
+hoa_class_rogue_smuggling_desc;Use your smuggling network abilities for diplomatic advantage.;Utilisez vos capacites de reseau de contrebande a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de red de contrabando para ventaja diplomatica.;;;;;;;;;x
+hoa_class_hunter_tracking;Expert Tracking;Pistage Expert;Meisterhaftes Spurenlesen;;Rastreo Experto;;;;;;;;;x
+hoa_class_hunter_tracking_desc;Use your expert tracking abilities for diplomatic advantage.;Utilisez vos capacites de pistage expert a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de rastreo experto para ventaja diplomatica.;;;;;;;;;x
+hoa_class_shaman_elements;Call of the Elements;Appel des Elements;Ruf der Elemente;;Llamada de los Elementos;;;;;;;;;x
+hoa_class_shaman_elements_desc;Use your call of the elements abilities for diplomatic advantage.;Utilisez vos capacites de appel des elements a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de llamada de los elementos para ventaja diplomatica.;;;;;;;;;x
+hoa_class_priest_excommunication;Spiritual Condemnation;Condamnation Spirituelle;Geistliche Verdammung;;Condena Espiritual;;;;;;;;;x
+hoa_class_priest_excommunication_desc;Use your spiritual condemnation abilities for diplomatic advantage.;Utilisez vos capacites de condamnation spirituelle a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de condena espiritual para ventaja diplomatica.;;;;;;;;;x
+hoa_class_warlock_dark_pact;Dark Pact;Pacte Sombre;Dunkler Pakt;;Pacto Oscuro;;;;;;;;;x
+hoa_class_warlock_dark_pact_desc;Use your dark pact abilities for diplomatic advantage.;Utilisez vos capacites de pacte sombre a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de pacto oscuro para ventaja diplomatica.;;;;;;;;;x
+hoa_class_druid_prediction;Nature's Vision;Vision de la Nature;Vision der Natur;;Vision de la Naturaleza;;;;;;;;;x
+hoa_class_druid_prediction_desc;Use your nature's vision abilities for diplomatic advantage.;Utilisez vos capacites de vision de la nature a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de vision de la naturaleza para ventaja diplomatica.;;;;;;;;;x
+hoa_class_dk_terror;Glacial Terror;Terreur Glaciale;Eisiger Schrecken;;Terror Glacial;;;;;;;;;x
+hoa_class_dk_terror_desc;Use your glacial terror abilities for diplomatic advantage.;Utilisez vos capacites de terreur glaciale a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de terror glacial para ventaja diplomatica.;;;;;;;;;x
+hoa_class_monk_meditation;Meditation of Peace;Meditation de Paix;Friedensmeditation;;Meditacion de Paz;;;;;;;;;x
+hoa_class_monk_meditation_desc;Use your meditation of peace abilities for diplomatic advantage.;Utilisez vos capacites de meditation de paix a des fins diplomatiques.;Nutzt eure Fahigkeiten fur diplomatische Vorteile.;Usa tus habilidades de meditacion de paz para ventaja diplomatica.;;;;;;;;;x
+hoa_trade_treaty;Trade Treaty;Traite Commercial;Handelsvertrag;;Tratado Comercial;;;;;;;;;x
+hoa_diplomatic_network;Diplomatic Network;Reseau Diplomatique;Diplomatisches Netzwerk;;Red Diplomatica;;;;;;;;;x
+hoa_summit_host;Summit Host;Hote du Sommet;Gipfelgastgeber;;Anfitrion de Cumbre;;;;;;;;;x
+hoa_audit_discount;Audit Findings;Resultats de l'Audit;Prufungsergebnisse;;Resultados de Auditoria;;;;;;;;;x
+hoa_efficient_treasury;Efficient Treasury;Tresor Efficace;Effiziente Schatzkammer;;Tesoro Eficiente;;;;;;;;;x
+hoa_shadow_network;Shadow Network;Reseau d'Ombres;Schattennetzwerk;;Red de Sombras;;;;;;;;;x
+hoa_spy_intel_major;Major Intelligence;Renseignement Majeur;Wichtige Geheimdienstinfo;;Inteligencia Mayor;;;;;;;;;x
+hoa_spy_intel_minor;Minor Intelligence;Renseignement Mineur;Geringe Geheimdienstinfo;;Inteligencia Menor;;;;;;;;;x
+hoa_fortified_borders;Fortified Borders;Frontieres Fortifiees;Befestigte Grenzen;;Fronteras Fortificadas;;;;;;;;;x
+hoa_campaign_plan_excellent;Excellent Campaign Plan;Plan de Campagne Excellent;Ausgezeichneter Feldzugsplan;;Plan de Campana Excelente;;;;;;;;;x
+hoa_campaign_plan_good;Good Campaign Plan;Bon Plan de Campagne;Guter Feldzugsplan;;Buen Plan de Campana;;;;;;;;;x
+hoa_campaign_plan_average;Average Campaign Plan;Plan de Campagne Moyen;Durchschnittlicher Feldzugsplan;;Plan de Campana Promedio;;;;;;;;;x
+hoa_province_sabotaged;Economic Sabotage;Sabotage Economique;Wirtschaftssabotage;;Sabotaje Economico;;;;;;;;;x
+hoa_province_sabotaged_minor;Minor Economic Disruption;Perturbation Economique Mineure;Geringe Wirtschaftsstorung;;Perturbacion Economica Menor;;;;;;;;;x
+hoa_doctrine_warrior;Warrior Doctrine;Doctrine Guerriere;Kriegerdoktrin;;Doctrina Guerrera;;;;;;;;;x
+hoa_doctrine_hunter;Hunter Doctrine;Doctrine du Chasseur;Jagerdoktrin;;Doctrina del Cazador;;;;;;;;;x
+hoa_doctrine_mage;Arcane Doctrine;Doctrine Arcanique;Arkane Doktrin;;Doctrina Arcana;;;;;;;;;x
+hoa_doctrine_paladin;Holy Doctrine;Doctrine Sacree;Heilige Doktrin;;Doctrina Sagrada;;;;;;;;;x
+hoa_doctrine_rogue;Shadow Doctrine;Doctrine de l'Ombre;Schattendoktrin;;Doctrina de la Sombra;;;;;;;;;x
+hoa_doctrine_shaman;Elemental Doctrine;Doctrine Elementaire;Elementardoktrin;;Doctrina Elemental;;;;;;;;;x
+hoa_doctrine_deathknight;Death Doctrine;Doctrine de la Mort;Todesdoktrin;;Doctrina de la Muerte;;;;;;;;;x
+hoa_doctrine_default;Standard Doctrine;Doctrine Standard;Standarddoktrin;;Doctrina Estandar;;;;;;;;;x
+hoa_arcane_portal;Arcane Portal Network;Reseau de Portails Arcaniques;Arkanportal-Netzwerk;;Red de Portales Arcanos;;;;;;;;;x
+hoa_smuggling_income;Smuggling Network;Reseau de Contrebande;Schmugglernetzwerk;;Red de Contrabando;;;;;;;;;x
+hoa_tracking_bonus;Expert Tracking;Pistage Expert;Meisterhaftes Spurenlesen;;Rastreo Experto;;;;;;;;;x
+hoa_elemental_fire;Elemental Fire;Feu Elementaire;Elementarfeuer;;Fuego Elemental;;;;;;;;;x
+hoa_elemental_earth;Elemental Earth;Terre Elementaire;Elementarerde;;Tierra Elemental;;;;;;;;;x
+hoa_elemental_water;Elemental Water;Eau Elementaire;Elementarwasser;;Agua Elemental;;;;;;;;;x
+hoa_elemental_air;Elemental Air;Air Elementaire;Elementarluft;;Aire Elemental;;;;;;;;;x
+hoa_terror_aura;Glacial Terror Aura;Aura de Terreur Glaciale;Eisige Schreckensaura;;Aura de Terror Glacial;;;;;;;;;x
+hoa_dark_pact_bond;Dark Pact Bond;Lien du Pacte Sombre;Dunkle Paktbindung;;Vinculo del Pacto Oscuro;;;;;;;;;x
+hoa_dark_pact_grief;Dark Pact Grief;Deuil du Pacte Sombre;Dunkle Pakttrauer;;Duelo del Pacto Oscuro;;;;;;;;;x
+hoa_peace_meditation;Aura of Peace;Aura de Paix;Aura des Friedens;;Aura de Paz;;;;;;;;;x
+hoa_battle_tested;Battle-Tested;Eprouve au Combat;Kampferprobt;;Probado en Batalla;;;;;;;;;x
+hoa_battle_tested_desc;This commander has proven themselves in battle.;Ce commandant a fait ses preuves au combat.;Dieser Kommandant hat sich in der Schlacht bewahrt.;;Este comandante ha demostrado su valia en batalla.;;;;;;;;;x
+hoa_war_hero;War Hero;Heros de Guerre;Kriegsheld;;Heroe de Guerra;;;;;;;;;x
+hoa_war_hero_desc;A legendary commander whose name inspires soldiers and strikes fear in enemies.;Un commandant legendaire dont le nom inspire les soldats.;Ein legendarer Kommandant, dessen Name Soldaten inspiriert.;;Un comandante legendario cuyo nombre inspira a los soldados.;;;;;;;;;x
+hoa_council.1.desc;Your chancellor returns from the diplomatic mission with news.;Votre chancelier revient de sa mission diplomatique avec des nouvelles.;Euer Kanzler kehrt von der diplomatischen Mission zuruck.;;Vuestro canciller regresa de la mision diplomatica con noticias.;;;;;;;;;x
+hoa_council.2.desc;Terrible news! Your chancellor has been captured during the negotiations.;Terrible nouvelle! Votre chancelier a ete capture durant les negociations.;Schreckliche Nachricht! Euer Kanzler wurde wahrend der Verhandlungen gefangen genommen.;;Terrible noticia! Vuestro canciller ha sido capturado durante las negociaciones.;;;;;;;;;x
+hoa_council.3.desc;Your marshal leads a daring rescue mission to free the captured chancellor.;Votre marechal mene une mission de sauvetage audacieuse.;Euer Marschall fuhrt eine gewagte Rettungsmission an.;;Vuestro mariscal lidera una audaz mision de rescate.;;;;;;;;;x
+hoa_council.10.desc;The diplomatic summit begins as rulers from neighboring realms arrive.;Le sommet diplomatique commence alors que les dirigeants voisins arrivent.;Der diplomatische Gipfel beginnt.;;La cumbre diplomatica comienza con la llegada de los gobernantes vecinos.;;;;;;;;;x
+hoa_council.11.desc;Your chancellor's intelligence network reports on neighboring political developments.;Le reseau de renseignement de votre chancelier rapporte les developpements politiques voisins.;Das Nachrichtennetz eures Kanzlers berichtet uber politische Entwicklungen.;;La red de inteligencia de vuestro canciller informa sobre desarrollos politicos vecinos.;;;;;;;;;x
+hoa_council.12.desc;Your chancellor has discovered information that could prove useful.;Votre chancelier a decouvert des informations potentiellement utiles.;Euer Kanzler hat nutzliche Informationen entdeckt.;;Vuestro canciller ha descubierto informacion potencialmente util.;;;;;;;;;x
+hoa_steward.1.desc;Your steward returns from the realm audit with a detailed report.;Votre intendant revient de l'audit du royaume avec un rapport detaille.;Euer Verwalter kehrt von der Reichsprufung zuruck.;;Vuestro administrador regresa de la auditoria del reino con un informe detallado.;;;;;;;;;x
+hoa_steward.10.desc;Your steward begins collecting the special tax from all vassals.;Votre intendant commence la collecte de l'impot special.;Euer Verwalter beginnt die Sondersteuer einzutreiben.;;Vuestro administrador comienza a recaudar el impuesto especial.;;;;;;;;;x
+hoa_steward.11.desc;Your steward presents an investment opportunity.;Votre intendant presente une opportunite d'investissement.;Euer Verwalter prasentiert eine Investitionsmoglichkeit.;;Vuestro administrador presenta una oportunidad de inversion.;;;;;;;;;x
+hoa_steward.12.desc;The investment your steward proposed has reached maturity.;L'investissement propose par votre intendant arrive a maturite.;Die vorgeschlagene Investition ist ausgereift.;;La inversion propuesta por vuestro administrador ha madurado.;;;;;;;;;x
+hoa_steward.13.desc;Your steward confesses that the investment funds were mismanaged.;Votre intendant avoue que les fonds ont ete mal geres.;Euer Verwalter gesteht, dass die Gelder schlecht verwaltet wurden.;;Vuestro administrador confiesa que los fondos fueron mal gestionados.;;;;;;;;;x
+hoa_spymaster.1.desc;Your spymaster returns from the infiltration mission.;Votre maitre-espion revient de sa mission d'infiltration.;Euer Spionagemeister kehrt von der Infiltrationsmission zuruck.;;Vuestro maestro de espias regresa de la mision de infiltracion.;;;;;;;;;x
+hoa_spymaster.2.desc;Your spymaster has been captured by the enemy!;Votre maitre-espion a ete capture par l'ennemi!;Euer Spionagemeister wurde vom Feind gefangen!;;Vuestro maestro de espias ha sido capturado por el enemigo!;;;;;;;;;x
+hoa_spymaster.10.desc;Your agents report on the results of the sabotage operation.;Vos agents rapportent les resultats de l'operation de sabotage.;Eure Agenten berichten uber die Ergebnisse der Sabotage.;;Vuestros agentes informan sobre los resultados del sabotaje.;;;;;;;;;x
+hoa_marshal.1.desc;Your marshal presents the military campaign plan.;Votre marechal presente le plan de campagne militaire.;Euer Marschall prasentiert den Feldzugsplan.;;Vuestro mariscal presenta el plan de campana militar.;;;;;;;;;x
+hoa_marshal.10.desc;Your marshal proposes a decisive assault to end the war.;Votre marechal propose un assaut decisif pour mettre fin a la guerre.;Euer Marschall schlagt einen entscheidenden Angriff vor.;;Vuestro mariscal propone un asalto decisivo para terminar la guerra.;;;;;;;;;x
+hoa_marshal.11.desc;After the victory, one of your commanders has distinguished themselves in battle.;Apres la victoire, un de vos commandants s'est distingue au combat.;Nach dem Sieg hat sich einer eurer Kommandanten ausgezeichnet.;;Tras la victoria, uno de vuestros comandantes se ha distinguido en batalla.;;;;;;;;;x
+hoa_commander.1.desc;Two of your most skilled commanders have developed a bitter rivalry.;Deux de vos commandants les plus talentueux ont developpe une rivalite amere.;Zwei eurer besten Kommandanten haben eine erbitterte Rivalitat entwickelt.;;Dos de vuestros comandantes mas habiles han desarrollado una amarga rivalidad.;;;;;;;;;x
+hoa_commander.2.desc;The slighted commander threatens to leave your service.;Le commandant offense menace de quitter votre service.;Der gekrankte Kommandant droht euren Dienst zu verlassen.;;El comandante ofendido amenaza con abandonar vuestro servicio.;;;;;;;;;x
+hoa_class_diplo.1.desc;You channel your warrior abilities for diplomatic purposes.;Vous canalisez vos capacites de guerrier a des fins diplomatiques.;Ihr nutzt eure Warrior-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de warrior con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.2.desc;You channel your mage abilities for diplomatic purposes.;Vous canalisez vos capacites de mage a des fins diplomatiques.;Ihr nutzt eure Mage-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de mage con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.3.desc;You channel your paladin abilities for diplomatic purposes.;Vous canalisez vos capacites de paladin a des fins diplomatiques.;Ihr nutzt eure Paladin-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de paladin con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.4.desc;You channel your rogue abilities for diplomatic purposes.;Vous canalisez vos capacites de voleur a des fins diplomatiques.;Ihr nutzt eure Rogue-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de rogue con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.5.desc;You channel your hunter abilities for diplomatic purposes.;Vous canalisez vos capacites de chasseur a des fins diplomatiques.;Ihr nutzt eure Hunter-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de hunter con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.6.desc;You channel your shaman abilities for diplomatic purposes.;Vous canalisez vos capacites de chaman a des fins diplomatiques.;Ihr nutzt eure Shaman-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de shaman con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.7.desc;You channel your priest abilities for diplomatic purposes.;Vous canalisez vos capacites de pretre a des fins diplomatiques.;Ihr nutzt eure Priest-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de priest con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.8.desc;You channel your warlock abilities for diplomatic purposes.;Vous canalisez vos capacites de demoniste a des fins diplomatiques.;Ihr nutzt eure Warlock-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de warlock con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.9.desc;You channel your druid abilities for diplomatic purposes.;Vous canalisez vos capacites de druide a des fins diplomatiques.;Ihr nutzt eure Druid-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de druid con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.10.desc;You channel your death knight abilities for diplomatic purposes.;Vous canalisez vos capacites de chevalier de la mort a des fins diplomatiques.;Ihr nutzt eure Death Knight-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de death knight con fines diplomaticos.;;;;;;;;;x
+hoa_class_diplo.11.desc;You channel your monk abilities for diplomatic purposes.;Vous canalisez vos capacites de moine a des fins diplomatiques.;Ihr nutzt eure Monk-Fahigkeiten fur diplomatische Zwecke.;;Canalizas tus habilidades de monk con fines diplomaticos.;;;;;;;;;x
+hoa_council.1.a;Excellent! A great triumph!;Excellent! Un grand triomphe!;Ausgezeichnet! Ein grosser Triumph!;;Excelente! Un gran triunfo!;;;;;;;;;x
+hoa_council.1.b;A fair outcome.;Un resultat acceptable.;Ein faires Ergebnis.;;Un resultado aceptable.;;;;;;;;;x
+hoa_council.1.c;Disappointing...;Decevant...;Enttauschend...;;Decepcionante...;;;;;;;;;x
+hoa_council.2.a;Pay the ransom!;Payez la rancon!;Zahlt das Losegeld!;;Pagad el rescate!;;;;;;;;;x
+hoa_council.2.b;Send the marshal to rescue them!;Envoyez le marechal les sauver!;Schickt den Marschall zur Rettung!;;Enviad al mariscal a rescatarlos!;;;;;;;;;x
+hoa_council.2.c;They knew the risks...;Ils connaissaient les risques...;Sie kannten die Risiken...;;Conocian los riesgos...;;;;;;;;;x
+hoa_council.3.a;The rescue was a success!;Le sauvetage est un succes!;Die Rettung war erfolgreich!;;El rescate fue un exito!;;;;;;;;;x
+hoa_council.3.b;We failed...;Nous avons echoue...;Wir haben versagt...;;Hemos fracasado...;;;;;;;;;x
+hoa_council.10.a;A grand success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_council.10.b;A decent showing.;Une performance correcte.;Eine ordentliche Vorstellung.;;Una muestra decente.;;;;;;;;;x
+hoa_council.10.c;Only a few came.;Seuls quelques-uns sont venus.;Nur wenige kamen.;;Solo unos pocos vinieron.;;;;;;;;;x
+hoa_council.10.d;Nobody came...;Personne n'est venu...;Niemand kam...;;Nadie vino...;;;;;;;;;x
+hoa_council.11.a;Useful intelligence.;Renseignements utiles.;Nutzliche Informationen.;;Inteligencia util.;;;;;;;;;x
+hoa_steward.1.a;Invest in development!;Investissez dans le developpement!;Investiert in die Entwicklung!;;Invertid en desarrollo!;;;;;;;;;x
+hoa_steward.1.b;Confront the corrupt vassal!;Confrontez le vassal corrompu!;Konfrontiert den korrupten Vasallen!;;Confrontad al vasallo corrupto!;;;;;;;;;x
+hoa_steward.1.c;Minor findings, but useful.;Des trouvailles mineures mais utiles.;Kleinere Erkenntnisse, aber nutzlich.;;Hallazgos menores pero utiles.;;;;;;;;;x
+hoa_steward.1.d;The steward was bribed?!;L'intendant a ete corrompu?!;Der Verwalter wurde bestochen?!;;El administrador fue sobornado?!;;;;;;;;;x
+hoa_steward.10.a;Collect the tax.;Collectez l'impot.;Treibt die Steuer ein.;;Recaudad el impuesto.;;;;;;;;;x
+hoa_steward.11.a;Invest the gold.;Investissez l'or.;Investiert das Gold.;;Invertid el oro.;;;;;;;;;x
+hoa_steward.11.b;Too risky.;Trop risque.;Zu riskant.;;Demasiado arriesgado.;;;;;;;;;x
+hoa_spymaster.1.a;Excellent work!;Excellent travail!;Ausgezeichnete Arbeit!;;Excelente trabajo!;;;;;;;;;x
+hoa_spymaster.1.b;Some useful findings.;Quelques trouvailles utiles.;Einige nutzliche Erkenntnisse.;;Algunos hallazgos utiles.;;;;;;;;;x
+hoa_spymaster.1.c;Nothing found.;Rien trouve.;Nichts gefunden.;;Nada encontrado.;;;;;;;;;x
+hoa_spymaster.1.d;They were captured!;Ils ont ete captures!;Sie wurden gefangen!;;Han sido capturados!;;;;;;;;;x
+hoa_spymaster.2.a;Pay the ransom.;Payez la rancon.;Zahlt das Losegeld.;;Pagad el rescate.;;;;;;;;;x
+hoa_spymaster.2.b;Deny everything.;Niez tout.;Leugnet alles.;;Negadlo todo.;;;;;;;;;x
+hoa_spymaster.2.c;Send a rescue team.;Envoyez une equipe de sauvetage.;Schickt ein Rettungsteam.;;Enviad un equipo de rescate.;;;;;;;;;x
+hoa_spymaster.10.a;The sabotage succeeded!;Le sabotage a reussi!;Die Sabotage war erfolgreich!;;El sabotaje tuvo exito!;;;;;;;;;x
+hoa_spymaster.10.b;Partial success.;Succes partiel.;Teilerfolg.;;Exito parcial.;;;;;;;;;x
+hoa_spymaster.10.c;The operation failed.;L'operation a echoue.;Die Operation ist gescheitert.;;La operacion fracaso.;;;;;;;;;x
+hoa_marshal.1.a;An excellent plan!;Un plan excellent!;Ein ausgezeichneter Plan!;;Un plan excelente!;;;;;;;;;x
+hoa_marshal.1.b;A solid plan.;Un plan solide.;Ein solider Plan.;;Un plan solido.;;;;;;;;;x
+hoa_marshal.1.c;An adequate plan.;Un plan adequat.;Ein angemessener Plan.;;Un plan adecuado.;;;;;;;;;x
+hoa_marshal.1.d;This plan is flawed...;Ce plan est defaillant...;Dieser Plan ist mangelhaft...;;Este plan es defectuoso...;;;;;;;;;x
+hoa_marshal.10.a;Launch the assault!;Lancez l'assaut!;Startet den Angriff!;;Lanzad el asalto!;;;;;;;;;x
+hoa_marshal.10.b;Too dangerous.;Trop dangereux.;Zu gefahrlich.;;Demasiado peligroso.;;;;;;;;;x
+hoa_marshal.11.a;Honor this commander!;Honorez ce commandant!;Ehrt diesen Kommandanten!;;Honrad a este comandante!;;;;;;;;;x
+hoa_commander.1.a;Support the first commander.;Soutenez le premier commandant.;Unterstutzt den ersten Kommandanten.;;Apoyad al primer comandante.;;;;;;;;;x
+hoa_commander.1.b;Support the second commander.;Soutenez le second commandant.;Unterstutzt den zweiten Kommandanten.;;Apoyad al segundo comandante.;;;;;;;;;x
+hoa_commander.1.c;Mediate between them.;Mediez entre eux.;Vermittelt zwischen ihnen.;;Mediad entre ellos.;;;;;;;;;x
+hoa_commander.2.a;Bribe them to stay.;Soudoyez-les pour qu'ils restent.;Bestecht sie zum Bleiben.;;Sobornadlos para que se queden.;;;;;;;;;x
+hoa_commander.2.b;Let them leave.;Laissez-les partir.;Lasst sie gehen.;;Dejadlos ir.;;;;;;;;;x
+hoa_commander.2.c;Throw them in the dungeon!;Jetez-les au cachot!;Werft sie in den Kerker!;;Arrojadlos a la mazmorra!;;;;;;;;;x
+hoa_class_diplo.1.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.1.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.1.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.2.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.2.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.2.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.3.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.3.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.3.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.4.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.4.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.4.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.5.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.5.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.5.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.6.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.6.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.6.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.7.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.7.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.7.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.8.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.8.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.8.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.9.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.9.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.9.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.10.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.10.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.10.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
+hoa_class_diplo.11.a;A great success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_class_diplo.11.b;The outcome is uncertain.;Le resultat est incertain.;Das Ergebnis ist unsicher.;;El resultado es incierto.;;;;;;;;;x
+hoa_class_diplo.11.c;It has failed.;Cela a echoue.;Es ist gescheitert.;;Ha fracasado.;;;;;;;;;x
