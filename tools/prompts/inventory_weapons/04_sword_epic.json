@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_sword_epic",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_sword_epic.png",
+    "ck2_gfx_name": "GFX_inv_hoa_sword_epic",
+    "final_size": "80x80",
+    "scene_intent": "Epic quality massive greatsword inspired by Ashkandi, Greatsword of the Brotherhood. A weapon of terrifying grandeur — enormous, ornate, radiating power. The dragon-wing crossguard and purple runic inscriptions evoke the Black Dragonflight. The purple epic glow is unmistakable. This is a raid boss drop, the kind of weapon that makes other players inspect your character in Stormwind."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Direct reference: World of Warcraft inventory icon art style — single item rendered in painterly digital style on dark gradient background",
+        "Quality tier: Epic (purple) — item border glow color #a335ee, the prestigious tier from raid boss loot tables",
+        "Design inspiration: Ashkandi, Greatsword of the Brotherhood from Blackwing Lair — massive two-handed greatsword with draconic motifs",
+        "Rendering: hand-painted digital icon with bold confident brushwork, high contrast, dramatic lighting matching Blizzard's most impressive item icons"
+      ],
+      "look": "hand-painted digital game icon, painterly brushstrokes, slight canvas texture, Blizzard Entertainment WoW inventory icon quality at its peak, rich ornate material rendering with luminous purple magical accents, dark atmospheric background, stylized realism with high-fantasy grandeur, dramatic contrast and bold silhouette",
+      "palette": {
+        "dominant": "#2a2a3a — dark grey-blue steel for the massive blade, cold and imposing",
+        "secondary": "#1a0a2a — deep purple-black for the darkest shadows and the grip leather",
+        "accent_1": "#a335ee — epic quality purple for the runic inscriptions, magical glow, and quality aura",
+        "accent_2": "#d4a0ff — lighter lavender-purple for the brightest magical emission points",
+        "accent_3": "#8a7a2a — dark antique gold for the dragon-wing crossguard and ornamental metalwork",
+        "highlight": "#f0e0ff — pale purple-white for the most intense specular highlights where purple magic meets steel"
+      },
+      "art_references": [
+        "Blizzard Entertainment — Ashkandi, Greatsword of the Brotherhood icon and model (primary design reference)",
+        "WoW item icon team — epic quality weapon icons (Chromatically Tempered Sword, Quel'Serrar, Sulfuras, Obsidian Edged Blade)",
+        "Samwise Didier — bold heroic weapon concepts with draconic and ornate themes",
+        "Black Dragonflight aesthetic — dark steel, purple-black energy, draconic wing motifs, gold accents",
+        "Peter Lee (Blizzard concept artist) — dramatic weapon presentation with strong silhouette language"
+      ]
+    },
+    "subjects": [
+      {
+        "element": "Massive greatsword with dragon-wing crossguard and purple runes — epic quality (Ashkandi-inspired)",
+        "details": "An enormous two-handed greatsword approximately 160cm in total length — a weapon clearly designed for a warrior of superhuman strength. The blade is wide (12-15cm across at the base), double-edged, tapering to a reinforced clipped point. The steel is dark grey-blue with a polished but ominous sheen, and the blade surface bears the subtle grain of dragonscale-patterned Damascus folding — as if the metal itself was forged using dragon scales as a flux. Running down the blade center, occupying the space where a traditional fuller would be, is a channel of carved purple runic script — twelve ancient draconic runes that glow with a deep, throbbing purple energy (#a335ee). The glow pulses slowly, like the heartbeat of a sleeping dragon, and tendrils of purple magical mist curl from the rune channel. The crossguard is the weapon's most dramatic feature: two sweeping dragon wings forged from antique gold-plated steel, each wing spanning outward approximately 20cm from the blade. The wings are anatomically detailed with individual membrane sections, bone-like structural veins, and sharp pointed tips at each wing apex. The wings sweep forward and upward protectively. At the center of the crossguard where the wings meet the blade, a carved dragon head faces outward — mouth open, tiny amethyst eyes glowing purple. The grip is long enough for two hands (35cm), wrapped in black dragonskin leather with gold wire cross-binding in a scale pattern. The pommel is a large faceted amethyst crystal, roughly cut, set in a gold dragon-claw mounting — four golden talons grip the purple gem, which glows with internal magical light matching the blade runes.",
+        "scale": "Weapon fills approximately 80% of the square frame, oriented diagonally — its massive size is communicated through the width-to-length proportions and the ornate detail density"
+      }
+    ],
+    "camera": {
+      "shot_type": "Flat icon view with slight 3/4 angle — standard WoW inventory icon perspective",
+      "angle": "Very slight 3/4 rotation (approximately 10-15 degrees) to showcase the dragon-wing crossguard dimensionality, the blade width, and the amethyst pommel facets",
+      "lens_equivalent": "Orthographic / flat projection — no perspective distortion, game UI icon convention",
+      "focal_point": "The dragon-wing crossguard and dragon head at the center of the weapon — the most ornate and visually complex area, where gold meets purple glow",
+      "depth_of_field": "Infinite — everything in perfect focus, UI icon convention",
+      "composition_rules": [
+        "Weapon centered in frame, filling approximately 80% of the square canvas",
+        "Diagonal orientation lower-left to upper-right — blade tip reaching toward upper-right corner, pommel anchoring lower-left",
+        "Dragon-wing crossguard positioned near the visual center of the frame as the primary ornamental focal point",
+        "Purple rune channel creates a luminous spine guiding the eye along the blade",
+        "Dark gradient background with purple tint from the magical emanations",
+        "Single weapon only — no hands, no characters, no environmental context",
+        "Clear silhouette readable at 80x80 pixels — the dragon wings create a distinctive recognizable shape"
+      ]
+    },
+    "lighting": {
+      "key_light": "Dual primary lighting: (1) Soft cool directional from upper-left for steel definition, (2) Purple runic glow from the blade channel serving as an internal key light that illuminates the crossguard wings from below and the blade flats with purple caustic patterns",
+      "fill_light": "Warm gold reflected light from the crossguard metalwork, bouncing faint golden warmth onto the grip and lower blade — creating a complementary purple-gold lighting scheme",
+      "accent_lights": [
+        "Purple rune channel glow — deep throbbing #a335ee light from the twelve draconic runes, casting purple caustic patterns across the blade flats and creating purple rim-lighting on the crossguard dragon wings",
+        "Amethyst pommel glow — internal purple luminescence from the faceted gem, creating a secondary purple light source that illuminates the dragon-claw mounting from within",
+        "Dragon-head eyes — two tiny intense amethyst pinpoints in the crossguard dragon head",
+        "Purple energy tendrils — faint wisps of #d4a0ff magical mist curling upward from the rune channel",
+        "Epic-quality purple glow (#a335ee at 30-35% opacity) as a strong backlight halo around the entire weapon silhouette"
+      ],
+      "shadows": "Rich deep shadows with purple-tinted edges. The dragon wings cast dramatic pointed shadows downward onto the grip. The blade rune glow creates shifting purple light and shadow on the blade flats. The crossguard dragon head casts a small shadow onto the upper grip. Gold metalwork creates warm reflective highlights contrasting with the cool purple shadows.",
+      "atmospheric_fx": [
+        "Dark gradient background: radial gradient from #150a20 at center to #0a0510 at corners — distinctly purple-tinted darkness",
+        "Purple magical mist: ethereal tendrils of #d4a0ff luminous vapor curling upward from the blade rune channel, 4-6 visible wisps with soft falloff",
+        "Purple caustic light patterns on blade surface — the rune glow creates rippling interference patterns like light through water",
+        "Faint purple-gold interaction where the amethyst glow meets the gold crossguard — a rich color mixing zone",
+        "Epic quality purple glow (#a335ee at 30-35% opacity) around the weapon's silhouette edge — a strong, prestigious aura",
+        "Subtle painterly grain texture in the dark background"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hand-painted digital game icon, World of Warcraft inventory icon style, painterly brushstrokes, single weapon on dark background. An enormous two-handed greatsword (Ashkandi-inspired) oriented diagonally from lower-left to upper-right, filling 80% of the square frame. Wide double-edged blade of dark grey-blue steel with dragonscale Damascus pattern, tapering to reinforced clipped point. Central channel carved with twelve glowing purple draconic runes (#a335ee) pulsing with deep throbbing energy, tendrils of purple magical mist curling from the rune channel. Dramatic crossguard forged as two sweeping dragon wings in antique gold-plated steel, anatomically detailed with membrane sections and bone structural veins, sharp pointed wing tips sweeping forward and upward. Carved dragon head at crossguard center facing outward with open mouth and tiny glowing amethyst eyes. Long two-handed grip wrapped in black dragonskin leather with gold wire scale-pattern binding. Pommel is large faceted amethyst crystal in gold dragon-claw mounting, four golden talons gripping the purple gem glowing with internal magical light. Purple rune glow illuminates crossguard wings from below and blade flats with caustic patterns. Warm gold reflected light from crossguard metalwork. Epic quality purple glow (#a335ee) around weapon silhouette. Dark radial gradient background from #150a20 to #0a0510 with purple tint. Blizzard WoW icon art quality, dramatic contrast, bold ornate silhouette, painterly material rendering, stylized realism, rich fantasy grandeur.",
+    "negative": "text, watermark, signature, UI frame, item border overlay, numbers, stats, tooltip, hands holding weapon, fingers, character, person, arm, environmental background, ground, table, wall, grass, sky, bright cheerful daylight, warm orange tones, fire glow, green glow, blue glow, anime style, cartoon, chibi, photorealistic, 3D render, cel-shaded, multiple weapons, shield, second object, split frame, multiple panels, collage, border frame, blurry, low quality, deformed proportions, thin blade, small sword, dagger proportions, asymmetric dragon wings, melted crossguard detail, extra blades"
+  }
+}

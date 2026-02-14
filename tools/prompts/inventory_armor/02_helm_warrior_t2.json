@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_helm_warrior_t2",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_helm_warrior_t2.png",
+    "ck2_gfx_name": "GFX_inv_hoa_helm_warrior_t2",
+    "final_size": "64x64",
+    "scene_intent": "Tier 2 Wrath Helm — the legendary warrior helmet from Blackwing Lair, a magnificent blue steel great helm with golden dragon wing ornaments and a regal golden crest. Rendered as a World of Warcraft inventory icon with an epic-quality purple glow border. The helm must convey dragonslayer majesty, martial supremacy, and the prestige of having conquered Nefarian's domain."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Direct reference: World of Warcraft Classic — Helm of Wrath (Tier 2 Warrior set from Blackwing Lair)",
+        "Render: hand-painted digital icon art, rich saturated metallics, painterly highlights with visible brushwork",
+        "Framing: single isolated item, centered on dark gradient, WoW inventory icon composition",
+        "Quality border: epic item purple glow (#a335ee) framing the icon edges, regal radiant bloom",
+        "Tonality: dragonslayer royalty, martial perfection, the apex of warrior achievement"
+      ],
+      "look": "hand-painted WoW inventory icon style, stylized realism with bold color choices and painterly detail, dramatic metallic rendering with blue steel and gold contrast, concept art quality matching Blizzard item artists",
+      "palette": {
+        "dominant": "#3a5f8a — polished blue steel forming the main helm surface, cool and regal",
+        "secondary": "#c8a832 — rich burnished gold for the dragon wing ornaments and crest",
+        "accent_1": "#1a3a5c — deep blue-black in the shadowed recesses of the steel plates",
+        "accent_2": "#a335ee — epic quality purple glow emanating as a majestic aura",
+        "accent_3": "#e8d584 — bright gold highlights on the crest and wing tips",
+        "highlight": "#c0d8f0 — brilliant blue-white specular reflections on the polished steel"
+      },
+      "art_references": [
+        "World of Warcraft — Helm of Wrath (Tier 2 Warrior, Blackwing Lair drop)",
+        "Blizzard Entertainment — WoW Classic epic item icon rendering style",
+        "Frank Frazetta — warrior king helmet designs (regal horned/winged helms)",
+        "Historical Corinthian helm with Roman officer crest (structural reference)",
+        "Peter Lee — Blizzard concept art for Blackwing Lair armor sets"
+      ]
+    },
+    "environment": {
+      "space": "Pure inventory icon presentation. The helm floats centered against a smooth dark radial gradient background transitioning from near-black (#151520) at edges to a dark blue-grey (#1e2030) behind the item. The epic purple glow suffuses the area immediately surrounding the helm.",
+      "foreground": "The helm itself occupies approximately 75-80% of the frame, presented with a subtle three-quarter angle for maximum silhouette readability and to showcase both the frontal face and the wing ornaments.",
+      "midground": "Not applicable — single item icon composition",
+      "background": "Smooth dark radial gradient with a very faint cool blue undertone, clean inventory presentation. The darkness amplifies the contrast of the polished blue steel and bright gold ornamentation.",
+      "atmosphere": "The aura of an epic-quality treasure — rare, powerful, and deeply prestigious. The purple glow whispers of draconic enchantments forged in dragonfire.",
+      "weather": "Not applicable — interior inventory icon",
+      "time_of_day": "Not applicable — inventory icon with controlled lighting"
+    },
+    "subjects": [
+      {
+        "element": "Helm of Wrath — Tier 2 Warrior great helm",
+        "details": "A breathtaking full-face great helm forged from polished blue steel, the pinnacle of warrior armor craftsmanship. STRUCTURE: The helm has a rounded dome crown with a prominent central ridge running from the forehead to the nape, rising into a tall golden crest. The face is protected by a full plate construction with a narrow T-shaped visor slit — a horizontal eye slit intersected by a vertical nasal bar, both edged in gold. The cheek guards are broad and sweep downward to protect the jaw, each with an embossed golden dragon scale motif. The entire helm surface is polished blue steel — a distinctive cold blue-tinted metal with an almost mirror-like sheen in the highlights that fades to deep navy in the shadows. DRAGON WING ORNAMENTS: The defining feature — two magnificent golden dragon wings rise from the temples of the helm, one on each side. Each wing is an ornamental plate shaped like a stylized dragon wing with three to four elongated pointed pinions sweeping backward and upward. The wings are burnished gold with engraved feather-scale texturing, each pinion edged with a slightly brighter gold. The wing bases connect to the helm at ornate golden rosette mounts. These wings add dramatic width to the helm's silhouette, extending outward and upward impressively. GOLDEN CREST: A tall golden crest rises from the central ridge of the helm — a tapered blade-like fin of gold that curves slightly backward. The crest is engraved with a dragon motif in relief — a sinuous dragon body winding upward. The crest catches light brilliantly, serving as the topmost point of the helm. TRIM AND DETAILS: All edges of the blue steel plates are bordered with fine gold trim — the eye slit, the jawline, the crown ridge, the neck flare. Three small gold studs run along each cheek guard. The steel surface shows not battle damage but master polish — subtle reflective variations that read as carefully maintained ceremonial armor. The inside of the visor slit reveals controlled darkness — deep shadow but not the absolute void of the T1 helm, suggesting the refined interior padding of a lordly helm.",
+        "scale": "The helm fills the icon frame generously — the wing tips extend to near the frame edges, establishing a wide majestic silhouette"
+      },
+      {
+        "element": "Epic quality purple glow effect",
+        "details": "A rich, regal purple glow (#a335ee) emanates from the helm, stronger and more saturated than a rare blue glow. The aura is most intense along the golden elements — the wing tips, the crest peak, and the gold trim lines — as if the enchantment lives within the gold itself. The purple glow extends approximately 8-10% of the frame into the dark background, creating a prominent luminous halo. The glow has a subtle warm quality within the purple spectrum, leaning slightly toward magenta at the brightest points near the gold. This is the signature epic-quality item glow from World of Warcraft, immediately communicating to any player that this is a coveted epic drop.",
+        "scale": "The glow creates a noticeable aura halo around the entire helm, with intensified bloom at the wing tips and crest"
+      }
+    ],
+    "camera": {
+      "shot_type": "Flat frontal icon view with subtle three-quarter rotation to show dimensional depth of the wings",
+      "angle": "Eye level, 10-15 degree rotation to viewer's left, allowing both dragon wing ornaments to read clearly in the silhouette",
+      "lens_equivalent": "85mm equivalent — flat orthographic feel, no perspective distortion",
+      "focal_point": "The visor slit and golden nasal bar — the face of the helm, then the eye traces upward along the crest and outward along the wings",
+      "depth_of_field": "Infinite — entire helm in razor-sharp focus, only background glow is soft",
+      "composition_rules": [
+        "Item centered in frame with the crest peak near the top edge",
+        "Dragon wing tips define the horizontal extent, creating a wide impressive silhouette",
+        "Golden crest creates a strong vertical axis from visor to crown",
+        "The T-shaped visor serves as the visual anchor point at center-frame",
+        "Epic purple glow creates a natural luminous border framing the composition"
+      ]
+    },
+    "lighting": {
+      "key_light": "Strong directional light from upper-left at 45 degrees, cool white (6000K), designed to maximize the polished blue steel's reflective qualities. Creates a sweeping bright highlight across the left half of the dome, the left dragon wing, and the left cheek guard. The blue steel responds with brilliant cold reflections.",
+      "fill_light": "Warm golden ambient fill from lower-right at approximately 25% intensity, picking up the gold detailing on the shadowed side and preventing the right wing from disappearing into darkness. This fill also gives the gold trim on the right side a warm glow.",
+      "accent_lights": [
+        "Epic-quality purple rim light (#a335ee at 50% intensity) outlining the entire helm silhouette — strongest at wing tips and crest peak, creating the characteristic epic glow edge",
+        "Golden self-illumination from the ornamental elements — the wings, crest, and trim appear to emit a faint warm gold light of their own, as if enchanted",
+        "Sharp specular pinpoints on the polished blue steel — bright white-blue dots at the dome peak, the nasal bar tip, and the cheek guard curves"
+      ],
+      "shadows": "The blue steel creates beautiful gradient shadows — transitioning from bright sky-blue highlights through medium navy to deep blue-black in the recesses. The underside of each dragon wing casts a soft shadow on the dome crown. The interior of the visor is shadowed but not absolute black — a deep navy suggesting depth. Gold elements maintain warmth even in shadow.",
+      "atmospheric_fx": [
+        "Epic purple glow aura: rich diffuse bloom radiating outward from the helm's silhouette, strongest at golden elements and protrusions",
+        "Faint purple-white sparkle motes: 3-4 tiny brilliant sparkle points near the helm, brighter and more numerous than rare-quality sparkles",
+        "Gold element self-luminosity: subtle warm glow from within the golden wings and crest, as if containing captive dragonfire",
+        "Blue steel reflection mapping: the polished surface reflects hints of the purple glow and gold elements, creating complex color interactions across the metal"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hand-painted World of Warcraft inventory icon style, single item on dark background, stylized realism with rich painterly brushstrokes. A magnificent polished blue steel warrior great helm (Helm of Wrath, Tier 2) centered on a smooth dark gradient background. Rounded dome crown with prominent central ridge rising into a tall golden crest engraved with a dragon motif. Narrow T-shaped visor slit edged in gold, broad sweeping cheek guards with embossed golden dragon scale patterns. Two spectacular golden dragon wing ornaments rising from the temples, each wing with three to four elongated pointed pinions sweeping backward and upward, burnished gold with engraved feather-scale texturing. Fine gold trim bordering all steel plate edges. Polished blue-tinted steel surface with mirror-like sheen in highlights fading to deep navy in shadows. Masterwork ceremonial armor quality, no battle damage, carefully maintained lordly helm. Epic quality purple glow (#a335ee) emanating as a rich majestic aura, strongest at golden wing tips and crest peak. Purple-white magical sparkle motes floating nearby. Strong upper-left cool directional lighting creating sweeping highlights across the blue steel, warm golden fill from lower-right catching the gold ornamentation. Brilliant specular reflections on polished surfaces. Concept art quality, Blizzard epic item icon style, clear wide majestic silhouette.",
+    "negative": "person wearing armor, full body, mannequin, armor stand, text, watermark, signature, multiple items, busy background, environmental scene, photorealistic, photograph, 3D render, anime, cartoon, chibi, neon, sci-fi, modern elements, blurry, low quality, oversaturated, split frame, multiple panels, border frame, UI elements, HUD, tooltip, item name overlay"
+  }
+}

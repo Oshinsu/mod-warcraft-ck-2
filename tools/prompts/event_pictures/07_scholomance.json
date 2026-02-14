@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_scholomance",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_scholomance.png",
+    "ck2_gfx_name": "GFX_evt_hoa_scholomance",
+    "final_size": "460x300",
+    "scene_intent": "Scholomance — l'école de nécromancie du Fléau, installée dans les cryptes d'un manoir noble. L'académie de la mort : des squelettes assis sur des bancs d'amphithéâtre, un lich professeur, des grimoires reliés en peau — la perversion du savoir et de l'éducation."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : les gravures de l'université de Bologne (XIIIe s.) inversées en cauchemar nécromantique",
+        "Rendu : illustration gothique victorienne ultra-détaillée, encre et lavis rehaussés de lueur verte",
+        "Contraste thématique : la noblesse du savoir académique pervertie en instrument de mort — l'université comme abattoir intellectuel",
+        "Tonalité : horreur académique, le mal érudit et méthodique, l'abomination cataloguée et enseignée"
+      ],
+      "look": "Victorian gothic book illustration meets Blizzard dark fantasy concept art, ink-and-wash technique enhanced with necromantic green luminescence, obsessive architectural detail on gothic vaulted ceilings, every bookshelf crack and bone joint rendered, Gustave Doré engraving quality with digital color enhancement",
+      "palette": {
+        "dominant": "#1C1C1C — noir profond de la crypte, omniprésent comme l'encre des grimoires",
+        "secondary": "#39FF14 — vert nécromancie, l'énergie qui anime les morts et illumine les rituels",
+        "accent_1": "#556B2F — vert-olive foncé des bocaux de spécimens, du verre ancien",
+        "accent_2": "#8B4513 — brun des pupitres de bois sombre, des reliures de grimoires, du bois vieilli",
+        "accent_3": "#F5F5DC — blanc-os des squelettes, des crânes, de l'ivoire des pages anciennes",
+        "highlight": "#ADFF2F — vert-jaune vif des cercles rituels actifs et des yeux de liches"
+      },
+      "art_references": [
+        "Gustave Doré — illustrations de L'Enfer de Dante (gravure monumentale, lumière dramatique)",
+        "Rembrandt — La Leçon d'Anatomie du Dr Tulp (la scène d'enseignement macabre)",
+        "Edward Gorey — illustrations gothiques (l'horreur délicate, le détail obsessionnel)",
+        "Piranesi — Prisons Imaginaires (architecture oppressante, espaces impossibles)"
+      ]
+    },
+    "environment": {
+      "space": "Le Grand Amphithéâtre nécromantique de Scholomance — une salle de cours creusée dans la crypte d'un ancien manoir de Lordaeron. L'espace est un demi-cercle de gradins en pierre descendant vers une scène centrale de rituel. Le plafond est une voûte gothique en croisée d'ogives à 12m de hauteur, les nervures de pierre sculptées de crânes et de fémurs croisés. La salle peut accueillir 60 étudiants — mais les étudiants sont tous morts, et la leçon continue.",
+      "foreground": "Les premiers rangs de gradins en pierre sombre, vus d'en haut et de côté — le spectateur est placé comme un observateur sur le gradin le plus haut. Sur les pupitres de bois noir veiné : des grimoires ouverts dont les pages sont couvertes de diagrammes nécromantiques (cercles rituels, anatomie des morts-vivants). Des encriers remplis d'un liquide vert luminescent (pas d'encre — de l'essence nécromantique). Des plumes d'écriture taillées dans des os de doigts. Un crâne humain posé comme presse-papier sur un pupitre — des runes vertes sont gravées dans l'os frontal. Une bougie noire dans un chandelier de fer projette une faible lumière jaune-verte tremblante.",
+      "midground": "La scène centrale et les étudiants. Sur les gradins inférieurs : 15-20 squelettes et cadavres animés assis aux pupitres dans des postures d'étudiants attentifs — l'un a le menton posé sur sa main osseuse comme un étudiant pensif, un autre semble prendre des notes avec un os-plume, un troisième a la mâchoire décrochée mais reste tourné vers le professeur. Ils portent des vestiges de robes académiques sombres, effilochées et tachées. Sur la scène en contrebas : un LICH PROFESSEUR — un squelette draped dans une toge académique noire ornée de runes argentées, un phylactère brillant de vert accroché à une chaîne d'argent autour du cou. Il se tient devant un tableau d'ardoise couvert de diagrammes d'invocation. Sa main osseuse droite tient une baguette de craie (os taillé), la gauche lévite un petit crâne qui tourne lentement dans un halo vert — la démonstration en cours.",
+      "background": "Les murs de la crypte-amphithéâtre : des bibliothèques encastrées dans la pierre, du sol au plafond, remplies de grimoires reliés en cuir sombre (certains reliés en peau suspecte), de bocaux en verre contenant des spécimens conservés dans un liquide verdâtre (organes, petites créatures), de crânes étiquetés avec des numéros de catalogue. Un escalier en colimaçon dans le coin monte vers les niveaux supérieurs — une lumière verte pulse depuis le haut. Au-dessus du tableau d'ardoise, un blason sculpté : celui de la famille Barov, anciens propriétaires du manoir, maintenant esclave du Fléau — un bouclier héraldique surmonté d'un crâne couronné.",
+      "atmosphere": "L'horreur méthodique et silencieuse, le raclement de plume sur parchemin, le cliquetis doux des os, l'odeur imaginée de poussière millénaire et de formol nécromantique",
+      "weather": "Intérieur souterrain — air stagnant, froid, des filets de condensation sur les pierres les plus froides, poussière en suspension visible dans les rares faisceaux de lumière",
+      "time_of_day": "Sans objet (souterrain) — éclairage permanent des bougies noires et de la nécromancie verte"
+    },
+    "subjects": [
+      {
+        "element": "Le Lich Professeur sur la scène",
+        "details": "Squelette animé en toge académique noire richement brodée de runes argentées. Phylactère vert accroché au cou par une chaîne d'argent — pulsant d'énergie comme un coeur. Posture professorale classique — une main tenant la craie vers le tableau, l'autre faisant léviter un crâne-démonstration dans un halo vert. Les orbites vides brillent de vert intense. La mâchoire bouge comme s'il expliquait un concept. Il y a quelque chose de terriblement familier et rassurant dans sa posture — c'est un bon professeur. Qui est mort. Qui enseigne la mort.",
+        "importance": "Point focal secondaire mais narrativement central — incarne le thème"
+      },
+      {
+        "element": "Les étudiants squelettes",
+        "details": "15-20 morts-vivants aux pupitres dans des postures parfaitement reconnaissables d'étudiants : le pensif, le studieux, le distrait, l'endormi (le crâne posé sur les bras croisés sur le pupitre). Vestiges de robes académiques. L'un lève la main pour poser une question — son avant-bras est déconnecté au coude mais la main flotte à sa place. Un autre a un livre ouvert devant lui mais ses orbites sont tournées vers le plafond — contemplatif ou dysfonctionnel, impossible à dire.",
+        "importance": "Remplissent la scène de malaise — le familier rendu horrible"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plongée 3/4 depuis le gradin supérieur — vue d'amphithéâtre classique, regardant vers la scène en contrebas",
+      "angle": "Plongée de 30° regardant vers le bas et le centre — exactement comme un étudiant au fond de l'amphi",
+      "lens_equivalent": "35mm — standard académique, pas de distorsion, comme si on documentait une scène de classe",
+      "focal_point": "Le Lich Professeur et le crâne lévitant dans son halo vert — la seule source de mouvement visible dans la scène",
+      "depth_of_field": "Profondeur étendue — gradins nets au premier plan, scène nette au centre, bibliothèques au fond légèrement adoucies par la poussière en suspension",
+      "composition_rules": [
+        "Les gradins en arc de cercle créent des lignes courbes concentriques guidant le regard vers la scène",
+        "Le Lich Professeur est positionné au tiers inférieur de l'image — en contrebas, mais au centre du pouvoir",
+        "Les squelettes-étudiants sont répartis de façon naturaliste — pas alignés, comme dans un vrai amphi",
+        "Le blason Barov au-dessus du tableau ferme la composition vers le haut — le pouvoir mort qui surplombe"
+      ]
+    },
+    "lighting": {
+      "key_light": "Le halo nécromantique vert du crâne lévitant — source principale, projetant des ombres radiales depuis la scène vers les gradins, éclairant les premiers rangs de squelettes par en-dessous (uplighting sinistre sur les crânes)",
+      "fill_light": "Bougies noires dispersées sur les pupitres — lumière jaune-verte tremblante, chaque bougie créant un petit îlot de lumière chaude malade autour d'un pupitre, laissant des zones d'obscurité entre les rangs",
+      "accent_lights": [
+        "Phylactère du Lich : point de lumière verte concentré sur la poitrine du professeur, projetant son ombre sur le tableau derrière lui",
+        "Runes actives sur les grimoires ouverts : lueur verte faible émanant de certaines pages, comme si le texte était vivant",
+        "Bocaux de spécimens : chaque bocal émet sa propre faible lueur verdâtre, une galaxie de points verts sur les étagères",
+        "Cercle rituel sur la scène : tracé au sol en poudre d'os, les lignes brillent d'un vert constant et stable",
+        "Yeux des étudiants : chaque orbite de squelette brille d'un minuscule point vert — 30+ points verts dans les gradins"
+      ],
+      "shadows": "Les ombres sont le personnage principal silencieux de la scène. Elles sont profondes, noires, et omniprésentes. Les nervures de la voûte projettent un réseau d'ombres sur les murs qui ressemble à une cage ou une toile d'araignée. Les ombres des squelettes-étudiants sur les gradins derrière eux sont grotesquement allongées par l'uplighting, se chevauchant comme un champ de griffes noires sur la pierre.",
+      "atmospheric_fx": [
+        "Poussière en suspension : particules visibles dans les cônes de lumière verte, flottant avec une lenteur surnaturelle",
+        "Brume nécromantique : très fine brume vert-gris au niveau du sol de la scène, rampant sur les premières marches",
+        "Flammes des bougies : parfaitement immobiles — il n'y a pas le moindre courant d'air, ce qui est lui-même terrifiant",
+        "Condensation : minuscules gouttelettes sur les pierres froides, chacune reflétant un point vert minuscule"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Victorian gothic book illustration meets Blizzard dark fantasy concept art, Gustave Doré engraving quality with digital green luminescence enhancement, obsessive architectural detail on vaulted ceilings, every bookshelf and bone joint rendered. THE GRAND NECROMANTIC AMPHITHEATRE OF SCHOLOMANCE — a lecture hall carved into the crypt of an ancient Lordaeron manor. Semi-circular stone tiered seating descending to a central ritual stage. Gothic cross-ribbed vault ceiling at 12m height, stone ribs sculpted with skulls and crossed femurs. Capacity 60 students — all dead, the lesson continues. FOREGROUND (from upper tier looking down): dark stone bench rows with blackwood desks bearing open grimoires covered in necromantic diagrams (ritual circles, undead anatomy charts), inkwells filled with luminescent green liquid (not ink — necromantic essence), quill pens carved from finger bones, a human skull paperweight with green runes engraved in the frontal bone, a black candle in iron holder casting trembling yellow-green light. MIDGROUND: THE STUDENTS AND PROFESSOR. On lower tiers: 15-20 SKELETON AND ANIMATED CORPSE STUDENTS seated at desks in perfectly recognizable student postures — one with bony chin resting on skeletal hand looking thoughtful, another taking notes with a bone-quill, one with detached jaw still facing the professor, one raising a hand to ask a question with forearm disconnected at the elbow but hand floating in place, one with skull resting on crossed arms on desk (sleeping student pose), all wearing remnants of dark tattered academic robes. ON THE CENTRAL STAGE: a LICH PROFESSOR — an animated skeleton draped in a black academic gown richly embroidered with silver runes, a green-glowing phylactery on a silver chain around the neck pulsing like a heart. Standing before a slate blackboard covered in summoning diagrams. Right bony hand holds chalk (carved bone), left hand LEVITATES A SMALL SKULL slowly rotating in a green halo — the ongoing demonstration. Empty eye sockets glow intense green. Jaw moves as if explaining a concept. Terribly familiar reassuring professorial posture — a good teacher, who is dead, teaching death. BACKGROUND: crypt walls lined floor-to-ceiling with recessed bookshelves filled with dark leather-bound grimoires (some bound in suspicious skin), glass specimen jars containing preserved organs and small creatures in greenish liquid, labeled catalogued skulls with reference numbers. A spiral staircase in the corner ascending to upper levels with green light pulsing from above. Above the blackboard: carved Barov family coat of arms — heraldic shield topped with a crowned skull. LIGHTING: green necromantic halo from levitating skull as main source projecting radial shadows from stage across tiered seating, sinister uplighting on student skull faces. Black candles on desks providing trembling yellow-green light pools with darkness between rows. Lich phylactery as concentrated green chest-light casting his shadow on blackboard. Active runes on open grimoire pages emitting faint green glow as if text is alive. Specimen jars each emitting faint green glow — a galaxy of green points on shelves. Ritual circle on stage floor in bone dust glowing steady green. Every student skeleton eye socket glowing with tiny green point — 30+ green dots across tiers. Vault rib shadows creating cage/spiderweb pattern on walls. Student shadows grotesquely elongated by uplighting overlapping like a field of black claws on stone. ATMOSPHERIC: dust particles visible in green light cones floating with supernatural slowness, very thin green-grey necromantic ground mist on stage creeping up first steps, candle flames PERFECTLY STILL — no air current at all which is itself terrifying, condensation droplets on cold stones each reflecting tiny green point. Color palette: deep crypt black, necromantic green, dark olive specimen glass, aged dark wood brown, bone-white ivory, bright green-yellow for active ritual elements. Mood: methodical silent horror, quill scratching on parchment, soft bone clicking, the scholarly evil, the abomination catalogued and taught.",
+    "negative": "text, watermark, signature, UI elements, modern elements, anime style, cartoon, photorealistic close-up faces, bright daylight, outdoor scene, blue sky, cheerful colors, blood splatter, explicit gore, visible flesh wounds, modern furniture, computers, sci-fi, blurry, low quality, split frame, multiple panels, border frame"
+  }
+}

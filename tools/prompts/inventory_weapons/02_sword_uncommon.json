@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_sword_uncommon",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_sword_uncommon.png",
+    "ck2_gfx_name": "GFX_inv_hoa_sword_uncommon",
+    "final_size": "80x80",
+    "scene_intent": "Uncommon quality well-crafted steel sword with green gem. A noticeable step up from vendor trash — this is the first blade a player would feel good about equipping. The green gem in the pommel and faint emerald glow signal 'uncommon' immediately. The steel is polished, the craftsmanship deliberate. Still grounded and believable, but clearly superior to common iron."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Direct reference: World of Warcraft inventory icon art style — single item rendered in painterly digital style on dark gradient background",
+        "Quality tier: Uncommon (green) — item border glow color #1eff00, the first 'good' tier in WoW's item quality spectrum",
+        "Rendering: hand-painted digital icon with subtle brushwork, slight texture grain, matching Blizzard item icon art pipeline",
+        "Readability: weapon silhouette must be instantly identifiable as a longsword at 80x80 pixel display size, green gem must read as a bright focal point"
+      ],
+      "look": "hand-painted digital game icon, painterly brushstrokes, slight canvas texture, Blizzard Entertainment WoW inventory icon quality, rich material rendering on a single isolated object, dark atmospheric background with subtle vignette, stylized realism consistent with Warcraft aesthetic",
+      "palette": {
+        "dominant": "#8a9ba8 — polished steel blue-grey for the well-forged blade",
+        "secondary": "#3d2b1a — dark oiled leather for the grip, richer than common",
+        "accent_1": "#1eff00 — uncommon quality green for the pommel gem glow and faint border aura",
+        "accent_2": "#1a1a1a — near-black for the dark gradient background",
+        "accent_3": "#c0a850 — brass-gold for the crossguard metal accents and pommel setting",
+        "highlight": "#d4dce4 — bright steel reflection on the blade's polished flat"
+      },
+      "art_references": [
+        "Blizzard Entertainment WoW item icon team — uncommon quality weapon icons (Outlaw Sabre, Blade of Cunning, Protector's Sword)",
+        "Twincruiser (WoW icon artist) — green-glow item presentation and silhouette clarity",
+        "Historical knightly arming sword — well-forged cruciform with decorative elements befitting a quality-made weapon",
+        "Frazetta and Brom weapon rendering — painterly metal reflections, luminous gemstone focal points"
+      ]
+    },
+    "subjects": [
+      {
+        "element": "Steel longsword with green gem — uncommon quality",
+        "details": "A well-crafted steel longsword approximately 95cm in total length, visibly superior to common ironwork. The blade is straight, double-edged, made of polished steel with a mirror-like sheen along its fuller and visible grain pattern in the metal suggesting careful folding during forging. The blade edge is keen and unblemished — no nicks, no pitting — with a bright specular line running its full length. A single shallow decorative groove parallels the fuller on each flat of the blade. The crossguard is slightly upcurved at the tips, forged from the same quality steel but with brass wire inlay in a simple knotwork pattern along its length — a mark of a smith who takes pride in work. The grip is wrapped in dark oiled leather, tightly and evenly wound with brass wire cross-wrapping at quarter intervals for improved purchase. The pommel is a faceted steel octagon housing a single oval-cut green gemstone (emerald or peridot) approximately 12mm across, set in a brass bezel. The gem emits a faint, steady green luminescence (#1eff00) — not magical fireworks, but a subtle inner glow suggesting the stone holds a minor enchantment. This glow is the primary visual indicator of uncommon quality.",
+        "scale": "Weapon fills approximately 80% of the square frame, oriented diagonally from lower-left to upper-right at roughly 30-40 degrees from vertical"
+      }
+    ],
+    "camera": {
+      "shot_type": "Flat icon view with slight 3/4 angle — standard WoW inventory icon perspective",
+      "angle": "Very slight 3/4 rotation (approximately 10-15 degrees from perfectly flat) to give minimal depth to the crossguard curves and pommel gem facets while keeping the blade in clear profile",
+      "lens_equivalent": "Orthographic / flat projection — no perspective distortion, consistent with game UI icon conventions",
+      "focal_point": "The green gemstone in the pommel — the brightest point in the composition and the immediate quality-tier signifier",
+      "depth_of_field": "Infinite — everything in perfect focus, UI icon convention",
+      "composition_rules": [
+        "Weapon centered in frame, filling approximately 80% of the square canvas",
+        "Diagonal orientation lower-left to upper-right (blade tip upper-right, pommel lower-left) — standard WoW weapon icon layout",
+        "Green gem positioned in the lower-left quadrant where it anchors the composition and draws the eye",
+        "Dark gradient background: darkest at center, slightly lighter at edges",
+        "Single weapon only — no secondary objects, no hands, no environmental context",
+        "Clear silhouette readable at 80x80 pixels"
+      ]
+    },
+    "lighting": {
+      "key_light": "Soft directional light from upper-left at 45 degrees, cool white (6000K), creating a strong polished-steel reflection along the blade's left edge and a clean highlight across the crossguard brass inlay",
+      "fill_light": "Dim ambient fill from below-right, slightly warm (#9a9a8a), lifting the shadows on the grip and pommel underside just enough to reveal the leather wrapping detail",
+      "accent_lights": [
+        "Green gem internal glow — the emerald/peridot emits a soft steady #1eff00 luminescence that casts a faint green wash on the lower portion of the grip and the brass pommel setting, creating a small pool of colored light",
+        "Bright specular edge-catch along the full length of the blade — a crisp line of #d4dce4 silver-white, much brighter than the common sword, indicating superior polish",
+        "Faint uncommon-quality green glow (#1eff00 at 20-25% opacity) as a subtle backlight halo around the entire weapon silhouette"
+      ],
+      "shadows": "Soft drop shadow beneath the weapon blending into the dark gradient. The green gem glow creates a very faint green tint in the shadow area directly below the pommel. No hard cast shadows.",
+      "atmospheric_fx": [
+        "Dark gradient background: radial gradient from #1a1a1a at center to #0d0d0d at corners, with a very faint green tint (#0a1a0a) bleeding in from the pommel gem direction",
+        "Faint green luminous mist around the pommel gem — not particles, just a soft diffused glow halo extending 5-8mm from the stone surface",
+        "Subtle painterly grain texture throughout the background to maintain hand-painted feel",
+        "Green border glow (#1eff00 at 20-25% opacity) around the weapon's silhouette edge — the uncommon quality aura indicator"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hand-painted digital game icon, World of Warcraft inventory icon style, painterly brushstrokes, single weapon on dark background. A well-crafted polished steel longsword oriented diagonally from lower-left to upper-right, filling 80% of the square frame. Straight double-edged blade of polished blue-grey steel with mirror sheen along the fuller, visible metal grain pattern from careful forging. Keen unblemished blade edge with bright specular highlight running full length. Shallow decorative groove paralleling the fuller on each blade flat. Slightly upcurved crossguard of polished steel with brass wire knotwork inlay pattern. Dark oiled leather grip tightly wound with brass wire cross-wrapping at intervals. Faceted octagonal steel pommel housing a single oval-cut green gemstone (emerald) in a brass bezel setting. The green gem emits a faint steady luminescence (#1eff00), casting a soft green wash on the lower grip and pommel setting. Faint green quality glow (#1eff00) around the entire weapon silhouette indicating uncommon item tier. Dark radial gradient background from #1a1a1a to #0d0d0d with subtle green tint near pommel. Soft directional lighting from upper-left creating polished steel reflections. Painterly material rendering, Blizzard WoW icon art quality, rich detail, clear silhouette readable at small size, stylized realism, subtle canvas texture.",
+    "negative": "text, watermark, signature, UI frame, item border overlay, numbers, stats, tooltip, hands holding weapon, fingers, character, person, arm, environmental background, ground, table, wall, grass, sky, overly bright scene, neon cyberpunk, heavy magical effects, fire, lightning, excessive particle effects, anime style, cartoon, chibi, photorealistic, 3D render, cel-shaded, multiple weapons, dual wield, shield, second object, split frame, multiple panels, collage, border frame, blurry, low quality, deformed proportions, bent blade, extra crossguards, rust, damage, nicks in blade"
+  }
+}

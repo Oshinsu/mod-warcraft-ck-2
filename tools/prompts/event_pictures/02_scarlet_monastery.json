@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_scarlet_monastery",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_scarlet_monastery.png",
+    "ck2_gfx_name": "GFX_evt_hoa_scarlet_monastery",
+    "final_size": "460x300",
+    "scene_intent": "Le Monastère Écarlate — forteresse du fanatisme religieux. Quatre ailes (Graveyard, Library, Armory, Cathedral). L'image doit capturer la beauté corrompue d'une foi devenue folie — une cathédrale magnifique au service d'une croisade génocidaire."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : les cathédrales gothiques flamboyantes (Reims, Chartres) perverties par le fanatisme",
+        "Rendu : peinture à l'huile numérique, texture de toile visible, glacis lumineux",
+        "Contraste thématique : beauté architecturale sacrée vs bannières sanglantes de croisade",
+        "Tonalité : grandeur terrible, zèle aveugle, la croix et l'épée"
+      ],
+      "look": "grand master oil painting, luminous glazing technique like Vermeer, rich impasto on stone textures, Blizzard concept art meets classical religious painting, cathedral interior light study",
+      "palette": {
+        "dominant": "#8b0000 — rouge cramoisi profond des bannières Scarlet Crusade, omniprésent",
+        "secondary": "#ffd700 — or des ornements liturgiques, dorures, icônes sacrées",
+        "accent_1": "#f5f5dc — pierre calcaire claire de la cathédrale, crème et chaud",
+        "accent_2": "#1a1a2e — ombres profondes dans les alcôves et sous les arcs",
+        "accent_3": "#ff6347 — flammes des bûchers et torches, rouge-orange vif",
+        "highlight": "#fffacd — lumière divine traversant les vitraux, jaune pâle sacré"
+      },
+      "art_references": [
+        "Jan van Eyck — L'Agneau Mystique (lumière divine, détail obsessionnel, dorures)",
+        "Francisco Goya — Le Tribunal de l'Inquisition (fanatisme religieux, terreur sous couvert de foi)",
+        "Hugo — Notre-Dame de Paris illustrée par Gustave Doré (architecture gothique monumentale)",
+        "Blizzard cinematic — Fall of Lordaeron (qualité de rendu, ambiance)"
+      ]
+    },
+    "environment": {
+      "space": "Vue frontale de la façade principale du Monastère Écarlate au soleil couchant. L'édifice est un complexe monastique fortifié de style gothique flamboyant — murs de pierre calcaire claire, contreforts massifs, rosace centrale de 8m de diamètre en vitraux rouges et or représentant une flamme purificatrice. Deux clochers jumeaux encadrent la façade, surmontés de croix en fer forgé. Le portail principal est un triple arc ogival profondément sculpté de scènes de 'purification' (bûchers, exécutions stylisées en bas-reliefs).",
+      "foreground": "Un parvis pavé de dalles rouges et blanches en damier. Deux rangées de piques plantées dans le sol, certaines portant des crânes — trophées des 'hérétiques purifiés'. Un brasero en fer forgé brûle au centre, alimenté en permanence. Des bannières cramoisi frappées de la flamme d'or de la Croisade Écarlate pendent de hampes de 6m le long du parvis. Un chevalier Scarlet en armure de plates rouges et or, heaume fermé, se tient au garde-à-vous près du portail — sa cape rouge claque au vent.",
+      "midground": "La façade de la cathédrale dans toute sa gloire terrible. Les vitraux de la rosace irradient de l'intérieur — une lumière rouge-or qui semble battre comme un coeur. Au-dessus du portail, une inscription gravée dans la pierre (illisible mais présente comme texture). Des gargouilles en forme d'anges guerriers armés d'épées surplombent le visiteur. Les murs montrent des traces de réparations récentes — le monastère est en état de siège permanent contre les morts-vivants du Fléau.",
+      "background": "Derrière les clochers, un ciel de crépuscule dramatique — couches horizontales d'or, d'orange et de rouge sang qui se fondent dans un violet profond en altitude. Des nuages effilochés traversent le ciel comme des trainées de fumée. Au loin, la silhouette sombre de la forêt de Tirisfal, territoire du Fléau ennemi — rappel que ce lieu de foi est une forteresse assiégée. Quelques corbeaux en vol silhouettés contre le ciel embrasé.",
+      "atmosphere": "Grandeur fanatique, beauté terrible d'une foi devenue arme, chaleur oppressante du zèle, odeur imaginée d'encens et de cendres",
+      "weather": "Ciel de crépuscule dégagé, derniers rayons de soleil rasants illuminant la façade de pierre comme un projecteur divin",
+      "time_of_day": "Crépuscule doré — le soleil touche l'horizon derrière le spectateur, ses rayons rasants frappent la façade de plein fouet"
+    },
+    "subjects": [
+      {
+        "element": "La rosace centrale",
+        "details": "Vitrail circulaire de 8m représentant la Flamme Écarlate — motif central de la Croisade. Segments en rouge rubis, or ambré, et blanc pur formant une flamme stylisée. Éclairée par l'intérieur, elle pulse comme un oeil ardent. Les plombs dessinent des motifs d'épées et de croix entre les segments de verre.",
+        "importance": "Point focal principal — le regard doit être attiré ici en premier"
+      },
+      {
+        "element": "Le chevalier Scarlet gardien",
+        "details": "Un seul chevalier en armure de plates complète rouge et or. Heaume fermé avec une visière en croix. Tabard cramoisi frappé de la flamme d'or. Immobile comme une statue, épée plantée devant lui, mains gantées posées sur le pommeau. Sa posture est celle d'une dévotion absolue — il est plus monument que personne.",
+        "importance": "Donne l'échelle humaine et incarne la menace fanatique"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plan d'ensemble frontal légèrement en contre-plongée — cadrage symétrique de cathédrale",
+      "angle": "Contre-plongée de 10° — le spectateur lève légèrement les yeux vers la façade, sensation d'écrasement par la grandeur",
+      "lens_equivalent": "35mm — standard pour architecture monumentale sans distorsion excessive",
+      "focal_point": "La rosace centrale et sa lumière rouge-or — centre géométrique et dramatique de l'image",
+      "depth_of_field": "Grande profondeur de champ — tout est net du premier plan au ciel",
+      "composition_rules": [
+        "Symétrie quasi-parfaite autour de l'axe vertical central (le portail) — reflète le dogmatisme inflexible de la Croisade",
+        "Les lignes verticales des clochers et contreforts créent une sensation d'élancement vers le ciel",
+        "Le chevalier au sol et la rosace en haut créent un axe vertical de lecture : terre → foi → ciel",
+        "Les piques et bannières latérales encadrent et canalisent le regard vers le centre"
+      ]
+    },
+    "lighting": {
+      "key_light": "Soleil couchant rasant venant de derrière le spectateur (face à la façade) — lumière chaude dorée (3200K) qui enflamme littéralement la pierre calcaire, la faisant rougeoyer comme de la braise",
+      "fill_light": "Lumière rouge-or émanant de l'intérieur à travers la rosace et les vitraux latéraux — cette contre-lumière intérieure crée l'impression que l'édifice brûle de l'intérieur de sa propre ferveur",
+      "accent_lights": [
+        "Braseros au premier plan — flammes vives orange-rouge projetant des ombres dansantes sur le damier du parvis",
+        "Reflets métalliques sur l'armure du chevalier — points de lumière dorée sur les plaques de métal poli",
+        "Lueur des bougies derrière les fenêtres secondaires — points chauds discrets dans la masse sombre des murs"
+      ],
+      "shadows": "Ombres longues et dramatiques projetées vers le spectateur par le soleil rasant. Les arcs-boutants dessinent des motifs géométriques d'ombre sur le sol. L'intérieur du portail est une obscurité rougeâtre, comme une bouche de fournaise.",
+      "atmospheric_fx": [
+        "Lueur divine : le soleil couchant crée un halo doré autour des clochers, comme une auréole",
+        "Poussière dorée : particules en suspension illuminées par les rayons rasants, flottant dans l'air comme de l'encens",
+        "Chaleur visible : très léger effet de convection au-dessus des braseros",
+        "Vitraux projetés : la rosace projette un motif de lumière rouge et or au sol devant le portail"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Grand master oil painting, luminous Vermeer-like glazing, rich impasto stone textures, Blizzard concept art quality. Frontal view of the Scarlet Monastery at golden hour sunset. A fortified Gothic flamboyant monastery complex in warm cream limestone. Massive central rose window (8 meters diameter) of red ruby and gold amber stained glass depicting a stylized purification flame, lit from within pulsing like a burning eye, lead work forming sword and cross patterns between glass segments. Twin bell towers flanking the façade topped with wrought-iron crosses. Triple ogival arch portal deeply carved with purification scenes in bas-relief. Foreground: red and white checkered flagstone parvis, two rows of pikes planted in the ground — some bearing skulls of purified heretics, a central wrought-iron brazier burning permanently, crimson banners emblazoned with golden flame of the Scarlet Crusade hanging from 6-meter poles, a single Scarlet Knight in full red-and-gold plate armor standing at attention by the portal — closed helm with cross visor, crimson tabard with golden flame, sword planted before him hands on pommel, motionless as a monument of absolute devotion. Midground: cathedral façade in terrible glory, rose window radiating red-gold light like a heartbeat, angel-warrior gargoyles armed with swords overlooking the visitor, walls showing recent repairs — monastery under permanent siege against the Scourge. Background: dramatic twilight sky in horizontal layers of gold, orange, blood-red fading to deep violet, wispy clouds like smoke trails, dark silhouette of Tirisfal forest (Scourge territory), crows silhouetted against burning sky. Lighting: setting sun from behind viewer hitting façade at golden hour (3200K warm) making limestone glow like embers, red-gold interior light through rose window and lateral stained glass creating impression the building burns with its own fervor, brazier flames casting dancing shadows on checkered parvis, metallic reflections on knight's polished armor. Atmospheric effects: divine halo around bell towers from setting sun, golden dust particles floating like incense in raking light rays, subtle heat convection above braziers, rose window projecting red-gold light pattern on ground before portal. Near-perfect bilateral symmetry reflecting dogmatic inflexibility. Color palette: deep crimson, liturgical gold, warm cream limestone, deep shadows, fire-red-orange, pale sacred yellow. Mood: fanatical grandeur, terrible beauty of weaponized faith, oppressive zeal.",
+    "negative": "text, watermark, signature, UI elements, modern elements, anime style, cartoon, photorealistic close-up faces, oversaturated neon, sci-fi, guns, technology, blurry, low quality, deformed architecture, extra limbs, split frame, multiple panels, comic panels, border frame, cheerful bright atmosphere, blood splatter, explicit gore, nudity"
+  }
+}

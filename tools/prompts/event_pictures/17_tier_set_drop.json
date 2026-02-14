@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_tier_set_drop",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_tier_set_drop.png",
+    "ck2_gfx_name": "GFX_evt_hoa_tier_set_drop",
+    "final_size": "460x300",
+    "scene_intent": "Legendary loot moment — the climactic reward after a dungeon boss kill. A warrior kneels before an open treasure chest radiating divine golden light as epic-quality armour pieces materialise in the air around them. This image captures the quintessential MMO loot fantasy — the moment that justifies every risk taken. It must feel triumphant, sacred, and awe-inspiring."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Reference: WoW epic loot drops, legendary item acquisition cinematics, Diablo treasure chest opening moments",
+        "Rendering: high-end digital matte painting with visible oil-paint brushstrokes, heavy use of luminous glazing technique for the golden light",
+        "CK2 framing: narrative medium shot focused on the character-treasure interaction, medieval illuminated manuscript quality",
+        "Tone: sacred revelation — this is not mere treasure, it is destiny-forged equipment choosing its wielder. Quasi-religious ecstasy of the loot moment."
+      ],
+      "look": "hyper-detailed digital matte painting, visible oil brushstrokes, atmospheric perspective, concept art quality matching Blizzard cinematics team, painterly realism with fantasy elements, rich texture layering, divine radiance emanating from treasure with realistic light scattering",
+      "palette": {
+        "dominant": "#ffd700 — radiant divine gold from the treasure chest, the colour of legendary loot",
+        "secondary": "#4b0082 — deep indigo-purple of epic-quality magical energy surrounding the armour pieces",
+        "accent_1": "#c0c0c0 — polished steel and silver of the warrior's existing armour reflecting the golden light",
+        "accent_2": "#ff4500 — warm amber-orange of residual dungeon torch and fire light",
+        "accent_3": "#1a1a2e — deep shadow-blue of the dungeon chamber beyond the light's reach",
+        "highlight": "#fffff0 — near-white divine radiance at the epicentre of the chest opening, almost overexposed"
+      },
+      "art_references": [
+        "Caravaggio — The Conversion of Saint Paul (dramatic divine light overwhelming a kneeling figure)",
+        "William Blake — The Ancient of Days (divine radiance, sacred geometry in light patterns)",
+        "Blizzard Entertainment — WoW legendary weapon acquisition cinematics (golden light, item materialisation)",
+        "Howard Pyle — medieval treasure discovery illustrations (composition, character reaction, treasure presentation)"
+      ]
+    },
+    "environment": {
+      "space": "A large circular dungeon boss chamber, roughly twenty metres in diameter, with a domed stone ceiling supported by eight carved pillars. The floor is polished dark stone — obsidian or basalt — arranged in concentric circular patterns radiating outward from a central point where the treasure chest rests. The walls are carved with bas-relief battle scenes depicting ancient heroes. The chamber bears the marks of recent combat: scorch marks on pillars, cracks in the floor, a fallen stone column. In the far background, the massive corpse of a slain boss creature is partially visible, confirming the victory that earned this reward.",
+      "foreground": "The open treasure chest sits on a raised stone plinth at dead centre. It is an ornate chest of dark iron banded with gold, its lid thrown fully open. From within pours a column of intense golden-white divine light that reaches upward like a searchlight beam, dispersing against the domed ceiling in a radial bloom. Floating within and above the light column: four distinct pieces of epic plate armour materialising from pure energy — a horned helmet with a face guard, a massive pauldron set with glowing purple gems, gauntlets with articulated fingers crackling with purple arcane energy, and a breastplate inscribed with a roaring lion motif. Each piece trails streams of purple-gold magical energy, rotating slowly as if being assembled by invisible hands. The armour pieces emit their own purple inner glow — the signature colour of epic-quality gear.",
+      "midground": "A human warrior kneels on one knee before the chest, two metres from it, head bowed slightly, face upturned to the floating armour with an expression of stunned reverence. The golden light washes over him, casting his existing battle-worn steel armour in brilliant reflected gold. His greatsword lies flat on the ground beside him, abandoned in the moment of awe. His hands are slightly raised, palms open, as if receiving a benediction. Behind the kneeling warrior, three party members stand in a loose semicircle, five to seven metres back. A female mage with her hand over her mouth in amazement, arcane staff lowered. A rogue standing with arms crossed, a rare genuine smile visible beneath his hood. A paladin with both hands clasped on the head of his warhammer planted before him, nodding in solemn approval.",
+      "background": "The dungeon chamber walls recede into relative darkness beyond the treasure light's reach. The carved pillars cast long shadows radially outward. The slain boss — a massive winged creature with dark scales — is visible as a shadowed heap against the far wall, confirming the hard-won victory. Scattered across the floor: gold coins, loose gemstones, and mundane treasure that pales in comparison to the epic gear floating above the chest. A faint residual mist hangs at ankle height — the aftermath of the boss fight's magical energies.",
+      "atmosphere": "Sacred awe — the breath-held silence of witnessing something extraordinary. The mundane world has stopped. Only the treasure and the hero exist in this golden moment. Reverent, triumphant, quasi-religious in intensity.",
+      "weather": "Interior dungeon scene — no weather. The air is still and charged with magical energy. Fine golden dust motes drift in the light column. The temperature feels warm from the divine radiance.",
+      "time_of_day": "Irrelevant — deep underground dungeon. The golden light from the chest creates its own artificial daylight within a five-metre radius, beyond which the chamber falls to torchlit dimness."
+    },
+    "subjects": [
+      {
+        "element": "The kneeling warrior (loot recipient)",
+        "details": "A broad-shouldered human male warrior kneeling on his right knee, left foot planted forward. His existing armour is functional battle-worn steel plate — dented, scratched, with a cracked left pauldron and dried blood (not his own) spattered across the chest plate. This contrast between his worn gear and the pristine epic set floating before him is the visual narrative. His face is upturned, bathed in golden light, eyes wide with wonder — a hardened veteran momentarily reduced to awed silence. His dark hair is matted with sweat, a fresh cut across his left cheekbone from the recent battle. His hands are raised at chest height, palms open, fingers slightly spread, as if afraid to touch the divine gift. His red cloak is torn and singed but still clasped at his throat. His greatsword lies flat beside him, temporarily forgotten.",
+        "scale": "Primary subject, positioned at the lower-centre of the composition, his head at approximately the horizontal centre line"
+      },
+      {
+        "element": "The epic armour set (floating loot)",
+        "details": "Four pieces of tier-set plate armour floating in the golden light column above the open chest, rotating slowly. Each piece is masterwork craftsmanship in dark blue-steel with gold inlay and settings of glowing purple gemstones: (1) A full-face helmet with two swept-back horns and glowing purple eye slits, the visor shaped like a snarling lion. (2) Massive layered pauldrons with purple gem centrepieces pulsing with inner light, gold filigree edges. (3) Articulated gauntlets with each finger joint visible, tiny arcane runes etched along each finger, purple energy crackling between the fingertips. (4) A grand breastplate with a roaring lion relief in raised gold, the lion's eyes set with purple gems. Each piece trails ribbons of purple-gold magical energy downward like luminous silk streamers. The armour pieces are not static — they are in the process of materialising, their edges slightly translucent where they are still coalescing from pure energy.",
+        "scale": "Visually dominant, floating one to two metres above the chest, spread across a two-metre vertical space, positioned at the upper-centre of the composition"
+      },
+      {
+        "element": "The treasure chest",
+        "details": "An ornate chest one metre wide and half a metre deep, constructed of dark iron bands over black oak, with gold corner reinforcements shaped like dragon claws. The lid is thrown fully open, its interior lined with purple velvet. The golden-white light pours from the interior like concentrated sunlight, so intense that the chest's contents are invisible — pure radiance. The lock mechanism, a complex dwarven gear-and-rune system, hangs open. Ancient script along the chest's front edge glows golden. The stone plinth beneath it is carved with a circular mandala pattern that the light has activated — thin golden lines tracing geometric patterns across the floor around the chest.",
+        "scale": "Centre-bottom of composition, the source point of the dominant light, approximately one metre wide"
+      },
+      {
+        "element": "The watching party members",
+        "details": "Three figures standing in a loose arc behind and to the sides of the kneeling warrior, each reacting distinctly. The mage (screen left) has lowered her staff, one hand raised to her mouth in genuine surprise, blue robes rippling in the energy emanating from the chest. The rogue (screen right) stands with arms crossed over leather-clad chest, head tilted, wearing a rare smile of approval — this grizzled veteran is genuinely impressed. The paladin (centre-back) stands formally with both gauntleted hands resting on his planted warhammer, chin raised, nodding slowly — he recognises the divine quality of the reward. All three are lit by the golden radiance from the front, their own shadows stretching long behind them.",
+        "scale": "Secondary subjects, smaller in frame, positioned in the midground approximately five to seven metres behind the warrior"
+      }
+    ],
+    "camera": {
+      "shot_type": "Medium shot with vertical emphasis — capturing the kneeling warrior, the floating armour above, and the treasure chest below in a single vertical visual axis",
+      "angle": "Slightly low angle (8 degrees) from just below the warrior's eye level, looking upward to include the floating armour pieces, giving the loot a sense of descending from above",
+      "lens_equivalent": "40mm — moderate focal length for natural proportions with slight compression to keep the floating armour and the warrior both in comfortable frame",
+      "focal_point": "The warrior's upturned face and the nearest floating armour piece (the breastplate) — the human reaction is as important as the treasure itself",
+      "depth_of_field": "Shallow-moderate — the warrior and floating armour are tack-sharp, the party members behind are slightly soft, the chamber walls are noticeably soft, drawing all attention to the central loot moment",
+      "composition_rules": [
+        "Central vertical axis: the chest, the warrior, and the floating armour are aligned vertically at centre, creating a pillar of visual weight",
+        "The golden light column creates a natural frame-within-a-frame, isolating the key subjects",
+        "The three party members form a stable triangular base behind the central axis",
+        "Radial composition: the floor mandala patterns, the light bloom on the ceiling, and the scattered gold coins all radiate outward from the chest",
+        "Strong value contrast: the golden-white centre against the dark dungeon periphery creates an unmistakable focal point"
+      ]
+    },
+    "lighting": {
+      "key_light": "Intense golden-white divine radiance (4000K warm white with golden bias) erupting upward from the open treasure chest, the single dominant light source illuminating everything in the scene from below-centre, creating dramatic upward-cast shadows on all subjects",
+      "fill_light": "Purple-violet magical glow (420nm) from the floating armour pieces themselves, adding a secondary cool colour temperature that mixes with the golden key light on the warrior's armour, creating rich amber-purple gradients",
+      "accent_lights": [
+        "Faint residual orange torchlight from surviving wall sconces in the dungeon chamber, providing minimal warm fill on the party members' backs",
+        "Individual purple gem-glow from each armour piece's jewel settings — point sources of intense violet light",
+        "Golden light reflected off the polished obsidian floor, creating an uplight effect on all figures",
+        "Pale blue mage-staff glow from the mage character's crystal, barely visible against the overwhelming golden radiance"
+      ],
+      "shadows": "Dramatic upward shadows from the chest-light source — every figure casts a long shadow stretching up and away behind them onto the chamber walls and ceiling. The warrior's shadow is immense on the domed ceiling above. The floating armour pieces cast complex rotating shadows that sweep slowly across the pillars. The chest itself casts no shadow — it is the light source. Deep darkness beyond the five-metre radius of divine light.",
+      "atmospheric_fx": [
+        "Golden dust motes: millions of fine golden particles suspended in the light column, drifting slowly upward like luminous pollen",
+        "Light bloom: the golden radiance creates a soft overexposed bloom around the chest opening and on reflective armour surfaces",
+        "Purple energy ribbons: thin streams of purple-gold magical energy trailing from each floating armour piece downward toward the chest, like luminous silk in zero gravity",
+        "Floor mandala activation: thin golden light lines tracing geometric patterns outward from the chest across the dark stone floor",
+        "Ceiling radiance dispersal: the light column spreading against the dome ceiling in a soft golden wash, revealing the carved stone details above",
+        "Residual combat haze: faint ankle-height mist across the chamber floor, glowing gold where the chest light touches it"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hyper-detailed digital matte painting, oil paint brushstrokes visible, concept art quality. Legendary loot drop moment in a circular dungeon boss chamber with domed stone ceiling and eight carved pillars. Centre: an ornate dark iron treasure chest with gold dragon-claw corners on a carved stone plinth, lid thrown fully open, pouring an intense column of golden-white divine light upward that disperses against the domed ceiling. The light activates a circular mandala pattern of thin golden lines on the polished dark obsidian floor. Floating in the golden light column above the chest: four pieces of epic tier-set plate armour materialising from pure energy — a horned full-face helmet with glowing purple eye slits shaped like a snarling lion, massive layered pauldrons with pulsing purple gem centrepieces and gold filigree, articulated gauntlets with arcane runes and purple energy crackling between fingertips, a grand breastplate with roaring lion relief in raised gold with purple gem eyes. Each piece trails ribbons of purple-gold magical energy like luminous silk streamers, edges slightly translucent where still coalescing from energy. A broad-shouldered human warrior kneeling on one knee before the chest, existing armour battle-worn steel plate dented and scratched with cracked left pauldron and blood spatters, face upturned bathed in golden light with eyes wide in stunned reverence, dark hair matted with sweat, fresh cut on left cheekbone, hands raised at chest height palms open fingers spread, torn singed red cloak, greatsword lying flat beside him forgotten. Behind the warrior in a loose semicircle: a female mage with hand over mouth in amazement and lowered staff in blue robes, a rogue with arms crossed wearing a rare genuine smile beneath his hood, a paladin with both hands on planted warhammer nodding in solemn approval. Background: dungeon chamber walls receding into darkness, carved pillars casting long radial shadows, massive slain winged dark-scaled boss creature as shadowed heap against far wall, scattered gold coins and loose gemstones on the floor, faint ankle-height mist. Lighting: intense golden-white divine radiance erupting from chest as dominant upward light source, purple-violet glow from floating armour pieces mixing with golden light on warrior's armour creating amber-purple gradients, faint orange torchlight from wall sconces, individual purple gem point-lights, golden reflections off polished obsidian floor. Atmospheric effects: millions of golden dust motes drifting upward in light column, soft overexposed light bloom around chest, purple-gold energy ribbons trailing from armour pieces, golden mandala lines tracing across dark floor, golden wash on dome ceiling revealing carved details, residual combat haze at ankle height glowing gold. Colour palette: radiant divine gold, deep indigo-purple epic energy, polished steel silver, warm amber-orange, deep shadow-blue, near-white divine radiance at epicentre. Mood: sacred awe, the breath-held silence of witnessing something extraordinary, triumphant, quasi-religious revelation of legendary loot. Composition: central vertical axis with chest-warrior-floating armour aligned, golden light column as natural frame-within-frame, three party members forming triangular base, radial elements spreading outward from chest.",
+    "negative": "text, watermark, signature, UI elements, HUD, modern elements, cars, electricity poles, bright cheerful colors, anime style, cartoon, chibi, photorealistic close-up faces, oversaturated, neon cyberpunk, sci-fi elements, guns, technology, blurry, low quality, deformed architecture, floating objects without support, extra limbs, split frame, multiple panels, comic book panels, collage, border frame, deformed hands, deformed faces, extra fingers, mutated proportions, loot boxes, video game UI, health bars, item tooltips"
+  }
+}

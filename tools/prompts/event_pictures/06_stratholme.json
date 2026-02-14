@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_stratholme",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_stratholme.png",
+    "ck2_gfx_name": "GFX_evt_hoa_stratholme",
+    "final_size": "460x300",
+    "scene_intent": "Stratholme — la cité humaine où Arthas commit l'acte qui le damna. Purge de la cité infectée par la Peste, puis occupation Scourge. L'image doit capturer l'horreur d'une ville médiévale prospère en flammes éternelles, peuplée de morts-vivants — la scène de crime la plus tragique de Warcraft."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : le Grand Incendie de Londres (1666) peint par Lieve Verschuier — une ville entière qui brûle",
+        "Rendu : peinture à l'huile dramatique, clair-obscur extrême de Caravage, empâtements épais sur les flammes",
+        "Contraste thématique : architecture médiévale humaine chaleureuse et familière (notre civilisation) dévorée par le feu et la peste",
+        "Tonalité : tragédie grecque, l'irréversible, le point de non-retour — on ne peut pas regarder mais on ne peut pas détourner le regard"
+      ],
+      "look": "dramatic oil painting with extreme Caravaggio chiaroscuro, thick impasto on fire and light sources, ash and ember particles meticulously rendered, Blizzard Wrath of the Lich King cinematic quality, every burning timber and crumbling facade painted with love for the doomed architecture",
+      "palette": {
+        "dominant": "#FF4500 — orange incandescent des flammes éternelles, le feu qui ne s'éteint jamais",
+        "secondary": "#1A0A00 — noir de suie et de cendres, les ombres absolues entre les incendies",
+        "accent_1": "#8B0000 — rouge sang sombre, le ciel reflétant l'incendie, les bannières brûlées",
+        "accent_2": "#9ACD32 — vert Peste du Fléau, les chaudrons de Plague et les yeux des morts-vivants",
+        "accent_3": "#FFD700 — or fondu des trésors de la ville, métal en fusion coulant des structures",
+        "highlight": "#FFFFF0 — blanc-jaune du coeur des flammes les plus intenses, éblouissant"
+      },
+      "art_references": [
+        "Lieve Verschuier — Le Grand Incendie de Londres (ville entière en flammes, ciel rouge)",
+        "Le Caravage — chiaroscuro extrême (lumière dramatique, obscurité profonde)",
+        "Blizzard — Cinematic Wrath of the Lich King : La Purge de Stratholme (référence directe)",
+        "Zdzisław Beksiński — paysages de désolation (l'horreur calme, sans espoir)"
+      ]
+    },
+    "environment": {
+      "space": "Vue en enfilade d'une rue principale de Stratholme — une artère commerçante médiévale de 15m de large pavée de pierres rondes. Les bâtiments à colombages de 3-4 étages se font face de chaque côté, autrefois prospères (enseignes de commerces, étals de marché) — maintenant tous en feu à des degrés divers. Certains brûlent activement avec des flammes de 10m jaillissant des fenêtres. D'autres sont des squelettes calcinés, charpentes noires encore debout comme des côtes de baleines. Le pavé est jonché de débris — meubles brisés, tonneaux renversés, charrettes abandonnées.",
+      "foreground": "Le centre de la rue au premier plan : un chaudron de Peste du Fléau en fer forgé noir, monté sur un trépied, d'où s'élève un panache de fumée verdâtre épaisse. Le liquide à l'intérieur bouillonne en vert phosphorescent — c'est la source de l'infection. Autour du chaudron, trois corps au sol — on ne voit pas les détails (ombres, silhouettes) mais leur posture dit tout : fuite interrompue. Un pavé descellé. Un seau d'eau renversé (tentative dérisoire d'éteindre l'incendie). Une poupée de chiffon abandonnée, à moitié brûlée.",
+      "midground": "Les façades enflammées créent un tunnel de feu — les flammes jaillissent des fenêtres des deux côtés de la rue, se rejoignant presque au-dessus en une voûte incandescente. Une enseigne en fer forgé (autrefois une taverne — forme de chope) pend de ses gonds, rouge au feu. Un clocher d'église est visible au bout de la rue — le clocher de la cathédrale d'Alonsus, encore debout mais son toit brûle, les cloches fondues déformées visibles. Des silhouettes de morts-vivants (6-8 figures) errent dans la fumée à mi-distance — certaines marchent sans but, d'autres semblent chercher, l'une traîne quelque chose. Ce sont des ombres dans la fumée, pas des détails gore — l'imagination fait le reste.",
+      "background": "Le ciel est un enfer — entièrement rouge-orange, il n'y a plus de distinction entre les nuages et la fumée. L'incendie de la ville illumine le ciel comme un second soleil. La silhouette du rempart extérieur de Stratholme est visible — créneaux découpés en noir contre le ciel embrasé. Derrière le rempart, on devine la campagne sombre de Lordaeron — le monde normal qui regarde la catastrophe. Une colonne de fumée noire massive monte en champignon au-dessus de la cathédrale.",
+      "atmosphere": "Apocalypse à l'échelle d'une ville, chaleur suffocante, l'odeur imaginée de bois brûlé et pire, le silence après les cris — seul le crépitement du feu et le gémissement du vent dans les ruines",
+      "weather": "Pas de météo naturelle visible — le feu crée son propre climat : des courants d'air ascendants (firestorm), des tourbillons d'étincelles, une pluie de cendres",
+      "time_of_day": "Indéterminable — le feu remplace le soleil. Probablement la nuit mais on ne peut pas le savoir car le ciel est entièrement embrasé"
+    },
+    "subjects": [
+      {
+        "element": "Le chaudron de Peste",
+        "details": "Chaudron en fer noir de 1.5m de diamètre sur un trépied. Le liquide vert phosphorescent bouillonne, émettant une fumée verdâtre épaisse qui rampe au sol avant de s'élever. Des runes du Fléau sont gravées sur le fer. C'est l'instrument du génocide — simple, fonctionnel, horrible dans sa banalité.",
+        "importance": "Point focal principal — l'origine du mal, ce qui a causé tout cela"
+      },
+      {
+        "element": "Les silhouettes de morts-vivants dans la fumée",
+        "details": "6-8 figures sombres à mi-distance, partiellement masquées par la fumée et les flammes. Postures désarticulées — bras pendants, démarche traînante, certains immobiles la tête penchée. Aucun détail facial — ce sont des formes dans le brouillard de fumée, des présences. L'une est plus grande que les autres (abomination?). Yeux verts lumineux percant la fumée.",
+        "importance": "Peuplent la scène de menace sans gore explicite — l'horreur est suggérée"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plan d'ensemble en enfilade — la rue en perspective profonde, point de fuite sur le clocher de la cathédrale",
+      "angle": "Hauteur d'homme, droit devant — le spectateur est dans la rue, témoin impuissant",
+      "lens_equivalent": "35mm — standard, pas de distorsion, réalisme documentaire de la catastrophe",
+      "focal_point": "Le chaudron de Peste vert au premier plan — puis le regard remonte la rue vers le clocher en feu",
+      "depth_of_field": "Profondeur modérée — le premier plan est net, la profondeur se perd progressivement dans la fumée et les flammes (perspective atmosphérique de feu et fumée)",
+      "composition_rules": [
+        "Perspective à un point de fuite : la rue guide le regard droit vers le clocher — comme le destin d'Arthas, une ligne droite vers la damnation",
+        "Les façades enflammées des deux côtés créent un tunnel de feu — claustrophobie dans un espace ouvert",
+        "Le chaudron vert au premier plan brise la dominante orange-rouge — c'est la couleur de la cause, pas de la conséquence",
+        "La poupée brûlée au sol ancre le drame humain à hauteur de regard, empêche la distanciation esthétique"
+      ]
+    },
+    "lighting": {
+      "key_light": "Les incendies eux-mêmes — lumière orange-rouge intense (1800-2200K) venant de toutes les directions, éclairant la rue comme en plein jour mais dans une couleur infernale. Les façades en feu sont des murs de lumière vivante, ondulante, instable",
+      "fill_light": "Lueur verte du chaudron de Peste — une contre-lumière malade qui teinte le pavé et les corps environnants de vert, créant un îlot de maladie chromatique dans l'enfer rouge. Le vert et l'orange ne se mélangent pas bien — le résultat visuel est nauséeux, intentionnellement",
+      "accent_lights": [
+        "Coeur des flammes : points blanc-jaune éblouissants dans chaque fenêtre, chaque poutre qui craque",
+        "Braises volantes : milliers de particules orange incandescentes portées par les courants ascendants, comme une constellation en mouvement",
+        "Yeux verts des morts-vivants : minuscules points de lumière verte perçant la fumée à mi-distance, comme des lucioles démoniaques",
+        "Or fondu : métal en fusion coulant le long d'une façade — ligne de lumière dorée liquide"
+      ],
+      "shadows": "Paradoxalement, les ombres sont très profondes malgré l'intensité du feu — car la lumière vient de multiples sources instables, créant des ombres multiples qui se chevauchent et dansent. L'intérieur des bâtiments effondrés est d'un noir absolu. Les ombres portées des silhouettes de morts-vivants sont multiples et déformées, comme des spectres supplémentaires.",
+      "atmospheric_fx": [
+        "Fumée stratifiée : couches de fumée noire épaisse en altitude, fumée grise translucide au niveau de la rue, fumée verte rampante au sol autour du chaudron",
+        "Pluie de cendres : des flocons de cendres blanches et grises tombent partout comme une neige macabre, certains encore incandescents",
+        "Chaleur visible : distorsion de l'air (heat shimmer) au-dessus de chaque source de feu, déformant les silhouettes et les bâtiments",
+        "Étincelles en spirale : les courants de firestorm créent des tourbillons d'étincelles orange qui montent en spirale"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Dramatic oil painting with extreme Caravaggio chiaroscuro, thick impasto on fire and light, meticulously rendered ash and ember particles, Blizzard Wrath of the Lich King cinematic quality. A BURNING MEDIEVAL CITY STREET — Stratholme, the doomed city. View down a main commercial avenue 15m wide paved with round cobblestones. Half-timbered buildings 3-4 stories tall on both sides, formerly prosperous (shop signs, market stalls) now ALL BURNING at various stages — some with 10-meter flames erupting from windows, others blackened skeletal frameworks still standing like whale ribs. Cobblestones littered with debris — broken furniture, overturned barrels, abandoned carts. FOREGROUND CENTER: a PLAGUE CAULDRON — black wrought-iron 1.5m diameter on a tripod, phosphorescent green liquid bubbling within, thick greenish smoke rising and crawling along the ground before lifting. Scourge runes engraved on the iron. Around it: three fallen bodies (shadow silhouettes only, no detail — their postures tell everything: interrupted flight). A dislodged cobblestone. An overturned water bucket (futile attempt to fight fire). A half-burnt rag doll abandoned on the ground. MIDGROUND: blazing facades creating a TUNNEL OF FIRE — flames erupting from windows on both sides nearly meeting overhead in an incandescent vault. A wrought-iron tavern sign (tankard shape) hanging from one hinge, glowing red-hot. At the end of the street: the bell tower of Alonsus Cathedral still standing but roof ablaze, melted deformed bells visible. 6-8 UNDEAD SILHOUETTES wandering in the smoke at mid-distance — disjointed postures, dangling arms, shuffling gait, some motionless with tilted heads, one larger than others (abomination?), green luminous eyes piercing through smoke. They are shapes in smoke, not detailed gore — imagination completes the horror. BACKGROUND: the sky is HELL — entirely red-orange, no distinction between clouds and smoke, the city fire illuminating the sky like a second sun. Silhouette of Stratholme outer ramparts — crenellations cut black against blazing sky. Behind ramparts: dark Lordaeron countryside, the normal world watching catastrophe. Massive black mushroom smoke column rising above the cathedral. LIGHTING: fires themselves as key light — intense orange-red (1800-2200K) from all directions illuminating street like hellish daylight, burning facades as walls of living undulating unstable light. Green Plague cauldron as counter-light — sick glow tinting nearby pavements and bodies green, creating an island of chromatic illness in the red inferno, intentionally nauseating orange-green clash. White-yellow core of flames in every window as blinding accents. Thousands of incandescent orange ember particles carried by updrafts like a moving constellation. Tiny green luminous undead eyes piercing smoke like demonic fireflies. Molten gold metal flowing down a facade as liquid golden light line. Deep paradoxical shadows despite fire intensity from multiple unstable sources creating overlapping dancing shadows. ATMOSPHERIC: stratified smoke — thick black layers at altitude, translucent grey at street level, green crawling smoke at ground near cauldron. Ash snowfall — white and grey ash flakes falling everywhere like macabre snow some still glowing. Heat shimmer distortion above every fire source warping silhouettes and buildings. Firestorm spiral updrafts creating orange spark tornadoes. Color palette: incandescent orange, soot black, blood red sky, Plague green, molten gold, blinding white-yellow flame cores. Mood: city-scale apocalypse, suffocating heat, the silence after screams, only fire crackling and wind moaning through ruins.",
+    "negative": "text, watermark, signature, UI elements, modern elements, anime style, cartoon, photorealistic close-up faces, explicit gore, visible wounds, blood pools, dismemberment, bright cheerful colors, blue sky, sunshine, green grass, trees, nature, sci-fi, technology, blurry, low quality, split frame, multiple panels, border frame, peaceful atmosphere"
+  }
+}

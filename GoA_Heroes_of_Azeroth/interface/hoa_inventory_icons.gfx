@@ -1,0 +1,206 @@
+spriteTypes = {
+
+	# ====================================================================
+	# Heroes of Azeroth — Inventory Icons (80x80 DDS with alpha)
+	# Weapons, Armor, Accessories — WoW item icon style
+	# ====================================================================
+
+	# --- WEAPONS: SWORDS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_sword_common"
+		texturefile = "gfx/interface/inventory/hoa_inv_sword_common.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_sword_uncommon"
+		texturefile = "gfx/interface/inventory/hoa_inv_sword_uncommon.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_sword_rare"
+		texturefile = "gfx/interface/inventory/hoa_inv_sword_rare.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_sword_epic"
+		texturefile = "gfx/interface/inventory/hoa_inv_sword_epic.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_sword_legendary"
+		texturefile = "gfx/interface/inventory/hoa_inv_sword_legendary.dds"
+		noOfFrames = 1
+	}
+
+	# --- WEAPONS: STAVES ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_staff_epic"
+		texturefile = "gfx/interface/inventory/hoa_inv_staff_epic.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_staff_legendary"
+		texturefile = "gfx/interface/inventory/hoa_inv_staff_legendary.dds"
+		noOfFrames = 1
+	}
+
+	# --- WEAPONS: BOW, DAGGER, MACE, AXE ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_bow_epic"
+		texturefile = "gfx/interface/inventory/hoa_inv_bow_epic.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_dagger_epic"
+		texturefile = "gfx/interface/inventory/hoa_inv_dagger_epic.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_mace_epic"
+		texturefile = "gfx/interface/inventory/hoa_inv_mace_epic.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_axe_epic"
+		texturefile = "gfx/interface/inventory/hoa_inv_axe_epic.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_mace_legendary"
+		texturefile = "gfx/interface/inventory/hoa_inv_mace_legendary.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: WARRIOR HELMS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_helm_warrior_t1"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_warrior_t1.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_helm_warrior_t2"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_warrior_t2.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: MAGE HELMS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_helm_mage_t1"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_mage_t1.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_helm_mage_t2"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_mage_t2.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: PALADIN HELMS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_helm_paladin_t1"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_paladin_t1.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_helm_paladin_t2"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_paladin_t2.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: ROGUE HELMS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_helm_rogue_t1"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_rogue_t1.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_helm_rogue_t2"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_rogue_t2.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: HUNTER HELMS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_helm_hunter_t1"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_hunter_t1.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_helm_hunter_t2"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_hunter_t2.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: PRIEST HELMS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_helm_priest_t1"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_priest_t1.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_helm_priest_t2"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_priest_t2.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: WARLOCK HELMS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_helm_warlock_t1"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_warlock_t1.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_helm_warlock_t2"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_warlock_t2.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: DRUID HELMS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_helm_druid_t1"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_druid_t1.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_helm_druid_t2"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_druid_t2.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: SHAMAN HELMS ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_helm_shaman_t1"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_shaman_t1.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_helm_shaman_t2"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_shaman_t2.dds"
+		noOfFrames = 1
+	}
+
+	# --- ARMOR: CHESTPIECES ---
+
+	spriteType = {
+		name = "GFX_hoa_inv_chest_warrior_epic"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_warrior_epic.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_hoa_inv_chest_mage_epic"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_mage_epic.dds"
+		noOfFrames = 1
+	}
+}

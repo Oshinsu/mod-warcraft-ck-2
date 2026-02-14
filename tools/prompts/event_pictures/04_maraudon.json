@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_maraudon",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_maraudon.png",
+    "ck2_gfx_name": "GFX_evt_hoa_maraudon",
+    "final_size": "460x300",
+    "scene_intent": "Maraudon — sanctuaire sacré de Cenarius corrompu par les centaures et la princesse Theradras. La dualité beauté naturelle / corruption élémentaire. Un éden souterrain en train de mourir, des cristaux purs mêlés à des excroissances parasitaires."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : la grotte de Hang Son Doong (Vietnam) rencontre la corruption de Hayao Miyazaki (Princesse Mononoké — la forêt corrompue)",
+        "Rendu : aquarelle digitale hyper-détaillée sur fond de peinture à l'huile, dualité technique reflétant la dualité thématique",
+        "Contraste thématique : cristaux purs/cascade limpide (côté pur) vs excroissances parasitaires violettes/racines mortes (côté corrompu)",
+        "Tonalité : beauté blessée, sanctuaire profané, la nature qui pleure"
+      ],
+      "look": "luminous digital watercolor over oil painting base, bioluminescent natural lighting, Roger Dean album art meets Avatar Pandora caverns, crystal clarity juxtaposed with organic corruption, every mineral formation rendered with geological accuracy then fantastically enhanced",
+      "palette": {
+        "dominant": "#7B68EE — violet cristallin medium, la couleur de la corruption de Theradras, vibrant mais malsain",
+        "secondary": "#00CED1 — turquoise pur de l'eau sacrée et des cristaux non corrompus de Cenarius",
+        "accent_1": "#FF8C00 — orange chaud des cristaux de terre pure, formations géologiques saines",
+        "accent_2": "#556B2F — vert olive sombre de la corruption végétale, racines mortes et mousse pourrie",
+        "accent_3": "#FFD700 — or de la lumière sacrée résiduelle de Cenarius, espoir mourant",
+        "highlight": "#E0FFFF — blanc cristallin des formations minérales les plus pures, presque surnaturel"
+      },
+      "art_references": [
+        "Roger Dean — pochettes de Yes (paysages cristallins oniriques, formations impossibles)",
+        "Avatar de James Cameron — grottes bioluminescentes de Pandora (éclairage organique)",
+        "Hayao Miyazaki — Nausicaä (forêt toxique belle et terrifiante simultanément)",
+        "Ernst Haeckel — Kunstformen der Natur (beauté géométrique des formes naturelles)"
+      ]
+    },
+    "environment": {
+      "space": "Immense grotte naturelle cathédrale sous les plaines de Desolace. La salle centrale de Maraudon — un dôme naturel de 150m de diamètre dont les parois sont incrustées de formations cristallines massives. Le sol est divisé en deux : la moitié gauche est un jardin souterrain encore béni par le souvenir de Cenarius — mousse lumineuse, fleurs souterraines blanches, eau cristalline. La moitié droite est corrompue par Theradras — cristaux violets parasitaires, racines noircies et tordues, terre fissurée exsudant une substance mauve.",
+      "foreground": "Le bord d'un lac souterrain parfaitement clair — si limpide que le fond rocheux est visible à 10m de profondeur. Des cristaux turquoise émergent de l'eau comme des icebergs minéraux, projetant des reflets kaléidoscopiques sur les parois. À gauche du lac, des nénuphars luminescents blanc-or flottent sur l'eau. À droite, la surface est perturbée par des bulles de corruption violette qui éclatent en minuscules geysers de vapeur mauve. Un pont de pierre naturel (arc de roche) enjambe le lac étroit, fissuré exactement au milieu — la moitié pure est couverte de mousse vivante, la moitié corrompue de cristaux violets parasitaires.",
+      "midground": "La cascade centrale — une chute d'eau de 30m tombant d'une fissure dans la voûte. L'eau est pure en haut (blanc-turquoise) mais se teinte progressivement de violet en descendant, comme du sang se mélangeant à de l'eau claire. Le bassin au pied de la cascade est le point de rencontre exact entre la pureté et la corruption — les deux forces tourbillonnent sans se mélanger, créant des spirales turquoise-et-violet hypnotiques. De chaque côté de la cascade, des formations cristallines géantes : à gauche des colonnes de cristal orange pur (5m de haut, hexagonaux, lumineux comme de l'ambre), à droite des excroissances violettes parasitaires qui ressemblent à des tentacules minéraux, envahissant et étouffant les formations oranges.",
+      "background": "La voûte du dôme, couverte de stalactites cristallines de toutes tailles — certaines de 20m — et de réseaux de racines anciennes qui percent la roche. Les racines côté pur sont vivantes, écorce argentée, petites feuilles lumineuses. Les racines côté corrompu sont mortes, noircies, suintant une sève violette. Au fond, l'entrée de la Grotte Intérieure — un tunnel arrondi entouré de cristaux violets massifs qui pulsent d'énergie, menant au domaine de Theradras elle-même. Une lumière violette intense émane du tunnel comme un oeil qui regarde.",
+      "atmosphere": "Sacré et profané simultanément, beauté en agonie, la frontière visible entre la vie et la corruption, l'écho d'une prière ancienne",
+      "weather": "Intérieur de grotte — humidité extrême, brume basse sur le lac, micro-gouttelettes en suspension créant des prismes arc-en-ciel dans les faisceaux de lumière cristalline",
+      "time_of_day": "Sans objet (souterrain) — éclairage entièrement bioluminescent et cristallin"
+    },
+    "subjects": [
+      {
+        "element": "La cascade duale",
+        "details": "30m de chute d'eau — pure en haut (blanc-turquoise cristallin), se teintant de violet en descendant. Le bassin au pied montre deux forces tourbillonnant sans se mélanger — spirales turquoise-et-violet hypnotiques, comme un yin-yang aquatique. La transition est graduelle mais inexorable — la corruption gagne.",
+        "importance": "Point focal principal — incarne visuellement le thème central du donjon"
+      },
+      {
+        "element": "Le contraste cristallin gauche/droite",
+        "details": "Gauche (pur) : colonnes de cristal orange hexagonales de 5m, lumineuses comme de l'ambre liquide, parfaitement géométriques, entourées de mousse vivante et de fleurs blanches souterraines. Droite (corrompu) : excroissances de cristal violet qui ressemblent à des tentacules ou des tumeurs minérales, envahissant et étouffant les formations pures, pulsant d'une lumière malsaine irrégulière.",
+        "importance": "Illustre la progression de la corruption — le joueur comprend l'enjeu"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plan large intérieur — panoramique de grotte cathédrale à hauteur d'homme",
+      "angle": "Légère contre-plongée de 5° — regardant la cascade et le dôme au-dessus",
+      "lens_equivalent": "20mm ultra-grand angle — pour capturer l'immensité de la grotte et la dualité gauche/droite",
+      "focal_point": "Le point de rencontre turquoise/violet dans le bassin de la cascade — le centre exact du conflit",
+      "depth_of_field": "Très grande profondeur de champ — tout net, la brume crée la perspective atmosphérique naturellement",
+      "composition_rules": [
+        "Division verticale : l'axe de la cascade sépare le pur (gauche) du corrompu (droite)",
+        "Le pont de pierre naturel au premier plan crée une ligne horizontale stabilisatrice",
+        "Les colonnes cristallines et les stalactites créent un rythme vertical naturel comme les piliers d'une cathédrale",
+        "Le tunnel de Theradras en arrière-plan centre crée un point de fuite — une invitation/menace"
+      ]
+    },
+    "lighting": {
+      "key_light": "Bioluminescence duale — la moitié gauche de la scène baigne dans une lumière chaude turquoise-or émanant des cristaux purs et de la mousse lumineuse (température 6500K, douce, enveloppante). La moitié droite est éclairée par la lueur violette froide des cristaux corrompus (température 3000K décalée vers le violet, instable, pulsante)",
+      "fill_light": "La cascade elle-même — l'eau agitée crée des reflets mobiles sur toutes les surfaces de la grotte, projetant des motifs lumineux dansants (caustiques) sur les parois et le plafond",
+      "accent_lights": [
+        "Cristaux orange : chaque colonne hexagonale émet sa propre lumière ambrée, chaude et stable, comme des lampadaires naturels",
+        "Nénuphars luminescents : lumière blanc-or douce à la surface du lac, reflétée par l'eau",
+        "Cristaux violets parasitaires : pulsation irrégulière, comme un battement de coeur malade, intensité variable",
+        "Sève violette des racines mortes : filets de lumière violet sombre coulant le long des parois comme des veines visibles"
+      ],
+      "shadows": "Les ombres sont colorées — les ombres côté pur sont d'un bleu doux, les ombres côté corrompu sont d'un violet profond presque noir. La ligne de démarcation entre les deux zones d'ombre est nette et troublante. Les stalactites projettent des ombres rayonnantes sur le sol comme les aiguilles d'une horloge.",
+      "atmospheric_fx": [
+        "Brume basse sur le lac : nappe de vapeur translucide à 50cm au-dessus de l'eau, teintée turquoise côté pur et violet côté corrompu",
+        "Prismes et caustiques : les cristaux réfractent la lumière en spectres arc-en-ciel sur les parois, comme dans une géode géante",
+        "Particules bioluminescentes : spores ou micro-organismes lumineux flottant dans l'air comme des lucioles, blancs côté pur, violets côté corrompu",
+        "Vapeur de la cascade : brouillard d'eau au pied de la chute, traversé par les deux couleurs de lumière créant un effet aurore boréale"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Luminous digital watercolor over oil painting, bioluminescent natural lighting, Roger Dean crystal landscapes meets Avatar Pandora caverns, geological accuracy fantastically enhanced. Immense cathedral-like natural cave dome under Desolace plains — Maraudon central chamber, 150m diameter. The floor is split in two halves: LEFT SIDE blessed by Cenarius — luminous moss, white underground flowers, crystalline pure water, warm turquoise-gold glow, HEXAGONAL ORANGE CRYSTAL COLUMNS 5 meters tall glowing like liquid amber perfectly geometric surrounded by living moss. RIGHT SIDE corrupted by Theradras — parasitic violet crystals like mineral tentacles or tumors invading and choking the pure formations, blackened twisted dead roots, cracked earth exuding mauve substance, cold pulsing irregular violet light. Foreground: edge of a perfectly clear underground lake — so limpid the rocky bottom is visible 10m deep. Turquoise crystals emerging from water like mineral icebergs projecting kaleidoscopic reflections on cave walls. White-gold luminescent water lilies floating on the left. Violet corruption bubbles breaking the surface on the right in tiny mauve vapor geysers. A natural stone arch bridge spanning the narrow lake — cracked exactly at the midpoint, left half covered in living moss, right half covered in parasitic violet crystals. Midground: CENTRAL WATERFALL — 30-meter water cascade falling from a fissure in the vault. Water is pure white-turquoise at the top, gradually tinting violet as it descends like blood mixing into clear water. The pool at the base shows two forces swirling without mixing — turquoise-and-violet hypnotic spirals like an aquatic yin-yang. Giant crystal formations flanking the waterfall: left = pure orange hexagonal luminous columns, right = parasitic violet tentacle-like mineral growths. Background: dome ceiling covered in crystalline stalactites of all sizes (some 20m long) and networks of ancient roots piercing the rock — living silvery-bark roots with luminous leaves on the pure side, dead blackened roots weeping violet sap on the corrupt side. Far back: entrance to the Inner Grotto — a rounded tunnel surrounded by massive pulsing violet crystals leading to Theradras domain, intense violet light emanating like a watching eye. Lighting: DUAL BIOLUMINESCENCE — left warm turquoise-gold from pure crystals and luminous moss (6500K soft enveloping), right cold pulsing irregular violet from corrupt crystals (shifted 3000K unstable). Waterfall creates mobile reflections (water caustics) on all cave surfaces. Orange crystal columns emit stable amber light like natural lampposts. Luminescent water lilies cast soft white-gold surface glow. Corrupt violet crystals pulse irregularly like a sick heartbeat. Violet sap runs down walls like visible glowing veins. Colored shadows: soft blue on pure side, deep near-black violet on corrupt side with sharp disturbing demarcation line. Atmospheric: low mist on lake tinted turquoise pure side and violet corrupt side, crystals refracting light into rainbow spectra on walls like a giant geode interior, bioluminescent spores floating like fireflies — white on pure side violet on corrupt side, waterfall spray creating aurora borealis effect where both light colors meet. Color palette: crystalline violet, pure turquoise, amber orange, dark olive corruption, sacred gold, crystal white. Mood: the sacred defiled, beauty in agony, visible frontier between life and corruption.",
+    "negative": "text, watermark, signature, UI elements, modern elements, anime style, cartoon, photorealistic faces, sci-fi technology, blurry, low quality, flat lighting, monochromatic, outdoor daylight sky, sun, clouds, desert, split frame, multiple panels, border frame, people in foreground, characters close-up"
+  }
+}

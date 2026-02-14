@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_dungeon_entrance",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_dungeon_entrance.png",
+    "ck2_gfx_name": "GFX_evt_hoa_dungeon_entrance",
+    "final_size": "460x300",
+    "scene_intent": "Generic dungeon entrance — a diverse party of fantasy adventurers stands before the gaping maw of an ancient underground passage. This image is shown when a player initiates any dungeon run. It must convey the tension between heroic resolve and primal dread, the threshold moment between the known world and the lethal unknown below."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Reference: classic WoW dungeon loading screens and Blizzard concept art by Wei Wang and Peter Lee",
+        "Rendering: high-end digital matte painting with visible oil-paint brushstrokes, rich impasto texture on stone surfaces",
+        "CK2 framing: narrative wide-shot illustration, medieval chronicle quality with fantasy depth",
+        "Tone: heroic anticipation tempered by foreboding dread — the adventure is about to begin, but the darkness promises peril"
+      ],
+      "look": "hyper-detailed digital matte painting, visible oil brushstrokes, atmospheric perspective, concept art quality matching Blizzard cinematics team, painterly realism with fantasy elements, rich texture layering, dramatic chiaroscuro between torchlight and subterranean darkness",
+      "palette": {
+        "dominant": "#1a1a2e — deep cavern blue-black for the dungeon interior and shadows",
+        "secondary": "#4a3728 — warm umber stone and ancient masonry of the entrance archway",
+        "accent_1": "#e87d2f — warm orange torchlight reflecting on armour and stone faces",
+        "accent_2": "#3a86c9 — cool blue mage energy emanating from the caster's staff",
+        "accent_3": "#2d5a27 — dark moss and lichen on the ancient carved stones",
+        "highlight": "#ffd700 — golden glint of polished plate armour and weapon edges catching torchlight"
+      },
+      "art_references": [
+        "Caspar David Friedrich — Wanderer above the Sea of Fog (hero facing the unknown, threshold composition)",
+        "Frank Frazetta — classic dungeon entrance paintings (heroic party composition, dramatic lighting)",
+        "Alan Lee — Lord of the Rings conceptual art for Moria entrance (ancient carved stone, scale of passage)",
+        "Blizzard Entertainment — WoW Classic dungeon loading screens (atmosphere, party composition, colour grading)"
+      ]
+    },
+    "environment": {
+      "space": "A colossal stone archway hewn into the face of a weathered cliff, its entrance framed by carved pillars covered in ancient runic script now half-eroded by centuries of wind and rain. The archway is at least twelve metres tall, wide enough for five riders abreast. Beyond the threshold, rough-hewn steps descend steeply into impenetrable darkness. The cliff face extends upward another thirty metres, crowned by gnarled dead trees whose roots claw down the rock like skeletal fingers. Rubble and collapsed masonry litter the ground before the entrance — evidence of old battles or structural decay.",
+      "foreground": "Four adventurers stand in a loose formation on the stone-flagged approach, five metres from the entrance. The warrior is front-centre, one gauntleted hand on the hilt of a massive two-handed sword planted point-down in a crack between flagstones. A hooded rogue crouches to the right, daggers drawn, peering into the darkness. A female mage stands to the left, her oak staff crowned with a softly pulsing blue arcane crystal that casts cool light on her features. A plate-armoured healer (paladin) stands behind the group, shield on one arm, the other hand raised with a faint golden holy glow illuminating a prayer. Scattered at their feet: supply packs, coiled rope, a half-unrolled parchment map.",
+      "midground": "The entrance archway itself dominates the midground. Its carved pillars depict faded scenes of ancient battles — warriors fighting serpentine creatures, now barely legible under moss and mineral staining. A pair of massive iron braziers flank the entrance, one still burning with dying orange flames that send sparks spiralling upward, the other cold and overturned. Thick cobwebs span the upper corners of the archway. Just inside the threshold, the first three descending stone steps are visible before the darkness swallows everything. A faint greenish bioluminescent glow clings to the wet walls just inside, hinting at what lies below.",
+      "background": "Above the cliff face, a turbulent twilight sky in deep indigo and bruised purple, the last ember of sunset visible as a thin amber line on the western horizon. A crescent moon hangs low. The silhouettes of distant mountain peaks frame the scene. A flock of bats streams out from a crack high in the cliff face, spiralling into the darkening sky.",
+      "atmosphere": "Threshold tension — the last breath before the plunge. Heroic determination mixed with visceral unease. The warmth of torchlight versus the cold exhalation of subterranean air. A sense of ancient, patient malice waiting below.",
+      "weather": "Still evening air with a cold draught flowing outward from the dungeon entrance, visible as wisps of condensation. No rain, but heavy moisture on every stone surface creating subtle reflections.",
+      "time_of_day": "Late dusk, approximately 20 minutes after sunset, sky retaining the last purple-amber glow before full darkness"
+    },
+    "subjects": [
+      {
+        "element": "The warrior (party leader)",
+        "details": "A broad-shouldered human male in battle-worn steel plate armour with gold trim, standing in a resolute power stance. His two-handed greatsword is planted before him, both hands resting on the cross-guard. A red cloak hangs from his pauldrons, stirred slightly by the dungeon draught. His face is weathered, jaw set, eyes fixed on the darkness ahead. Torchlight catches the scratches and dents in his armour — this is not his first descent. A shield bearing a lion crest is strapped to his back.",
+        "scale": "Central figure, approximately 1.9m tall, positioned at the visual anchor point of the composition"
+      },
+      {
+        "element": "The rogue",
+        "details": "A lithe female nightelf in dark leather armour with hooded cowl partially concealing long silver-white hair and glowing amber eyes. She is crouched low to the right, one curved dagger in reverse grip, the other held forward. Her posture is coiled, predatory, scanning the entrance for traps. A bandolier of throwing knives crosses her chest. Her skin has a faint lavender hue visible where torchlight touches her cheek.",
+        "scale": "Crouched, head height roughly at the warrior's waist level, positioned right-of-centre"
+      },
+      {
+        "element": "The mage",
+        "details": "A human female in layered blue-and-silver robes with arcane sigils embroidered in luminous thread along the hems. She holds a tall oak staff topped with a crystalline orb radiating soft blue-white arcane energy that illuminates her face from below, creating dramatic uplighting. Her expression is focused, calculating. A leather-bound tome hangs from her belt. Her free hand is slightly raised, fingers trailing faint wisps of arcane frost.",
+        "scale": "Standing height approximately 1.7m, positioned left of the warrior, her staff adding another half-metre of height"
+      },
+      {
+        "element": "The healer (paladin)",
+        "details": "A stocky dwarven male in polished golden-steel plate armour adorned with hammer-and-anvil holy symbols. He carries a heavy kite shield inscribed with a radiant sun motif on his left arm. His right hand is raised palm-outward, projecting a warm golden glow — a blessing or ward being prepared. His braided red beard reaches his belt. A warhammer hangs at his hip. His expression combines pious determination with a hint of grim humour.",
+        "scale": "Standing at approximately 1.4m, positioned slightly behind and between the warrior and mage, the golden glow making him visually prominent despite shorter stature"
+      },
+      {
+        "element": "The dungeon entrance archway",
+        "details": "Monumental carved stone arch of ancient dwarven or titan construction, twelve metres tall. Two massive square-cut pillars support a lintel stone carved with a face — a stern bearded visage with hollow eyes that seem to stare at approaching visitors. The carving style suggests a long-dead civilization. Deep chisel marks, mineral deposits of orange and white streak the stone. Moss and dark lichen cling to every horizontal surface. The iron braziers at the base are ornate, shaped like clawed hands holding fire bowls.",
+        "scale": "Towering over the party — the archway dwarfs all four figures, emphasizing the enormity of what they are about to enter"
+      }
+    ],
+    "camera": {
+      "shot_type": "Wide establishing shot — plan large capturing the full party and the complete entrance archway",
+      "angle": "Slight low angle (10-12 degrees) from ground level, looking up at both the party and the archway to emphasize the monumental scale of the entrance",
+      "lens_equivalent": "35mm — moderate wide angle to capture the full scene with natural proportions, minimal distortion",
+      "focal_point": "The warrior's face and the darkness of the entrance behind him — the eye travels from the hero to the void he is about to enter",
+      "depth_of_field": "Deep focus with very slight softening on the distant mountain silhouettes, all foreground and midground elements tack-sharp",
+      "composition_rules": [
+        "Rule of thirds: the warrior is placed at the left-third vertical line, the dungeon entrance centre-right",
+        "The descending steps create a vanishing-point perspective line pulling the eye into the darkness",
+        "The four party members form a rough diamond shape creating visual stability",
+        "The vertical axis of the archway balanced by the horizontal spread of the party",
+        "Leading lines: the flagstone path, the brazier flames, and the staff's glow all converge toward the entrance"
+      ]
+    },
+    "lighting": {
+      "key_light": "Warm orange torchlight from the burning brazier (2700K) at screen-right of the entrance, casting strong directional light across the party from above-right, creating deep shadows on their left sides and throwing long shadows across the flagstones toward the viewer",
+      "fill_light": "Cool blue arcane glow (7500K) from the mage's staff crystal, providing soft fill on the left side of the scene, creating a warm-cool contrast across the warrior's armour",
+      "accent_lights": [
+        "Golden holy light from the paladin's raised hand — a warm radiant glow (3500K) illuminating his face and armour from below, casting upward shadows",
+        "Faint greenish bioluminescent glow from just inside the dungeon threshold — an unsettling cold light (490nm) that hints at the subterranean ecosystem below",
+        "Dying amber sunset light on the upper cliff face and mountain silhouettes — the last warm light of the safe world above",
+        "Moonlight — pale silver-blue wash on the very top of the cliff and the dead tree silhouettes"
+      ],
+      "shadows": "Deep and dramatic. The party casts long shadows toward the viewer across the flagstones. The archway interior is near-total darkness beyond the third step. The carved face on the lintel is half in shadow, making its hollow eyes appear to shift. The rogue is partially lost in shadow, appropriate to her class. The brazier casts flickering shadows that animate the runic carvings on the pillars.",
+      "atmospheric_fx": [
+        "Volumetric torch smoke: orange-lit smoke curling upward from the brazier, caught in the cold updraught from the dungeon",
+        "Cold breath effect: faint condensation wisps flowing outward from the dungeon entrance along the ground, mixing with the warm air",
+        "Spark trail: tiny orange embers spiralling up from the brazier into the darkening sky",
+        "Arcane motes: tiny blue-white particles drifting lazily around the mage's staff crystal, like luminous dust",
+        "Subtle god rays: the dying sunset creates faint amber light shafts through gaps in the cliff-top trees"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hyper-detailed digital matte painting, oil paint brushstrokes visible, concept art quality. A diverse party of four fantasy adventurers standing before a colossal ancient stone dungeon entrance carved into a weathered cliff face. The entrance is a monumental twelve-metre archway with carved pillars covered in eroded ancient runes, a stern bearded stone face on the lintel with hollow staring eyes, moss and dark lichen on every surface. Beyond the threshold, rough stone steps descend steeply into impenetrable pitch darkness with faint greenish bioluminescent glow on wet walls. Foreground: four heroes in loose formation on stone flagstones. Centre: a broad-shouldered human warrior in battle-worn steel plate armour with gold trim, red cloak, greatsword planted point-down before him, resolute expression, eyes fixed on the darkness. Right: a lithe nightelf female rogue crouched low in dark leather armour with hooded cowl, silver-white hair, glowing amber eyes, curved daggers drawn, scanning for traps. Left: a human female mage in blue-silver robes with arcane sigils, holding an oak staff topped with a pulsing blue-white arcane crystal illuminating her face from below, trailing frost wisps from her fingers. Behind: a stocky dwarven paladin in polished golden-steel plate with hammer-and-anvil holy symbols, kite shield with radiant sun motif, right hand raised projecting warm golden holy glow, braided red beard, grim determination. Supply packs, coiled rope, and a half-unrolled map scattered at their feet. Midground: massive iron braziers flanking the entrance, one burning with orange flames sending sparks upward, thick cobwebs in upper archway corners, carved battle scenes on pillars showing ancient warriors fighting serpentine creatures. Background: turbulent twilight sky in deep indigo and bruised purple, thin amber sunset line on western horizon, crescent moon, distant mountain peak silhouettes, a stream of bats spiralling from a cliff crack. Lighting: warm orange torchlight from brazier casting dramatic directional light with long shadows, cool blue arcane glow from mage staff creating warm-cool contrast on armour, golden holy light from paladin's hand, faint green bioluminescence from inside dungeon. Atmospheric effects: volumetric torch smoke curling upward, cold condensation wisps flowing from dungeon entrance along ground, orange ember sparks spiralling into sky, arcane blue-white motes around staff crystal, faint amber god rays through cliff-top trees. Colour palette: deep cavern blue-black, warm umber ancient stone, orange torchlight, cool blue arcane energy, dark moss green, golden armour glints. Mood: threshold tension, heroic anticipation, the last breath before the plunge into darkness, ancient patient malice waiting below. Composition: rule of thirds with warrior at left vertical, entrance centre-right, descending steps creating vanishing point into darkness, party forming diamond shape, leading lines converging on entrance.",
+    "negative": "text, watermark, signature, UI elements, HUD, modern elements, cars, electricity poles, bright cheerful colors, anime style, cartoon, chibi, photorealistic close-up faces, oversaturated, neon cyberpunk, sci-fi elements, guns, technology, blurry, low quality, deformed architecture, floating objects without support, extra limbs, split frame, multiple panels, comic book panels, collage, border frame, deformed hands, deformed faces, extra fingers, mutated proportions"
+  }
+}

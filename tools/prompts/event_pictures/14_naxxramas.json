@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_naxxramas",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_naxxramas.png",
+    "ck2_gfx_name": "GFX_evt_hoa_naxxramas",
+    "final_size": "460x300",
+    "scene_intent": "Naxxramas — la nécropole volante du Fléau, le vaisseau-forteresse de Kel'Thuzad. Vue extérieure : une ziggurat d'os et de fer flottant dans un ciel de tempête au-dessus d'une terre ravagée par la Peste. La Mort incarnée en architecture."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : Le vaisseau fantôme (Flying Dutchman) + Laputa le Château dans le Ciel + l'iceberg de Caspar David Friedrich",
+        "Rendu : peinture atmosphérique romantique sombre, ciel immense occupant 70% de l'image, la forteresse comme une présence dans le vide",
+        "La clé est l'ISOLEMENT : Naxxramas est seul dans le ciel, rien ne peut l'atteindre, rien ne peut s'en échapper",
+        "Tonalité : mort inéluctable, l'hiver éternel, la solitude glaciale du pouvoir absolu"
+      ],
+      "look": "dark romantic atmospheric painting, Turner stormy skies meets Friedrich isolation sublime, bone-white and frost-blue architecture floating impossibly, Blizzard Wrath of the Lich King aesthetic at maximum scale, the fortress as small as possible against an overwhelming sky to emphasize cosmic insignificance turned into cosmic threat",
+      "palette": {
+        "dominant": "#2F4F4F — gris-bleu de tempête, la couleur du ciel empoisonné par le Fléau",
+        "secondary": "#F5F5DC — blanc-os de la structure de Naxxramas, le calcaire des ossements géants",
+        "accent_1": "#39FF14 — vert nécromancie, les faisceaux d'énergie reliant les sections de la nécropole",
+        "accent_2": "#4169E1 — bleu glacial des cristaux de givre et de la magie du Fléau",
+        "accent_3": "#4B0082 — violet sombre des bannières du Fléau déchirées par le vent",
+        "highlight": "#E0FFFF — blanc bleuté du givre et de la lumière de l'éclair"
+      },
+      "art_references": [
+        "Caspar David Friedrich — La Mer de Glace (la puissance indifférente de la nature/mort)",
+        "JMW Turner — cieux de tempête (atmosphère dramatique, lumière perçant les nuages)",
+        "Studio Ghibli — Le Château dans le Ciel de Laputa (forteresse volante dans les nuages)",
+        "Blizzard — Cinematic d'intro de Wrath of the Lich King (glace, mort, majesté)"
+      ]
+    },
+    "environment": {
+      "space": "Vue extérieure en plan large : Naxxramas flotte à 1000m d'altitude dans un ciel de tempête au-dessus des Plaguelands orientales. La nécropole est une ZIGGURAT INVERSÉE — une pyramide de 300m de base et 200m de hauteur, pointe vers le bas, faite d'os blancs géants, de pierre funéraire grise et de fer noir nécromantique. Elle est composée de quatre ailes connectées à un noyau central par des PASSERELLES DE CHAÎNES ET D'ÉNERGIE VERTE nécromantique. La structure entière est recouverte de givre et de glace, des stalactites de glace pendant de chaque rebord. Des wyrms de givre (dragons squelettiques de glace) circulent autour de la structure comme des vautours.",
+      "foreground": "Le paysage des Plaguelands vu du sol — une terre MORTE. Des champs autrefois fertiles maintenant bruns et nécrosés. Des fermes en ruines avec des toits effondrés. Des arbres morts, blancs et tordus, sans une seule feuille. La rivière qui traverse le paysage est d'un vert pestilentiel, empoisonnée par la Peste. Des chaudrons de Peste visibles aux carrefours. Le sol est couvert d'une brume verte rampante — la Peste elle-même, visible, tangible. Ce paysage occupe le tiers inférieur de l'image et sert de BASE DE CONTRASTE — c'est d'ICI que Naxxramas s'est élevé, et c'est ICI que sa terreur retombera.",
+      "midground": "Naxxramas elle-même, flottant entre le sol ravagé et les nuages de tempête. La structure est SYMÉTRIQUE vue de face — quatre ailes (ailes de l'Araignée, de la Peste, militaire, et de la Construction) s'étendent comme les bras d'une croix depuis le coeur central. L'architecture est un mélange de MAÇONNERIE FUNÉRAIRE (pierre grise gravée de runes du Fléau, comme un mausolée géant), d'OS GÉANTS (des fémurs et des côtes de créatures titanesques servant de poutres structurelles), et de FER NOIR (plaques d'armure, chaînes, pointes). Le coeur central abrite le PHYLACTÈRE DE KEL'THUZAD — visible comme une lueur verte intense au centre de la structure, un noyau d'énergie nécromantique. Des FAISCEAUX D'ÉNERGIE VERTE connectent les quatre ailes au noyau. Des bannières du Fléau (violet sombre avec le crâne bleu-blanc du Fléau) pendent des parois, déchirées par le vent. Des gargoyles de pierre sont perchées sur chaque saillie. Des wyrms de givre (3 visibles — squelettes de dragons avec des ailes de glace translucide) circulent en orbite autour de la nécropole.",
+      "background": "Le CIEL DE TEMPÊTE — un mur de nuages de 5km de haut dans des tons de gris plomb, bleu-noir et violet, éclairé par des éclairs internes qui illuminent les masses nuageuses en flashs blancs-bleus. Le ciel est HOSTILE — pas un orage naturel mais le sillage atmosphérique de Naxxramas, le ciel qui réagit à la présence de la mort. Une trouée dans les nuages au-dessus de Naxxramas laisse filtrer un unique rayon de lumière froide — non pas un espoir mais un projecteur divin accusateur, un oeil dans le ciel. Les nuages les plus bas touchent presque Naxxramas, des filaments de vapeur s'enroulant autour des ailes comme des doigts de spectre.",
+      "atmosphere": "Mort inéluctable en approche, l'hiver qui ne finira jamais, le silence absolu de 1000m d'altitude brisé par le vent glacial et le cliquetis des chaînes de Naxxramas",
+      "weather": "Tempête hivernale apocalyptique — vent violent, neige horizontale, éclairs fréquents, température -30°C",
+      "time_of_day": "Indéterminable — le ciel est si couvert que ni soleil ni lune ne sont visibles. Une lumière diffuse grise-bleue règne, l'éternel crépuscule du Fléau."
+    },
+    "subjects": [
+      {
+        "element": "Naxxramas la nécropole volante",
+        "details": "Ziggurat inversée de 300m x 200m flottant à 1000m. 4 ailes en croix connectées par faisceaux d'énergie verte au noyau central. Matériaux : pierre funéraire grise, os titanesques blancs comme poutres, fer noir en plaques d'armure. Entièrement recouverte de givre et glace. Lueur verte intense au coeur (phylactère de Kel'Thuzad). Bannières du Fléau violet déchirées. Gargoyles sur chaque saillie. La pointe inférieure de la pyramide inversée est un pic d'obsidienne d'où s'écoulent des gouttes de liquide nécromantique vert.",
+        "importance": "Le sujet unique — Naxxramas EST l'image"
+      },
+      {
+        "element": "Les wyrms de givre en orbite",
+        "details": "3 dragons squelettiques de glace circulant autour de Naxxramas. Os blancs articulés sans chair, ailes de membranes de glace translucide bleutée, orbites vides émettant une lueur bleue glaciale. Ils ne volent pas — ils flottent, portés par la nécromancie. Taille : 15m d'envergure chacun. Ils patrouillent en spirales lentes autour de la forteresse.",
+        "importance": "Donnent l'échelle de Naxxramas et ajoutent la menace vivante"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plan d'ensemble dramatique — Naxxramas relativement petite dans un ciel immense, vue depuis le sol à 1km de distance",
+      "angle": "Contre-plongée forte de 50° — regardant le ciel, le sol en bande au premier plan, Naxxramas en altitude",
+      "lens_equivalent": "35mm — pas de distorsion, proportion réaliste entre la forteresse et le ciel pour maximiser le sentiment de taille réelle",
+      "focal_point": "La lueur verte du coeur de Naxxramas — le point de lumière le plus intense dans le gris du ciel",
+      "depth_of_field": "Grande profondeur — sol net, Naxxramas nette, nuages diffus",
+      "composition_rules": [
+        "LE CIEL DOMINE : 70% ciel, 10% Naxxramas, 20% sol ravagé — la forteresse est petite dans l'immensité, ce qui la rend PLUS terrifiante (elle n'a pas besoin d'être grande pour dominer)",
+        "Naxxramas centrée horizontalement mais au tiers supérieur vertical — entre terre et ciel, ni l'un ni l'autre",
+        "La terre morte en bande inférieure crée un CONTRASTE de texture : horizontal/plat vs vertical/nuageux",
+        "Le rayon de lumière perçant les nuages crée une diagonale depuis le coin supérieur droit vers Naxxramas — illumination accusatrice"
+      ]
+    },
+    "lighting": {
+      "key_light": "La lueur verte nécromantique de Naxxramas elle-même — les faisceaux d'énergie verte entre les ailes et le noyau projettent une lumière verte sur les nuages environnants, teintant les vapeurs qui l'entourent. C'est la seule vraie source de lumière dans la scène, tout le reste est couvert par la tempête",
+      "fill_light": "Lumière d'orage diffuse — une luminosité grise-bleue ambiante venant de partout et de nulle part, le ciel couvert comme un softbox géant mais sinistre",
+      "accent_lights": [
+        "Éclairs de tempête : flashs blancs-bleus illuminant des sections entières du mur nuageux, révélant brièvement la profondeur monstrueuse du cumulonimbus",
+        "Yeux des wyrms de givre : 6 points bleu-glacial en orbite, marquant le périmètre de défense",
+        "Le rayon divin : un unique faisceau de lumière froide perçant la trouée nuageuse au-dessus de Naxxramas — bleu-blanc, presque accusateur",
+        "Lueur de Peste au sol : le vert rampant des chaudrons de Peste éclaire la brume au niveau du sol en contrebas",
+        "Gargoyles : les yeux des gargoyles de pierre émettent une faible lueur verte — la nécropole est vivante de mille regards"
+      ],
+      "shadows": "Naxxramas projette une OMBRE IMMENSE sur les Plaguelands en contrebas — une ombre en forme de croix (la forme de ses 4 ailes) qui couvre les fermes en ruines. L'ombre n'est pas naturelle — elle est plus noire qu'une ombre normale, et la Peste semble plus dense dans cette ombre. Les nuages projettent des ombres mouvantes sur la surface de Naxxramas elle-même.",
+      "atmospheric_fx": [
+        "Nuages qui s'enroulent : les filaments de vapeur les plus bas touchent Naxxramas et s'enroulent autour des tours et des ailes comme des doigts spectraux",
+        "Neige/grésil horizontal : des particules de glace et de neige soufflées par le vent de tempête, visibles dans les faisceaux de lumière verte comme un blizzard miniature",
+        "Foudre interne aux nuages : les masses nuageuses s'illuminent de l'intérieur en flashs irréguliers, donnant au ciel un aspect vivant et menaçant",
+        "Brume de Peste au sol : le vert nécromantique rampe sur la terre morte en contrebas, exactement sous l'ombre de Naxxramas — la forteresse empoisonne le sol qu'elle survole"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Dark romantic atmospheric painting, Turner stormy skies meets Friedrich isolation sublime, bone-white frost-blue architecture floating impossibly, Blizzard Wrath of the Lich King maximum scale. NAXXRAMAS THE FLOATING NECROPOLIS — exterior view, grand establishing shot. An INVERTED ZIGGURAT (pyramid point-down) 300m base, 200m tall, floating at 1000m altitude in an APOCALYPTIC STORM SKY above the Eastern Plaguelands. Made of GREY FUNERARY STONE engraved with Scourge runes, TITANIC WHITE BONES used as structural beams (giant femurs and ribs), and BLACK IRON armor plates, chains, and spikes. Four wings in a cross shape (Spider, Plague, Military, Construct) connected to a central core by BEAMS OF GREEN NECROMANTIC ENERGY. Entirely covered in frost and ice, icicles hanging from every ledge. Intense GREEN GLOW at the core (Kel'Thuzad's phylactery). Torn purple Scourge banners (blue-white skull emblem) flapping in the gale. Stone gargoyles perched on every protrusion with faint green eye glow. The inverted pyramid's bottom tip is an obsidian spike dripping green necromantic liquid. 3 FROST WYRMS orbiting — skeletal dragons with translucent blue ice membrane wings, empty eye sockets emitting glacial blue glow, 15m wingspan each, floating carried by necromancy, patrolling in slow spirals. FOREGROUND (lower 20%): DEAD PLAGUELANDS below — formerly fertile fields now brown and necrotic, ruined farmhouses with collapsed roofs, dead white twisted leafless trees, a river turned PESTILENTIAL GREEN, Plague cauldrons at crossroads, green crawling Plague mist covering the ground. Naxxramas casts a CROSS-SHAPED SHADOW on this dead land — the shadow unnaturally dark with denser Plague within it. BACKGROUND (upper 70%): STORM SKY — a wall of clouds 5km tall in lead grey, blue-black, and violet tones, illuminated by internal lightning flashes in white-blue. The sky is HOSTILE — not natural storm but Naxxramas atmospheric wake, sky reacting to death's presence. A SINGLE BREAK in the clouds above Naxxramas lets through one cold light beam — not hope but an accusatory divine searchlight, an eye in the sky. Lowest cloud filaments touching Naxxramas wrapping around towers and wings like spectral fingers. COMPOSITION: SKY DOMINATES 70%, NAXXRAMAS 10%, DEAD GROUND 20% — the fortress is relatively small in the immensity which makes it MORE terrifying (it doesn't need to be large to dominate). Naxxramas centered horizontally at the upper third. LIGHTING: Naxxramas green necromantic glow as only real light source — green energy beams tinting surrounding clouds green. Diffuse grey-blue storm light as sinister ambient. White-blue lightning flashes revealing monstrous cumulonimbus depth. Frost wyrm glacial blue eye points marking defense perimeter. Single cold divine beam from cloud break illuminating Naxxramas from above right. Green Plague glow at ground level. Naxxramas massive cross shadow on Plaguelands below. ATMOSPHERIC: cloud filaments wrapping like spectral fingers, horizontal ice and snow particles blown by storm winds visible in green light beams, internal cloud lightning making sky look alive, Plague mist crawling on dead ground below exactly under Naxxramas shadow. Color palette: storm grey-blue, bone white, necromantic green, glacial blue, Scourge violet, accusatory cold white beam. Mood: ineluctable death approaching, eternal winter, glacial solitude of absolute power, the silence of 1000m altitude broken by wind and chain clinking.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, faces, daylight sun, blue clear sky, green vegetation alive, summer, warm colors, friendly, cheerful, indoor scene, close-up, technology, sci-fi ship, blurry, low quality, flat, split frame, panels, border"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_raid_victory",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_raid_victory.png",
+    "ck2_gfx_name": "GFX_evt_hoa_raid_victory",
+    "final_size": "460x300",
+    "scene_intent": "Raid victory — the triumphant aftermath of slaying a massive dragon boss. A battered but jubilant raid party stands atop or beside the colossal fallen corpse, weapons raised in victory, illuminated by holy and arcane light breaking through the shattered lair ceiling. This image is shown when the player achieves a Great Success raid outcome. It must convey exhaustion transformed into euphoria, the scale of the achievement, and the earned glory of heroes."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Reference: Blizzard WoW raid boss kill screenshots and Warcraft cinematic dragon-slaying sequences by Wei Wang",
+        "Rendering: high-end digital matte painting with visible oil-paint brushstrokes, Renaissance battle painting grandeur",
+        "CK2 framing: epic narrative wide shot, the climax of the adventure story, painted with the gravitas of a historical battle piece",
+        "Tone: triumphant exhaustion — these heroes have been through hell and emerged victorious. Blood, sweat, torn cloaks, but unbroken spirits raised in defiant celebration."
+      ],
+      "look": "hyper-detailed digital matte painting, visible oil brushstrokes, atmospheric perspective, concept art quality matching Blizzard cinematics team, painterly realism with fantasy elements, rich texture layering, Renaissance battle painting composition with fantasy spectacle lighting",
+      "palette": {
+        "dominant": "#ffd700 — triumphant gold of holy light and divine victory radiance",
+        "secondary": "#8b0000 — dark crimson of dragon blood, battle wounds, and worn red banners",
+        "accent_1": "#4169e1 — royal blue of arcane energy and heroic cloaks",
+        "accent_2": "#2d5a27 — dark green of dragon scales and the ancient lair floor",
+        "accent_3": "#c0c0c0 — battered steel and silver of dented armour catching the light",
+        "highlight": "#ffffff — pure white light breaking through the shattered ceiling, divine intervention"
+      },
+      "art_references": [
+        "Eugene Delacroix — Liberty Leading the People (triumphant figures amid exhaustion and debris, raised arms composition)",
+        "Peter Paul Rubens — The Hunt of the Hippopotamus (massive beast defeated by coordinated hunters, dynamic composition)",
+        "Blizzard Entertainment — Deathwing cinematic and Onyxia raid completion art (dragon scale, hero scale contrast)",
+        "Frank Frazetta — Dragon slayer paintings (warrior-dragon proportion, victory posture, dramatic lighting)"
+      ]
+    },
+    "environment": {
+      "space": "A vast dragon's lair — a natural volcanic cavern expanded and reshaped by centuries of the dragon's habitation. The cavern is roughly fifty metres wide and thirty metres tall. The ceiling has been partially shattered by the final battle — a massive jagged hole fifteen metres across lets shafts of golden exterior light pour in from above. The walls are dark volcanic basalt with veins of glowing orange-red magma still visible in cracks. Massive stalactites hang from the intact portions of the ceiling. The floor is uneven, covered in the dragon's hoard: gold coins, gemstones, broken weapons of previous challengers, and scorched bones — now scattered and disrupted by the battle.",
+      "foreground": "The dragon's massive head and upper body dominate the foreground, lying on its side in death. The head alone is five metres long — a horned, scaled monstrosity with jaws permanently frozen open in its final roar, revealing rows of sword-length teeth. One enormous amber eye is half-open, dulling as life fades. Dark crimson blood pools beneath the head, mixing with scattered gold coins. Deep wounds are visible — a massive gash across the throat where the killing blow landed, arcane burn marks across the snout, arrows protruding from the neck membrane. One massive clawed forelimb is outstretched toward the viewer, talons still gripping the cracked stone floor. The scales are dark green-black, each the size of a dinner plate, some cracked or missing from combat impacts.",
+      "midground": "Standing atop the dragon's shoulder and upper back — seven to eight heroes of the raid party in various postures of victory and exhaustion. The raid leader (a human warrior) stands at the highest point atop the dragon's shoulder blade, greatsword raised overhead in one hand, the other fist clenched skyward, mouth open in a victory cry, silhouetted against the golden light pouring through the ceiling hole. Beside him, a female paladin has driven her banner — a tattered blue-and-gold standard — into the dragon's back, claiming the kill. A mage sits exhausted on the dragon's spine, staff across her knees, head bowed but laughing. An orc shaman kneels, hands pressed to the dragon's scales in a ritual of respect for the fallen foe. Two rogues are already picking through the nearby treasure scatter. A dwarven priest raises a golden holy symbol overhead, golden healing light still radiating from it. Below the dragon, on the cavern floor, more party members are visible — some collapsed from exhaustion, some embracing, some tending to wounded companions.",
+      "background": "The shattered ceiling frames a view of a golden sunset sky above the mountain peak — the world outside unchanged and beautiful, contrasting with the underground carnage. Shafts of warm golden light pour through the hole at dramatic angles, illuminating the floating dust and smoke. The far walls of the cavern show more of the dragon's hoard — towering piles of gold, ornate chests, ancient weapons mounted on crude stone racks. The dragon's tail extends into the background darkness, its massive size requiring the entire cavern floor.",
+      "atmosphere": "Triumphant exhaustion — the stunned euphoria of survival against impossible odds. The air is thick with smoke, dust, and the metallic tang of dragon blood. Every hero is wounded, torn, bloodied — but alive and victorious. The silence after battle, broken only by victory cries and the crackle of dying fires.",
+      "weather": "Interior cavern scene. Post-battle smoke and dust fill the air. Through the shattered ceiling, a clear golden sunset sky is visible. Warm light pours in. Fine debris and ash particles drift in the light shafts.",
+      "time_of_day": "Late afternoon — golden hour sunset light entering through the shattered ceiling, providing the triumphal illumination"
+    },
+    "subjects": [
+      {
+        "element": "The fallen dragon",
+        "details": "A colossal wyrm easily forty metres from snout to tail tip, lying on its right side in death. Dark green-black scales with an iridescent sheen. Four massive limbs with taloned feet — the right forelimb outstretched, claws gouging furrows in the stone floor. Enormous bat-like wings partially folded, one wing pinned beneath the body, the other draping over a collapsed stalactite. A long sinuous neck ending in a horned head with a crown of six swept-back horns, each one metre long. The killing wound: a massive diagonal gash across the throat, deep enough to expose dark muscle and bone, from which dark crimson blood flows. Dozens of secondary wounds — arrow shafts, arcane scorch marks, axe impacts on scales. The creature is unmistakably dead, but its sheer scale communicates the magnitude of the victory.",
+        "scale": "Enormous — the head alone fills the lower-left quarter of the image. The body extends across the full width and into the background. The heroes standing on it appear tiny by comparison, emphasising the achievement."
+      },
+      {
+        "element": "The raid leader (warrior)",
+        "details": "A tall human male warrior standing at the apex of the dragon's shoulder, the highest point in the composition. His plate armour is battered beyond recognition — one pauldron missing entirely, breastplate deeply dented, greaves cracked. But he stands tall, greatsword raised overhead in his right hand, left fist punching the sky, head thrown back in a primal victory roar. His face is bloodied — a gash across his forehead paints half his face red — but his expression is pure wild triumph. His red cloak is reduced to ribbons streaming in the warm updraft from below. He is backlit by the golden sunset light from the ceiling breach, creating a near-silhouette with a divine golden rim-light.",
+        "scale": "Small relative to the dragon — standing on the beast's shoulder blade, he is perhaps one-twentieth the dragon's length, but his raised sword and commanding position make him the compositional apex"
+      },
+      {
+        "element": "The victory banner",
+        "details": "A blue-and-gold war banner on a tall wooden pole, driven into the dragon's back between two scales by the paladin. The banner is torn and burned but still readable — a golden lion rampant on a blue field. It flutters in the updraft. The paladin who planted it stands beside it, one gauntleted hand on the pole, the other resting on her sword pommel. She is a tall human woman in ornate but battle-damaged plate, her own face exhausted but proud. Planting the banner is the symbolic claim of victory.",
+        "scale": "The banner pole stands approximately three metres above the dragon's back, making it a strong vertical accent in the composition"
+      },
+      {
+        "element": "The exhausted and celebrating party members",
+        "details": "Seven to ten additional heroes visible in various states across and around the dragon. On the dragon's back: a mage sitting cross-legged, staff across knees, head bowed forward in exhausted laughter, robes singed and torn. An orc shaman kneeling respectfully, pressing scarred green hands against the dragon's scales in a spiritual gesture. Two rogues already moving toward the treasure, silhouetted against the hoard. On the cavern floor: a dwarven priest raising a golden holy symbol with golden light still emanating, his face split by a gap-toothed grin. Two fighters sitting back-to-back on the ground, too exhausted to stand but raising waterskins in a toast. A troll hunter tending to a wounded companion, applying bandages. Each figure tells a story of individual heroism within the collective triumph.",
+        "scale": "Scattered across the midground, each figure small relative to the dragon, reinforcing the scale of the achievement"
+      }
+    ],
+    "camera": {
+      "shot_type": "Epic wide shot — plan d'ensemble emphasising the scale of the dragon and the smallness of the heroes who defeated it",
+      "angle": "Low angle (15-20 degrees) from ground level at the dragon's head, looking up along the body toward the raid leader on the shoulder, giving the warrior a heroic elevated position against the sky",
+      "lens_equivalent": "24mm — wide angle to encompass the full scale of the dragon corpse and the cavern, with moderate perspective exaggeration of the foreground head",
+      "focal_point": "The raid leader's raised sword silhouetted against the golden ceiling breach — the pinnacle of the victory moment",
+      "depth_of_field": "Deep focus — everything from the dragon's foreground teeth to the background treasure hoard is legible, only the farthest cavern walls lose sharpness",
+      "composition_rules": [
+        "Diagonal composition: the dragon's body creates a powerful diagonal from lower-left (head) to upper-right (tail disappearing), creating dynamic energy",
+        "The raid leader at the apex of the diagonal, positioned at the upper-third intersection point",
+        "The golden light breach in the ceiling creates a natural spotlight and frames the victory moment",
+        "The dragon's outstretched claw in the foreground points toward the viewer, breaking the fourth wall and increasing immersion",
+        "Value gradient from dark foreground (dragon head in shadow) to bright midground (golden-lit heroes) to dark background (cavern depths)"
+      ]
+    },
+    "lighting": {
+      "key_light": "Golden sunset light (3200K warm gold) pouring through the shattered ceiling breach in dramatic angled shafts, illuminating the heroes on the dragon's back and creating the triumphant backlight on the raid leader",
+      "fill_light": "Residual orange-red glow from magma veins in the cavern walls and the dying fires of the battle, providing warm fill in the shadows and on the dragon's underside",
+      "accent_lights": [
+        "Golden holy light from the dwarven priest's raised symbol — a radiant warm glow casting light on nearby figures from below",
+        "Faint blue-white arcane residue still sparking on the dragon's wounds where mage spells impacted",
+        "The dull amber glow of the dragon's dying eye — a fading point of light in the dark foreground",
+        "Scattered glints from the treasure hoard — thousands of tiny golden reflections across the cavern floor from coins and gems catching the overhead light"
+      ],
+      "shadows": "The light shafts from the ceiling create dramatic, well-defined shadow boundaries. The dragon's body casts an enormous shadow across half the cavern floor. Heroes standing in the light are brilliantly illuminated, those in shadow are lit only by the red magma glow, creating pockets of contrasting mood. The raid leader's raised sword casts a crisp diagonal shadow across the dragon's scales.",
+      "atmospheric_fx": [
+        "Volumetric god rays: thick golden light shafts from the ceiling breach, made visible by dense post-battle dust and smoke particles",
+        "Battle smoke: residual grey-brown smoke drifting in layers through the cavern, catching the light dramatically",
+        "Floating debris: tiny particles of stone, ash, and scale fragments drifting in the light shafts like golden snow",
+        "Dragon blood steam: faint wisps of heat-shimmer rising from the dragon's open wounds where hot blood meets cool air",
+        "Residual spell effects: fading arcane blue sparks scattered across the dragon's body where magical attacks landed",
+        "Dust motes: millions of fine particles illuminated by the golden ceiling light, creating a divine haze around the heroes"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hyper-detailed digital matte painting, oil paint brushstrokes visible, concept art quality. Epic raid victory scene in a vast volcanic dragon's lair cavern fifty metres wide with dark basalt walls veined with glowing orange-red magma. Shattered ceiling with a massive fifteen-metre jagged hole letting golden sunset light pour in as dramatic god rays through dust and smoke. Foreground: a colossal fallen dragon lying on its side in death, dark green-black iridescent scales each the size of a dinner plate, massive head five metres long with six swept-back horns, jaws frozen open revealing sword-length teeth, one enormous dulling amber eye half-open, deep killing gash across throat exposing dark muscle with crimson blood pooling and mixing with scattered gold coins, dozens of arrows and arcane burn marks and axe impacts on scales, massive forelimb outstretched with talons gouging stone floor, enormous bat-like wings partially folded. Midground: seven to eight heroes standing atop the dragon's shoulder and back in various poses of victory and exhaustion. At the apex on the shoulder blade: a tall human warrior raid leader in battered plate armour — one pauldron missing, breastplate deeply dented — greatsword raised overhead in right hand, left fist punching sky, head thrown back in primal victory roar, face bloodied with gash painting half his face red, red cloak reduced to ribbons streaming in updraft, backlit by golden sunset light creating rim-light silhouette. Beside him: a female paladin having driven a tattered blue-and-gold war banner with golden lion rampant into the dragon's back between scales, one hand on pole, exhausted but proud. A mage sitting cross-legged on dragon's spine, staff across knees, head bowed in exhausted laughter, robes singed and torn. An orc shaman kneeling pressing scarred green hands against dragon's scales in spiritual respect gesture. Two rogues silhouetted moving toward treasure. On cavern floor below: a dwarven priest raising golden holy symbol with emanating golden light gap-toothed grin, two fighters sitting back-to-back raising waterskins in toast too exhausted to stand, a troll hunter bandaging a wounded companion. Background: shattered ceiling framing golden sunset sky above mountain peak, dramatic angled light shafts through dust, far walls showing towering piles of gold treasure and ornate chests, dragon's tail extending into background darkness. Scattered across floor: gold coins, gemstones, broken weapons of previous challengers, scorched bones. Lighting: golden sunset god rays through ceiling breach as key light creating dramatic shadows, orange-red magma glow from walls as warm fill, golden holy light from priest, blue-white arcane residue sparking on dragon wounds, amber glow of dying dragon eye, thousands of tiny golden reflections from treasure hoard. Atmospheric effects: thick volumetric golden light shafts through dense dust and smoke, residual grey-brown battle smoke in layers, floating stone and ash debris like golden snow, faint heat shimmer from dragon's wounds, fading blue arcane sparks, millions of golden dust motes creating divine haze. Colour palette: triumphant gold, dark crimson dragon blood, royal blue cloaks and banners, dark green dragon scales, battered steel silver, pure white ceiling light. Mood: triumphant exhaustion, euphoria of survival against impossible odds, the earned glory of heroes. Composition: powerful diagonal from dragon's head lower-left to tail upper-right, raid leader at apex at upper-third intersection, golden ceiling breach as natural spotlight, dragon's outstretched claw toward viewer.",
+    "negative": "text, watermark, signature, UI elements, HUD, modern elements, cars, electricity poles, bright cheerful colors, anime style, cartoon, chibi, photorealistic close-up faces, oversaturated, neon cyberpunk, sci-fi elements, guns, technology, blurry, low quality, deformed architecture, floating objects without support, extra limbs, split frame, multiple panels, comic book panels, collage, border frame, deformed hands, deformed faces, extra fingers, mutated proportions, cute dragon, friendly dragon, baby dragon, clean armour, pristine clothing, no battle damage"
+  }
+}

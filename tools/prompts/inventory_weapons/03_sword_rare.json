@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_sword_rare",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_sword_rare.png",
+    "ck2_gfx_name": "GFX_inv_hoa_sword_rare",
+    "final_size": "80x80",
+    "scene_intent": "Rare quality dark steel curved blade with blue glowing runes and skull pommel. This is a dungeon drop — a weapon with real power and sinister personality. The blue rune glow and skull pommel evoke death knight or shadow warrior aesthetics. The curved blade suggests Eastern or demonic influence. The blue rare border glow must pop against the dark background. A weapon players would screenshot and show off."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Direct reference: World of Warcraft inventory icon art style — single item rendered in painterly digital style on dark gradient background",
+        "Quality tier: Rare (blue) — item border glow color #0070dd, the coveted 'blue drop' that defines early WoW dungeon progression",
+        "Rendering: hand-painted digital icon with confident brushwork, rich texture, matching Blizzard item icon art pipeline at its most atmospheric",
+        "Design language: dark fantasy / death knight aesthetic — curved blade, skull motif, runic enchantment visible as blue light"
+      ],
+      "look": "hand-painted digital game icon, painterly brushstrokes, slight canvas texture, Blizzard Entertainment WoW inventory icon quality, rich dark material rendering with luminous magical accents, dark atmospheric background with vignette, stylized realism with strong fantasy elements, dramatic contrast between dark steel and blue magical glow",
+      "palette": {
+        "dominant": "#1c1c2a — dark blued steel for the curved blade, near-black with cold blue undertones",
+        "secondary": "#2a1a2a — dark purple-black leather and bone for the grip and skull pommel",
+        "accent_1": "#0070dd — rare quality blue for the glowing runes carved into the blade, the primary magical indicator",
+        "accent_2": "#4a9eff — lighter electric blue for the brightest points of rune glow and energy wisps",
+        "accent_3": "#c8c8b0 — aged bone-white for the skull pommel, yellowed ivory tone",
+        "highlight": "#a0c0ff — ice-blue specular highlights where blade edge catches light through the runic glow"
+      },
+      "art_references": [
+        "Blizzard Entertainment WoW item icon team — rare quality dark weapons (Krol Blade, Hanzo Sword, Sword of Zeal, Blackblade of Shahram)",
+        "Death Knight weapon concept art from WotLK — runic blades with blue frost/shadow energy",
+        "Samwise Didier (Blizzard artist) — bold dark silhouettes with luminous magical accents",
+        "Japanese tachi / Middle Eastern scimitar hybrid — the curved blade shape reference, not straight European"
+      ]
+    },
+    "subjects": [
+      {
+        "element": "Dark steel curved blade with blue runes and skull pommel — rare quality",
+        "details": "A menacing curved sword approximately 100cm in total length, forged from dark blued steel that appears almost black. The blade has a pronounced curve reminiscent of a bastardized scimitar or tachi, single-edged with a wickedly sharp convex cutting edge and a reinforced spine. The steel itself has a dark blue-black patina with subtle swirling patterns in the metal — suggesting it was quenched in something other than water. Carved into both flats of the blade are runic inscriptions — seven distinct runes on each side, each approximately 15mm tall, cut deep into the steel and filled with a self-luminous blue magical energy (#0070dd). The runes pulse with a slow, steady rhythm like a heartbeat, casting shifting blue light onto the blade surface and creating small caustic light patterns. Faint wisps of blue energy (#4a9eff) trail upward from the topmost runes like cold flame. The crossguard is fashioned from dark iron wrought into the shape of two stylized bat wings or demonic pinions, sweeping forward and downward with sharp pointed tips. The grip is wrapped in black leather over what appears to be a bone core — the texture suggests dried sinew binding rather than conventional stitching. The pommel is a finely detailed human skull carved from aged ivory or bone, approximately 30mm across. The skull's eye sockets are hollow but emit a faint blue luminescence matching the blade runes, suggesting the enchantment permeates the entire weapon. The jaw is clenched, the expression frozen in a silent scream. Small cracks web across the skull surface, dark with age.",
+        "scale": "Weapon fills approximately 80% of the square frame, oriented diagonally from lower-left to upper-right, with the blade curve creating a menacing silhouette"
+      }
+    ],
+    "camera": {
+      "shot_type": "Flat icon view with slight 3/4 angle — standard WoW inventory icon perspective",
+      "angle": "Very slight 3/4 rotation (approximately 10-15 degrees) to reveal the blade curve depth, crossguard wing dimensionality, and skull pommel facial features",
+      "lens_equivalent": "Orthographic / flat projection — no perspective distortion, game UI icon convention",
+      "focal_point": "The cluster of brightest blue runes at the blade's midpoint — the strongest light source and the visual hook that communicates 'this weapon is enchanted'",
+      "depth_of_field": "Infinite — everything in perfect focus, UI icon convention",
+      "composition_rules": [
+        "Weapon centered in frame, filling approximately 80% of the square canvas",
+        "Diagonal orientation lower-left to upper-right, blade curve sweeping toward upper-right corner",
+        "Blue rune glow creates a luminous spine along the blade center that guides the eye from pommel to tip",
+        "Skull pommel in lower-left quadrant as a secondary focal point",
+        "Dark gradient background: darkest at edges, slightly illuminated at center by the rune glow",
+        "Single weapon only — no hands, no characters, no environmental context",
+        "Clear silhouette readable at 80x80 pixels"
+      ]
+    },
+    "lighting": {
+      "key_light": "The runes themselves serve as the primary light source — blue magical luminescence (#0070dd) emanating from the carved inscriptions, casting shifting blue light across the blade surface and creating rim lighting on the crossguard wings and grip",
+      "fill_light": "Very dim cool ambient from upper-left (#3a3a4a), just enough to define the dark steel blade edges and crossguard shape where the rune light doesn't reach",
+      "accent_lights": [
+        "Blue runic glow — each of the 14 runes (7 per side) emits a steady blue light (#0070dd core, #4a9eff at the brightest emission points) that illuminates the blade flats with shifting caustic patterns",
+        "Skull pommel eye-glow — faint blue luminescence from the hollow eye sockets, creating two tiny blue pinpoints that echo the blade runes",
+        "Faint blue energy wisps — thin tendrils of #4a9eff light trailing upward from the blade runes like cold ethereal flame",
+        "Rare-quality blue glow (#0070dd at 25-30% opacity) as a backlight halo around the entire weapon silhouette — stronger than the uncommon green aura"
+      ],
+      "shadows": "Deep shadows on the blade's non-lit side, with blue rune light creating hard-edged runic shadow patterns. The crossguard bat-wings cast small pointed shadows downward onto the grip. The skull pommel has dramatic blue-lit shadows in the eye sockets, nasal cavity, and beneath the cheekbones.",
+      "atmospheric_fx": [
+        "Dark gradient background: radial gradient from #111122 at center to #080810 at corners, with a distinct blue tint from the rune illumination",
+        "Blue magical wisps: thin threads of luminous blue energy (#4a9eff at varying opacity) curling upward from the blade runes like heat distortion or spectral flame — 3-5 wisps visible",
+        "Faint blue caustic light patterns on the blade surface — the rune glow refracting through the enchantment creates shifting ripple-like highlights",
+        "Blue border glow (#0070dd at 25-30% opacity) around the weapon's silhouette edge — the rare quality aura",
+        "Subtle painterly grain texture in the dark background"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hand-painted digital game icon, World of Warcraft inventory icon style, painterly brushstrokes, single weapon on dark background. A menacing curved sword of dark blued steel oriented diagonally from lower-left to upper-right, filling 80% of the square frame. Pronounced scimitar-like blade curve, single-edged with wickedly sharp convex cutting edge. Dark blue-black steel patina with swirling patterns in the metal. Seven glowing blue magical runes (#0070dd) carved deep into each flat of the blade, pulsing with steady blue light, casting blue caustic light patterns on blade surface. Faint wisps of blue energy trailing upward from the runes like cold ethereal flame. Crossguard fashioned from dark iron in the shape of two stylized bat wings sweeping forward with sharp pointed tips. Black leather grip over bone core with sinew binding texture. Pommel is a finely detailed human skull carved from aged ivory with hollow eye sockets emitting faint blue luminescence matching the blade runes, clenched jaw frozen in silent scream, small age cracks across surface. Blue rune glow serves as primary illumination casting shifting blue light across the entire weapon. Rare quality blue glow (#0070dd) around weapon silhouette. Dark radial gradient background from #111122 to #080810 with blue tint. Dramatic contrast between near-black steel and luminous blue magical energy. Blizzard WoW icon art quality, painterly material rendering, clear dark silhouette readable at small size, stylized realism, rich fantasy detail.",
+    "negative": "text, watermark, signature, UI frame, item border overlay, numbers, stats, tooltip, hands holding weapon, fingers, character, person, arm, environmental background, ground, table, wall, grass, sky, bright cheerful colors, warm colors, red glow, green glow, orange glow, yellow light, fire effects, anime style, cartoon, chibi, photorealistic, 3D render, cel-shaded, multiple weapons, shield, second object, split frame, multiple panels, collage, border frame, blurry, low quality, deformed proportions, straight blade, extra crossguards, extra pommels, melted skull, symmetrical face on skull"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_sword_legendary",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_sword_legendary.png",
+    "ck2_gfx_name": "GFX_inv_hoa_sword_legendary",
+    "final_size": "80x80",
+    "scene_intent": "Legendary quality elemental sword inspired by Thunderfury, Blessed Blade of the Windseeker. The most coveted weapon in classic WoW — a blade of pure elemental fury, crackling with chain lightning, its form partially dissolved into living storm energy. The orange legendary glow must scream 'once in a lifetime drop.' This icon should make any WoW veteran feel a rush of nostalgia and envy. The weapon transcends mere steel — it IS the storm."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Direct reference: World of Warcraft inventory icon art style — single item rendered in painterly digital style on dark gradient background",
+        "Quality tier: Legendary (orange) — item border glow color #ff8000, the rarest and most prestigious tier in WoW's item quality system",
+        "Design inspiration: Thunderfury, Blessed Blade of the Windseeker — the most iconic legendary weapon in WoW history, elemental storm sword",
+        "Rendering: hand-painted digital icon with maximum detail, energy effects, and dramatic lighting — this is the showcase piece"
+      ],
+      "look": "hand-painted digital game icon, painterly brushstrokes with energetic loose strokes for the electrical effects, Blizzard Entertainment WoW inventory icon quality at absolute peak, rich luminous rendering where solid weapon transitions into pure energy, dark atmospheric background overwhelmed by elemental light, stylized realism pushed to its most fantastical extreme",
+      "palette": {
+        "dominant": "#2a4a5a — dark teal-blue steel for the solid blade portions, storm-metal",
+        "secondary": "#ff8000 — legendary orange for the quality glow, border aura, and warmest electrical arcs",
+        "accent_1": "#00ccff — electric cyan-blue for the primary lightning energy crackling along the blade",
+        "accent_2": "#ffffff — pure white for the brightest lightning arc cores and electrical discharge points",
+        "accent_3": "#80d4ff — pale ice-blue for the secondary electrical field and ionized air glow",
+        "highlight": "#ffe080 — warm golden-white where orange legendary glow meets white lightning peaks"
+      },
+      "art_references": [
+        "Blizzard Entertainment — Thunderfury, Blessed Blade of the Windseeker icon and 3D model (primary design reference, the gold standard of WoW legendaries)",
+        "WoW item icon team — legendary weapon icons at maximum visual impact",
+        "Blizzard Cinematics team — elemental energy rendering (lightning, storm effects) from WoW and Diablo cinematics",
+        "Nikola Tesla electrical discharge photography — real lightning arc reference for believable electrical patterns",
+        "Roger Dean / Chris Foss — science-fantasy weapon forms that blur the line between solid object and energy"
+      ]
+    },
+    "subjects": [
+      {
+        "element": "Elemental storm sword crackling with lightning — legendary quality (Thunderfury-inspired)",
+        "details": "A breathtaking elemental sword approximately 110cm in total length, its form existing at the boundary between physical weapon and living storm. The blade is an elongated, slightly curved single-edged form with a dramatic forked tip that splits into two prongs like a lightning bolt frozen in metal. The lower two-thirds of the blade is forged from dark teal-blue storm-metal — an alloy that seems to contain swirling cloud patterns within its surface, as if a thunderhead was compressed into steel. The metal has a wet, electrically charged sheen. The upper third of the blade transitions from solid metal into crackling, arcing electrical energy — the steel appears to dissolve into pure lightning, with jagged bolts of cyan-blue electricity (#00ccff) leaping between the two forked blade tips and arcing outward into the surrounding air. The transition zone where metal becomes energy is the most visually intense area: white-hot (#ffffff) at the conversion points, surrounded by branching electrical fractals. Small chain-lightning arcs continuously jump from the blade to the crossguard, from the blade tip into empty air, and between the forked prongs. The crossguard is a sweeping angular form of the same storm-metal, shaped like swept-back wind or stylized lightning bolts, with its tips crackling with small electrical discharges. The grip is wrapped in a material that appears to be woven from metallic storm-grey threads, and it vibrates with visible electrical energy running through it — tiny arcs of lightning visible crawling along its surface. The pommel is an orb of contained ball lightning — a sphere of roiling blue-white electrical energy held in place by a cage of storm-metal wire, constantly flickering and pulsing, the most intense small light source on the weapon.",
+        "scale": "Weapon fills approximately 80% of the square frame, oriented diagonally — the forked blade tip and electrical arcs extend the weapon's visual footprint beyond the metal form"
+      }
+    ],
+    "camera": {
+      "shot_type": "Flat icon view with slight 3/4 angle — standard WoW inventory icon perspective",
+      "angle": "Very slight 3/4 rotation (approximately 10-15 degrees) to showcase the forked blade tip depth and the ball-lightning pommel dimensionality",
+      "lens_equivalent": "Orthographic / flat projection — no perspective distortion, game UI icon convention",
+      "focal_point": "The transition zone where solid blade dissolves into pure lightning energy — the most visually spectacular area of the weapon",
+      "depth_of_field": "Infinite — everything in perfect focus, but the electrical arcs have natural motion blur from their rapid flickering",
+      "composition_rules": [
+        "Weapon centered in frame, filling approximately 80% of the square canvas",
+        "Diagonal orientation lower-left to upper-right — forked lightning-blade tip reaching toward upper-right, ball-lightning pommel anchoring lower-left",
+        "Electrical arcs extend beyond the weapon silhouette into the surrounding dark space, making the weapon feel alive and dangerous",
+        "The brightest point (metal-to-energy transition) positioned near the visual center-upper area of the composition",
+        "Dark gradient background dramatically illuminated by the weapon's own electrical discharge",
+        "Single weapon only — no hands, no characters, no environmental context",
+        "Clear silhouette readable at 80x80 — the forked tip and electrical arcs create an unmistakable shape"
+      ]
+    },
+    "lighting": {
+      "key_light": "The weapon IS the light source — electrical energy from the blade provides the overwhelming majority of scene illumination, casting intense cyan-blue-white light in all directions, creating a dramatic rim-light effect on the dark storm-metal portions of the weapon",
+      "fill_light": "Orange legendary glow (#ff8000) from behind the weapon as a warm backlight, mixing with the blue electrical light to create dramatic color contrast — warm orange halo behind, cool blue-white electrical light in front",
+      "accent_lights": [
+        "Chain lightning arcs — bright cyan-blue (#00ccff) with white cores (#ffffff), 6-8 visible arcs leaping from the blade at various points, each one a small concentrated light source",
+        "Ball-lightning pommel — intense flickering blue-white sphere that pulses and strobes, casting dynamic light onto the grip and lower crossguard",
+        "Forked blade tip electrical discharge — the brightest area, white-hot (#ffffff) where the two prongs arc between each other with continuous branching lightning fractals",
+        "Legendary-quality orange glow (#ff8000 at 35-40% opacity) as a strong warm backlight halo around the entire weapon silhouette — the most intense quality aura of any tier",
+        "Electrical corona — a pale blue ionization field (#80d4ff at low opacity) surrounding the entire blade, visible as a soft electrical haze"
+      ],
+      "shadows": "Minimal traditional shadows — the weapon produces so much light that it overwhelms most shadow areas. Where shadows exist (behind the crossguard, under the grip wrapping), they are deep teal-blue. The interplay of warm orange backlighting and cool blue-white electrical front-lighting creates complex color-shadow interactions on the storm-metal surfaces.",
+      "atmospheric_fx": [
+        "Dark gradient background: radial gradient from #0a1520 at center to #050a10 at corners, dramatically illuminated by the weapon's electrical discharge — the background is alive with reflected blue light",
+        "Chain lightning arcs: 6-8 crackling electrical bolts leaping from the blade surface into the surrounding air, each with a bright white core surrounded by cyan-blue glow, branching into smaller fractal tendrils — these extend beyond the weapon silhouette",
+        "Electrical corona: a soft luminous haze of ionized air (#80d4ff at 15-20% opacity) surrounding the entire blade, creating an electrical field effect",
+        "Orange legendary border glow (#ff8000 at 35-40% opacity) around the weapon's outermost silhouette edge — strong, warm, unmistakably legendary tier",
+        "Tiny electrical sparks and motes floating in the air near the blade — scattered cyan-white points of light",
+        "Ozone distortion: very subtle wavy heat-distortion-like effect near the most intense electrical areas, suggesting the air itself is being ionized"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hand-painted digital game icon, World of Warcraft inventory icon style, painterly brushstrokes with energetic loose strokes for electrical effects, single weapon on dark background. A breathtaking elemental storm sword (Thunderfury-inspired) oriented diagonally from lower-left to upper-right, filling 80% of the square frame. Elongated slightly curved single-edged blade with dramatic forked tip splitting into two lightning-bolt prongs. Lower blade forged from dark teal-blue storm-metal with swirling cloud patterns within the steel surface, wet electrically charged sheen. Upper blade transitions from solid metal into crackling arcing pure lightning energy — steel dissolving into cyan-blue electricity (#00ccff) with white-hot transition points (#ffffff), branching electrical fractals. Chain lightning arcs leaping between the forked blade tips and outward into surrounding air, 6-8 visible arcs with bright white cores and cyan-blue glow. Swept-back angular crossguard of storm-metal shaped like stylized lightning, tips crackling with electrical discharge. Grip wrapped in metallic storm-grey threads with tiny lightning arcs crawling along surface. Pommel is a contained ball lightning sphere — roiling blue-white electrical energy in storm-metal wire cage, constantly flickering. Legendary quality orange glow (#ff8000) as strong warm backlight halo behind weapon. Weapon IS the primary light source, blue-white electrical illumination casting rim-light on dark metal portions. Cyan-blue electrical corona haze surrounding entire blade. Dark radial gradient background from #0a1520 to #050a10 dramatically illuminated by electrical discharge. Tiny floating electrical sparks near blade. Maximum visual impact, Blizzard WoW icon art quality at its peak, dramatic energy effects, stylized realism pushed to fantastical extreme.",
+    "negative": "text, watermark, signature, UI frame, item border overlay, numbers, stats, tooltip, hands holding weapon, fingers, character, person, arm, environmental background, ground, table, wall, grass, sky, clouds, rain, mundane steel, rust, dull metal, no magical effects, plain weapon, simple design, anime style, cartoon, chibi, photorealistic, 3D render, cel-shaded, multiple weapons, shield, second object, split frame, multiple panels, collage, border frame, blurry, low quality, deformed proportions, straight boring blade, symmetrical blade tip, no electrical effects, red fire effects, green nature effects, purple shadow effects, single color lighting"
+  }
+}

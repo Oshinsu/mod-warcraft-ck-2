@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_evt_gnomeregan",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/event_pictures/hoa_evt_gnomeregan.png",
+    "ck2_gfx_name": "GFX_evt_hoa_gnomeregan",
+    "final_size": "460x300",
+    "scene_intent": "Gnomeregan — la cité souterraine gnome irradiée et trahie. L'ancienne merveille technologique du peuple gnome, empoisonnée par Thermaplugg, devenue un tombeau radioactif. L'image doit capturer la tragédie d'un génie brisé — des machines extraordinaires noyées dans la radiation verte."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Référence : BioShock Rapture rencontre Tchernobyl — utopie technologique détruite de l'intérieur",
+        "Rendu : illustration technique steampunk ultra-détaillée, chaque engrenage compte",
+        "Contraste thématique : émerveillement technologique vs contamination radioactive mortelle",
+        "Tonalité : catastrophe industrielle, nostalgie d'un âge d'or perdu, horreur silencieuse de la radiation"
+      ],
+      "look": "ultra-detailed steampunk industrial illustration, technical precision in mechanical elements, luminous radioactive glow effects, cross-section architectural cutaway feel, Blizzard concept art meets Syd Mead industrial design, every rivet and gear rendered with love",
+      "palette": {
+        "dominant": "#39ff14 — vert radioactif toxique, omniprésent comme un poison visuel (tropoylium green)",
+        "secondary": "#8B4513 — cuivre oxydé et laiton terni, les métaux nobles de la technologie gnome corrompus",
+        "accent_1": "#CD7F32 — bronze poli sur les machines encore fonctionnelles, éclats de l'ancien génie",
+        "accent_2": "#2F4F4F — acier sombre des structures portantes, gris-vert de la corrosion",
+        "accent_3": "#FFD700 — or des circuits d'énergie encore actifs, veines lumineuses dans les murs",
+        "highlight": "#ADFF2F — points de lumière radioactive maximale, presque blanc-vert aveuglant"
+      },
+      "art_references": [
+        "Syd Mead — designs industriels futuristes (rigueur technique, vision utopiste)",
+        "HR Giger — Alien (architecture organique-mécanique corrompue, malaise visuel)",
+        "Studio Ghibli — Le Château dans le Ciel (la merveille technologique abandonnée)",
+        "BioShock — Rapture underwater city (utopie déchue, art déco mécanique)"
+      ]
+    },
+    "environment": {
+      "space": "Immense caverne artificielle souterraine — le Grand Hall d'Assemblage de Gnomeregan. Une salle de 200m de diamètre et 80m de hauteur, entièrement usinée dans la roche, chaque surface couverte de machines, tuyaux, engrenages et cadrans. Au centre, le Générateur Principal — un cylindre de cuivre et cristal de 40m de haut qui pulsait autrefois d'énergie propre mais déverse maintenant une luminescence verte toxique. Des passerelles métalliques à claire-voie s'entrecroisent à différentes hauteurs comme un réseau de toiles d'araignée industrielles. Des tubes pneumatiques transpercent l'espace dans toutes les directions.",
+      "foreground": "Plateforme d'observation en grillage métallique au bord de laquelle le spectateur se tient. Garde-corps en laiton terni avec des cadrans à aiguilles — tous bloqués en zone rouge. Un panneau de contrôle gnomique à demi arraché, fils pendants, étincelles sporadiques. Des flaques de liquide radioactif vert fluorescent stagnent dans les creux du grillage, reflétant la lueur du Générateur. Un casque de technicien gnome abandonné au sol — cabossé, visière brisée, encore taché de vert. Des empreintes de pas minuscules (gnomes) mènent vers le bord et s'arrêtent.",
+      "midground": "Le Générateur Principal domine l'espace — un pilier technologique autrefois magnifique maintenant corrompu. Ses anneaux de cuivre tournent encore lentement, émettant des grondements sourds. Le cristal central a viré du bleu pur au vert malade. Des fuites radioactives s'écoulent de joints éclatés en cascades lumineuses vertes. Autour du Générateur, des machines gnomiques complexes (centrifugeuses, distillateurs, automates) sont figées dans leur dernier état — certaines encore en mouvement erratique, d'autres effondrées en tas de métal. Des leper gnomes (gnomes irradiés, peau verdâtre, yeux fous) sont visibles comme de minuscules silhouettes sur les passerelles inférieures — certains semblent travailler sur des machines qui ne fonctionnent plus, gestes répétitifs et insensés.",
+      "background": "Les parois de la caverne sont percées de centaines d'ouvertures circulaires — habitations, ateliers, laboratoires — comme une termitière mécanique. La plupart sont sombres, abandonnées. Quelques-unes émettent encore une lueur errante. Le plafond de la caverne est invisible, perdu dans les vapeurs vertes et les réseaux de tuyaux. Des stalactites artificielles (condenseurs, récupérateurs) pendent comme des lustres industriels brisés. Tout au fond, l'entrée du tunnel d'évacuation — un cercle de lumière grise naturelle, minuscule, rappelant que le monde extérieur existe encore.",
+      "atmosphere": "Catastrophe industrielle silencieuse, génie gâché, radiation omniprésente, machines qui ne savent pas qu'elles sont mortes",
+      "weather": "Intérieur souterrain — pas de météo mais des vapeurs radioactives vertes qui se déplacent en nappes lentes, condensation sur toutes les surfaces métalliques",
+      "time_of_day": "Sans objet (souterrain) — éclairage artificiel défaillant crée un perpétuel crépuscule vert"
+    },
+    "subjects": [
+      {
+        "element": "Le Générateur Principal corrompu",
+        "details": "Cylindre de cuivre et cristal de 40m — chef-d'oeuvre d'ingénierie gnome. Anneaux concentriques de cuivre poli tournant lentement autour d'un cristal central hexagonal. Le cristal a viré du bleu au vert empoisonné. Des fuites de fluide radioactif suintent de 12 joints éclatés, formant des cascades vertes luminescentes. Des arcs d'énergie verte crépitent entre les anneaux. La base est noyée dans un lac de liquide radioactif.",
+        "importance": "Point focal central absolu — toute la tragédie de Gnomeregan dans un seul objet"
+      },
+      {
+        "element": "Les leper gnomes",
+        "details": "5-8 minuscules silhouettes (0.9m de haut) sur les passerelles inférieures. Peau verdâtre, vêtements de techniciens en lambeaux. Certains répètent des gestes de maintenance sur des machines mortes — tragédie de l'esprit brisé par la radiation. L'un semble regarder vers le haut, bras pendants. Tous sont des silhouettes ou de très petites figures, pas de détails faciaux.",
+        "importance": "Donnent l'échelle colossale de la salle et incarnent la tragédie humaine"
+      }
+    ],
+    "camera": {
+      "shot_type": "Plongée légère depuis une plateforme d'observation — vue panoramique intérieure",
+      "angle": "Plongée de 20° regardant vers le bas et le centre de la caverne, embrassant toute la hauteur du Générateur",
+      "lens_equivalent": "24mm grand angle — pour capturer l'immensité de l'espace souterrain et la densité des machines",
+      "focal_point": "Le cristal vert du Générateur Principal au centre de l'image — la source de toute la corruption",
+      "depth_of_field": "Profondeur étendue avec brouillard radioactif créant une perspective atmosphérique naturelle — net au premier plan, progressivement voilé de vert",
+      "composition_rules": [
+        "Composition radiale : le Générateur au centre, les passerelles et tuyaux irradiant comme les rayons d'une roue",
+        "Le casque gnome abandonné au premier plan crée une entrée narrative intime avant le panorama vertigineux",
+        "Les lignes courbes des passerelles spiralent vers le centre comme un drain — sensation d'aspiration vers le danger",
+        "Gradient vertical de lumière : vert intense au centre (Générateur), progressivement plus sombre vers les parois"
+      ]
+    },
+    "lighting": {
+      "key_light": "Luminescence radioactive verte du Générateur central — c'est la source principale, une lumière malade, instable, qui pulse lentement comme un coeur empoisonné, projetant des ombres vertes dans toutes les directions",
+      "fill_light": "Lueur résiduelle des circuits d'énergie dorés encore actifs dans les murs — veines de lumière chaude (or) qui contrastent avec le vert dominant, rappel de ce que Gnomeregan était autrefois",
+      "accent_lights": [
+        "Étincelles sporadiques des courts-circuits — flashes blanc-bleu brefs et aléatoires sur les panneaux de contrôle",
+        "Flaques radioactives au sol — chaque flaque est une source de lumière verte par le bas (uplighting sinistre)",
+        "Cascades de fluide radioactif depuis le Générateur — lignes de lumière verte verticales, comme des chutes d'eau lumineuses",
+        "Rares lampes gnomiques encore fonctionnelles — globes de verre ambrés parmi la verdure, comme des étoiles chaudes mourantes"
+      ],
+      "shadows": "Les structures métalliques projettent des ombres quadrillées complexes — grillages, engrenages, tuyaux créent un réseau d'ombres géométriques sur toutes les surfaces. L'ombre propre du Générateur forme un cylindre sombre à sa base. Les passerelles supérieures ombrent les inférieures, créant des strates de lumière et d'obscurité.",
+      "atmospheric_fx": [
+        "Brouillard radioactif : nappes de vapeur vert translucide se déplaçant lentement à mi-hauteur, traversées par les faisceaux de lumière du Générateur",
+        "Particules en suspension : poussière métallique et gouttelettes radioactives visibles dans les cônes de lumière — chaque particule un minuscule point vert",
+        "Halo du Générateur : nimbe vert diffus autour du cristal central, s'atténuant avec la distance",
+        "Condensation : gouttelettes sur toutes les surfaces métalliques froides, reflétant la lumière verte en milliers de minuscules points"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "3:2",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Ultra-detailed steampunk industrial illustration, technical precision on every gear and rivet, luminous radioactive glow, Blizzard concept art meets Syd Mead industrial design. Immense artificial underground cavern — Gnomeregan Grand Assembly Hall, 200 meters diameter, 80 meters tall, every surface covered in machines, pipes, gears, and dials. Center: the corrupted Main Generator — a 40-meter copper-and-crystal cylinder that once pulsed clean energy now radiating sick green toxic luminescence. Concentric copper rings slowly rotating around a hexagonal central crystal turned from pure blue to poisoned green. Radioactive fluid leaking from 12 burst seals forming luminescent green cascades. Green energy arcs crackling between rings. Base flooded in a lake of radioactive liquid. Metal grate walkways crisscrossing at multiple heights like an industrial spiderweb network. Pneumatic tubes piercing the space in all directions. Foreground: observation platform with tarnished brass railings, dial gauges all stuck in red zones, half-ripped gnomish control panel with dangling wires and sporadic sparks, puddles of fluorescent green radioactive liquid pooling in grate depressions reflecting the Generator glow, an abandoned gnome technician helmet on the ground — dented, visor cracked, stained green, tiny footprints leading to the edge and stopping. Midground: the Generator dominates, its once-magnificent copper rings still grinding slowly with deep rumbles, complex gnomish machines (centrifuges, distillers, automatons) frozen in their last state — some still moving erratically, others collapsed in metal heaps. 5-8 tiny leper gnome silhouettes (0.9m tall) on lower walkways, greenish skin, tattered technician clothes, some repeating maintenance gestures on dead machines in broken repetitive motions, one looking up with arms hanging limp. Background: cavern walls perforated with hundreds of circular openings — abandoned dwellings, workshops, laboratories — like a mechanical termite mound, most dark, a few emitting faint wandering light. Ceiling lost in green vapors and pipe networks. Artificial stalactites (condensers, collectors) hanging like broken industrial chandeliers. Far back: evacuation tunnel entrance — a tiny circle of grey natural light, reminder the outside world exists. Lighting: radioactive green from central Generator as main source — sick, unstable, pulsing slowly like a poisoned heartbeat, casting green shadows in all directions. Residual golden energy circuits still active in walls — warm gold veins contrasting the dominant green, memory of what Gnomeregan once was. Sporadic white-blue sparks from short circuits. Green radioactive puddles as sinister uplighting sources. Rare functioning gnomish amber glass globe lamps among the green like dying warm stars. Atmospheric: slow-moving translucent green vapor at mid-height, metallic dust and radioactive droplets visible in light cones as tiny green points, green halo nimbus around central crystal. Radial composition centered on Generator. Color palette: toxic neon green dominant, tarnished copper and brass, corroded dark steel, gold circuit veins, blinding white-green highlights. Mood: silent industrial catastrophe, wasted genius, omnipresent radiation, machines that do not know they are dead.",
+    "negative": "text, watermark, signature, UI elements, modern computers, anime style, cartoon, photorealistic faces, oversaturated, outdoor scene, sunlight, sky, trees, nature, blurry, low quality, deformed machinery, extra limbs, split frame, multiple panels, border frame, cheerful atmosphere, clean pristine surfaces, bright happy colors"
+  }
+}

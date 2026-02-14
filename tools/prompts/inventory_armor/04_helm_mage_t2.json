@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_helm_mage_t2",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_helm_mage_t2.png",
+    "ck2_gfx_name": "GFX_inv_hoa_helm_mage_t2",
+    "final_size": "64x64",
+    "scene_intent": "Netherwind Crown — Tier 2 Mage headpiece from Blackwing Lair, a dramatic purple and silver circlet with sweeping arcane wing ornaments and a large purple crystal centerpiece. Rendered as a World of Warcraft inventory icon with an epic-quality purple glow. The crown must convey mastery of the nether winds, otherworldly arcane supremacy, and the terrifying elegance of raw magical power barely contained."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Direct reference: World of Warcraft Classic — Netherwind Crown (Tier 2 Mage set from Blackwing Lair)",
+        "Render: hand-painted digital icon art, ethereal quality, luminous purple crystal rendering, silver metalwork precision",
+        "Framing: single isolated item, centered on dark gradient, WoW inventory icon composition",
+        "Quality border: epic item purple glow (#a335ee) framing the icon edges, nether-energy radiant bloom",
+        "Tonality: otherworldly arcane supremacy, nether-wind mastery, terrifying magical elegance"
+      ],
+      "look": "hand-painted WoW inventory icon style, stylized realism with ethereal luminous quality, silver and purple tonal harmony, concept art quality matching peak Blizzard item artistry",
+      "palette": {
+        "dominant": "#6b3fa0 — rich purple of the cloth elements and crystal body",
+        "secondary": "#b0b8c8 — polished silver of the metalwork framework and wing structures",
+        "accent_1": "#9040d0 — bright violet-magenta of the crystal's internal energy",
+        "accent_2": "#a335ee — epic quality purple glow suffusing the entire piece",
+        "accent_3": "#d0d8e8 — bright silver highlights on the wing edges and metal peaks",
+        "highlight": "#e0c0ff — pale lavender-white brilliance at the crystal's brightest facets"
+      },
+      "art_references": [
+        "World of Warcraft — Netherwind Crown (Tier 2 Mage, Blackwing Lair)",
+        "Blizzard Entertainment — WoW epic cloth headpiece icon art",
+        "Hermes/Mercury winged crown motif — classical deity headwear with wing elements",
+        "Art Deco crystal crown design — geometric precision with luminous gemwork",
+        "Alphonse Mucha — decorative headpiece illustrations with sweeping organic wing forms"
+      ]
+    },
+    "environment": {
+      "space": "Pure inventory icon presentation. The crown floats centered against a dark radial gradient from deep black-purple (#12101a) at edges to dark plum (#1c1828) behind the item. The epic purple glow saturates the surrounding darkness.",
+      "foreground": "The crown occupies approximately 70-75% of the frame, with the sweeping wing ornaments extending the visual footprint. Presented at near-frontal view with a subtle tilt.",
+      "midground": "Not applicable — single item icon composition",
+      "background": "Smooth dark gradient with purple-black undertone, harmonizing with the crown's dominant purple palette.",
+      "atmosphere": "Raw nether energy barely contained within silver bindings — the crown feels like it could tear a hole in reality. Beautiful and dangerous.",
+      "weather": "Not applicable — interior inventory icon",
+      "time_of_day": "Not applicable — inventory icon with controlled lighting"
+    },
+    "subjects": [
+      {
+        "element": "Netherwind Crown — Tier 2 Mage headpiece",
+        "details": "A breathtaking arcane crown that transcends mere jewelry into the realm of magical apparatus — a device for channeling and focusing nether energies. STRUCTURE: The base is a slender silver circlet band, more refined and thinner than the T1 crown, with a slightly raised center front mounting platform. The silver is polished to a mirror finish with subtle cool blue undertones. The band features etched geometric patterns — concentric arcs, arcane circles, and precise line work that suggests magical circuitry rather than decorative filigree. SWEEPING WING ORNAMENTS: Rising from the temples of the circlet, two magnificent sweeping wings made of thin silver metalwork extend upward and backward. Unlike the warrior's solid gold dragon wings, these are skeletal and elegant — thin silver framework forming wing-bone structures with translucent purple crystalline membrane panels between the silver ribs. Each wing has four primary vanes that sweep upward in a graceful arc, the tips slightly curved and razor-sharp. The silver framework of the wings is etched with the same arcane circuit patterns as the band. The translucent purple membranes between the wing ribs glow with faint internal light, appearing almost like stained glass. PURPLE CRYSTAL CENTERPIECE: A large pointed amethyst-like crystal is mounted at the forehead, projecting slightly forward and upward. The crystal is a deep saturated purple with extraordinary internal luminosity — it appears to contain a swirling vortex of nether energy within, light spiraling inside the faceted form. The crystal is hexagonal in cross-section, tapering to a sharp point at the top. It sits in a precision-cut silver mounting cradle with six articulated prongs. The crystal's glow illuminates the surrounding silver metalwork with a wash of purple light. At the crystal's base, tiny tendrils of purple energy appear to arc between the prongs, as if the mounting is actively containing the crystal's power. DETAILS: Small secondary crystals — three on each side — are mounted along the circlet band between the forehead crystal and the wing bases. These are smaller pointed purple crystals, each glowing faintly in resonance with the central stone. The entire piece has an engineered precision that suggests archmage artificery rather than traditional jewelry-making.",
+        "scale": "The wings extend the silhouette dramatically beyond the circlet band width, creating a tall and wide crown profile that dominates the icon frame"
+      },
+      {
+        "element": "Epic quality purple glow effect",
+        "details": "An intense purple glow (#a335ee) radiates from the crown, particularly from the central crystal and the wing membrane panels. The glow is rich and saturated, creating a prominent halo around the entire piece. The crystal serves as the primary glow source, with nether-purple light radiating outward in all directions. The wing membranes glow as secondary sources. The effect creates a layered luminous aura — bright magenta-purple nearest the crystal, fading to softer lavender-purple at the edges of the halo. Faint arcs of purple energy occasionally bridge between the crystal and the wing tips.",
+        "scale": "Prominent glow halo extending 10-12% beyond the item silhouette, with the crystal glow reaching even further in subtle radiance"
+      }
+    ],
+    "camera": {
+      "shot_type": "Flat frontal icon view with minimal rotation to preserve the symmetry of the wing ornaments",
+      "angle": "Nearly dead-on frontal, 5 degree leftward rotation and 5 degree downward tilt to reveal the crystal's top facet and the wing curvature",
+      "lens_equivalent": "85mm equivalent — flat orthographic presentation",
+      "focal_point": "The central purple crystal — the brightest and most luminous element, drawing the eye immediately before it traces outward along the wings",
+      "depth_of_field": "Infinite on the item, soft diffuse glow effects in the background",
+      "composition_rules": [
+        "Crown centered with crystal as the compositional anchor",
+        "Wing ornaments create dramatic upward-sweeping lines from center to corners",
+        "Near-bilateral symmetry gives the crown a formal, powerful presence",
+        "Crystal positioned at the visual center, serving as the radiant focal hub",
+        "Epic purple glow establishes the quality tier immediately and creates a luminous frame"
+      ]
+    },
+    "lighting": {
+      "key_light": "Cool directional light from upper-left at 45 degrees (7000K slightly blue), designed to maximize the silver metalwork's reflective brilliance. The cool temperature complements the purple palette rather than fighting it.",
+      "fill_light": "Purple-tinted ambient fill from the crystal itself, radiating outward and illuminating the underside of the wings and the circlet band with a soft violet wash.",
+      "accent_lights": [
+        "Epic-quality purple rim light (#a335ee at 50% intensity) outlining the wing edges and circlet band, strongest at wing tips",
+        "Crystal core illumination: intense purple-white light from within the central crystal, the brightest single light source in the image",
+        "Secondary crystal resonance glow: each small side crystal emits a tiny purple light, creating six small accent points along the band",
+        "Silver metalwork specular highlights: sharp cool white-blue points on the wing framework edges and circlet band peaks"
+      ],
+      "shadows": "Minimal heavy shadows due to the crown's self-illumination — the purple crystal and glowing membranes fill shadows with colored light. The silver catches cool highlights on the light side and purple reflected light on the shadow side. The wing framework casts delicate shadow patterns on the translucent membranes. The area directly beneath the crystal shows the strongest concentrated purple illumination.",
+      "atmospheric_fx": [
+        "Epic purple glow aura: rich saturated bloom radiating from the crown, creating a prominent halo effect in the dark background",
+        "Crystal vortex internal effect: visible swirling nether energy within the central crystal, suggesting contained power",
+        "Nether energy arcs: faint purple lightning-like tendrils bridging between the crystal prongs and occasionally arcing toward wing tips",
+        "Purple-white sparkle motes: 4-5 bright sparkle points scattered around the crown, more numerous than T1 quality",
+        "Wing membrane translucency: the purple panels between wing ribs glow with transmitted light, visible as luminous purple panes"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hand-painted World of Warcraft inventory icon style, single item on dark background, stylized realism with ethereal luminous quality. A dramatic purple and silver mage crown (Netherwind Crown, Tier 2) centered on a smooth dark gradient background. Slender polished silver circlet band with etched arcane geometric circuit patterns. Two magnificent sweeping silver wing ornaments rising from the temples, thin skeletal silver framework with translucent glowing purple crystalline membrane panels between the ribs, four vanes per wing curving upward gracefully with razor-sharp tips. Large pointed hexagonal purple crystal centerpiece at the forehead projecting upward, deep saturated purple with extraordinary internal luminosity, swirling nether vortex visible within facets, mounted in a precision six-prong silver cradle with tiny purple energy arcs between the prongs. Six smaller resonant purple crystals along the band. Engineered archmage precision aesthetic. Epic quality purple glow (#a335ee) radiating as a rich saturated aura, strongest from the central crystal and wing membranes. Faint nether lightning arcs between crystal and wing tips. Purple-white sparkle motes floating nearby. Cool directional lighting maximizing silver reflective brilliance, crystal self-illumination casting purple wash on surrounding metalwork. Concept art quality, Blizzard epic item icon style, otherworldly arcane elegance.",
+    "negative": "person wearing armor, full body, mannequin, armor stand, text, watermark, signature, multiple items, busy background, environmental scene, photorealistic, photograph, 3D render, anime, cartoon, chibi, neon, sci-fi, modern elements, blurry, low quality, oversaturated, split frame, multiple panels, border frame, UI elements, HUD, tooltip, item name overlay"
+  }
+}

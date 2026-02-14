@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_helm_warrior_t1",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_helm_warrior_t1.png",
+    "ck2_gfx_name": "GFX_inv_hoa_helm_warrior_t1",
+    "final_size": "64x64",
+    "scene_intent": "Tier 1 Might Helm — the iconic warrior helmet from Molten Core, a brutal dark iron great helm with imposing bull horns and an open visor. Rendered as a World of Warcraft inventory icon: a single item floating on a dark background with a rare-quality blue glow border. The helm should convey raw martial power, dwarven-forged resilience, and the volcanic origins of Molten Core."
+  },
+  "scene_graph": {
+    "style_bible": {
+      "usp_core": [
+        "Direct reference: World of Warcraft Classic inventory icon art style — hand-painted, stylized realism",
+        "Render: digital painting with visible brushwork, rich color saturation, painterly highlights and shadows",
+        "Framing: single isolated item, centered on dark gradient, WoW inventory icon composition",
+        "Quality border: rare item blue glow (#0070dd) framing the icon edges, soft radiant bloom",
+        "Tonality: martial brutality, volcanic forge heat, unyielding defensive strength"
+      ],
+      "look": "hand-painted WoW inventory icon style, stylized realism with painterly brushstrokes, rich saturated metallics, dramatic lighting on a single object against dark background, concept art quality matching Blizzard item artists like Twincruiser and Samwise Didier",
+      "palette": {
+        "dominant": "#2a2a2a — dark gunmetal iron forming the bulk of the helm's surface",
+        "secondary": "#4a3628 — warm dark brown undertones in the iron, volcanic forge patina",
+        "accent_1": "#c45e1a — molten orange-red glow in the rivets and eye slit edges, suggesting forge heat",
+        "accent_2": "#8b7355 — aged bronze trim along the brow ridge and cheek guards",
+        "accent_3": "#0070dd — rare quality blue glow emanating as a soft aura around the helm",
+        "highlight": "#d4c5a9 — bright metallic reflection points on the horn tips and brow ridge"
+      },
+      "art_references": [
+        "World of Warcraft — Helm of Might (Tier 1 Warrior set from Molten Core)",
+        "Blizzard Entertainment — WoW Classic inventory icon rendering style (64x64 painted icons)",
+        "Frank Frazetta — Death Dealer helmet (imposing horned barbarian helm silhouette)",
+        "Historical Viking Gjermundbu helm (open-face construction with nasal guard reference)",
+        "Dark Souls — Havel's Helm (massive oppressive plate helm aesthetic)"
+      ]
+    },
+    "environment": {
+      "space": "Pure inventory icon presentation — no environmental scene. The helm floats in the center of the frame against a smooth dark-to-darker radial gradient background. The background transitions from a very dark charcoal (#1a1a1a) at the edges to a slightly lighter dark grey (#252525) behind the helm, creating subtle depth. A faint rare-quality blue glow suffuses the area immediately around the item.",
+      "foreground": "The helm itself occupies approximately 75-80% of the frame, presented as if resting on an invisible stand at a very slight three-quarter angle for maximum readability of its silhouette and features.",
+      "midground": "Not applicable — single item icon composition",
+      "background": "Smooth dark radial gradient, no detail, no texture — clean inventory presentation background. The darkness serves to make the metalwork and glow effects pop with maximum contrast.",
+      "atmosphere": "The aura of a freshly looted rare item — precious, powerful, coveted. The blue glow whispers of magical enhancement beyond mundane craftsmanship.",
+      "weather": "Not applicable — interior inventory icon",
+      "time_of_day": "Not applicable — inventory icon with controlled lighting"
+    },
+    "subjects": [
+      {
+        "element": "Helm of Might — Tier 1 Warrior great helm",
+        "details": "A massive dark iron great helm built for a human or orc warrior of imposing stature. The helm is forged from thick plates of near-black iron with a subtle warm brown patina suggesting volcanic forge origins in the depths of Blackrock Mountain. STRUCTURE: Full bucket-style great helm with a flat crown and angular faceted sides. The visor is open — a wide horizontal eye slit with a thick nasal bar dividing it, flanked by pronounced cheek guards that angle outward slightly. The jawline of the helm is squared and brutal, with three rivets on each side holding the cheek plates to the main shell. HORNS: Two massive bull horns sprout from the temples of the helm, curving outward and then upward in a wide aggressive sweep. The horns are the same dark iron as the helm body but polished smoother, catching more light at their tips and ridged with subtle growth-ring textures along their length. Each horn is approximately one-third the total height of the helm. DETAILS: A reinforced brow ridge runs across the forehead, slightly raised and trimmed with aged bronze. Six dome-headed rivets run along this brow ridge, each with a faint orange-red glow at its base as if still cooling from the forge. The eye slit reveals deep shadow within — absolute darkness suggesting the void behind the visor. The nasal guard is thicker at the base and tapers slightly, with a single shallow groove running its length. Small scratch marks and battle wear are visible across the iron surface — shallow dents, tiny nicks, hairline scratches that catch the light differently from the surrounding metal. The neck guard at the rear flares outward slightly for mobility. MATERIAL QUALITY: The iron has a matte finish with areas of subtle sheen where use has polished it — the brow ridge, the horn bases, the edges of the eye slit. The metal reads as genuinely heavy — thick, substantial, forged not cast.",
+        "scale": "The helm fills most of the icon frame — presented at a scale that emphasizes its mass and the width of the horns. It should read clearly even at 64x64 pixel rendering."
+      },
+      {
+        "element": "Rare quality blue glow effect",
+        "details": "A soft, diffuse blue glow (#0070dd) emanates from the helm itself, as if the item radiates latent magical energy. The glow is strongest along the edges and silhouette of the helm — particularly the horn tips, the brow ridge, and the lower jaw edge. It bleeds outward approximately 5-8% of the frame into the dark background, creating a subtle halo. The glow is not uniform — it pulses slightly brighter at the horn tips and the rivets, suggesting enchantment focal points. This is the signature rare-quality item glow from World of Warcraft, immediately readable to any WoW player as a blue-quality item.",
+        "scale": "The glow extends just beyond the helm's silhouette, creating a thin luminous border effect"
+      }
+    ],
+    "camera": {
+      "shot_type": "Flat frontal icon view — the helm is presented almost straight-on with a very subtle 10-15 degree rotation to the viewer's left to show dimensional depth",
+      "angle": "Dead-on eye level, very slight three-quarter turn (10-15 degrees) to reveal the side plane of the helm and give the horns dimensional separation",
+      "lens_equivalent": "85mm equivalent — no perspective distortion, flat orthographic feel typical of inventory icons",
+      "focal_point": "The open visor eye slit and the dark void within — the viewer's eye should go to the face area first, then trace up to the horns",
+      "depth_of_field": "Effectively infinite — the entire helm is in razor-sharp focus, as befitting an inventory icon. Only the background glow is soft.",
+      "composition_rules": [
+        "Item centered in frame with equal margins on all sides",
+        "Horns extend to near the top edge of the frame, establishing maximum silhouette impact",
+        "The helm's widest point (horn tips) defines the horizontal extent",
+        "Dark background gradient centered behind the helm for subtle depth separation",
+        "Rare blue glow creates a natural border/vignette effect"
+      ]
+    },
+    "lighting": {
+      "key_light": "Strong directional light from upper-left at approximately 45 degrees (10 o'clock position), warm white (5500K) to emphasize the metallic surfaces. This creates a bright highlight stripe along the left horn, the left cheek guard, and the left half of the brow ridge. The key light is the primary surface-reading illumination.",
+      "fill_light": "Subtle cool blue-grey ambient fill from the lower-right, approximately 20% intensity of the key light, preventing the right side from falling into total blackness while maintaining dramatic contrast. This fill picks up the edges of the right horn and right cheek guard.",
+      "accent_lights": [
+        "Rare-quality blue rim light (#0070dd at 40% intensity) outlining the entire helm silhouette — strongest at the horn tips and brow ridge, creating the characteristic item-glow edge lighting",
+        "Faint warm orange point light from the rivet glow points — six tiny sources along the brow ridge casting minuscule warm highlights on surrounding iron",
+        "Specular highlight pinpoints on the polished areas — sharp white dots on the horn tips, the nasal guard peak, and the center of the brow ridge"
+      ],
+      "shadows": "Deep, rich shadows on the right side and underside of the helm. The interior of the visor is absolute black — the darkest point in the entire image. The underside of the horns casts a soft shadow on the top of the helm crown. Each rivet casts a tiny circular shadow below it. The shadow side of the helm maintains just enough detail to read the form.",
+      "atmospheric_fx": [
+        "Rare blue glow aura: soft diffuse bloom extending outward from the helm's silhouette into the dark background, strongest at edges and protrusions",
+        "Faint blue sparkle motes: 2-3 tiny bright blue-white sparkle points floating near the helm, suggesting magical enchantment particles",
+        "Subtle warm glow in rivet points: tiny orange-red emission from the six brow rivets as if magma still lives within the forge marks",
+        "Metal surface micro-reflections: hairline bright catches on scratches and wear marks across the iron surface"
+      ]
+    }
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png",
+    "safety_filter_level": "block_none"
+  },
+  "prompt_construction": {
+    "positive": "Hand-painted World of Warcraft inventory icon style, single item on dark background, stylized realism with painterly brushstrokes. A massive dark iron warrior great helm (Helm of Might, Tier 1) centered on a smooth dark gradient background. Full bucket-style great helm with flat crown, angular faceted sides, thick dark iron plates with warm volcanic-brown patina. Open visor with wide horizontal eye slit divided by a thick nasal bar, deep impenetrable shadow within. Pronounced squared cheek guards with three dome-headed rivets each. Two imposing bull horns sprouting from the temples, curving outward and upward in aggressive sweep, polished dark iron with subtle ridge textures along their length. Reinforced raised brow ridge trimmed with aged bronze, six dome rivets along it with faint orange-red forge glow at their bases. Battle-worn surface with shallow dents, tiny nicks, hairline scratches catching light. Matte iron finish with areas of use-polish sheen. Rare quality blue glow (#0070dd) emanating from the helm as a soft diffuse aura, strongest at horn tips and brow ridge, bleeding into the dark background. Tiny blue-white magical sparkle motes floating near the item. Strong directional lighting from upper-left creating dramatic metallic highlights and deep shadows. Rich saturated metallics, concept art quality, Blizzard item art style, clear readable silhouette at small scale.",
+    "negative": "person wearing armor, full body, mannequin, armor stand, text, watermark, signature, multiple items, busy background, environmental scene, photorealistic, photograph, 3D render, anime, cartoon, chibi, neon, sci-fi, modern elements, blurry, low quality, oversaturated, split frame, multiple panels, border frame, UI elements, HUD, tooltip, item name overlay"
+  }
+}
