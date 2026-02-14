@@ -2,7 +2,8 @@
 # Heroes of Azeroth - Prisoner & Battle Loot System
 # =====================================================
 # Artifact confiscation from prisoners and battlefield loot
-# Hooked via on_actions: on_character_captured, on_battle_won
+# Hooked via on_actions: on_battle_won_owner, on_death
+# Also triggered via decisions (confiscate prisoner goods)
 # =====================================================
 
 namespace = hoa_loot
@@ -10,7 +11,7 @@ namespace = hoa_loot
 # ========================================
 # 1. PRISONER CAPTURED - Confiscate Goods
 # ========================================
-# Fired when you capture a character (on_character_captured_any)
+# Fired from confiscation decisions
 # ROOT = captor, FROM = prisoner
 
 character_event = {
@@ -38,7 +39,7 @@ character_event = {
 			any_artifact = {
 				limit = { is_artifact_equipped = yes }
 				unsafe_transfer_artifact = {
-					from = FROM
+					from = PREV
 					to = ROOT
 				}
 			}
@@ -68,7 +69,7 @@ character_event = {
 					}
 				}
 				unsafe_transfer_artifact = {
-					from = FROM
+					from = PREV
 					to = ROOT
 				}
 			}
@@ -324,48 +325,31 @@ character_event = {
 }
 
 # ========================================
-# 6. EXECUTION LOOT
+# 6. DEATH LOOT RELAY (Hidden)
 # ========================================
-# When executing a prisoner, inherit their artifacts
+# Fires on_death: ROOT = dying character, FROM = killer
+# This is a hidden relay that fires hoa_loot.9 for the killer
 character_event = {
 	id = hoa_loot.6
-	title = hoa_loot_6_title
-	desc = hoa_loot_6_desc
-	picture = GFX_evt_battle
+	hide_window = yes
 
 	is_triggered_only = yes
 
 	trigger = {
+		any_artifact = { always = yes }
 		FROM = {
-			any_artifact = { always = yes }
+			character = yes
 		}
 	}
 
-	# Claim their possessions
-	option = {
-		name = hoa_loot_6_a
+	immediate = {
 		FROM = {
-			any_artifact = {
-				unsafe_transfer_artifact = {
-					from = FROM
-					to = ROOT
-				}
-			}
+			character_event = { id = hoa_loot.9 }
 		}
-		prestige = 10
-
-		ai_chance = { factor = 90 }
 	}
 
-	# Bury them with their belongings
 	option = {
-		name = hoa_loot_6_b
-		piety = 25
-
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 3 trait = kind }
-		}
+		name = OK
 	}
 }
 
@@ -395,7 +379,7 @@ character_event = {
 			random_artifact = {
 				limit = { is_artifact_equipped = yes }
 				unsafe_transfer_artifact = {
-					from = FROM
+					from = PREV
 					to = ROOT
 				}
 			}
@@ -481,5 +465,45 @@ character_event = {
 		prestige = -5
 
 		ai_chance = { factor = 20 }
+	}
+}
+
+# ========================================
+# 9. FALLEN ENEMY POSSESSIONS (Notification to killer)
+# ========================================
+# Fired by hoa_loot.6 relay: ROOT = killer, FROM = dead character
+character_event = {
+	id = hoa_loot.9
+	title = hoa_loot_6_title
+	desc = hoa_loot_6_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	# Claim their possessions
+	option = {
+		name = hoa_loot_6_a
+		FROM = {
+			any_artifact = {
+				unsafe_transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		prestige = 10
+
+		ai_chance = { factor = 90 }
+	}
+
+	# Bury them with their belongings
+	option = {
+		name = hoa_loot_6_b
+		piety = 25
+
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 3 trait = kind }
+		}
 	}
 }

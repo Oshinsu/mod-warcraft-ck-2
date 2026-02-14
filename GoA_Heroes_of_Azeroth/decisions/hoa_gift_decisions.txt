@@ -40,17 +40,17 @@ targetted_decisions = {
 
 		effect = {
 			FROM = { wealth = -25 }
-			# Base +10 opinion, +1 per 2 diplomacy of sender
+			wealth = 25
 			opinion = {
 				who = FROM
 				modifier = hoa_opinion_gift_small
 				years = 5
 			}
-			# Tooltip feedback
 			hidden_tooltip = {
 				FROM = {
 					character_event = { id = hoa_gift.1 }
 				}
+				character_event = { id = hoa_gift.10 }
 			}
 		}
 
@@ -105,6 +105,7 @@ targetted_decisions = {
 
 		effect = {
 			FROM = { wealth = -50 }
+			wealth = 50
 			opinion = {
 				who = FROM
 				modifier = hoa_opinion_gift_moderate
@@ -114,6 +115,7 @@ targetted_decisions = {
 				FROM = {
 					character_event = { id = hoa_gift.2 }
 				}
+				character_event = { id = hoa_gift.10 }
 			}
 		}
 
@@ -163,6 +165,7 @@ targetted_decisions = {
 
 		effect = {
 			FROM = { wealth = -100 }
+			wealth = 100
 			opinion = {
 				who = FROM
 				modifier = hoa_opinion_gift_generous
@@ -172,6 +175,7 @@ targetted_decisions = {
 				FROM = {
 					character_event = { id = hoa_gift.3 }
 				}
+				character_event = { id = hoa_gift.10 }
 			}
 		}
 
@@ -225,6 +229,7 @@ targetted_decisions = {
 
 		effect = {
 			FROM = { wealth = -250 }
+			wealth = 250
 			opinion = {
 				who = FROM
 				modifier = hoa_opinion_gift_royal
@@ -237,6 +242,7 @@ targetted_decisions = {
 				FROM = {
 					character_event = { id = hoa_gift.4 }
 				}
+				character_event = { id = hoa_gift.10 }
 			}
 		}
 
@@ -290,6 +296,7 @@ targetted_decisions = {
 
 		effect = {
 			FROM = { wealth = -500 }
+			wealth = 500
 			opinion = {
 				who = FROM
 				modifier = hoa_opinion_gift_legendary
@@ -298,11 +305,11 @@ targetted_decisions = {
 			# Major prestige for the act of generosity
 			FROM = { prestige = 150 }
 			prestige = 75
-			# Chance of non-aggression
 			hidden_tooltip = {
 				FROM = {
 					character_event = { id = hoa_gift.5 }
 				}
+				character_event = { id = hoa_gift.10 }
 			}
 		}
 

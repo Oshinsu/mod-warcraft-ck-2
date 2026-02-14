@@ -11,16 +11,6 @@ hoa_commander_duel_cooldown = { }
 hoa_class_ability_cooldown = { }
 
 # ==========================================
-# FACTION / TRADE COOLDOWNS (shared)
-# ==========================================
-hoa_appease_cooldown = { }
-hoa_faction_spy_cooldown = { }
-hoa_trade_route_cooldown = { }
-hoa_caravan_cooldown = { }
-hoa_trade_fair_cooldown = { }
-hoa_embargo_cooldown = { }
-
-# ==========================================
 # FORTIFICATION MODIFIER
 # ==========================================
 hoa_fortified_position = {
@@ -134,86 +124,9 @@ hoa_battle_monk_serenity = {
 }
 
 # ==========================================
-# WAR WEARINESS / RALLY MODIFIERS
+# WAR WEARINESS
 # ==========================================
-hoa_rallied_loyalists = {
-	vassal_opinion = 10
-	levy_size = 0.05
-	icon = 4
-}
-
 hoa_war_weariness_press_on = {
 	levy_size = -0.05
 	icon = 7
-}
-
-# ==========================================
-# TRADE MODIFIERS (shared with trade system)
-# ==========================================
-hoa_trade_fair_active = {
-	local_tax_modifier = 0.15
-	icon = 4
-}
-
-hoa_active_trade_route = {
-	global_tax_modifier = 0.10
-	monthly_character_wealth = 1
-	icon = 4
-}
-
-hoa_active_trade_route_minor = {
-	global_tax_modifier = 0.05
-	icon = 4
-}
-
-hoa_renowned_market = {
-	local_tax_modifier = 0.10
-	tech_growth_modifier = 0.05
-	icon = 4
-}
-
-hoa_embargoed = {
-	local_tax_modifier = -0.15
-	levy_size = -0.10
-	icon = 7
-}
-
-# ==========================================
-# CIVIL WAR MODIFIER
-# ==========================================
-hoa_civil_war_prepared = {
-	levy_size = 0.10
-	morale_offence = 0.10
-	icon = 14
-}
-
-# ==========================================
-# BATTLE OPINION MODIFIERS
-# ==========================================
-hoa_opinion_appeased = {
-	opinion = 15
-}
-
-hoa_opinion_faction_exposed = {
-	opinion = -10
-}
-
-hoa_opinion_rallied = {
-	opinion = 10
-}
-
-hoa_opinion_submitted = {
-	opinion = 15
-}
-
-hoa_opinion_defied = {
-	opinion = -30
-}
-
-hoa_opinion_embargo_target = {
-	opinion = -25
-}
-
-hoa_opinion_war_weary = {
-	opinion = -10
 }

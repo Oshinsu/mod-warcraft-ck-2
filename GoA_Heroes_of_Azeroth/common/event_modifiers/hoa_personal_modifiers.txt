@@ -134,36 +134,7 @@ hoa_cultural_reform = {
 hoa_recently_looted_battle = { }
 hoa_recently_looted_commander = { }
 
-# ==========================================
-# LOOT SYSTEM OPINION MODIFIERS
-# ==========================================
-hoa_opinion_robbed = {
-	opinion = -50
-}
-hoa_opinion_confiscated = {
-	opinion = -25
-}
-opinion_merciful = {
-	opinion = 25
-}
-opinion_fair_judge = {
-	opinion = 20
-}
-opinion_unfair = {
-	opinion = -15
-}
-opinion_pious_ruler = {
-	opinion = 15
-}
-opinion_feared = {
-	opinion = -20
-}
-opinion_dishonorable = {
-	opinion = -15
-}
-opinion_loyal_servant = {
-	opinion = 15
-}
+# NOTE: Opinion modifiers are in common/opinion_modifiers/hoa_opinion_modifiers.txt
 
 # ==========================================
 # SCHEME COOLDOWN MODIFIERS
@@ -176,6 +147,7 @@ hoa_scheme_poison_cd = { }
 hoa_scheme_kidnap_cd = { }
 hoa_scheme_ritual_cd = { }
 hoa_scheme_coup_cd = { }
+hoa_scheme_smuggle_cd = { }
 
 # ==========================================
 # SCHEME ONGOING MODIFIERS
@@ -186,24 +158,4 @@ hoa_smuggling_network_small = {
 	icon = 14
 }
 
-# ==========================================
-# SCHEME OPINION MODIFIERS
-# ==========================================
-hoa_opinion_caught_scheming = {
-	opinion = -30
-}
-hoa_opinion_scandal = {
-	opinion = -25
-}
-hoa_opinion_poisoner = {
-	opinion = -40
-}
-hoa_opinion_blackmailed = {
-	opinion = 15
-}
-hoa_opinion_watched = {
-	opinion = -10
-}
-hoa_opinion_coup_success = {
-	opinion = -15
-}
+# NOTE: Scheme opinion modifiers are in common/opinion_modifiers/hoa_opinion_modifiers.txt

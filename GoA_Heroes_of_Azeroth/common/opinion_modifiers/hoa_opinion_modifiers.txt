@@ -1,0 +1,277 @@
+# =====================================================
+# Heroes of Azeroth - Opinion Modifiers
+# =====================================================
+# CK2 requires opinion modifiers in common/opinion_modifiers/
+# for use with the opinion = { modifier = X } command.
+# Event modifiers (common/event_modifiers/) are a separate system.
+# =====================================================
+
+# ==========================================
+# GIFT SYSTEM OPINIONS
+# ==========================================
+hoa_opinion_gift_small = {
+	opinion = 10
+}
+hoa_opinion_gift_moderate = {
+	opinion = 20
+}
+hoa_opinion_gift_generous = {
+	opinion = 30
+}
+hoa_opinion_gift_royal = {
+	opinion = 50
+}
+hoa_opinion_gift_legendary = {
+	opinion = 75
+}
+
+# ==========================================
+# LOOT SYSTEM OPINIONS
+# ==========================================
+hoa_opinion_robbed = {
+	opinion = -50
+}
+hoa_opinion_confiscated = {
+	opinion = -25
+}
+opinion_merciful = {
+	opinion = 25
+}
+opinion_fair_judge = {
+	opinion = 20
+}
+opinion_unfair = {
+	opinion = -15
+}
+opinion_pious_ruler = {
+	opinion = 15
+}
+opinion_feared = {
+	opinion = -20
+}
+opinion_dishonorable = {
+	opinion = -15
+}
+opinion_loyal_servant = {
+	opinion = 15
+}
+
+# ==========================================
+# SCHEME OPINIONS
+# ==========================================
+hoa_opinion_caught_scheming = {
+	opinion = -30
+}
+hoa_opinion_scandal = {
+	opinion = -25
+}
+hoa_opinion_poisoner = {
+	opinion = -40
+}
+hoa_opinion_blackmailed = {
+	opinion = 15
+}
+hoa_opinion_watched = {
+	opinion = -10
+}
+hoa_opinion_coup_success = {
+	opinion = -15
+}
+
+# ==========================================
+# DIPLOMACY / DUEL OPINIONS
+# ==========================================
+opinion_refused_duel = {
+	opinion = -25
+}
+opinion_duel_victor = {
+	opinion = 15
+}
+opinion_hosted_summit = {
+	opinion = 20
+}
+opinion_defensive_pact = {
+	opinion = 30
+}
+opinion_sent_emissary = {
+	opinion = 15
+}
+opinion_generous_gift = {
+	opinion = 25
+}
+opinion_grateful = {
+	opinion = 20
+}
+
+# ==========================================
+# CHANCELLOR / COUNCIL OPINIONS
+# ==========================================
+hoa_opinion_abandoned_chancellor = {
+	opinion = -30
+}
+hoa_opinion_rescued_me = {
+	opinion = 40
+}
+hoa_opinion_summit_great = {
+	opinion = 30
+}
+hoa_opinion_summit_good = {
+	opinion = 15
+}
+hoa_opinion_summit_disaster = {
+	opinion = -10
+}
+opinion_audit_caught_fraud = {
+	opinion = -20
+}
+opinion_special_tax_levied = {
+	opinion = -15
+}
+opinion_just_tax_offset = {
+	opinion = 7
+}
+opinion_confronted_corruption = {
+	opinion = -10
+}
+opinion_caught_spying = {
+	opinion = -40
+}
+opinion_disappointed = {
+	opinion = -15
+}
+
+# ==========================================
+# CLASS DIPLOMACY OPINIONS
+# ==========================================
+hoa_opinion_intimidated = {
+	opinion = -20
+}
+hoa_opinion_ultimatum_rejected = {
+	opinion = -30
+}
+hoa_opinion_judged_tyrant = {
+	opinion = -20
+}
+hoa_opinion_false_accusation = {
+	opinion = -25
+}
+hoa_opinion_caught_smuggling = {
+	opinion = -20
+}
+hoa_opinion_spiritually_corrupt = {
+	opinion = -15
+}
+hoa_opinion_false_excomm = {
+	opinion = -20
+}
+hoa_opinion_dark_pact = {
+	opinion = 20
+}
+hoa_opinion_pact_rejected = {
+	opinion = -15
+}
+hoa_opinion_terror_aura = {
+	opinion = -25
+}
+hoa_opinion_inner_peace = {
+	opinion = 30
+}
+hoa_opinion_meditation_rejected = {
+	opinion = -10
+}
+
+# ==========================================
+# TRADE OPINIONS
+# ==========================================
+hoa_opinion_embargo_imposed = {
+	opinion = -40
+}
+hoa_opinion_embargo_target = {
+	opinion = -25
+}
+
+# ==========================================
+# SECRET SOCIETY OPINIONS
+# ==========================================
+hoa_opinion_society_brother = {
+	opinion = 25
+}
+hoa_opinion_society_betrayed = {
+	opinion = -40
+}
+hoa_opinion_society_recruited = {
+	opinion = 15
+}
+
+# ==========================================
+# FACTION & CIVIL WAR OPINIONS
+# ==========================================
+hoa_opinion_appeased = {
+	opinion = 15
+}
+hoa_opinion_appeased_partial = {
+	opinion = 10
+}
+hoa_opinion_appease_insulted = {
+	opinion = -5
+}
+hoa_opinion_demand_granted = {
+	opinion = 20
+}
+hoa_opinion_demand_refused = {
+	opinion = -15
+}
+hoa_opinion_demand_plotting = {
+	opinion = -20
+}
+hoa_opinion_counter_offer_good = {
+	opinion = 5
+}
+hoa_opinion_counter_offer_bad = {
+	opinion = -10
+}
+hoa_opinion_under_suspicion = {
+	opinion = -5
+}
+hoa_opinion_spying_detected = {
+	opinion = -5
+}
+hoa_opinion_rallied = {
+	opinion = 10
+}
+hoa_opinion_submitted = {
+	opinion = 15
+}
+hoa_opinion_defied_ultimatum = {
+	opinion = -30
+}
+hoa_opinion_autonomy_granted = {
+	opinion = 30
+}
+hoa_opinion_counter_rejected = {
+	opinion = -20
+}
+hoa_opinion_war_averted = {
+	opinion = 20
+}
+hoa_opinion_intimidated_civil = {
+	opinion = 10
+}
+hoa_opinion_weak_display = {
+	opinion = -10
+}
+hoa_opinion_instability = {
+	opinion = -5
+}
+hoa_opinion_trusted_informant = {
+	opinion = 10
+}
+hoa_opinion_faction_exposed = {
+	opinion = -10
+}
+hoa_opinion_defied = {
+	opinion = -30
+}
+hoa_opinion_war_weary = {
+	opinion = -10
+}

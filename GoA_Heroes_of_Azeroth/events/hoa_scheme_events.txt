@@ -837,6 +837,8 @@ character_event = {
 		add_trait = hoa_shadow_agent
 		prestige = 20
 		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_smuggle_cooldown
+			add_character_modifier = { name = hoa_scheme_smuggle_cd duration = 1825 hidden = yes }
 			set_character_flag = hoa_scheme_smuggle_cooldown
 		}
 	}
@@ -856,6 +858,8 @@ character_event = {
 		add_character_modifier = { name = hoa_smuggling_network_small duration = 1825 }
 		wealth = 50
 		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_smuggle_cooldown
+			add_character_modifier = { name = hoa_scheme_smuggle_cd duration = 730 hidden = yes }
 			set_character_flag = hoa_scheme_smuggle_cooldown
 		}
 	}
@@ -879,6 +883,8 @@ character_event = {
 			opinion = { who = ROOT modifier = hoa_opinion_caught_scheming years = 5 }
 		}
 		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_smuggle_cooldown
+			add_character_modifier = { name = hoa_scheme_smuggle_cd duration = 1825 hidden = yes }
 			set_character_flag = hoa_scheme_smuggle_cooldown
 		}
 	}
@@ -983,5 +989,142 @@ character_event = {
 			add_character_modifier = { name = hoa_scheme_coup_cd duration = 7300 hidden = yes }
 			set_character_flag = hoa_scheme_coup_cooldown
 		}
+	}
+}
+
+# ========================================
+# COOLDOWN FLAG CLEANUP (Yearly Pulse)
+# ========================================
+# Flags are set during scheme initiation to prevent re-firing while
+# in progress, and re-set in outcomes alongside timed modifiers.
+# This event clears expired flags (when the modifier has expired).
+character_event = {
+	id = hoa_scheme.99
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				has_character_flag = hoa_scheme_steal_cooldown
+				NOT = { has_character_modifier = hoa_scheme_steal_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_scandal_cooldown
+				NOT = { has_character_modifier = hoa_scheme_scandal_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_rebellion_cooldown
+				NOT = { has_character_modifier = hoa_scheme_rebellion_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_blackmail_cooldown
+				NOT = { has_character_modifier = hoa_scheme_blackmail_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_poison_cooldown
+				NOT = { has_character_modifier = hoa_scheme_poison_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_kidnap_cooldown
+				NOT = { has_character_modifier = hoa_scheme_kidnap_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_ritual_cooldown
+				NOT = { has_character_modifier = hoa_scheme_ritual_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_smuggle_cooldown
+				NOT = { has_character_modifier = hoa_scheme_smuggle_cd }
+				NOT = { has_character_modifier = hoa_smuggling_network }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_coup_cooldown
+				NOT = { has_character_modifier = hoa_scheme_coup_cd }
+			}
+			AND = {
+				has_character_flag = hoa_discussion_cooldown
+				NOT = { has_character_modifier = hoa_discussion_cd }
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_steal_cooldown
+				NOT = { has_character_modifier = hoa_scheme_steal_cd }
+			}
+			clr_character_flag = hoa_scheme_steal_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_scandal_cooldown
+				NOT = { has_character_modifier = hoa_scheme_scandal_cd }
+			}
+			clr_character_flag = hoa_scheme_scandal_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_rebellion_cooldown
+				NOT = { has_character_modifier = hoa_scheme_rebellion_cd }
+			}
+			clr_character_flag = hoa_scheme_rebellion_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_blackmail_cooldown
+				NOT = { has_character_modifier = hoa_scheme_blackmail_cd }
+			}
+			clr_character_flag = hoa_scheme_blackmail_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_poison_cooldown
+				NOT = { has_character_modifier = hoa_scheme_poison_cd }
+			}
+			clr_character_flag = hoa_scheme_poison_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_kidnap_cooldown
+				NOT = { has_character_modifier = hoa_scheme_kidnap_cd }
+			}
+			clr_character_flag = hoa_scheme_kidnap_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_ritual_cooldown
+				NOT = { has_character_modifier = hoa_scheme_ritual_cd }
+			}
+			clr_character_flag = hoa_scheme_ritual_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_smuggle_cooldown
+				NOT = { has_character_modifier = hoa_scheme_smuggle_cd }
+				NOT = { has_character_modifier = hoa_smuggling_network }
+			}
+			clr_character_flag = hoa_scheme_smuggle_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_coup_cooldown
+				NOT = { has_character_modifier = hoa_scheme_coup_cd }
+			}
+			clr_character_flag = hoa_scheme_coup_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_discussion_cooldown
+				NOT = { has_character_modifier = hoa_discussion_cd }
+			}
+			clr_character_flag = hoa_discussion_cooldown
+		}
+	}
+
+	option = {
+		name = OK
 	}
 }

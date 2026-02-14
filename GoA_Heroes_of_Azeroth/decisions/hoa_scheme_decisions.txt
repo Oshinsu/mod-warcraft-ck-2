@@ -48,7 +48,6 @@ targetted_decisions = {
 				set_character_flag = hoa_scheme_steal_cooldown
 				hidden_tooltip = {
 					character_event = { id = hoa_scheme.1 days = 30 }
-					set_character_flag = hoa_scheme_target_@ROOT
 				}
 			}
 			hidden_tooltip = {

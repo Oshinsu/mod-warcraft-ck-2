@@ -4,6 +4,7 @@
 # Fires for all characters once per year
 on_yearly_pulse = {
 	events = {
+		hoa_scheme.99 # Cooldown flag cleanup - clears expired scheme flags
 	}
 }
 
@@ -28,14 +29,6 @@ on_battle_lost_owner = {
 	}
 }
 
-# Fires when a character captures another character
-on_character_captured = {
-	events = {
-		hoa_loot.1 # Confiscate prisoner artifacts
-		hoa_loot.2 # Seize prisoner gold
-	}
-}
-
 # Fires when a war ends (winner side)
 on_war_ended_victory = {
 	events = {
@@ -44,9 +37,10 @@ on_war_ended_victory = {
 }
 
 # Fires when a character dies
+# ROOT = dying character, FROM = killer (if any)
 on_death = {
 	events = {
-		hoa_loot.6 # Transfer artifacts from executed prisoners
+		hoa_loot.6 # Hidden relay: transfer artifacts from dead to killer
 	}
 }
 
