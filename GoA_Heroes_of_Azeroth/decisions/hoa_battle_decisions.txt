@@ -1,0 +1,245 @@
+# GoA: Heroes of Azeroth - Heroic Battles & Siege Decisions
+# Interactive warfare decisions with class-based combat abilities.
+# Requires: war = yes (active war) for all battle decisions.
+
+decisions = {
+
+	###############################################
+	# 1. LEAD A PERSONAL CHARGE
+	# Ride at the head of your forces into the fray
+	###############################################
+	hoa_lead_charge = {
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			war = yes
+			martial >= 12
+			NOT = { has_character_modifier = hoa_charge_cooldown }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			martial >= 12
+			NOT = { trait = craven }
+			custom_tooltip = {
+				text = hoa_lead_charge_allow_tt
+				NOT = { trait = craven }
+			}
+		}
+
+		effect = {
+			character_event = { id = hoa_battle.1 }
+			add_character_modifier = {
+				name = hoa_charge_cooldown
+				duration = 365
+				hidden = yes
+			}
+			custom_tooltip = { text = hoa_lead_charge_effect_tt }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 3 trait = brave }
+			modifier = { factor = 2 martial >= 18 }
+			modifier = { factor = 0.5 trait = wounded }
+			modifier = { factor = 0 trait = severely_injured }
+		}
+	}
+
+	###############################################
+	# 2. FORTIFY POSITION
+	# Dig in and fortify your army's position
+	###############################################
+	hoa_fortify_position = {
+		only_playable = yes
+		ai_check_interval = 90
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			war = yes
+			NOT = { has_character_modifier = hoa_fortify_cooldown }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			wealth >= 100
+			martial >= 8
+			custom_tooltip = {
+				text = hoa_fortify_allow_tt
+				martial >= 8
+			}
+		}
+
+		effect = {
+			wealth = -100
+			add_character_modifier = {
+				name = hoa_fortified_position
+				duration = 365
+			}
+			add_character_modifier = {
+				name = hoa_fortify_cooldown
+				duration = 730
+				hidden = yes
+			}
+			custom_tooltip = { text = hoa_fortify_effect_tt }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 NOT = { wealth >= 300 } }
+			modifier = { factor = 2 martial >= 14 }
+			modifier = { factor = 2 trait = patient }
+		}
+	}
+
+	###############################################
+	# 3. INSPIRE TROOPS
+	# Give a rousing speech to boost morale
+	###############################################
+	hoa_inspire_troops = {
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			war = yes
+			NOT = { has_character_modifier = hoa_inspire_cooldown }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			OR = {
+				diplomacy >= 12
+				martial >= 14
+			}
+			custom_tooltip = {
+				text = hoa_inspire_allow_tt
+				OR = {
+					diplomacy >= 12
+					martial >= 14
+				}
+			}
+		}
+
+		effect = {
+			character_event = { id = hoa_battle.10 }
+			add_character_modifier = {
+				name = hoa_inspire_cooldown
+				duration = 180
+				hidden = yes
+			}
+			custom_tooltip = { text = hoa_inspire_effect_tt }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 2 diplomacy >= 16 }
+			modifier = { factor = 2 trait = gregarious }
+			modifier = { factor = 0.5 trait = shy }
+		}
+	}
+
+	###############################################
+	# 4. CHALLENGE ENEMY COMMANDER
+	# Challenge the enemy commander to single combat
+	###############################################
+	hoa_challenge_enemy_commander = {
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			war = yes
+			martial >= 16
+			NOT = { has_character_modifier = hoa_commander_duel_cooldown }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			martial >= 16
+			OR = {
+				trait = brave
+				trait = wroth
+			}
+			custom_tooltip = {
+				text = hoa_challenge_commander_allow_tt
+				OR = {
+					trait = brave
+					trait = wroth
+				}
+			}
+		}
+
+		effect = {
+			character_event = { id = hoa_battle.20 }
+			add_character_modifier = {
+				name = hoa_commander_duel_cooldown
+				duration = 730
+				hidden = yes
+			}
+			custom_tooltip = { text = hoa_challenge_commander_effect_tt }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 3 trait = brave }
+			modifier = { factor = 2 trait = wroth }
+			modifier = { factor = 2 martial >= 22 }
+			modifier = { factor = 0 NOT = { martial >= 18 } }
+		}
+	}
+
+	###############################################
+	# 5. CLASS BATTLE ABILITY
+	# Use your class-specific ability in battle
+	###############################################
+	hoa_class_battle_ability = {
+		only_playable = yes
+		ai_check_interval = 90
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			war = yes
+			has_any_class_trigger = yes
+			NOT = { has_character_modifier = hoa_class_ability_cooldown }
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+
+		allow = {
+			has_any_class_trigger = yes
+			custom_tooltip = {
+				text = hoa_class_ability_allow_tt
+				has_any_class_trigger = yes
+			}
+		}
+
+		effect = {
+			character_event = { id = hoa_battle.30 }
+			add_character_modifier = {
+				name = hoa_class_ability_cooldown
+				duration = 365
+				hidden = yes
+			}
+			custom_tooltip = { text = hoa_class_ability_effect_tt }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 2 martial >= 14 }
+			modifier = { factor = 2 trait = brave }
+			modifier = { factor = 0 trait = craven }
+		}
+	}
+}

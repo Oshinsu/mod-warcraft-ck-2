@@ -1,0 +1,1188 @@
+# GoA: Heroes of Azeroth - Faction & Civil War Events
+# Vassal faction management, appeasement, espionage, ultimatums, and civil war.
+
+namespace = hoa_faction
+
+###############################################
+# hoa_faction.1 - APPEASEMENT RESULTS
+# Triggered by hoa_appease_faction decision.
+# Outcome weighted by diplomacy and traits.
+###############################################
+character_event = {
+	id = hoa_faction.1
+	desc = hoa_faction.1.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			# Success: vassals are pleased
+			40 = {
+				modifier = {
+					factor = 1.5
+					diplomacy >= 16
+				}
+				modifier = {
+					factor = 1.3
+					trait = charitable
+				}
+				modifier = {
+					factor = 1.2
+					trait = diplomat
+				}
+				set_character_flag = hoa_appease_success
+			}
+			# Partial: some are appeased
+			35 = {
+				modifier = {
+					factor = 1.2
+					diplomacy >= 12
+				}
+				set_character_flag = hoa_appease_partial
+			}
+			# Fail: they take the gold and remain angry
+			25 = {
+				modifier = {
+					factor = 1.3
+					trait = arbitrary
+				}
+				modifier = {
+					factor = 0.7
+					diplomacy >= 16
+				}
+				set_character_flag = hoa_appease_fail
+			}
+		}
+	}
+
+	# Success: all unhappy vassals gain +15 opinion
+	option = {
+		name = hoa_faction.1.a
+		trigger = { has_character_flag = hoa_appease_success }
+		custom_tooltip = { text = hoa_appease_success_tt }
+		prestige = 50
+		hidden_tooltip = {
+			any_vassal = {
+				limit = {
+					NOT = { opinion = { who = ROOT value = 0 } }
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_appeased
+					years = 5
+				}
+			}
+			clr_character_flag = hoa_appease_success
+		}
+	}
+
+	# Partial: 2 random vassals gain +10 opinion
+	option = {
+		name = hoa_faction.1.b
+		trigger = { has_character_flag = hoa_appease_partial }
+		custom_tooltip = { text = hoa_appease_partial_tt }
+		prestige = 25
+		hidden_tooltip = {
+			random_vassal = {
+				limit = {
+					NOT = { opinion = { who = ROOT value = 0 } }
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_appeased_partial
+					years = 3
+				}
+			}
+			random_vassal = {
+				limit = {
+					NOT = { opinion = { who = ROOT value = 0 } }
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_appeased_partial
+					years = 3
+				}
+			}
+			clr_character_flag = hoa_appease_partial
+		}
+	}
+
+	# Fail: gold wasted, worst vassal gets more angry
+	option = {
+		name = hoa_faction.1.c
+		trigger = { has_character_flag = hoa_appease_fail }
+		custom_tooltip = { text = hoa_appease_fail_tt }
+		prestige = -25
+		hidden_tooltip = {
+			random_vassal = {
+				limit = {
+					NOT = { opinion = { who = ROOT value = -20 } }
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_appease_insulted
+					years = 3
+				}
+			}
+			clr_character_flag = hoa_appease_fail
+		}
+	}
+}
+
+###############################################
+# hoa_faction.5 - VASSAL DEMANDS (MTTH)
+# A powerful vassal demands concessions from the liege.
+###############################################
+character_event = {
+	id = hoa_faction.5
+	desc = hoa_faction.5.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		prisoner = no
+		higher_tier_than = COUNT
+		NOT = { has_character_flag = hoa_vassal_demand_cooldown }
+		any_vassal = {
+			NOT = { opinion = { who = ROOT value = -40 } }
+			is_adult = yes
+			is_ruler = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 3
+		modifier = {
+			factor = 0.7
+			any_vassal = {
+				count = 3
+				NOT = { opinion = { who = ROOT value = -40 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_vassal = {
+				NOT = { opinion = { who = ROOT value = -60 } }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			diplomacy >= 16
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 0.8
+			trait = cruel
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				NOT = { opinion = { who = ROOT value = -40 } }
+				is_adult = yes
+				is_ruler = yes
+			}
+			save_event_target_as = hoa_demanding_vassal
+		}
+	}
+
+	# Option A: Grant their demand
+	option = {
+		name = hoa_faction.5.a
+		wealth = -100
+		custom_tooltip = { text = hoa_vassal_demand_grant_tt }
+		hidden_tooltip = {
+			event_target:hoa_demanding_vassal = {
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_demand_granted
+					years = 5
+				}
+			}
+		}
+		set_character_flag = hoa_vassal_demand_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_faction.6 days = 730 }
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 1.5
+				trait = kind
+			}
+			modifier = {
+				factor = 1.5
+				wealth >= 300
+			}
+		}
+	}
+
+	# Option B: Refuse their demand
+	option = {
+		name = hoa_faction.5.b
+		custom_tooltip = { text = hoa_vassal_demand_refuse_tt }
+		hidden_tooltip = {
+			event_target:hoa_demanding_vassal = {
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_demand_refused
+					years = 5
+				}
+			}
+			# 30% chance they plot against you
+			random_list = {
+				30 = {
+					event_target:hoa_demanding_vassal = {
+						opinion = {
+							who = ROOT
+							modifier = hoa_opinion_demand_plotting
+							years = 10
+						}
+					}
+				}
+				70 = {
+					# No further consequences
+				}
+			}
+		}
+		set_character_flag = hoa_vassal_demand_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_faction.6 days = 730 }
+		}
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 2
+				martial >= 16
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+		}
+	}
+
+	# Option C: Counter-offer (diplomacy check)
+	option = {
+		name = hoa_faction.5.c
+		custom_tooltip = { text = hoa_vassal_demand_counter_tt }
+		hidden_tooltip = {
+			# Diplomacy check: 16+ succeeds
+			if = {
+				limit = { diplomacy >= 16 }
+				event_target:hoa_demanding_vassal = {
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_counter_offer_good
+						years = 5
+					}
+				}
+				# Both sides save face
+				prestige = 25
+			}
+			if = {
+				limit = { NOT = { diplomacy >= 16 } }
+				event_target:hoa_demanding_vassal = {
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_counter_offer_bad
+						years = 3
+					}
+				}
+			}
+		}
+		set_character_flag = hoa_vassal_demand_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_faction.6 days = 730 }
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				diplomacy >= 16
+			}
+			modifier = {
+				factor = 0
+				NOT = { diplomacy >= 10 }
+			}
+		}
+	}
+}
+
+###############################################
+# hoa_faction.6 - VASSAL DEMAND COOLDOWN CLEAR (Hidden)
+###############################################
+character_event = {
+	id = hoa_faction.6
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = hoa_vassal_demand_cooldown
+	}
+}
+
+###############################################
+# hoa_faction.10 - FACTION INTELLIGENCE REPORT
+# Triggered by hoa_spy_on_factions decision.
+# Outcome weighted by spymaster intrigue and class.
+###############################################
+character_event = {
+	id = hoa_faction.10
+	desc = hoa_faction.10.desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			# Full intel: discover all disloyal vassals
+			30 = {
+				modifier = {
+					factor = 1.5
+					any_courtier = {
+						has_job_title = job_spymaster
+						intrigue >= 16
+					}
+				}
+				modifier = {
+					factor = 1.3
+					is_rogue_class_trigger = yes
+				}
+				modifier = {
+					factor = 1.2
+					intrigue >= 14
+				}
+				set_character_flag = hoa_faction_intel_full
+			}
+			# Partial: discover 1 plotter
+			40 = {
+				modifier = {
+					factor = 1.2
+					any_courtier = {
+						has_job_title = job_spymaster
+						intrigue >= 14
+					}
+				}
+				set_character_flag = hoa_faction_intel_partial
+			}
+			# Nothing found: factions well hidden
+			20 = {
+				modifier = {
+					factor = 0.7
+					any_courtier = {
+						has_job_title = job_spymaster
+						intrigue >= 16
+					}
+				}
+				set_character_flag = hoa_faction_intel_nothing
+			}
+			# Compromised: spymaster detected
+			10 = {
+				modifier = {
+					factor = 0.5
+					any_courtier = {
+						has_job_title = job_spymaster
+						intrigue >= 18
+					}
+				}
+				modifier = {
+					factor = 1.5
+					any_courtier = {
+						has_job_title = job_spymaster
+						NOT = { intrigue >= 14 }
+					}
+				}
+				set_character_flag = hoa_faction_intel_compromised
+			}
+		}
+	}
+
+	# Full intel: +2 intrigue modifier for 1 year, +50 prestige
+	option = {
+		name = hoa_faction.10.a
+		trigger = { has_character_flag = hoa_faction_intel_full }
+		custom_tooltip = { text = hoa_faction_intel_full_tt }
+		prestige = 50
+		add_character_modifier = {
+			name = hoa_faction_full_intel
+			duration = 365
+		}
+		hidden_tooltip = {
+			# Reveal any plots targeting us
+			any_known_plotter = {
+				limit = {
+					has_plot = yes
+					plot_target_char = {
+						character = ROOT
+					}
+				}
+				reveal_plot = yes
+			}
+			clr_character_flag = hoa_faction_intel_full
+		}
+	}
+
+	# Partial: discover 1 plotter, +1 intrigue modifier for 6 months
+	option = {
+		name = hoa_faction.10.b
+		trigger = { has_character_flag = hoa_faction_intel_partial }
+		custom_tooltip = { text = hoa_faction_intel_partial_tt }
+		add_character_modifier = {
+			name = hoa_faction_partial_intel
+			duration = 180
+		}
+		hidden_tooltip = {
+			random_vassal = {
+				limit = {
+					NOT = { opinion = { who = ROOT value = -20 } }
+				}
+				save_event_target_as = hoa_discovered_plotter
+				# Mark them so the player knows
+				reverse_opinion = {
+					who = ROOT
+					modifier = hoa_opinion_under_suspicion
+					years = 3
+				}
+			}
+			clr_character_flag = hoa_faction_intel_partial
+		}
+	}
+
+	# Nothing found
+	option = {
+		name = hoa_faction.10.c
+		trigger = { has_character_flag = hoa_faction_intel_nothing }
+		custom_tooltip = { text = hoa_faction_intel_nothing_tt }
+		hidden_tooltip = {
+			clr_character_flag = hoa_faction_intel_nothing
+		}
+	}
+
+	# Compromised: spymaster detected, all vassals -5 opinion
+	option = {
+		name = hoa_faction.10.d
+		trigger = { has_character_flag = hoa_faction_intel_compromised }
+		custom_tooltip = { text = hoa_faction_intel_compromised_tt }
+		hidden_tooltip = {
+			any_vassal = {
+				limit = {
+					is_adult = yes
+					is_ruler = yes
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_spying_detected
+					years = 3
+				}
+			}
+			clr_character_flag = hoa_faction_intel_compromised
+		}
+	}
+}
+
+###############################################
+# hoa_faction.20 - RALLY LOYALISTS RESULT
+# Triggered by hoa_rally_loyalists decision.
+# Bonus depends on martial vs diplomacy build.
+###############################################
+character_event = {
+	id = hoa_faction.20
+	desc = hoa_faction.20.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		# Determine rally type based on highest stat
+		if = {
+			limit = { martial >= 14 }
+			set_character_flag = hoa_rally_military
+		}
+		if = {
+			limit = {
+				diplomacy >= 14
+				NOT = { has_character_flag = hoa_rally_military }
+			}
+			set_character_flag = hoa_rally_diplomatic
+		}
+		if = {
+			limit = {
+				NOT = { has_character_flag = hoa_rally_military }
+				NOT = { has_character_flag = hoa_rally_diplomatic }
+			}
+			# Default to generic rally
+			set_character_flag = hoa_rally_generic
+		}
+	}
+
+	# Military rally: +3 martial modifier for 1 year
+	option = {
+		name = hoa_faction.20.a
+		trigger = { has_character_flag = hoa_rally_military }
+		custom_tooltip = { text = hoa_rally_military_tt }
+		prestige = 100
+		add_character_modifier = {
+			name = hoa_rally_martial_bonus
+			duration = 365
+		}
+		hidden_tooltip = {
+			any_vassal = {
+				limit = {
+					opinion = { who = ROOT value = 0 }
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_rallied
+					years = 3
+				}
+			}
+			clr_character_flag = hoa_rally_military
+		}
+	}
+
+	# Diplomatic rally: +3 diplomacy modifier for 1 year
+	option = {
+		name = hoa_faction.20.b
+		trigger = { has_character_flag = hoa_rally_diplomatic }
+		custom_tooltip = { text = hoa_rally_diplomatic_tt }
+		prestige = 100
+		add_character_modifier = {
+			name = hoa_rally_diplomacy_bonus
+			duration = 365
+		}
+		hidden_tooltip = {
+			any_vassal = {
+				limit = {
+					opinion = { who = ROOT value = 0 }
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_rallied
+					years = 3
+				}
+			}
+			clr_character_flag = hoa_rally_diplomatic
+		}
+	}
+
+	# Generic rally: smaller bonus
+	option = {
+		name = hoa_faction.20.c
+		trigger = { has_character_flag = hoa_rally_generic }
+		custom_tooltip = { text = hoa_rally_generic_tt }
+		prestige = 100
+		hidden_tooltip = {
+			any_vassal = {
+				limit = {
+					opinion = { who = ROOT value = 0 }
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_rallied
+					years = 3
+				}
+			}
+			clr_character_flag = hoa_rally_generic
+		}
+	}
+}
+
+###############################################
+# hoa_faction.30 - ULTIMATUM DELIVERED
+# Fired on the TARGET vassal by hoa_faction_ultimatum decision.
+# Vassal must choose: submit, defy, or counter-negotiate.
+###############################################
+character_event = {
+	id = hoa_faction.30
+	desc = hoa_faction.30.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Option A: Submit to the liege
+	option = {
+		name = hoa_faction.30.a
+		custom_tooltip = { text = hoa_ultimatum_submit_tt }
+		prestige = -50
+		hidden_tooltip = {
+			# Remove brave, add craven if they submit
+			if = {
+				limit = { trait = brave }
+				remove_trait = brave
+			}
+			if = {
+				limit = {
+					NOT = { trait = brave }
+					NOT = { trait = craven }
+				}
+				add_trait = craven
+			}
+			opinion = {
+				who = event_target:hoa_ultimatum_liege
+				modifier = hoa_opinion_submitted
+				years = 10
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				trait = craven
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { martial >= 10 }
+			}
+			modifier = {
+				factor = 0.5
+				trait = brave
+			}
+			modifier = {
+				factor = 1.5
+				event_target:hoa_ultimatum_liege = {
+					martial >= 18
+				}
+			}
+			modifier = {
+				factor = 0.3
+				wealth >= 500
+			}
+		}
+	}
+
+	# Option B: Defy the liege
+	option = {
+		name = hoa_faction.30.b
+		custom_tooltip = { text = hoa_ultimatum_defy_tt }
+		hidden_tooltip = {
+			opinion = {
+				who = event_target:hoa_ultimatum_liege
+				modifier = hoa_opinion_defied_ultimatum
+				years = 10
+			}
+			# 40% chance vassal plots to kill liege
+			# 20% chance vassal declares independence war
+			# 40% just angry but no action
+			random_list = {
+				40 = {
+					# Plot to kill liege
+					event_target:hoa_ultimatum_liege = {
+						add_character_modifier = {
+							name = hoa_vassal_plotting
+							duration = 730
+						}
+					}
+				}
+				20 = {
+					# Vassal declares independence war
+					if = {
+						limit = {
+							is_ruler = yes
+							higher_tier_than = BARON
+						}
+						war = {
+							target = event_target:hoa_ultimatum_liege
+							casus_belli = bid_for_independence
+						}
+					}
+				}
+				40 = {
+					# Just angry, no further action
+				}
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 3
+				trait = brave
+			}
+			modifier = {
+				factor = 0.3
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				martial >= 14
+			}
+			modifier = {
+				factor = 1.5
+				wealth >= 300
+			}
+			modifier = {
+				factor = 0.5
+				event_target:hoa_ultimatum_liege = {
+					martial >= 20
+				}
+			}
+		}
+	}
+
+	# Option C: Counter-negotiate (requires diplomacy 12+)
+	option = {
+		name = hoa_faction.30.c
+		trigger = { diplomacy >= 12 }
+		custom_tooltip = { text = hoa_ultimatum_counter_tt }
+		hidden_tooltip = {
+			event_target:hoa_ultimatum_liege = {
+				save_event_target_as = hoa_ultimatum_liege
+				character_event = { id = hoa_faction.31 days = 14 }
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 3
+				diplomacy >= 16
+			}
+			modifier = {
+				factor = 0
+				NOT = { diplomacy >= 12 }
+			}
+			modifier = {
+				factor = 1.5
+				trait = diplomat
+			}
+		}
+	}
+}
+
+###############################################
+# hoa_faction.31 - VASSAL COUNTER-PROPOSAL
+# Fired back on the liege after vassal counter-negotiates.
+# Vassal offers autonomy in exchange for loyalty.
+###############################################
+character_event = {
+	id = hoa_faction.31
+	desc = hoa_faction.31.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Option A: Accept the deal - vassal +30 opinion, reduced taxes for 5 years
+	option = {
+		name = hoa_faction.31.a
+		custom_tooltip = { text = hoa_counter_accept_tt }
+		hidden_tooltip = {
+			FROM = {
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_autonomy_granted
+					years = 10
+				}
+				add_character_modifier = {
+					name = hoa_vassal_autonomy
+					duration = 1825
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = kind
+			}
+			modifier = {
+				factor = 1.5
+				diplomacy >= 14
+			}
+			modifier = {
+				factor = 0.5
+				trait = greedy
+			}
+		}
+	}
+
+	# Option B: Reject the counter-proposal - escalation
+	option = {
+		name = hoa_faction.31.b
+		custom_tooltip = { text = hoa_counter_reject_tt }
+		hidden_tooltip = {
+			FROM = {
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_counter_rejected
+					years = 5
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 2
+				martial >= 16
+			}
+			modifier = {
+				factor = 0.5
+				trait = kind
+			}
+		}
+	}
+}
+
+###############################################
+# hoa_faction.40 - CIVIL WAR ERUPTS (MTTH)
+# A coalition of vassals rises against the liege.
+###############################################
+character_event = {
+	id = hoa_faction.40
+	desc = hoa_faction.40.desc
+	picture = GFX_evt_battle
+
+	trigger = {
+		is_ruler = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		prisoner = no
+		higher_tier_than = DUKE
+		realm_size >= 5
+		NOT = { has_character_flag = hoa_civil_war_cooldown }
+		any_vassal = {
+			NOT = { opinion = { who = ROOT value = -60 } }
+			is_adult = yes
+			is_ruler = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 0.6
+			any_vassal = {
+				count = 3
+				NOT = { opinion = { who = ROOT value = -60 } }
+			}
+		}
+		modifier = {
+			factor = 0.7
+			any_vassal = {
+				count = 5
+				NOT = { opinion = { who = ROOT value = -40 } }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			trait = cruel
+		}
+		modifier = {
+			factor = 0.8
+			trait = arbitrary
+		}
+		modifier = {
+			factor = 1.5
+			diplomacy >= 16
+		}
+		modifier = {
+			factor = 1.3
+			martial >= 18
+		}
+	}
+
+	# Option A: Negotiate - spend gold to avert war
+	option = {
+		name = hoa_faction.40.a
+		trigger = { wealth >= 300 }
+		wealth = -300
+		custom_tooltip = { text = hoa_civil_war_negotiate_tt }
+		hidden_tooltip = {
+			if = {
+				limit = { diplomacy >= 16 }
+				# War averted through diplomacy
+				any_vassal = {
+					limit = {
+						NOT = { opinion = { who = ROOT value = -40 } }
+					}
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_war_averted
+						years = 5
+					}
+				}
+				prestige = 100
+			}
+			if = {
+				limit = { NOT = { diplomacy >= 16 } }
+				# Partial success: gold spent but only some appeased
+				random_vassal = {
+					limit = {
+						NOT = { opinion = { who = ROOT value = -40 } }
+					}
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_appeased
+						years = 3
+					}
+				}
+				prestige = -50
+			}
+		}
+		set_character_flag = hoa_civil_war_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_faction.41 days = 3650 }
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 2
+				diplomacy >= 16
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { diplomacy >= 12 }
+			}
+			modifier = {
+				factor = 1.5
+				trait = kind
+			}
+		}
+	}
+
+	# Option B: Show of force - intimidation
+	option = {
+		name = hoa_faction.40.b
+		custom_tooltip = { text = hoa_civil_war_force_tt }
+		prestige = -200
+		hidden_tooltip = {
+			if = {
+				limit = { martial >= 18 }
+				# Intimidation works
+				any_vassal = {
+					limit = {
+						NOT = { opinion = { who = ROOT value = -40 } }
+					}
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_intimidated_civil
+						years = 5
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { martial >= 18 } }
+				# Show of force fails - vassals see you as weak
+				any_vassal = {
+					limit = {
+						NOT = { opinion = { who = ROOT value = -40 } }
+					}
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_weak_display
+						years = 3
+					}
+				}
+			}
+		}
+		set_character_flag = hoa_civil_war_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_faction.41 days = 3650 }
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 3
+				martial >= 18
+			}
+			modifier = {
+				factor = 0
+				NOT = { martial >= 12 }
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+		}
+	}
+
+	# Option C: Prepare for war - military buildup
+	option = {
+		name = hoa_faction.40.c
+		custom_tooltip = { text = hoa_civil_war_prepare_tt }
+		add_character_modifier = {
+			name = hoa_civil_war_prepared
+			duration = 730
+		}
+		hidden_tooltip = {
+			# Happy vassals worry about instability
+			any_vassal = {
+				limit = {
+					opinion = { who = ROOT value = 0 }
+					is_adult = yes
+					is_ruler = yes
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_instability
+					years = 3
+				}
+			}
+		}
+		set_character_flag = hoa_civil_war_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_faction.41 days = 3650 }
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 2
+				martial >= 14
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+		}
+	}
+}
+
+###############################################
+# hoa_faction.41 - CIVIL WAR COOLDOWN CLEAR (Hidden)
+###############################################
+character_event = {
+	id = hoa_faction.41
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = hoa_civil_war_cooldown
+	}
+}
+
+###############################################
+# hoa_faction.50 - LOYAL VASSAL REPORTS CONSPIRACY (MTTH flavor)
+# A loyal vassal warns you about a brewing conspiracy.
+###############################################
+character_event = {
+	id = hoa_faction.50
+	desc = hoa_faction.50.desc
+	picture = GFX_evt_shadow
+
+	trigger = {
+		is_ruler = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		prisoner = no
+		higher_tier_than = COUNT
+		NOT = { has_character_flag = hoa_conspiracy_report_cooldown }
+		any_courtier = {
+			has_job_title = job_spymaster
+		}
+		any_vassal = {
+			NOT = { opinion = { who = ROOT value = -30 } }
+			is_adult = yes
+			is_ruler = yes
+		}
+		# Must also have at least one loyal vassal to report it
+		any_vassal = {
+			opinion = { who = ROOT value = 20 }
+			is_adult = yes
+			is_ruler = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 4
+		modifier = {
+			factor = 0.7
+			intrigue >= 14
+		}
+		modifier = {
+			factor = 0.8
+			any_courtier = {
+				has_job_title = job_spymaster
+				intrigue >= 16
+			}
+		}
+		modifier = {
+			factor = 0.8
+			any_vassal = {
+				count = 3
+				NOT = { opinion = { who = ROOT value = -30 } }
+			}
+		}
+		modifier = {
+			factor = 1.3
+			NOT = { intrigue >= 10 }
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				opinion = { who = ROOT value = 20 }
+				is_adult = yes
+				is_ruler = yes
+			}
+			save_event_target_as = hoa_loyal_informant
+		}
+	}
+
+	# Accept the intelligence
+	option = {
+		name = hoa_faction.50.a
+		custom_tooltip = { text = hoa_conspiracy_report_tt }
+		add_character_modifier = {
+			name = hoa_conspiracy_awareness
+			duration = 365
+		}
+		hidden_tooltip = {
+			event_target:hoa_loyal_informant = {
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_trusted_informant
+					years = 10
+				}
+			}
+		}
+		set_character_flag = hoa_conspiracy_report_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_faction.51 days = 1825 }
+		}
+	}
+
+	# Dismiss the report
+	option = {
+		name = hoa_faction.50.b
+		prestige = 10
+		set_character_flag = hoa_conspiracy_report_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_faction.51 days = 1825 }
+		}
+		ai_chance = { factor = 10 }
+	}
+}
+
+###############################################
+# hoa_faction.51 - CONSPIRACY REPORT COOLDOWN CLEAR (Hidden)
+###############################################
+character_event = {
+	id = hoa_faction.51
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = hoa_conspiracy_report_cooldown
+	}
+}
