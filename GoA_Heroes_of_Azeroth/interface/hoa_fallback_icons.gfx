@@ -29,6 +29,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/event_pictures/hoa_evt_raid_victory.png"
 		noOfFrames = 1
 	}
+	# GFX_evt_shadow — shadow/spy scene, used in spymaster and rogue events
+	spriteType = {
+		name = "GFX_evt_shadow"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_dungeon_entrance.png"
+		noOfFrames = 1
+	}
 
 	# --- CHEST ARMOR: CLOTH ---
 

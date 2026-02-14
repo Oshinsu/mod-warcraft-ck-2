@@ -1,0 +1,277 @@
+# =====================================================
+# Heroes of Azeroth - Secret Society System
+# =====================================================
+# Create your own secret society, recruit members,
+# conduct shadow operations, and manage the risk of
+# exposure. Integrates with the class system.
+# =====================================================
+
+decisions = {
+
+	# ========================
+	# FOUND A SECRET SOCIETY
+	# ========================
+	hoa_found_secret_society = {
+		only_playable = yes
+		ai_check_interval = 365
+
+		potential = {
+			is_ruler = yes
+			is_adult = yes
+			NOT = { has_character_modifier = hoa_secret_society_leader }
+			NOT = { has_character_modifier = hoa_society_creation_cooldown }
+		}
+
+		allow = {
+			intrigue >= 10
+			wealth >= 200
+			prestige >= 100
+			num_of_vassals >= 1
+		}
+
+		effect = {
+			wealth = -200
+			prestige = -100
+			add_character_modifier = {
+				name = hoa_secret_society_leader
+				duration = -1
+			}
+			hidden_tooltip = {
+				set_character_flag = hoa_society_founded
+				set_character_flag = hoa_society_members_0
+				character_event = { id = hoa_society.1 }
+			}
+			custom_tooltip = {
+				text = hoa_found_society_tooltip
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				NOT = { intrigue >= 14 }
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = honest
+			}
+			modifier = {
+				factor = 3
+				is_warlock_class_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				is_rogue_class_trigger = yes
+			}
+		}
+	}
+
+	# ========================
+	# RECRUIT A NEW MEMBER
+	# ========================
+	hoa_society_recruit = {
+		only_playable = yes
+		ai_check_interval = 180
+
+		potential = {
+			is_ruler = yes
+			has_character_modifier = hoa_secret_society_leader
+			NOT = { has_character_flag = hoa_recruiting_cooldown }
+		}
+
+		allow = {
+			wealth >= 50
+			any_courtier = {
+				is_adult = yes
+				NOT = { has_character_modifier = hoa_society_member_loyal }
+				NOT = { trait = honest }
+				intrigue >= 6
+			}
+		}
+
+		effect = {
+			wealth = -50
+			hidden_tooltip = {
+				set_character_flag = hoa_recruiting_cooldown
+				character_event = { id = hoa_society.10 days = 30 }
+			}
+			custom_tooltip = {
+				text = hoa_recruit_member_tooltip
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				wealth < 200
+			}
+		}
+	}
+
+	# ========================
+	# CONDUCT SHADOW OPERATION
+	# ========================
+	hoa_society_shadow_op = {
+		only_playable = yes
+		ai_check_interval = 365
+
+		potential = {
+			is_ruler = yes
+			has_character_modifier = hoa_secret_society_leader
+			NOT = { has_character_flag = hoa_shadow_op_cooldown }
+			any_courtier = {
+				has_character_modifier = hoa_society_member_loyal
+			}
+		}
+
+		allow = {
+			wealth >= 100
+			intrigue >= 12
+		}
+
+		effect = {
+			wealth = -100
+			hidden_tooltip = {
+				set_character_flag = hoa_shadow_op_cooldown
+				character_event = { id = hoa_society.20 days = 60 }
+			}
+			custom_tooltip = {
+				text = hoa_shadow_op_tooltip
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				wealth < 300
+			}
+			modifier = {
+				factor = 2
+				any_rival = { always = yes }
+			}
+		}
+	}
+
+	# ========================
+	# DISBAND SOCIETY
+	# ========================
+	hoa_society_disband = {
+		only_playable = yes
+		ai_check_interval = 730
+
+		potential = {
+			is_ruler = yes
+			has_character_modifier = hoa_secret_society_leader
+		}
+
+		allow = {
+			has_character_modifier = hoa_secret_society_leader
+		}
+
+		effect = {
+			remove_character_modifier = hoa_secret_society_leader
+			clr_character_flag = hoa_society_founded
+			clr_character_flag = hoa_society_members_0
+			clr_character_flag = hoa_society_members_1
+			clr_character_flag = hoa_society_members_2
+			clr_character_flag = hoa_society_members_3
+			prestige = -50
+			# Remove member status from courtiers
+			any_courtier = {
+				limit = {
+					has_character_modifier = hoa_society_member_loyal
+				}
+				remove_character_modifier = hoa_society_member_loyal
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_society_betrayed
+					years = 10
+				}
+			}
+			add_character_modifier = {
+				name = hoa_society_creation_cooldown
+				duration = 1825
+				hidden = yes
+			}
+			custom_tooltip = {
+				text = hoa_disband_society_tooltip
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.01
+			modifier = {
+				factor = 100
+				has_character_modifier = hoa_society_exposed
+			}
+		}
+	}
+}
+
+# =====================================================
+# TARGETED: Recruit specific courtier
+# =====================================================
+targetted_decisions = {
+
+	hoa_society_recruit_target = {
+		only_playable = yes
+		ai_target_filter = court
+		ai_check_interval = 180
+
+		from_potential = {
+			is_ruler = yes
+			has_character_modifier = hoa_secret_society_leader
+			NOT = { has_character_flag = hoa_recruiting_cooldown }
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_adult = yes
+			host = { character = FROM }
+			NOT = { has_character_modifier = hoa_society_member_loyal }
+			NOT = { trait = honest }
+			intrigue >= 5
+		}
+
+		allow = {
+			FROM = { wealth >= 50 }
+			NOT = { trait = honest }
+			intrigue >= 5
+		}
+
+		effect = {
+			FROM = { wealth = -50 }
+			hidden_tooltip = {
+				FROM = {
+					set_character_flag = hoa_recruiting_cooldown
+				}
+				character_event = { id = hoa_society.11 }
+			}
+		}
+
+		revoke_allowed = { always = no }
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				intrigue >= 14
+			}
+			modifier = {
+				factor = 2
+				trait = deceitful
+			}
+			modifier = {
+				factor = 0
+				FROM = { wealth < 200 }
+			}
+		}
+	}
+}
