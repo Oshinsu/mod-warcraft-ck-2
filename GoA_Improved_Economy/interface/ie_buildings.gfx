@@ -1,0 +1,94 @@
+spriteTypes = {
+
+	# ====================================================================
+	# GoA: Improved Economy — Building Icon Definitions
+	# ====================================================================
+	#
+	# STATUS: PLACEHOLDER — No custom building icons have been created yet.
+	#
+	# CK2 will fall back to default building icons when no custom GFX
+	# entry is defined for a building. This file is a prepared scaffold
+	# for when custom icons are created.
+	#
+	# HOW CK2 BUILDING ICONS WORK:
+	# Each building needs a spriteType with:
+	#   name = "GFX_<building_name>"
+	#   texturefile = "gfx/interface/buildings/<icon_filename>.dds"
+	#
+	# BUILDINGS THAT NEED ICONS (131 total across 4 files):
+	#
+	# ie_castle_economy.txt (21 buildings):
+	#   ie_ca_mine_1 through ie_ca_mine_5 (5)
+	#   ie_ca_arcane_workshop_1 through ie_ca_arcane_workshop_4 (4)
+	#   ie_ca_war_forge_1 through ie_ca_war_forge_4 (4)
+	#   ie_ca_merchant_quarter_1 through ie_ca_merchant_quarter_4 (4)
+	#   ie_ca_lumber_mill_1 through ie_ca_lumber_mill_4 (4)
+	#
+	# ie_culture_economy.txt (54 buildings):
+	#   ie_ca_goblin_engineering_1-3, ie_ca_goblin_trade_emporium_1-3 (6)
+	#   ie_ca_dwarf_deep_mine_1-3, ie_ca_dwarf_master_forge_1-3 (6)
+	#   ie_ca_human_merchant_guild_1-3, ie_ca_human_academy_1-3 (6)
+	#   ie_ca_orc_trophy_market_1-3, ie_ca_orc_peon_camp_1-3 (6)
+	#   ie_ca_nightelf_moonwell_1-3 (3)
+	#   ie_ca_troll_voodoo_market_1-3 (3)
+	#   ie_ca_tauren_ranch_1-3 (3)
+	#   ie_ca_draenei_crystal_workshop_1-3 (3)
+	#   ie_ca_gnome_inventor_1-3 (3)
+	#   ie_ca_highelf_bazaar_1-3 (3)
+	#   ie_ca_undead_apothecary_1-3 (3)
+	#   (Total: 45 culture buildings in castle type)
+	#
+	# ie_tribal_economy.txt (10 buildings):
+	#   ie_tb_market_1 through ie_tb_market_4 (4)
+	#   ie_tb_gathering_1 through ie_tb_gathering_3 (3)
+	#   ie_tb_hunting_1 through ie_tb_hunting_3 (3)
+	#
+	# ie_unique_capitals.txt (12 buildings):
+	#   Castle: ie_ca_stormwind_trade_district, ie_ca_orgrimmar_war_forge,
+	#           ie_ca_ironforge_hall_explorers, ie_ca_thunderbluff_elder_rise,
+	#           ie_ca_gnomeregan_innovation (5)
+	#   City:   ie_ct_stormwind_old_town, ie_ct_boralus_harbor,
+	#           ie_ct_dalaran_violet (3)
+	#   Temple: ie_tp_darnassus_moon_treasury, ie_tp_silvermoon_sunstrider (2)
+	#
+	# RECOMMENDED IMAGE SPECS:
+	#   Format: DDS (DXT5) or TGA with alpha
+	#   Size: 46x46 pixels (CK2 standard building icon size)
+	#   Location: gfx/interface/buildings/
+	#
+	# TO ADD A CUSTOM ICON:
+	# 1. Create the image file in GoA_Improved_Economy/gfx/interface/buildings/
+	# 2. Add a spriteType entry below following this template:
+	#
+	#   spriteType = {
+	#       name = "GFX_ie_ca_mine_1"
+	#       texturefile = "gfx/interface/buildings/ie_ca_mine.dds"
+	#       noOfFrames = 1
+	#   }
+	#
+	# NOTE: Building upgrade tiers (e.g. mine_1 through mine_5) can share
+	# the same icon. CK2 handles the upgrade chain display automatically.
+	#
+	# VERIFICATION NEEDED: If the GoA base mod provides building icons at
+	# standard CK2 paths, those will be used automatically. Check the GoA
+	# base mod's interface/ directory before creating duplicate entries.
+	# ====================================================================
+
+	# --- EVENT PICTURE FALLBACKS ---
+	# GFX_evt_caravan and GFX_evt_feast are used in ie_economy_events.txt.
+	# These are common CK2/GoA event picture names that should exist in the
+	# GoA base mod. If they don't, uncomment these entries and provide
+	# appropriate images in GoA_Improved_Economy/gfx/interface/event_pictures/
+	#
+	# spriteType = {
+	#     name = "GFX_evt_caravan"
+	#     texturefile = "gfx/interface/event_pictures/ie_evt_caravan.dds"
+	#     noOfFrames = 1
+	# }
+	# spriteType = {
+	#     name = "GFX_evt_feast"
+	#     texturefile = "gfx/interface/event_pictures/ie_evt_feast.dds"
+	#     noOfFrames = 1
+	# }
+
+}

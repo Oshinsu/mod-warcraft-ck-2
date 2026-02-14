@@ -1,5 +1,5 @@
 # GoA: Heroes of Azeroth - T0 Dungeon Events (5-man)
-# Multi-stage: Stage 1 (trash) → Stage 2 (mini-boss) → Stage 3 (final boss)
+# Multi-stage: Stage 1 (trash) -> Stage 2 (mini-boss) -> Stage 3 (final boss)
 
 namespace = hoa_t0
 

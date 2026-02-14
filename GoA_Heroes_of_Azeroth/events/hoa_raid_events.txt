@@ -6,7 +6,7 @@ namespace = hoa_raid
 
 ###############################################
 # MOLTEN CORE - 3 Stages (HARD)
-# Stage 1: Fire Elementals → Stage 2: Majordomo → Stage 3: Ragnaros
+# Stage 1: Fire Elementals -> Stage 2: Majordomo -> Stage 3: Ragnaros
 ###############################################
 
 # Stage 1: The Fiery Descent

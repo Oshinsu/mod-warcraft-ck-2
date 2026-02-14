@@ -1,0 +1,50 @@
+# GoA: Heroes of Azeroth - On Actions
+# Hooks into game pulses for periodic events and battle outcomes
+#
+# NOTE: Most HoA events are is_triggered_only (fired from decisions).
+# This file handles the few events that should fire organically:
+#   - Diplomatic flavor events (MTTH-based, handled by engine already)
+#   - Battle/war hooks for future commander/champion systems
+#   - Yearly hooks for artifact maintenance and cooldown cleanup
+
+# Fires for all characters once per year
+on_yearly_pulse = {
+	events = {
+	}
+}
+
+# Fires for all characters once every 5 years
+on_five_year_pulse = {
+	events = {
+	}
+}
+
+# Fires when a character wins a major battle
+on_battle_won_owner = {
+	events = {
+	}
+}
+
+# Fires when a character loses a major battle
+on_battle_lost_owner = {
+	events = {
+	}
+}
+
+# Fires when a war ends (winner side)
+on_war_ended_victory = {
+	events = {
+	}
+}
+
+# Fires when a character dies
+on_death = {
+	events = {
+	}
+}
+
+# Fires when a new ruler takes power
+on_new_holder = {
+	events = {
+	}
+}

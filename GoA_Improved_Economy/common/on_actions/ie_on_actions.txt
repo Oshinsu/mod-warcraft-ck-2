@@ -1,0 +1,31 @@
+# GoA: Improved Economy - On Actions
+# Hooks into game pulses for economic events
+#
+# NOTE: The 5 MTTH economy events (ie_economy.1 through ie_economy.5)
+# use mean_time_to_happen and are evaluated by the engine directly.
+# They do NOT need on_actions hooks - the engine handles them.
+#
+# ie_economy.6 is is_triggered_only (fired by ie_economy.5 chain).
+#
+# This file provides hooks for future economy features:
+#   - Building completion rewards
+#   - Trade route disruption events
+#   - Yearly economic reports
+
+# Fires for all characters once per year
+on_yearly_pulse = {
+	events = {
+	}
+}
+
+# Fires for all characters once every 5 years
+on_five_year_pulse = {
+	events = {
+	}
+}
+
+# Fires when a new building is completed
+on_building_complete = {
+	events = {
+	}
+}
