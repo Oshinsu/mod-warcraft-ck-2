@@ -1,15 +1,10 @@
 # GoA: Heroes of Azeroth - On Actions
-# Hooks into game pulses for periodic events and battle outcomes
-#
-# NOTE: Most HoA events are is_triggered_only (fired from decisions).
-# This file handles the few events that should fire organically:
-#   - Diplomatic flavor events (MTTH-based, handled by engine already)
-#   - Battle/war hooks for future commander/champion systems
-#   - Yearly hooks for artifact maintenance and cooldown cleanup
+# Hooks into game events for loot, battles, captures, and deaths
 
 # Fires for all characters once per year
 on_yearly_pulse = {
 	events = {
+		hoa_scheme.99 # Cooldown flag cleanup - clears expired scheme flags
 	}
 }
 
@@ -23,6 +18,8 @@ on_five_year_pulse = {
 on_battle_won_owner = {
 	events = {
 		hoa_marshal.11 # Commander Glory - chance for a commander to gain renown
+		hoa_loot.3     # Battlefield loot - chance to find items/gold
+		hoa_loot.4     # Enemy commander loot - chance to claim their gear
 	}
 }
 
@@ -35,12 +32,15 @@ on_battle_lost_owner = {
 # Fires when a war ends (winner side)
 on_war_ended_victory = {
 	events = {
+		hoa_loot.7 # Demand tribute artifacts from defeated ruler
 	}
 }
 
 # Fires when a character dies
+# ROOT = dying character, FROM = killer (if any)
 on_death = {
 	events = {
+		hoa_loot.6 # Hidden relay: transfer artifacts from dead to killer
 	}
 }
 

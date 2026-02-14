@@ -88,3 +88,27 @@ hoa_society.50.a;Knowledge is the greatest power.;Le savoir est le plus grand po
 hoa_society.60.title;Trade Windfall;Manne Financiere;Handelsgewinn;;Ganancias Comerciales;;;;;;;;;x
 hoa_society.60.desc;Your Trade Syndicate has completed a lucrative deal through its shadow network. The profits flow back to you.;Votre Syndicat Commercial a conclu un accord lucratif via son reseau clandestin.;Euer Handelssyndikat hat ein lukratives Geschaft abgeschlossen.;;Tu Sindicato Comercial ha completado un trato lucrativo.;;;;;;;;;x
 hoa_society.60.a;Gold flows to those who seize opportunity.;L'or coule vers ceux qui saisissent l'opportunite.;Gold fliesst zu denen, die die Gelegenheit ergreifen.;;El oro fluye hacia quienes aprovechan la oportunidad.;;;;;;;;;x
+hoa_opinion_gift_small;Small Gift;Petit Cadeau;Kleines Geschenk;;Pequeno Regalo;;;;;;;;;x
+hoa_opinion_gift_moderate;Moderate Gift;Cadeau Modere;Moderates Geschenk;;Regalo Moderado;;;;;;;;;x
+hoa_opinion_gift_generous;Generous Gift;Cadeau Genereux;Grosszugiges Geschenk;;Regalo Generoso;;;;;;;;;x
+hoa_opinion_gift_royal;Royal Gift;Cadeau Royal;Konigliches Geschenk;;Regalo Real;;;;;;;;;x
+hoa_opinion_gift_legendary;Legendary Gift;Cadeau Legendaire;Legendares Geschenk;;Regalo Legendario;;;;;;;;;x
+hoa_opinion_robbed;Robbed Me;M'a Depouille;Beraubt;;Me Robo;;;;;;;;;x
+hoa_opinion_confiscated;Confiscated My Goods;Biens Confisques;Beschlagnahmt;;Bienes Confiscados;;;;;;;;;x
+opinion_merciful;Showed Mercy;A Montre de la Clemence;Gnade gezeigt;;Mostro Clemencia;;;;;;;;;x
+hoa_opinion_caught_scheming;Caught Scheming;Pris en Complot;Beim Intrigieren erwischt;;Atrapado Conspirando;;;;;;;;;x
+hoa_opinion_scandal;Scandalous Reputation;Reputation Scandaleuse;Skandaloser Ruf;;Reputacion Escandalosa;;;;;;;;;x
+hoa_opinion_poisoner;Known Poisoner;Empoisonneur Connu;Bekannter Giftmischer;;Envenenador Conocido;;;;;;;;;x
+hoa_opinion_blackmailed;Blackmailed;Victime de Chantage;Erpresst;;Chantajeado;;;;;;;;;x
+hoa_opinion_coup_success;Seized Power;Prise de Pouvoir;Machtergreifung;;Toma de Poder;;;;;;;;;x
+opinion_refused_duel;Refused a Duel;A Refuse un Duel;Duell abgelehnt;;Rechazo un Duelo;;;;;;;;;x
+opinion_duel_victor;Defeated in Duel;Vaincu en Duel;Im Duell besiegt;;Derrotado en Duelo;;;;;;;;;x
+opinion_hosted_summit;Hosted Diplomatic Summit;A Organise un Sommet;Diplomatengipfel ausgerichtet;;Organizo Cumbre Diplomatica;;;;;;;;;x
+opinion_defensive_pact;Defensive Pact;Pacte Defensif;Verteidigungspakt;;Pacto Defensivo;;;;;;;;;x
+opinion_sent_emissary;Sent Emissary;A Envoye un Emissaire;Gesandter geschickt;;Envio Emisario;;;;;;;;;x
+opinion_generous_gift;Generous Gift;Cadeau Genereux;Grosszugiges Geschenk;;Regalo Generoso;;;;;;;;;x
+opinion_grateful;Grateful;Reconnaissant;Dankbar;;Agradecido;;;;;;;;;x
+hoa_opinion_appeased;Appeased;Apaise;Besanftigt;;Apaciguado;;;;;;;;;x
+hoa_opinion_society_brother;Society Brother;Frere de la Societe;Gesellschaftsbruder;;Hermano de la Sociedad;;;;;;;;;x
+hoa_opinion_society_betrayed;Society Betrayer;Traitre de la Societe;Gesellschaftsverrater;;Traidor de la Sociedad;;;;;;;;;x
+hoa_opinion_embargo_imposed;Embargo Imposed;Embargo Impose;Embargo verhangt;;Embargo Impuesto;;;;;;;;;x

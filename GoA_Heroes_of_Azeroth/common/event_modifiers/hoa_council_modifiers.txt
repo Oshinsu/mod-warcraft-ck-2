@@ -1,67 +1,6 @@
 # GoA: Heroes of Azeroth - Council Modifiers
 # Modifiers used by Chancellor, Steward, Marshal, and Spymaster decisions/events.
-
-# ==========================================
-# CHANCELLOR MODIFIERS
-# ==========================================
-
-# Granted by successful treaty negotiation
-hoa_trade_treaty = {
-	tax_income = 0.10
-	icon = 4
-}
-
-# Long-term diplomatic contacts network
-hoa_diplomatic_network = {
-	diplomacy = 2
-	icon = 4
-}
-
-# Hosting a grand diplomatic summit
-hoa_summit_host = {
-	diplomacy = 3
-	monthly_character_prestige = 0.1
-	icon = 4
-}
-
-# ==========================================
-# STEWARD MODIFIERS
-# ==========================================
-
-# Realm audit found savings on construction
-hoa_audit_discount = {
-	build_cost_modifier = -0.20
-	icon = 4
-}
-
-# Optimized tax collection
-hoa_efficient_treasury = {
-	tax_income = 0.05
-	icon = 4
-}
-
-# ==========================================
-# SPYMASTER MODIFIERS
-# ==========================================
-
-# Active spy network in enemy realm
-hoa_shadow_network = {
-	intrigue = 2
-	plot_power_modifier = 0.10
-	icon = 7
-}
-
-# Major intelligence gathered from spies
-hoa_spy_intel_major = {
-	intrigue = 2
-	icon = 7
-}
-
-# Minor intelligence gathered from spies
-hoa_spy_intel_minor = {
-	intrigue = 1
-	icon = 7
-}
+# NOTE: Shared modifiers (trade, faction, etc.) are defined in hoa_modifiers.txt
 
 # ==========================================
 # MARSHAL MODIFIERS - FORTIFICATION
@@ -170,7 +109,7 @@ hoa_campaign_plan_average = {
 hoa_campaign_plan_cooldown = { }
 
 # ==========================================
-# SABOTAGE MODIFIERS (Province-level)
+# SPYMASTER MODIFIERS - SABOTAGE (Province-level)
 # Applied by spymaster operations to enemy provinces.
 # ==========================================
 
@@ -187,10 +126,13 @@ hoa_province_sabotaged_minor = {
 	icon = 7
 }
 
-# ==========================================
-# OPINION MODIFIERS (Council-related)
-# ==========================================
+# Spymaster-specific intel modifiers
+hoa_spy_intel_major = {
+	intrigue = 2
+	icon = 7
+}
 
-opinion_disappointed = {
-	opinion = -15
+hoa_spy_intel_minor = {
+	intrigue = 1
+	icon = 7
 }

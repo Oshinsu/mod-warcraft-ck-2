@@ -1,0 +1,65 @@
+CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+hoa_meditate;Meditate;Mediter;;;;;;;;;;;;x
+hoa_meditate_desc;Spend time in quiet meditation or prayer to restore your mind and spirit.;Passez du temps en meditation silencieuse pour restaurer votre esprit.;;;;;;;;;;;;x
+hoa_hold_private_court;Hold Private Court;Tenir Cour Privee;;;;;;;;;;;;x
+hoa_hold_private_court_desc;Open your throne room for private audiences with petitioners and merchants.;Ouvrez votre salle du trone pour des audiences privees.;;;;;;;;;;;;x
+hoa_write_memoirs;Write Memoirs;Ecrire ses Memoires;;;;;;;;;;;;x
+hoa_write_memoirs_desc;Begin documenting your life story and the lessons you have learned.;Commencez a documenter votre histoire et les lecons apprises.;;;;;;;;;;;;x
+hoa_seek_healing;Seek Healing;Chercher la Guerison;;;;;;;;;;;;x
+hoa_seek_healing_desc;Seek out healers and remedies for your ailments.;Cherchez des guerisseurs et des remedes pour vos maux.;;;;;;;;;;;;x
+hoa_night_patrol;Night Patrol;Patrouille de Nuit;;;;;;;;;;;;x
+hoa_night_patrol_desc;Personally patrol your capital under cover of darkness.;Patrouiller personnellement votre capitale sous le couvert de l'obscurite.;;;;;;;;;;;;x
+hoa_visit_library;Visit the Library;Visiter la Bibliotheque;;;;;;;;;;;;x
+hoa_visit_library_desc;Spend time studying ancient texts and tomes in your library.;Passez du temps a etudier des textes anciens dans votre bibliotheque.;;;;;;;;;;;;x
+hoa_confiscate_prisoner_goods;Confiscate Prisoner Goods;Confisquer les Biens des Prisonniers;;;;;;;;;;;;x
+hoa_confiscate_prisoner_goods_desc;Strip all prisoners of their artifacts and valuables.;Depouiller tous les prisonniers de leurs artefacts et objets de valeur.;;;;;;;;;;;;x
+hoa_inspect_armory;Inspect Armory;Inspecter l'Armurerie;;;;;;;;;;;;x
+hoa_inspect_armory_desc;Review your personal collection of weapons and artifacts.;Passez en revue votre collection personnelle d'armes et artefacts.;;;;;;;;;;;;x
+hoa_meditate_peace_tt;You find inner peace. Stress dissolves and your health improves.;Vous trouvez la paix interieure. Le stress se dissout.;;;;;;;;;;;;x
+hoa_meditate_wisdom_tt;Deep meditation reveals hidden wisdom.;La meditation profonde revele une sagesse cachee.;;;;;;;;;;;;x
+hoa_meditate_vision_tt;A mystical vision grants you supernatural insight.;Une vision mystique vous accorde une perception surnaturelle.;;;;;;;;;;;;x
+hoa_meditate_restless_tt;Your mind wanders. The meditation is only partially successful.;Votre esprit vagabonde. La meditation n'est que partiellement reussie.;;;;;;;;;;;;x
+hoa_meditate_nightmare_tt;Disturbing visions plague your meditation but teach you something.;Des visions troublantes perturbent votre meditation mais vous enseignent quelque chose.;;;;;;;;;;;;x
+hoa_patrol_thief_tt;You catch a thief in the act! Your vigilance impresses the guard.;Vous attrapez un voleur en flagrant delit!;;;;;;;;;;;;x
+hoa_patrol_quiet_tt;A quiet night. Your presence reassures the populace.;Une nuit calme. Votre presence rassure la populace.;;;;;;;;;;;;x
+hoa_patrol_ambush_tt;Bandits attack! You fight them off but take a wound.;Des bandits attaquent! Vous les repoussez mais etes blesse.;;;;;;;;;;;;x
+hoa_patrol_spy_tt;You discover a spy lurking in the shadows.;Vous decouvrez un espion tapi dans l'ombre.;;;;;;;;;;;;x
+hoa_patrol_people_tt;You bond with the common folk during your patrol.;Vous creez des liens avec le petit peuple pendant votre patrouille.;;;;;;;;;;;;x
+hoa_library_lore_tt;You uncover forgotten lore in dusty tomes.;Vous decouvrez des savoirs oublies dans des tomes poussiereux.;;;;;;;;;;;;x
+hoa_library_strategy_tt;Military treatises sharpen your tactical mind.;Des traites militaires aiguisent votre esprit tactique.;;;;;;;;;;;;x
+hoa_library_politics_tt;Political texts deepen your understanding of diplomacy.;Des textes politiques approfondissent votre comprehension de la diplomatie.;;;;;;;;;;;;x
+hoa_library_secrets_tt;Hidden in an old book, you find arcane knowledge.;Cache dans un vieux livre, vous trouvez des connaissances arcaniques.;;;;;;;;;;;;x
+hoa_library_boring_tt;Hours of reading yield little of interest.;Des heures de lecture ne donnent rien d'interessant.;;;;;;;;;;;;x
+hoa_confiscate_tt;Strip all prisoners of their equipped artifacts.;Depouiller tous les prisonniers de leurs artefacts equipes.;;;;;;;;;;;;x
+hoa_armory_maintained_tt;Your weapons are in excellent condition.;Vos armes sont en excellent etat.;;;;;;;;;;;;x
+hoa_armory_upgrade_tt;You commission improvements to your equipment.;Vous commandez des ameliorations a votre equipement.;;;;;;;;;;;;x
+hoa_armory_discovery_tt;You find a forgotten item hidden among your collection.;Vous trouvez un objet oublie cache dans votre collection.;;;;;;;;;;;;x
+hoa_memoirs_started_tt;You begin writing your life story...;Vous commencez a ecrire l'histoire de votre vie...;;;;;;;;;;;;x
+hoa_memoirs_published_tt;Your memoirs will be read for generations.;Vos memoires seront lues pendant des generations.;;;;;;;;;;;;x
+hoa_personal_1_title;Private Court;Cour Privee;;;;;;;;;;;;x
+hoa_personal_1_desc;You open your throne room for private audiences. Several petitioners await.;Vous ouvrez votre salle du trone pour des audiences privees.;;;;;;;;;;;;x
+hoa_personal_1_a;Hear the vassal's grievance;Ecouter la plainte du vassal;;;;;;;;;;;;x
+hoa_personal_1_b;Receive the merchant;Recevoir le marchand;;;;;;;;;;;;x
+hoa_personal_1_c;Welcome the stranger;Accueillir l'etranger;;;;;;;;;;;;x
+hoa_court_grievance_tt;A vassal brings a matter requiring your judgment.;Un vassal apporte une affaire necessitant votre jugement.;;;;;;;;;;;;x
+hoa_court_merchant_tt;A wealthy merchant seeks your patronage.;Un marchand riche cherche votre patronage.;;;;;;;;;;;;x
+hoa_court_stranger_tt;A mysterious stranger requests sanctuary.;Un etranger mysterieux demande asile.;;;;;;;;;;;;x
+hoa_personal_10_title;Memoirs Completed;Memoires Acheves;;;;;;;;;;;;x
+hoa_personal_10_desc;After months of writing, your memoirs are complete. A legacy in words.;Apres des mois d'ecriture, vos memoires sont acheves.;;;;;;;;;;;;x
+hoa_personal_10_a;Publish them for all to read;Les publier pour que tous puissent lire;;;;;;;;;;;;x
+hoa_personal_10_b;Keep them private;Les garder prives;;;;;;;;;;;;x
+hoa_personal_20_title;Seeking Healing;Recherche de Guerison;;;;;;;;;;;;x
+hoa_personal_20_desc;You consult with the realm's finest healers about your wounds and ailments.;Vous consultez les meilleurs guerisseurs du royaume.;;;;;;;;;;;;x
+hoa_personal_20_a;Undergo treatment;Subir le traitement;;;;;;;;;;;;x
+hoa_healing_full_tt;The healer's magic restores your body completely!;La magie du guerisseur restaure completement votre corps!;;;;;;;;;;;;x
+hoa_healing_partial_tt;Treatment helps but doesn't fully heal you.;Le traitement aide mais ne vous guerit pas completement.;;;;;;;;;;;;x
+hoa_healing_minor_tt;Only minor improvement from the treatment.;Seulement une amelioration mineure du traitement.;;;;;;;;;;;;x
+hoa_healing_failed_tt;The treatment has no effect. Perhaps the Light will heal in time.;Le traitement n'a aucun effet.;;;;;;;;;;;;x
+hoa_personal_50_title;Private Discussion;Discussion Privee;;;;;;;;;;;;x
+hoa_personal_50_desc;You sit down for a private conversation, away from prying ears.;Vous vous asseyez pour une conversation privee, loin des oreilles indiscretes.;;;;;;;;;;;;x
+hoa_personal_50_a;Friendly chat;Discussion amicale;;;;;;;;;;;;x
+hoa_personal_50_b;Probe for information;Sonder pour des informations;;;;;;;;;;;;x
+hoa_personal_50_c;Intimidate;Intimider;;;;;;;;;;;;x
+hoa_discussion_friendly_tt;A warm conversation improves your relationship.;Une conversation chaleureuse ameliore votre relation.;;;;;;;;;;;;x
+hoa_discussion_probe_tt;You carefully extract useful information.;Vous extrayez soigneusement des informations utiles.;;;;;;;;;;;;x
+hoa_discussion_intimidate_tt;You use your authority to pressure them.;Vous utilisez votre autorite pour les presser.;;;;;;;;;;;;x

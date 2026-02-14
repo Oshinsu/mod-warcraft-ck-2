@@ -1,0 +1,291 @@
+# =====================================================
+# Heroes of Azeroth - Personal Action Events
+# =====================================================
+# Events for self-click personal decisions:
+# Private court, memoirs, healing, discussions
+# =====================================================
+
+namespace = hoa_personal
+
+# ========================================
+# HOLD PRIVATE COURT (hoa_personal.1-5)
+# ========================================
+character_event = {
+	id = hoa_personal.1
+	title = hoa_personal_1_title
+	desc = hoa_personal_1_desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# A vassal brings a grievance
+	option = {
+		name = hoa_personal_1_a
+		custom_tooltip = { text = hoa_court_grievance_tt }
+		random_list = {
+			40 = {
+				random_vassal = {
+					limit = { is_adult = yes }
+					opinion = { who = ROOT modifier = opinion_fair_judge years = 5 }
+				}
+				prestige = 20
+				change_diplomacy = 1
+			}
+			30 = {
+				wealth = 30
+				prestige = 15
+			}
+			20 = {
+				random_vassal = {
+					limit = { is_adult = yes }
+					opinion = { who = ROOT modifier = opinion_unfair years = 3 }
+				}
+				change_intrigue = 1
+			}
+			10 = {
+				prestige = -10
+				add_trait = stressed
+			}
+		}
+
+		ai_chance = { factor = 50 }
+	}
+
+	# A merchant seeks audience
+	option = {
+		name = hoa_personal_1_b
+		custom_tooltip = { text = hoa_court_merchant_tt }
+		random_list = {
+			50 = {
+				wealth = 50
+				change_stewardship = 1
+			}
+			30 = {
+				wealth = 25
+				prestige = 10
+			}
+			20 = {
+				wealth = -25
+				prestige = -10
+			}
+		}
+
+		ai_chance = { factor = 30 }
+	}
+
+	# A stranger requests sanctuary
+	option = {
+		name = hoa_personal_1_c
+		custom_tooltip = { text = hoa_court_stranger_tt }
+		random_list = {
+			30 = {
+				piety = 30
+				prestige = 15
+				add_trait = hoa_silver_tongue
+			}
+			30 = {
+				piety = 20
+				change_learning = 1
+			}
+			25 = {
+				prestige = 10
+			}
+			15 = {
+				change_intrigue = 1
+				prestige = -10
+			}
+		}
+
+		ai_chance = { factor = 20 }
+	}
+}
+
+# ========================================
+# MEMOIRS COMPLETED (hoa_personal.10-12)
+# ========================================
+character_event = {
+	id = hoa_personal.10
+	title = hoa_personal_10_title
+	desc = hoa_personal_10_desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Publish the memoirs
+	option = {
+		name = hoa_personal_10_a
+		prestige = 100
+		add_trait = hoa_loremaster
+		remove_character_modifier = hoa_writing_memoirs
+		add_character_modifier = { name = hoa_published_memoirs duration = -1 }
+		custom_tooltip = { text = hoa_memoirs_published_tt }
+
+		ai_chance = { factor = 70 }
+	}
+
+	# Keep them private
+	option = {
+		name = hoa_personal_10_b
+		prestige = 30
+		change_learning = 2
+		remove_character_modifier = hoa_writing_memoirs
+
+		ai_chance = { factor = 30 }
+	}
+}
+
+# ========================================
+# SEEK HEALING OUTCOMES (hoa_personal.20-23)
+# ========================================
+character_event = {
+	id = hoa_personal.20
+	title = hoa_personal_20_title
+	desc = hoa_personal_20_desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_personal_20_a
+		random_list = {
+			35 = {
+				modifier = { factor = 1.5 is_priest_class_trigger = yes }
+				modifier = { factor = 1.3 learning >= 14 }
+				custom_tooltip = { text = hoa_healing_full_tt }
+				if = {
+					limit = { trait = wounded }
+					remove_trait = wounded
+				}
+				if = {
+					limit = { trait = infirm }
+					remove_trait = infirm
+				}
+				health = 1
+				prestige = 20
+			}
+			30 = {
+				custom_tooltip = { text = hoa_healing_partial_tt }
+				health = 0.5
+				prestige = 10
+			}
+			20 = {
+				custom_tooltip = { text = hoa_healing_minor_tt }
+				health = 0.2
+			}
+			15 = {
+				custom_tooltip = { text = hoa_healing_failed_tt }
+				prestige = -10
+				piety = 10
+			}
+		}
+	}
+}
+
+# ========================================
+# PRIVATE DISCUSSION (hoa_personal.50-55)
+# ========================================
+# Fired when using the targeted "Private Discussion" decision
+character_event = {
+	id = hoa_personal.50
+	title = hoa_personal_50_title
+	desc = hoa_personal_50_desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Friendly chat - improve relations
+	option = {
+		name = hoa_personal_50_a
+		custom_tooltip = { text = hoa_discussion_friendly_tt }
+		random_list = {
+			40 = {
+				change_diplomacy = 1
+				random_courtier = {
+					limit = { is_adult = yes NOT = { character = ROOT } }
+					opinion = { who = ROOT modifier = opinion_grateful years = 5 }
+				}
+			}
+			30 = {
+				prestige = 15
+				random_courtier = {
+					limit = { is_adult = yes NOT = { character = ROOT } }
+					opinion = { who = ROOT modifier = opinion_loyal_servant years = 3 }
+				}
+			}
+			30 = {
+				prestige = 5
+			}
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_discussion_cooldown
+			add_character_modifier = { name = hoa_discussion_cd duration = 30 hidden = yes }
+			set_character_flag = hoa_discussion_cooldown
+		}
+
+		ai_chance = { factor = 40 }
+	}
+
+	# Probe for information
+	option = {
+		name = hoa_personal_50_b
+		custom_tooltip = { text = hoa_discussion_probe_tt }
+		random_list = {
+			40 = {
+				change_intrigue = 1
+				prestige = 10
+			}
+			30 = {
+				add_trait = hoa_silver_tongue
+				prestige = 15
+			}
+			30 = {
+				prestige = -5
+				random_courtier = {
+					limit = { is_adult = yes NOT = { character = ROOT } }
+					opinion = { who = ROOT modifier = opinion_dishonorable years = 3 }
+				}
+			}
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_discussion_cooldown
+			add_character_modifier = { name = hoa_discussion_cd duration = 30 hidden = yes }
+			set_character_flag = hoa_discussion_cooldown
+		}
+
+		ai_chance = { factor = 35 }
+	}
+
+	# Intimidate
+	option = {
+		name = hoa_personal_50_c
+		tooltip_info = martial
+		custom_tooltip = { text = hoa_discussion_intimidate_tt }
+		random_list = {
+			35 = {
+				prestige = 20
+				random_courtier = {
+					limit = { is_adult = yes NOT = { character = ROOT } }
+					opinion = { who = ROOT modifier = opinion_feared years = 5 }
+				}
+			}
+			35 = {
+				change_martial = 1
+				prestige = 10
+			}
+			30 = {
+				prestige = -15
+				random_courtier = {
+					limit = { is_adult = yes NOT = { character = ROOT } }
+					add_rival = ROOT
+				}
+			}
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_discussion_cooldown
+			add_character_modifier = { name = hoa_discussion_cd duration = 30 hidden = yes }
+			set_character_flag = hoa_discussion_cooldown
+		}
+
+		ai_chance = { factor = 25 }
+	}
+}

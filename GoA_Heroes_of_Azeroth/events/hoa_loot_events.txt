@@ -1,0 +1,509 @@
+# =====================================================
+# Heroes of Azeroth - Prisoner & Battle Loot System
+# =====================================================
+# Artifact confiscation from prisoners and battlefield loot
+# Hooked via on_actions: on_battle_won_owner, on_death
+# Also triggered via decisions (confiscate prisoner goods)
+# =====================================================
+
+namespace = hoa_loot
+
+# ========================================
+# 1. PRISONER CAPTURED - Confiscate Goods
+# ========================================
+# Fired from confiscation decisions
+# ROOT = captor, FROM = prisoner
+
+character_event = {
+	id = hoa_loot.1
+	title = hoa_loot_1_title
+	desc = hoa_loot_1_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			any_artifact = {
+				always = yes
+			}
+		}
+	}
+
+	# Option A: Confiscate all artifacts
+	option = {
+		name = hoa_loot_1_a
+		tooltip_info = martial
+
+		FROM = {
+			any_artifact = {
+				limit = { is_artifact_equipped = yes }
+				unsafe_transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		FROM = {
+			opinion = { who = ROOT modifier = hoa_opinion_robbed years = 20 }
+		}
+		prestige = 25
+
+		ai_chance = {
+			factor = 60
+			modifier = { factor = 1.5 trait = greedy }
+			modifier = { factor = 0.5 trait = just }
+		}
+	}
+
+	# Option B: Confiscate only weapons
+	option = {
+		name = hoa_loot_1_b
+
+		FROM = {
+			any_artifact = {
+				limit = {
+					is_artifact_equipped = yes
+					OR = {
+						artifact_slot = weapon
+					}
+				}
+				unsafe_transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		FROM = {
+			opinion = { who = ROOT modifier = hoa_opinion_confiscated years = 10 }
+		}
+		prestige = 15
+
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 2 trait = just }
+		}
+	}
+
+	# Option C: Show mercy - take nothing
+	option = {
+		name = hoa_loot_1_c
+		tooltip_info = diplomacy
+
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_merciful years = 5 }
+		}
+		piety = 15
+		prestige = 10
+
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 3 trait = kind }
+			modifier = { factor = 2 trait = just }
+			modifier = { factor = 0 trait = greedy }
+		}
+	}
+}
+
+# ========================================
+# 2. PRISONER HAS GOLD - Ransom Enhancement
+# ========================================
+character_event = {
+	id = hoa_loot.2
+	title = hoa_loot_2_title
+	desc = hoa_loot_2_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			wealth >= 50
+			NOT = {
+				any_artifact = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	# Take their gold
+	option = {
+		name = hoa_loot_2_a
+		FROM = {
+			transfer_scaled_wealth = {
+				to = ROOT
+				value = 0.5
+			}
+		}
+		FROM = {
+			opinion = { who = ROOT modifier = hoa_opinion_robbed years = 15 }
+		}
+
+		ai_chance = { factor = 70 }
+	}
+
+	# Demand tribute instead (ongoing payment)
+	option = {
+		name = hoa_loot_2_b
+		FROM = {
+			opinion = { who = ROOT modifier = hoa_opinion_confiscated years = 10 }
+		}
+		wealth = 100
+		prestige = 20
+
+		ai_chance = { factor = 30 }
+	}
+}
+
+# ========================================
+# 3. BATTLE WON - Battlefield Loot
+# ========================================
+# Fired on_battle_won_owner - chance to find loot
+character_event = {
+	id = hoa_loot.3
+	title = hoa_loot_3_title
+	desc = hoa_loot_3_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ruler = yes
+		NOT = { has_character_modifier = hoa_recently_looted_battle }
+	}
+
+	# Search the battlefield
+	option = {
+		name = hoa_loot_3_a
+		random_list = {
+			30 = {
+				custom_tooltip = { text = hoa_loot_gold_tt }
+				wealth = 75
+				prestige = 15
+			}
+			25 = {
+				custom_tooltip = { text = hoa_loot_weapon_tt }
+				hidden_tooltip = {
+					random_list = {
+						50 = { add_artifact = hoa_crafted_sword_uncommon }
+						50 = { add_artifact = hoa_crafted_sword_rare }
+					}
+				}
+			}
+			20 = {
+				custom_tooltip = { text = hoa_loot_armor_tt }
+				hidden_tooltip = {
+					add_artifact = hoa_crafted_plate_uncommon
+				}
+			}
+			15 = {
+				custom_tooltip = { text = hoa_loot_trinket_tt }
+				hidden_tooltip = {
+					random_list = {
+						50 = { add_artifact = hoa_crafted_ring_uncommon }
+						50 = { add_artifact = hoa_crafted_amulet_uncommon }
+					}
+				}
+			}
+			10 = {
+				custom_tooltip = { text = hoa_loot_nothing_tt }
+				prestige = 10
+			}
+		}
+		add_character_modifier = { name = hoa_recently_looted_battle duration = 180 hidden = yes }
+
+		ai_chance = { factor = 80 }
+	}
+
+	# Leave the dead in peace
+	option = {
+		name = hoa_loot_3_b
+		piety = 20
+		prestige = 10
+		add_character_modifier = { name = hoa_recently_looted_battle duration = 180 hidden = yes }
+
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 3 trait = just }
+		}
+	}
+}
+
+# ========================================
+# 4. MAJOR BATTLE WON - Enemy Commander Loot
+# ========================================
+# Special event for taking enemy commander's gear
+character_event = {
+	id = hoa_loot.4
+	title = hoa_loot_4_title
+	desc = hoa_loot_4_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ruler = yes
+		martial >= 10
+		NOT = { has_character_modifier = hoa_recently_looted_commander }
+	}
+
+	# Claim the enemy commander's weapons
+	option = {
+		name = hoa_loot_4_a
+		random_list = {
+			40 = {
+				custom_tooltip = { text = hoa_loot_commander_epic_tt }
+				wealth = 50
+				prestige = 50
+				hidden_tooltip = {
+					add_artifact = hoa_crafted_sword_rare
+				}
+			}
+			35 = {
+				custom_tooltip = { text = hoa_loot_commander_good_tt }
+				wealth = 100
+				prestige = 30
+			}
+			25 = {
+				custom_tooltip = { text = hoa_loot_commander_fled_tt }
+				prestige = 15
+			}
+		}
+		add_character_modifier = { name = hoa_recently_looted_commander duration = 365 hidden = yes }
+
+		ai_chance = { factor = 80 }
+	}
+
+	# Show honor - return their effects
+	option = {
+		name = hoa_loot_4_b
+		piety = 30
+		prestige = 25
+		diplomacy = 1
+		add_character_modifier = { name = hoa_recently_looted_commander duration = 365 hidden = yes }
+
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 3 trait = just }
+			modifier = { factor = 2 trait = kind }
+		}
+	}
+}
+
+# ========================================
+# 5. STRIP PRISONER - Decision Event
+# ========================================
+# Fired from the "confiscate prisoner goods" decision
+character_event = {
+	id = hoa_loot.5
+	title = hoa_loot_5_title
+	desc = hoa_loot_5_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_loot_5_a
+		any_courtier = {
+			limit = {
+				prisoner = yes
+				host = { character = ROOT }
+				any_artifact = { always = yes }
+			}
+			any_artifact = {
+				unsafe_transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+			opinion = { who = ROOT modifier = hoa_opinion_robbed years = 20 }
+		}
+		prestige = 25
+		piety = -15
+	}
+}
+
+# ========================================
+# 6. DEATH LOOT RELAY (Hidden)
+# ========================================
+# Fires on_death: ROOT = dying character, FROM = killer
+# This is a hidden relay that fires hoa_loot.9 for the killer
+character_event = {
+	id = hoa_loot.6
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_artifact = { always = yes }
+		FROM = {
+			character = yes
+		}
+	}
+
+	immediate = {
+		FROM = {
+			character_event = { id = hoa_loot.9 }
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+# ========================================
+# 7. WAR VICTORY - Demand Tribute Artifacts
+# ========================================
+character_event = {
+	id = hoa_loot.7
+	title = hoa_loot_7_title
+	desc = hoa_loot_7_desc
+	picture = GFX_evt_hoa_raid_victory
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ruler = yes
+		FROM = {
+			is_ruler = yes
+			any_artifact = { always = yes }
+		}
+	}
+
+	# Demand their finest artifact as tribute
+	option = {
+		name = hoa_loot_7_a
+		FROM = {
+			random_artifact = {
+				limit = { is_artifact_equipped = yes }
+				unsafe_transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+			opinion = { who = ROOT modifier = hoa_opinion_robbed years = 20 }
+		}
+		prestige = 50
+
+		ai_chance = { factor = 60 }
+	}
+
+	# Demand gold instead
+	option = {
+		name = hoa_loot_7_b
+		FROM = {
+			transfer_scaled_wealth = {
+				to = ROOT
+				value = 0.3
+			}
+		}
+		prestige = 30
+
+		ai_chance = { factor = 30 }
+	}
+
+	# Be magnanimous
+	option = {
+		name = hoa_loot_7_c
+		FROM = {
+			opinion = { who = ROOT modifier = opinion_merciful years = 10 }
+		}
+		piety = 30
+		prestige = 20
+		diplomacy = 1
+
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 3 trait = kind }
+		}
+	}
+}
+
+# ========================================
+# 8. CONFISCATE PRISONER GOODS - Decision
+# ========================================
+# Regular decision to strip all prisoners of artifacts
+character_event = {
+	id = hoa_loot.8
+	title = hoa_loot_8_title
+	desc = hoa_loot_8_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	# Confirm confiscation
+	option = {
+		name = hoa_loot_8_a
+		custom_tooltip = { text = hoa_confiscate_all_tt }
+		hidden_tooltip = {
+			any_courtier = {
+				limit = {
+					prisoner = yes
+					host = { character = ROOT }
+					any_artifact = { always = yes }
+				}
+				any_artifact = {
+					unsafe_transfer_artifact = {
+						from = PREV
+						to = ROOT
+					}
+				}
+				opinion = { who = ROOT modifier = hoa_opinion_robbed years = 20 }
+			}
+		}
+		prestige = 30
+		piety = -20
+
+		ai_chance = { factor = 80 }
+	}
+
+	# Changed my mind
+	option = {
+		name = hoa_loot_8_b
+		prestige = -5
+
+		ai_chance = { factor = 20 }
+	}
+}
+
+# ========================================
+# 9. FALLEN ENEMY POSSESSIONS (Notification to killer)
+# ========================================
+# Fired by hoa_loot.6 relay: ROOT = killer, FROM = dead character
+character_event = {
+	id = hoa_loot.9
+	title = hoa_loot_6_title
+	desc = hoa_loot_6_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	# Claim their possessions
+	option = {
+		name = hoa_loot_6_a
+		FROM = {
+			any_artifact = {
+				unsafe_transfer_artifact = {
+					from = PREV
+					to = ROOT
+				}
+			}
+		}
+		prestige = 10
+
+		ai_chance = { factor = 90 }
+	}
+
+	# Bury them with their belongings
+	option = {
+		name = hoa_loot_6_b
+		piety = 25
+
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 3 trait = kind }
+		}
+	}
+}

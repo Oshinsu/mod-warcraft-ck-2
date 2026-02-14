@@ -1,0 +1,67 @@
+CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+hoa_consult_chancellor;Consult Chancellor;Consulter le Chancelier;;;;;;;;;;;;x
+hoa_consult_chancellor_desc;Request a detailed diplomatic briefing from your Chancellor.;Demander un rapport diplomatique detaille a votre Chancelier.;;;;;;;;;;;;x
+hoa_consult_steward;Consult Steward;Consulter l'Intendant;;;;;;;;;;;;x
+hoa_consult_steward_desc;Request an economic report and policy recommendations from your Steward.;Demander un rapport economique et des recommandations a votre Intendant.;;;;;;;;;;;;x
+hoa_consult_marshal;Consult Marshal;Consulter le Marechal;;;;;;;;;;;;x
+hoa_consult_marshal_desc;Request a military readiness assessment from your Marshal.;Demander une evaluation de la preparation militaire a votre Marechal.;;;;;;;;;;;;x
+hoa_consult_spymaster;Consult Spymaster;Consulter le Maitre Espion;;;;;;;;;;;;x
+hoa_consult_spymaster_desc;Request an intelligence briefing from your Spymaster.;Demander un rapport de renseignement a votre Maitre Espion.;;;;;;;;;;;;x
+hoa_consult_chaplain;Consult Court Chaplain;Consulter l'Aumonier;;;;;;;;;;;;x
+hoa_consult_chaplain_desc;Seek spiritual counsel and moral guidance from your Court Chaplain.;Chercher un conseil spirituel aupres de votre Aumonier.;;;;;;;;;;;;x
+hoa_request_policy_change;Request Policy Change;Demander un Changement de Politique;;;;;;;;;;;;x
+hoa_request_policy_change_desc;Discuss major policy reforms with your advisor.;Discuter de reformes majeures avec votre conseiller.;;;;;;;;;;;;x
+hoa_consult_chancellor_tt;Your Chancellor will prepare a diplomatic report...;Votre Chancelier preparera un rapport diplomatique...;;;;;;;;;;;;x
+hoa_consult_steward_tt;Your Steward will prepare an economic analysis...;Votre Intendant preparera une analyse economique...;;;;;;;;;;;;x
+hoa_consult_marshal_tt;Your Marshal will assess military readiness...;Votre Marechal evaluera la preparation militaire...;;;;;;;;;;;;x
+hoa_consult_spymaster_tt;Your Spymaster will prepare an intelligence briefing...;Votre Maitre Espion preparera un rapport de renseignement...;;;;;;;;;;;;x
+hoa_consult_chaplain_tt;Your Court Chaplain will prepare spiritual counsel...;Votre Aumonier preparera un conseil spirituel...;;;;;;;;;;;;x
+hoa_policy_change_tt;You discuss major reforms with your advisor...;Vous discutez de reformes majeures avec votre conseiller...;;;;;;;;;;;;x
+hoa_advisor_1_title;Chancellor's Report;Rapport du Chancelier;;;;;;;;;;;;x
+hoa_advisor_1_desc;Your Chancellor presents a comprehensive overview of the diplomatic situation, detailing allies, rivals, and opportunities.;Votre Chancelier presente un apercu complet de la situation diplomatique.;;;;;;;;;;;;x
+hoa_advisor_1_a;Review diplomatic relations;Examiner les relations diplomatiques;;;;;;;;;;;;x
+hoa_advisor_1_b;Propose alliance strategy;Proposer une strategie d'alliance;;;;;;;;;;;;x
+hoa_advisor_1_c;Crisis management briefing;Briefing de gestion de crise;;;;;;;;;;;;x
+hoa_chancellor_analysis_tt;Your Chancellor provides valuable diplomatic insights.;Votre Chancelier fournit de precieuses informations diplomatiques.;;;;;;;;;;;;x
+hoa_chancellor_alliance_tt;A strategic alliance framework emerges from the discussion.;Un cadre d'alliance strategique emerge de la discussion.;;;;;;;;;;;;x
+hoa_chancellor_crisis_tt;The briefing reveals hidden diplomatic crises.;Le briefing revele des crises diplomatiques cachees.;;;;;;;;;;;;x
+hoa_advisor_10_title;Steward's Report;Rapport de l'Intendant;;;;;;;;;;;;x
+hoa_advisor_10_desc;Your Steward presents detailed economic data: tax revenues, expenditures, and growth projections.;Votre Intendant presente des donnees economiques detaillees.;;;;;;;;;;;;x
+hoa_advisor_10_a;Review the economic audit;Examiner l'audit economique;;;;;;;;;;;;x
+hoa_advisor_10_b;Discuss tax reforms;Discuter des reformes fiscales;;;;;;;;;;;;x
+hoa_advisor_10_c;Investment recommendations;Recommandations d'investissement;;;;;;;;;;;;x
+hoa_steward_audit_tt;The audit reveals economic opportunities.;L'audit revele des opportunites economiques.;;;;;;;;;;;;x
+hoa_steward_reform_tt;Tax reforms will boost revenue from your capital.;Les reformes fiscales augmenteront les revenus de votre capitale.;;;;;;;;;;;;x
+hoa_steward_invest_tt;Sound investment advice improves your economic acumen.;De bons conseils d'investissement ameliorent votre acuite economique.;;;;;;;;;;;;x
+hoa_advisor_20_title;Marshal's Report;Rapport du Marechal;;;;;;;;;;;;x
+hoa_advisor_20_desc;Your Marshal presents a comprehensive military readiness report, assessing troops, defenses, and potential threats.;Votre Marechal presente un rapport complet de preparation militaire.;;;;;;;;;;;;x
+hoa_advisor_20_a;Review military readiness;Examiner la preparation militaire;;;;;;;;;;;;x
+hoa_advisor_20_b;Propose a campaign;Proposer une campagne;;;;;;;;;;;;x
+hoa_advisor_20_c;Assess border security;Evaluer la securite des frontieres;;;;;;;;;;;;x
+hoa_marshal_readiness_tt;The military assessment reveals strengths and weaknesses.;L'evaluation militaire revele forces et faiblesses.;;;;;;;;;;;;x
+hoa_marshal_campaign_tt;A promising military strategy takes shape.;Une strategie militaire prometteuse prend forme.;;;;;;;;;;;;x
+hoa_marshal_border_tt;Border defenses are strengthened following the assessment.;Les defenses frontalières sont renforcees.;;;;;;;;;;;;x
+hoa_advisor_30_title;Spymaster's Briefing;Briefing du Maitre Espion;;;;;;;;;;;;x
+hoa_advisor_30_desc;In the shadows of a private chamber, your Spymaster reveals what their agents have uncovered.;Dans l'ombre d'une chambre privee, votre Maitre Espion revele ce que ses agents ont decouvert.;;;;;;;;;;;;x
+hoa_advisor_30_a;Intelligence briefing;Briefing de renseignement;;;;;;;;;;;;x
+hoa_advisor_30_b;Counter-espionage operations;Operations de contre-espionnage;;;;;;;;;;;;x
+hoa_advisor_30_c;Identify internal threats;Identifier les menaces internes;;;;;;;;;;;;x
+hoa_spymaster_intel_tt;Your Spymaster reveals critical intelligence.;Votre Maitre Espion revele des renseignements critiques.;;;;;;;;;;;;x
+hoa_spymaster_counter_tt;Counter-intelligence measures are put in place.;Des mesures de contre-espionnage sont mises en place.;;;;;;;;;;;;x
+hoa_spymaster_threats_tt;Potential conspirators are identified and watched.;Des conspirateurs potentiels sont identifies et surveilles.;;;;;;;;;;;;x
+hoa_advisor_40_title;Spiritual Counsel;Conseil Spirituel;;;;;;;;;;;;x
+hoa_advisor_40_desc;Your Court Chaplain offers words of wisdom and spiritual guidance for the challenges ahead.;Votre Aumonier offre des paroles de sagesse et des conseils spirituels.;;;;;;;;;;;;x
+hoa_advisor_40_a;Seek spiritual guidance;Chercher des conseils spirituels;;;;;;;;;;;;x
+hoa_advisor_40_b;Discuss vassal factions;Discuter des factions vassales;;;;;;;;;;;;x
+hoa_advisor_40_c;Request a blessing;Demander une benediction;;;;;;;;;;;;x
+hoa_chaplain_guidance_tt;Words of wisdom restore clarity to your troubled mind.;Des paroles de sagesse restaurent la clarte de votre esprit trouble.;;;;;;;;;;;;x
+hoa_chaplain_faction_tt;Moral authority helps sway disloyal vassals.;L'autorite morale aide a influencer les vassaux deloyaux.;;;;;;;;;;;;x
+hoa_chaplain_blessing_tt;A holy blessing strengthens your body and spirit.;Une benediction sacree renforce votre corps et votre esprit.;;;;;;;;;;;;x
+hoa_advisor_50_title;Policy Reform Council;Conseil de Reforme Politique;;;;;;;;;;;;x
+hoa_advisor_50_desc;You convene your advisors to discuss sweeping policy changes that will shape the realm's future.;Vous convoquiez vos conseillers pour discuter de changements politiques majeurs.;;;;;;;;;;;;x
+hoa_advisor_50_a;Implement economic reforms;Implementer des reformes economiques;;;;;;;;;;;;x
+hoa_advisor_50_b;Implement military reforms;Implementer des reformes militaires;;;;;;;;;;;;x
+hoa_advisor_50_c;Implement cultural reforms;Implementer des reformes culturelles;;;;;;;;;;;;x
+hoa_policy_economic_tt;Economic reforms boost trade and taxation in your capital.;Les reformes economiques boostent le commerce et la taxation de votre capitale.;;;;;;;;;;;;x
+hoa_policy_military_tt;Military reforms strengthen your armies and defenses.;Les reformes militaires renforcent vos armees et vos defenses.;;;;;;;;;;;;x
+hoa_policy_cultural_tt;Cultural reforms accelerate learning and technology.;Les reformes culturelles accelerent l'apprentissage et la technologie.;;;;;;;;;;;;x

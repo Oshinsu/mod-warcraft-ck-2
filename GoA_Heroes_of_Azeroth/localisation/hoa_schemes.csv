@@ -1,0 +1,138 @@
+CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+hoa_scheme_steal_artifact;Steal Artifact;Voler un Artefact;;;;;;;;;;;;x
+hoa_scheme_steal_artifact_desc;Plot to steal an equipped artifact from the target through your agents.;Complotez pour voler un artefact equipe de la cible.;;;;;;;;;;;;x
+hoa_scheme_fabricate_scandal;Fabricate Scandal;Fabriquer un Scandale;;;;;;;;;;;;x
+hoa_scheme_fabricate_scandal_desc;Spread false rumors to destroy a rival's reputation across the realm.;Repandez de fausses rumeurs pour detruire la reputation d'un rival.;;;;;;;;;;;;x
+hoa_scheme_incite_rebellion;Incite Rebellion;Inciter une Rebellion;;;;;;;;;;;;x
+hoa_scheme_incite_rebellion_desc;Turn a ruler's vassals against them through secret agitation.;Retournez les vassaux d'un dirigeant contre lui.;;;;;;;;;;;;x
+hoa_scheme_blackmail;Blackmail;Chantage;;;;;;;;;;;;x
+hoa_scheme_blackmail_desc;Gather compromising information on a target for leverage.;Rassemblez des informations compromettantes sur une cible.;;;;;;;;;;;;x
+hoa_scheme_poison;Poison Rival;Empoisonner un Rival;;;;;;;;;;;;x
+hoa_scheme_poison_desc;Commission a slow-acting poison for a discreet elimination.;Commandez un poison a action lente pour une elimination discrete.;;;;;;;;;;;;x
+hoa_scheme_kidnap;Kidnap Target;Enlever la Cible;;;;;;;;;;;;x
+hoa_scheme_kidnap_desc;Abduct a character for ransom or political leverage.;Enlevez un personnage pour une rancon ou un avantage politique.;;;;;;;;;;;;x
+hoa_scheme_dark_ritual;Dark Ritual;Rituel Sombre;;;;;;;;;;;;x
+hoa_scheme_dark_ritual_desc;Perform forbidden magic against a rival ruler. Only for magic classes.;Effectuez un rituel magique interdit contre un rival. Classes magiques seulement.;;;;;;;;;;;;x
+hoa_scheme_smuggling;Establish Smuggling Network;Reseau de Contrebande;;;;;;;;;;;;x
+hoa_scheme_smuggling_desc;Set up an illicit trade network for ongoing income. Requires discretion.;Creez un reseau de commerce illicite pour des revenus continus.;;;;;;;;;;;;x
+hoa_scheme_coup;Plan Coup d'Etat;Planifier un Coup d'Etat;;;;;;;;;;;;x
+hoa_scheme_coup_desc;Plot to overthrow your liege and seize power for yourself.;Complotez pour renverser votre suzerain et prendre le pouvoir.;;;;;;;;;;;;x
+hoa_private_discussion;Private Discussion;Discussion Privee;;;;;;;;;;;;x
+hoa_private_discussion_desc;Have a private conversation with this person.;Avoir une discussion privee avec cette personne.;;;;;;;;;;;;x
+hoa_smuggling_setup_tt;Your agents begin establishing smuggling routes...;Vos agents commencent a etablir des routes de contrebande...;;;;;;;;;;;;x
+hoa_coup_planning_tt;You begin secretly preparing your seizure of power...;Vous commencez a preparer secretement votre prise de pouvoir...;;;;;;;;;;;;x
+hoa_scheme_1_title;The Heist Begins;Le Braquage Commence;;;;;;;;;;;;x
+hoa_scheme_1_desc;Your agents have identified the target's most prized artifact. They await your signal to begin the operation.;Vos agents ont identifie l'artefact le plus precieux de la cible. Ils attendent votre signal.;;;;;;;;;;;;x
+hoa_scheme_1_a;Begin the operation;Commencer l'operation;;;;;;;;;;;;x
+hoa_scheme_2_title;Artifact Stolen!;Artefact Vole!;;;;;;;;;;;;x
+hoa_scheme_2_desc;Your agents successfully infiltrated and extracted the artifact without being detected. A masterful operation.;Vos agents ont reussi a infiltrer et extraire l'artefact sans etre detectes.;;;;;;;;;;;;x
+hoa_scheme_2_a;Excellent work;Excellent travail;;;;;;;;;;;;x
+hoa_scheme_3_title;Partial Success;Succes Partiel;;;;;;;;;;;;x
+hoa_scheme_3_desc;Your agents couldn't reach the artifact but managed to pocket some gold during the infiltration.;Vos agents n'ont pas pu atteindre l'artefact mais ont recupere de l'or.;;;;;;;;;;;;x
+hoa_scheme_3_a;At least we got something;Au moins on a quelque chose;;;;;;;;;;;;x
+hoa_scheme_4_title;Caught!;Pris sur le fait!;;;;;;;;;;;;x
+hoa_scheme_4_desc;Your agents were discovered during the operation. Your involvement is now known throughout the realm.;Vos agents ont ete decouverts. Votre implication est maintenant connue.;;;;;;;;;;;;x
+hoa_scheme_4_a;This is... unfortunate;C'est... regrettable;;;;;;;;;;;;x
+hoa_scheme_10_title;Spreading Rumors;Propagation de Rumeurs;;;;;;;;;;;;x
+hoa_scheme_10_desc;Your network of informants begins spreading carefully crafted lies about the target.;Votre reseau d'informateurs commence a repandre des mensonges soigneusement elabores.;;;;;;;;;;;;x
+hoa_scheme_10_a;Let the whispers do their work;Laissons les murmures faire leur oeuvre;;;;;;;;;;;;x
+hoa_scheme_11_title;Scandal Erupts!;Le Scandale Eclate!;;;;;;;;;;;;x
+hoa_scheme_11_desc;The false rumors have spread like wildfire. The target's reputation lies in ruins.;Les fausses rumeurs se sont propagees comme une trainee de poudre.;;;;;;;;;;;;x
+hoa_scheme_11_a;Their reputation is destroyed;Leur reputation est detruite;;;;;;;;;;;;x
+hoa_scheme_12_title;Mild Gossip;Ragots Legers;;;;;;;;;;;;x
+hoa_scheme_12_desc;Some rumors circulate but fail to gain real traction. Still, you learned useful skills.;Quelques rumeurs circulent mais ne prennent pas vraiment.;;;;;;;;;;;;x
+hoa_scheme_12_a;Better than nothing;Mieux que rien;;;;;;;;;;;;x
+hoa_scheme_13_title;Scandal Backfires!;Le Scandale se Retourne!;;;;;;;;;;;;x
+hoa_scheme_13_desc;The false rumors have been traced back to you. Now everyone knows you as a liar and schemer.;Les fausses rumeurs ont ete retracees jusqu'a vous.;;;;;;;;;;;;x
+hoa_scheme_13_a;I should have been more careful;J'aurais du etre plus prudent;;;;;;;;;;;;x
+hoa_scheme_20_title;Agents of Chaos;Agents du Chaos;;;;;;;;;;;;x
+hoa_scheme_20_desc;Your operatives infiltrate the target realm, whispering promises of freedom to disgruntled vassals.;Vos agents infiltrent le royaume cible, murmurant des promesses de liberte.;;;;;;;;;;;;x
+hoa_scheme_20_a;Spread the seeds of discord;Semez les graines de la discorde;;;;;;;;;;;;x
+hoa_scheme_21_title;Rebellion Erupts!;La Rebellion Eclate!;;;;;;;;;;;;x
+hoa_scheme_21_desc;Your efforts bear fruit as multiple vassals rise against their overlord in open revolt!;Vos efforts portent leurs fruits alors que plusieurs vassaux se revolent!;;;;;;;;;;;;x
+hoa_scheme_21_a;The chaos serves our purpose;Le chaos sert nos interets;;;;;;;;;;;;x
+hoa_scheme_22_title;Unrest Simmers;Agitation Sourde;;;;;;;;;;;;x
+hoa_scheme_22_desc;There is unrest in the target realm but no outright rebellion. The seeds are planted.;Il y a de l'agitation mais pas de rebellion ouverte.;;;;;;;;;;;;x
+hoa_scheme_22_a;The foundation is laid;Les fondations sont posees;;;;;;;;;;;;x
+hoa_scheme_23_title;Plot Discovered!;Complot Decouvert!;;;;;;;;;;;;x
+hoa_scheme_23_desc;Your involvement in the failed rebellion has been exposed. Diplomatic consequences will follow.;Votre implication dans la rebellion echouee a ete exposee.;;;;;;;;;;;;x
+hoa_scheme_23_a;We've made a powerful enemy;Nous avons cree un puissant ennemi;;;;;;;;;;;;x
+hoa_scheme_30_title;Gathering Secrets;Collecte de Secrets;;;;;;;;;;;;x
+hoa_scheme_30_desc;Your spies begin investigating the target's private life, searching for any compromising information.;Vos espions enquetent sur la vie privee de la cible.;;;;;;;;;;;;x
+hoa_scheme_30_a;Find their weakness;Trouvez leur faiblesse;;;;;;;;;;;;x
+hoa_scheme_31_title;Leverage Acquired!;Levier Acquis!;;;;;;;;;;;;x
+hoa_scheme_31_desc;Your agents have uncovered damning evidence. The target is now in your power.;Vos agents ont decouvert des preuves accablantes.;;;;;;;;;;;;x
+hoa_scheme_31_a;Pay up or be exposed;Payez ou soyez expose;;;;;;;;;;;;x
+hoa_scheme_31_b;Swear loyalty to me;Jurez-moi fidelite;;;;;;;;;;;;x
+hoa_scheme_32_title;Some Useful Info;Quelques Infos Utiles;;;;;;;;;;;;x
+hoa_scheme_32_desc;Your investigation yielded some minor dirt but nothing truly devastating.;Votre enquete a revele quelques details mineurs mais rien de devastateur.;;;;;;;;;;;;x
+hoa_scheme_32_a;It will have to do;Ca devra suffire;;;;;;;;;;;;x
+hoa_scheme_33_title;Counter-Blackmail!;Contre-Chantage!;;;;;;;;;;;;x
+hoa_scheme_33_desc;In investigating the target, your agents accidentally revealed YOUR secrets. Now they have leverage on you.;En enquetant, vos agents ont accidentellement revele VOS secrets.;;;;;;;;;;;;x
+hoa_scheme_33_a;How did this happen?;Comment est-ce arrive?;;;;;;;;;;;;x
+hoa_scheme_40_title;The Poison is Prepared;Le Poison est Prepare;;;;;;;;;;;;x
+hoa_scheme_40_desc;A vial of slow-acting poison has been crafted. Your agents move to deliver it.;Une fiole de poison a action lente a ete preparee.;;;;;;;;;;;;x
+hoa_scheme_40_a;Deliver the poison;Livrez le poison;;;;;;;;;;;;x
+hoa_scheme_41_title;Target Eliminated;Cible Eliminee;;;;;;;;;;;;x
+hoa_scheme_41_desc;The poison took effect. The target has fallen ill and perished. No one suspects your involvement.;Le poison a fait effet. La cible est tombee malade et a peri.;;;;;;;;;;;;x
+hoa_scheme_41_a;One less problem;Un probleme de moins;;;;;;;;;;;;x
+hoa_scheme_42_title;Target Weakened;Cible Affaiblie;;;;;;;;;;;;x
+hoa_scheme_42_desc;The poison took partial effect. The target survived but is significantly weakened.;Le poison n'a fait qu'un effet partiel.;;;;;;;;;;;;x
+hoa_scheme_42_a;They'll suffer for a while;Ils souffriront un moment;;;;;;;;;;;;x
+hoa_scheme_43_title;Poison Intercepted;Poison Intercepte;;;;;;;;;;;;x
+hoa_scheme_43_desc;A loyal servant tasted the poison before it reached the target. Your plot is exposed.;Un serviteur loyal a goute le poison avant qu'il n'atteigne la cible.;;;;;;;;;;;;x
+hoa_scheme_43_a;This will haunt me;Cela me hantera;;;;;;;;;;;;x
+hoa_scheme_44_title;Self-Poisoned!;Auto-Empoisonne!;;;;;;;;;;;;x
+hoa_scheme_44_desc;In a terrible irony, you accidentally exposed yourself to the poison during preparation.;Par une terrible ironie, vous vous etes accidentellement expose au poison.;;;;;;;;;;;;x
+hoa_scheme_44_a;The pain is excruciating;La douleur est atroce;;;;;;;;;;;;x
+hoa_scheme_50_title;The Abduction Plan;Le Plan d'Enlevement;;;;;;;;;;;;x
+hoa_scheme_50_desc;Your agents have scouted the target's movements. They are ready to strike.;Vos agents ont etudie les deplacements de la cible.;;;;;;;;;;;;x
+hoa_scheme_50_a;Execute the plan;Executez le plan;;;;;;;;;;;;x
+hoa_scheme_51_title;Target Captured!;Cible Capturee!;;;;;;;;;;;;x
+hoa_scheme_51_desc;Your agents successfully abducted the target. They are now your prisoner.;Vos agents ont reussi a enlever la cible.;;;;;;;;;;;;x
+hoa_scheme_51_a;Bring them to me;Amenez-les moi;;;;;;;;;;;;x
+hoa_scheme_52_title;Target Escaped;La Cible s'est Echappee;;;;;;;;;;;;x
+hoa_scheme_52_desc;The target managed to escape your agents. The operation was a costly failure.;La cible a reussi a echapper a vos agents.;;;;;;;;;;;;x
+hoa_scheme_52_a;A waste of resources;Un gaspillage de ressources;;;;;;;;;;;;x
+hoa_scheme_53_title;Agents Captured!;Agents Captures!;;;;;;;;;;;;x
+hoa_scheme_53_desc;Your own agents were caught and imprisoned. They will likely reveal your involvement.;Vos propres agents ont ete captures et emprisonnes.;;;;;;;;;;;;x
+hoa_scheme_53_a;This is a disaster;C'est un desastre;;;;;;;;;;;;x
+hoa_scheme_60_title;The Ritual Begins;Le Rituel Commence;;;;;;;;;;;;x
+hoa_scheme_60_desc;You gather the forbidden components and begin the dark ritual, channeling arcane energies against your target.;Vous rassemblez les composants interdits et commencez le rituel sombre.;;;;;;;;;;;;x
+hoa_scheme_60_a;Let the dark magic flow;Laissez la magie noire couler;;;;;;;;;;;;x
+hoa_scheme_61_title;Devastating Curse!;Malediction Devastatrice!;;;;;;;;;;;;x
+hoa_scheme_61_desc;The ritual succeeds beyond expectations. A terrible curse falls upon your target's lands and people.;Le rituel depasse les attentes. Une terrible malediction s'abat sur les terres de votre cible.;;;;;;;;;;;;x
+hoa_scheme_61_a;They will suffer for crossing me;Ils souffriront pour m'avoir defie;;;;;;;;;;;;x
+hoa_scheme_62_title;Partial Effect;Effet Partiel;;;;;;;;;;;;x
+hoa_scheme_62_desc;The ritual produced some effect but not the devastating curse you hoped for.;Le rituel a produit un certain effet mais pas la malediction devastatrice esperee.;;;;;;;;;;;;x
+hoa_scheme_62_a;The magic was not strong enough;La magie n'etait pas assez puissante;;;;;;;;;;;;x
+hoa_scheme_63_title;Ritual Backfire;Rituel Retourne;;;;;;;;;;;;x
+hoa_scheme_63_desc;The dark energies spiraled out of control and turned against you. Your mind and body are scarred.;Les energies sombres ont echappe a tout controle.;;;;;;;;;;;;x
+hoa_scheme_63_a;The darkness consumes me;Les tenebres me consument;;;;;;;;;;;;x
+hoa_scheme_64_title;Demonic Backlash!;Contrecoup Demoniaque!;;;;;;;;;;;;x
+hoa_scheme_64_desc;The ritual attracted the attention of malevolent entities. They punished your hubris severely.;Le rituel a attire l'attention d'entites malveillantes.;;;;;;;;;;;;x
+hoa_scheme_64_a;I should never have tried this;Je n'aurais jamais du essayer;;;;;;;;;;;;x
+hoa_scheme_70_title;Setting Up Routes;Mise en Place des Routes;;;;;;;;;;;;x
+hoa_scheme_70_desc;Your agents scout hidden paths and corrupt border guards to establish smuggling routes.;Vos agents repaient des chemins caches et corrompent des gardes-frontieres.;;;;;;;;;;;;x
+hoa_scheme_70_a;Build the network;Construisez le reseau;;;;;;;;;;;;x
+hoa_scheme_71_title;Smuggling Network Established!;Reseau de Contrebande Etabli!;;;;;;;;;;;;x
+hoa_scheme_71_desc;A profitable smuggling operation is now running under your realm. Gold flows in regularly.;Un reseau de contrebande profitable fonctionne maintenant sous votre royaume.;;;;;;;;;;;;x
+hoa_scheme_71_a;The gold flows;L'or coule;;;;;;;;;;;;x
+hoa_scheme_72_title;Small-Time Operation;Operation de Petite Envergure;;;;;;;;;;;;x
+hoa_scheme_72_desc;Only a small smuggling operation could be established. It provides modest income.;Seule une petite operation de contrebande a pu etre etablie.;;;;;;;;;;;;x
+hoa_scheme_72_a;Better than nothing;Mieux que rien;;;;;;;;;;;;x
+hoa_scheme_73_title;Smuggling Ring Busted!;Reseau de Contrebande Demantele!;;;;;;;;;;;;x
+hoa_scheme_73_desc;Your smuggling operation was discovered and shut down. Your reputation takes a hit.;Votre operation de contrebande a ete decouverte et demantelee.;;;;;;;;;;;;x
+hoa_scheme_73_a;Clean up the evidence;Nettoyez les preuves;;;;;;;;;;;;x
+hoa_scheme_80_title;Preparations for the Coup;Preparations du Coup d'Etat;;;;;;;;;;;;x
+hoa_scheme_80_desc;You secretly contact like-minded nobles and military commanders, planning the overthrow.;Vous contactez secretement des nobles et des commandants militaires allies.;;;;;;;;;;;;x
+hoa_scheme_80_a;The time for action approaches;Le moment d'agir approche;;;;;;;;;;;;x
+hoa_scheme_81_title;The Coup Succeeds!;Le Coup d'Etat Reussit!;;;;;;;;;;;;x
+hoa_scheme_81_desc;Your forces seize the capital! The old regime falls and you take power!;Vos forces s'emparent de la capitale! L'ancien regime tombe!;;;;;;;;;;;;x
+hoa_scheme_81_a;The throne is mine!;Le trone est a moi!;;;;;;;;;;;;x
+hoa_scheme_82_title;Concessions Won;Concessions Obtenues;;;;;;;;;;;;x
+hoa_scheme_82_desc;The coup was not entirely successful, but your show of force extracted significant concessions.;Le coup n'a pas entierement reussi, mais votre demonstration de force a extrait des concessions.;;;;;;;;;;;;x
+hoa_scheme_82_a;We gained some ground;Nous avons gagne du terrain;;;;;;;;;;;;x
+hoa_scheme_83_title;The Coup Fails!;Le Coup d'Etat Echoue!;;;;;;;;;;;;x
+hoa_scheme_83_desc;Your plot was discovered before you could act. The retaliation is swift and brutal.;Votre complot a ete decouvert avant que vous ne puissiez agir.;;;;;;;;;;;;x
+hoa_scheme_83_a;I should have planned better;J'aurais du mieux planifier;;;;;;;;;;;;x

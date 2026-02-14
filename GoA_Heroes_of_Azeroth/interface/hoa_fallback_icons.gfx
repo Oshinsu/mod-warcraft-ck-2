@@ -36,6 +36,57 @@ spriteTypes = {
 		noOfFrames = 1
 	}
 
+	# --- ADDITIONAL EVENT PICTURES (fallbacks for new systems) ---
+
+	# GFX_evt_caravan — trade caravan scene
+	spriteType = {
+		name = "GFX_evt_caravan"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_crafting_workshop.png"
+		noOfFrames = 1
+	}
+	# GFX_evt_market — marketplace scene
+	spriteType = {
+		name = "GFX_evt_market"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_crafting_workshop.png"
+		noOfFrames = 1
+	}
+	# GFX_evt_shadowy_meeting — secret meeting scene
+	spriteType = {
+		name = "GFX_evt_shadowy_meeting"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_dungeon_entrance.png"
+		noOfFrames = 1
+	}
+	# GFX_evt_feast — feast/banquet scene
+	spriteType = {
+		name = "GFX_evt_feast"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_raid_victory.png"
+		noOfFrames = 1
+	}
+	# GFX_evt_tavern — tavern/inn scene
+	spriteType = {
+		name = "GFX_evt_tavern"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_crafting_workshop.png"
+		noOfFrames = 1
+	}
+	# GFX_evt_library — library/study scene
+	spriteType = {
+		name = "GFX_evt_library"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_raid_victory.png"
+		noOfFrames = 1
+	}
+	# GFX_evt_throne — throne room / private court scene
+	spriteType = {
+		name = "GFX_evt_throne"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_raid_victory.png"
+		noOfFrames = 1
+	}
+	# GFX_evt_meditation — meditation/prayer scene
+	spriteType = {
+		name = "GFX_evt_meditation"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_raid_victory.png"
+		noOfFrames = 1
+	}
+
 	# --- CHEST ARMOR: CLOTH ---
 
 	# inv_chest_cloth_44 — generic cloth chest (Robes of Arugal)

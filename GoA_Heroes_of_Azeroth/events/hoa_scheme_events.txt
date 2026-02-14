@@ -1,0 +1,1130 @@
+# =====================================================
+# Heroes of Azeroth - Intrigue Scheme Events
+# =====================================================
+# Events for the 8 scheme types defined in hoa_scheme_decisions.txt
+# Each scheme has success/failure/discovery outcomes
+# =====================================================
+
+namespace = hoa_scheme
+
+# ========================================
+# STEAL ARTIFACT SCHEME (hoa_scheme.1-5)
+# ========================================
+
+# Initial: Your agents prepare the heist
+character_event = {
+	id = hoa_scheme.1
+	title = hoa_scheme_1_title
+	desc = hoa_scheme_1_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_1_a
+		hidden_tooltip = {
+			random_list = {
+				35 = {
+					modifier = { factor = 1.5 intrigue >= 16 }
+					modifier = { factor = 1.5 is_rogue_class_trigger = yes }
+					modifier = { factor = 1.3 trait = deceitful }
+					character_event = { id = hoa_scheme.2 days = 30 }
+				}
+				35 = {
+					character_event = { id = hoa_scheme.3 days = 30 }
+				}
+				30 = {
+					modifier = { factor = 1.5 trait = honest }
+					modifier = { factor = 0.7 intrigue >= 18 }
+					character_event = { id = hoa_scheme.4 days = 30 }
+				}
+			}
+		}
+	}
+}
+
+# Success: Artifact stolen
+character_event = {
+	id = hoa_scheme.2
+	title = hoa_scheme_2_title
+	desc = hoa_scheme_2_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_2_a
+		prestige = 25
+		add_trait = hoa_shadow_agent
+		random_list = {
+			50 = {
+				add_artifact = hoa_crafted_sword_rare
+			}
+			30 = {
+				add_artifact = hoa_crafted_ring_uncommon
+			}
+			20 = {
+				wealth = 100
+			}
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_steal_cooldown
+			add_character_modifier = { name = hoa_scheme_steal_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_scheme_steal_cooldown
+		}
+	}
+}
+
+# Partial success: Got some gold but no artifact
+character_event = {
+	id = hoa_scheme.3
+	title = hoa_scheme_3_title
+	desc = hoa_scheme_3_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_3_a
+		wealth = 50
+		prestige = 10
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_steal_cooldown
+			add_character_modifier = { name = hoa_scheme_steal_cd duration = 365 hidden = yes }
+			set_character_flag = hoa_scheme_steal_cooldown
+		}
+	}
+}
+
+# Failure: Caught! Reputation damage
+character_event = {
+	id = hoa_scheme.4
+	title = hoa_scheme_4_title
+	desc = hoa_scheme_4_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_4_a
+		prestige = -50
+		piety = -25
+		any_vassal = {
+			limit = { is_adult = yes }
+			opinion = { who = ROOT modifier = hoa_opinion_caught_scheming years = 5 }
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_steal_cooldown
+			add_character_modifier = { name = hoa_scheme_steal_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_steal_cooldown
+		}
+	}
+}
+
+# ========================================
+# FABRICATE SCANDAL (hoa_scheme.10-14)
+# ========================================
+
+character_event = {
+	id = hoa_scheme.10
+	title = hoa_scheme_10_title
+	desc = hoa_scheme_10_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_10_a
+		hidden_tooltip = {
+			random_list = {
+				40 = {
+					modifier = { factor = 1.5 intrigue >= 16 }
+					modifier = { factor = 1.3 trait = deceitful }
+					character_event = { id = hoa_scheme.11 days = 30 }
+				}
+				30 = {
+					character_event = { id = hoa_scheme.12 days = 30 }
+				}
+				30 = {
+					modifier = { factor = 1.5 trait = honest }
+					character_event = { id = hoa_scheme.13 days = 30 }
+				}
+			}
+		}
+	}
+}
+
+# Success: Scandal spreads, target's reputation destroyed
+character_event = {
+	id = hoa_scheme.11
+	title = hoa_scheme_11_title
+	desc = hoa_scheme_11_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_11_a
+		prestige = 30
+		add_trait = hoa_master_schemer
+		random_independent_ruler = {
+			limit = {
+				NOT = { character = ROOT }
+				is_within_diplo_range = ROOT
+			}
+			prestige = -100
+			any_vassal = {
+				limit = { is_adult = yes }
+				opinion = { who = PREV modifier = hoa_opinion_scandal years = 5 }
+			}
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_scandal_cooldown
+			add_character_modifier = { name = hoa_scheme_scandal_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_scandal_cooldown
+		}
+	}
+}
+
+# Partial: Rumors spread but not very damaging
+character_event = {
+	id = hoa_scheme.12
+	title = hoa_scheme_12_title
+	desc = hoa_scheme_12_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_12_a
+		prestige = 10
+		change_intrigue = 1
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_scandal_cooldown
+			add_character_modifier = { name = hoa_scheme_scandal_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_scheme_scandal_cooldown
+		}
+	}
+}
+
+# Failure: Scandal traced back to you
+character_event = {
+	id = hoa_scheme.13
+	title = hoa_scheme_13_title
+	desc = hoa_scheme_13_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_13_a
+		prestige = -75
+		diplomacy = -1
+		any_vassal = {
+			limit = { is_adult = yes }
+			opinion = { who = ROOT modifier = hoa_opinion_caught_scheming years = 10 }
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_scandal_cooldown
+			add_character_modifier = { name = hoa_scheme_scandal_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_scandal_cooldown
+		}
+	}
+}
+
+# ========================================
+# INCITE REBELLION (hoa_scheme.20-24)
+# ========================================
+
+character_event = {
+	id = hoa_scheme.20
+	title = hoa_scheme_20_title
+	desc = hoa_scheme_20_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_20_a
+		hidden_tooltip = {
+			random_list = {
+				30 = {
+					modifier = { factor = 1.5 intrigue >= 18 }
+					modifier = { factor = 1.3 is_rogue_class_trigger = yes }
+					character_event = { id = hoa_scheme.21 days = 60 }
+				}
+				35 = {
+					character_event = { id = hoa_scheme.22 days = 60 }
+				}
+				35 = {
+					modifier = { factor = 1.3 trait = honest }
+					character_event = { id = hoa_scheme.23 days = 60 }
+				}
+			}
+		}
+	}
+}
+
+# Success: Rebellion breaks out in target's realm
+character_event = {
+	id = hoa_scheme.21
+	title = hoa_scheme_21_title
+	desc = hoa_scheme_21_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_21_a
+		prestige = 75
+		add_trait = hoa_master_schemer
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_rebellion_cooldown
+			add_character_modifier = { name = hoa_scheme_rebellion_cd duration = 3650 hidden = yes }
+			set_character_flag = hoa_scheme_rebellion_cooldown
+		}
+	}
+}
+
+# Partial: Unrest but no full rebellion
+character_event = {
+	id = hoa_scheme.22
+	title = hoa_scheme_22_title
+	desc = hoa_scheme_22_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_22_a
+		prestige = 25
+		change_intrigue = 1
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_rebellion_cooldown
+			add_character_modifier = { name = hoa_scheme_rebellion_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_rebellion_cooldown
+		}
+	}
+}
+
+# Failure: Plot discovered, war declared
+character_event = {
+	id = hoa_scheme.23
+	title = hoa_scheme_23_title
+	desc = hoa_scheme_23_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_23_a
+		prestige = -100
+		piety = -50
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_rebellion_cooldown
+			add_character_modifier = { name = hoa_scheme_rebellion_cd duration = 3650 hidden = yes }
+			set_character_flag = hoa_scheme_rebellion_cooldown
+		}
+	}
+}
+
+# ========================================
+# BLACKMAIL (hoa_scheme.30-34)
+# ========================================
+
+character_event = {
+	id = hoa_scheme.30
+	title = hoa_scheme_30_title
+	desc = hoa_scheme_30_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_30_a
+		hidden_tooltip = {
+			random_list = {
+				40 = {
+					modifier = { factor = 1.5 intrigue >= 16 }
+					modifier = { factor = 1.3 is_rogue_class_trigger = yes }
+					character_event = { id = hoa_scheme.31 days = 15 }
+				}
+				30 = {
+					character_event = { id = hoa_scheme.32 days = 15 }
+				}
+				30 = {
+					character_event = { id = hoa_scheme.33 days = 15 }
+				}
+			}
+		}
+	}
+}
+
+# Success: You have dirt on them - gold + opinion
+character_event = {
+	id = hoa_scheme.31
+	title = hoa_scheme_31_title
+	desc = hoa_scheme_31_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	# Demand gold
+	option = {
+		name = hoa_scheme_31_a
+		wealth = 150
+		prestige = 20
+		add_trait = hoa_shadow_agent
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_blackmail_cooldown
+			add_character_modifier = { name = hoa_scheme_blackmail_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_scheme_blackmail_cooldown
+		}
+	}
+	# Demand loyalty
+	option = {
+		name = hoa_scheme_31_b
+		random_courtier = {
+			limit = { is_adult = yes NOT = { character = ROOT } }
+			opinion = { who = ROOT modifier = hoa_opinion_blackmailed years = 10 }
+		}
+		change_intrigue = 1
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_blackmail_cooldown
+			add_character_modifier = { name = hoa_scheme_blackmail_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_scheme_blackmail_cooldown
+		}
+	}
+}
+
+# Partial: Some useful info
+character_event = {
+	id = hoa_scheme.32
+	title = hoa_scheme_32_title
+	desc = hoa_scheme_32_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_32_a
+		wealth = 50
+		change_intrigue = 1
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_blackmail_cooldown
+			add_character_modifier = { name = hoa_scheme_blackmail_cd duration = 365 hidden = yes }
+			set_character_flag = hoa_scheme_blackmail_cooldown
+		}
+	}
+}
+
+# Failure: They have dirt on YOU
+character_event = {
+	id = hoa_scheme.33
+	title = hoa_scheme_33_title
+	desc = hoa_scheme_33_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_33_a
+		prestige = -50
+		wealth = -75
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_blackmail_cooldown
+			add_character_modifier = { name = hoa_scheme_blackmail_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_blackmail_cooldown
+		}
+	}
+}
+
+# ========================================
+# POISON (hoa_scheme.40-44)
+# ========================================
+
+character_event = {
+	id = hoa_scheme.40
+	title = hoa_scheme_40_title
+	desc = hoa_scheme_40_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_40_a
+		hidden_tooltip = {
+			random_list = {
+				25 = {
+					modifier = { factor = 1.5 intrigue >= 18 }
+					modifier = { factor = 2 is_rogue_class_trigger = yes }
+					character_event = { id = hoa_scheme.41 days = 30 }
+				}
+				30 = {
+					character_event = { id = hoa_scheme.42 days = 30 }
+				}
+				25 = {
+					character_event = { id = hoa_scheme.43 days = 30 }
+				}
+				20 = {
+					character_event = { id = hoa_scheme.44 days = 30 }
+				}
+			}
+		}
+	}
+}
+
+# Success: Target killed
+character_event = {
+	id = hoa_scheme.41
+	title = hoa_scheme_41_title
+	desc = hoa_scheme_41_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_41_a
+		prestige = 10
+		piety = -50
+		add_trait = hoa_master_schemer
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_poison_cooldown
+			add_character_modifier = { name = hoa_scheme_poison_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_poison_cooldown
+		}
+	}
+}
+
+# Partial: Target weakened but alive
+character_event = {
+	id = hoa_scheme.42
+	title = hoa_scheme_42_title
+	desc = hoa_scheme_42_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_42_a
+		prestige = 5
+		piety = -25
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_poison_cooldown
+			add_character_modifier = { name = hoa_scheme_poison_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_scheme_poison_cooldown
+		}
+	}
+}
+
+# Failure: Poison intercepted
+character_event = {
+	id = hoa_scheme.43
+	title = hoa_scheme_43_title
+	desc = hoa_scheme_43_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_43_a
+		prestige = -50
+		piety = -25
+		any_vassal = {
+			limit = { is_adult = yes }
+			opinion = { who = ROOT modifier = hoa_opinion_poisoner years = 15 }
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_poison_cooldown
+			add_character_modifier = { name = hoa_scheme_poison_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_poison_cooldown
+		}
+	}
+}
+
+# Catastrophe: You poison yourself
+character_event = {
+	id = hoa_scheme.44
+	title = hoa_scheme_44_title
+	desc = hoa_scheme_44_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_44_a
+		health = -2
+		add_trait = wounded
+		prestige = -25
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_poison_cooldown
+			add_character_modifier = { name = hoa_scheme_poison_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_poison_cooldown
+		}
+	}
+}
+
+# ========================================
+# KIDNAP (hoa_scheme.50-53)
+# ========================================
+
+character_event = {
+	id = hoa_scheme.50
+	title = hoa_scheme_50_title
+	desc = hoa_scheme_50_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_50_a
+		hidden_tooltip = {
+			random_list = {
+				30 = {
+					modifier = { factor = 1.5 martial >= 14 }
+					modifier = { factor = 1.5 intrigue >= 16 }
+					character_event = { id = hoa_scheme.51 days = 20 }
+				}
+				35 = {
+					character_event = { id = hoa_scheme.52 days = 20 }
+				}
+				35 = {
+					modifier = { factor = 0.7 martial >= 14 }
+					character_event = { id = hoa_scheme.53 days = 20 }
+				}
+			}
+		}
+	}
+}
+
+# Success: Target captured
+character_event = {
+	id = hoa_scheme.51
+	title = hoa_scheme_51_title
+	desc = hoa_scheme_51_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_51_a
+		prestige = 50
+		wealth = 100
+		add_trait = hoa_shadow_agent
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_kidnap_cooldown
+			add_character_modifier = { name = hoa_scheme_kidnap_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_kidnap_cooldown
+		}
+	}
+}
+
+# Failure: Target escaped
+character_event = {
+	id = hoa_scheme.52
+	title = hoa_scheme_52_title
+	desc = hoa_scheme_52_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_52_a
+		prestige = -25
+		wealth = -50
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_kidnap_cooldown
+			add_character_modifier = { name = hoa_scheme_kidnap_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_scheme_kidnap_cooldown
+		}
+	}
+}
+
+# Catastrophe: Your agents captured instead
+character_event = {
+	id = hoa_scheme.53
+	title = hoa_scheme_53_title
+	desc = hoa_scheme_53_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_53_a
+		prestige = -75
+		wealth = -100
+		any_vassal = {
+			limit = { is_adult = yes }
+			opinion = { who = ROOT modifier = hoa_opinion_caught_scheming years = 10 }
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_kidnap_cooldown
+			add_character_modifier = { name = hoa_scheme_kidnap_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_kidnap_cooldown
+		}
+	}
+}
+
+# ========================================
+# DARK RITUAL (hoa_scheme.60-63)
+# ========================================
+
+character_event = {
+	id = hoa_scheme.60
+	title = hoa_scheme_60_title
+	desc = hoa_scheme_60_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_60_a
+		hidden_tooltip = {
+			random_list = {
+				25 = {
+					modifier = { factor = 2 is_warlock_class_trigger = yes }
+					modifier = { factor = 1.5 learning >= 18 }
+					character_event = { id = hoa_scheme.61 days = 45 }
+				}
+				30 = {
+					character_event = { id = hoa_scheme.62 days = 45 }
+				}
+				25 = {
+					character_event = { id = hoa_scheme.63 days = 45 }
+				}
+				20 = {
+					character_event = { id = hoa_scheme.64 days = 45 }
+				}
+			}
+		}
+	}
+}
+
+# Success: Devastating magical curse
+character_event = {
+	id = hoa_scheme.61
+	title = hoa_scheme_61_title
+	desc = hoa_scheme_61_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_61_a
+		prestige = 50
+		piety = -75
+		add_trait = hoa_spirit_touched
+		change_learning = 1
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_ritual_cooldown
+			add_character_modifier = { name = hoa_scheme_ritual_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_ritual_cooldown
+		}
+	}
+}
+
+# Partial: Some effect but weakened
+character_event = {
+	id = hoa_scheme.62
+	title = hoa_scheme_62_title
+	desc = hoa_scheme_62_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_62_a
+		prestige = 15
+		piety = -30
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_ritual_cooldown
+			add_character_modifier = { name = hoa_scheme_ritual_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_scheme_ritual_cooldown
+		}
+	}
+}
+
+# Failure: Ritual backfires
+character_event = {
+	id = hoa_scheme.63
+	title = hoa_scheme_63_title
+	desc = hoa_scheme_63_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_63_a
+		health = -1
+		prestige = -50
+		piety = -50
+		add_trait = stressed
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_ritual_cooldown
+			add_character_modifier = { name = hoa_scheme_ritual_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_ritual_cooldown
+		}
+	}
+}
+
+# Catastrophe: Demonic backlash
+character_event = {
+	id = hoa_scheme.64
+	title = hoa_scheme_64_title
+	desc = hoa_scheme_64_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_64_a
+		health = -3
+		add_trait = wounded
+		prestige = -100
+		piety = -100
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_ritual_cooldown
+			add_character_modifier = { name = hoa_scheme_ritual_cd duration = 3650 hidden = yes }
+			set_character_flag = hoa_scheme_ritual_cooldown
+		}
+	}
+}
+
+# ========================================
+# SMUGGLING NETWORK (hoa_scheme.70-73)
+# ========================================
+
+character_event = {
+	id = hoa_scheme.70
+	title = hoa_scheme_70_title
+	desc = hoa_scheme_70_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_70_a
+		hidden_tooltip = {
+			random_list = {
+				40 = {
+					modifier = { factor = 1.5 intrigue >= 14 }
+					modifier = { factor = 1.5 is_rogue_class_trigger = yes }
+					character_event = { id = hoa_scheme.71 days = 30 }
+				}
+				35 = {
+					character_event = { id = hoa_scheme.72 days = 30 }
+				}
+				25 = {
+					character_event = { id = hoa_scheme.73 days = 30 }
+				}
+			}
+		}
+	}
+}
+
+# Success: Smuggling network established
+character_event = {
+	id = hoa_scheme.71
+	title = hoa_scheme_71_title
+	desc = hoa_scheme_71_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_71_a
+		add_character_modifier = { name = hoa_smuggling_network duration = -1 }
+		add_trait = hoa_shadow_agent
+		prestige = 20
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_smuggle_cooldown
+			add_character_modifier = { name = hoa_scheme_smuggle_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_smuggle_cooldown
+		}
+	}
+}
+
+# Partial: Small-time operation
+character_event = {
+	id = hoa_scheme.72
+	title = hoa_scheme_72_title
+	desc = hoa_scheme_72_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_72_a
+		add_character_modifier = { name = hoa_smuggling_network_small duration = 1825 }
+		wealth = 50
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_smuggle_cooldown
+			add_character_modifier = { name = hoa_scheme_smuggle_cd duration = 730 hidden = yes }
+			set_character_flag = hoa_scheme_smuggle_cooldown
+		}
+	}
+}
+
+# Failure: Caught, fined, reputation damaged
+character_event = {
+	id = hoa_scheme.73
+	title = hoa_scheme_73_title
+	desc = hoa_scheme_73_desc
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_73_a
+		prestige = -50
+		wealth = -100
+		any_vassal = {
+			limit = { is_adult = yes }
+			opinion = { who = ROOT modifier = hoa_opinion_caught_scheming years = 5 }
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_smuggle_cooldown
+			add_character_modifier = { name = hoa_scheme_smuggle_cd duration = 1825 hidden = yes }
+			set_character_flag = hoa_scheme_smuggle_cooldown
+		}
+	}
+}
+
+# ========================================
+# COUP D'ETAT (hoa_scheme.80-83)
+# ========================================
+
+character_event = {
+	id = hoa_scheme.80
+	title = hoa_scheme_80_title
+	desc = hoa_scheme_80_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_80_a
+		hidden_tooltip = {
+			random_list = {
+				25 = {
+					modifier = { factor = 1.5 martial >= 16 }
+					modifier = { factor = 1.5 intrigue >= 16 }
+					modifier = { factor = 1.3 trait = ambitious }
+					character_event = { id = hoa_scheme.81 days = 60 }
+				}
+				30 = {
+					character_event = { id = hoa_scheme.82 days = 60 }
+				}
+				45 = {
+					modifier = { factor = 0.7 martial >= 18 }
+					character_event = { id = hoa_scheme.83 days = 60 }
+				}
+			}
+		}
+	}
+}
+
+# Success: Liege overthrown
+character_event = {
+	id = hoa_scheme.81
+	title = hoa_scheme_81_title
+	desc = hoa_scheme_81_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_81_a
+		prestige = 200
+		add_trait = hoa_legendary_warrior
+		any_vassal = {
+			limit = { is_adult = yes }
+			opinion = { who = ROOT modifier = hoa_opinion_coup_success years = 10 }
+		}
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_coup_cooldown
+			add_character_modifier = { name = hoa_scheme_coup_cd duration = 7300 hidden = yes }
+			set_character_flag = hoa_scheme_coup_cooldown
+		}
+	}
+}
+
+# Partial: Concessions extracted
+character_event = {
+	id = hoa_scheme.82
+	title = hoa_scheme_82_title
+	desc = hoa_scheme_82_desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_82_a
+		prestige = 50
+		wealth = 200
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_coup_cooldown
+			add_character_modifier = { name = hoa_scheme_coup_cd duration = 3650 hidden = yes }
+			set_character_flag = hoa_scheme_coup_cooldown
+		}
+	}
+}
+
+# Failure: Imprisoned by liege
+character_event = {
+	id = hoa_scheme.83
+	title = hoa_scheme_83_title
+	desc = hoa_scheme_83_desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_scheme_83_a
+		prestige = -200
+		wealth = -300
+		add_trait = wounded
+		hidden_tooltip = {
+			clr_character_flag = hoa_scheme_coup_cooldown
+			add_character_modifier = { name = hoa_scheme_coup_cd duration = 7300 hidden = yes }
+			set_character_flag = hoa_scheme_coup_cooldown
+		}
+	}
+}
+
+# ========================================
+# COOLDOWN FLAG CLEANUP (Yearly Pulse)
+# ========================================
+# Flags are set during scheme initiation to prevent re-firing while
+# in progress, and re-set in outcomes alongside timed modifiers.
+# This event clears expired flags (when the modifier has expired).
+character_event = {
+	id = hoa_scheme.99
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				has_character_flag = hoa_scheme_steal_cooldown
+				NOT = { has_character_modifier = hoa_scheme_steal_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_scandal_cooldown
+				NOT = { has_character_modifier = hoa_scheme_scandal_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_rebellion_cooldown
+				NOT = { has_character_modifier = hoa_scheme_rebellion_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_blackmail_cooldown
+				NOT = { has_character_modifier = hoa_scheme_blackmail_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_poison_cooldown
+				NOT = { has_character_modifier = hoa_scheme_poison_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_kidnap_cooldown
+				NOT = { has_character_modifier = hoa_scheme_kidnap_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_ritual_cooldown
+				NOT = { has_character_modifier = hoa_scheme_ritual_cd }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_smuggle_cooldown
+				NOT = { has_character_modifier = hoa_scheme_smuggle_cd }
+				NOT = { has_character_modifier = hoa_smuggling_network }
+			}
+			AND = {
+				has_character_flag = hoa_scheme_coup_cooldown
+				NOT = { has_character_modifier = hoa_scheme_coup_cd }
+			}
+			AND = {
+				has_character_flag = hoa_discussion_cooldown
+				NOT = { has_character_modifier = hoa_discussion_cd }
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_steal_cooldown
+				NOT = { has_character_modifier = hoa_scheme_steal_cd }
+			}
+			clr_character_flag = hoa_scheme_steal_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_scandal_cooldown
+				NOT = { has_character_modifier = hoa_scheme_scandal_cd }
+			}
+			clr_character_flag = hoa_scheme_scandal_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_rebellion_cooldown
+				NOT = { has_character_modifier = hoa_scheme_rebellion_cd }
+			}
+			clr_character_flag = hoa_scheme_rebellion_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_blackmail_cooldown
+				NOT = { has_character_modifier = hoa_scheme_blackmail_cd }
+			}
+			clr_character_flag = hoa_scheme_blackmail_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_poison_cooldown
+				NOT = { has_character_modifier = hoa_scheme_poison_cd }
+			}
+			clr_character_flag = hoa_scheme_poison_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_kidnap_cooldown
+				NOT = { has_character_modifier = hoa_scheme_kidnap_cd }
+			}
+			clr_character_flag = hoa_scheme_kidnap_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_ritual_cooldown
+				NOT = { has_character_modifier = hoa_scheme_ritual_cd }
+			}
+			clr_character_flag = hoa_scheme_ritual_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_smuggle_cooldown
+				NOT = { has_character_modifier = hoa_scheme_smuggle_cd }
+				NOT = { has_character_modifier = hoa_smuggling_network }
+			}
+			clr_character_flag = hoa_scheme_smuggle_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_scheme_coup_cooldown
+				NOT = { has_character_modifier = hoa_scheme_coup_cd }
+			}
+			clr_character_flag = hoa_scheme_coup_cooldown
+		}
+		if = {
+			limit = {
+				has_character_flag = hoa_discussion_cooldown
+				NOT = { has_character_modifier = hoa_discussion_cd }
+			}
+			clr_character_flag = hoa_discussion_cooldown
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

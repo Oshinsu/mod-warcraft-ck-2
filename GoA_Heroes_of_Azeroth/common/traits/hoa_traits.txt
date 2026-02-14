@@ -1,0 +1,213 @@
+# GoA: Heroes of Azeroth - Expanded Traits System
+# 17 custom traits earned through gameplay (dungeons, battles, schemes, personal actions)
+# Each trait has meaningful stat effects and roleplay flavor
+
+# ==================================
+# COMBAT / MILITARY TRAITS
+# ==================================
+
+hoa_battle_tested = {
+	martial = 1
+	combat_rating = 2
+
+	opposites = {
+		hoa_war_hero
+	}
+
+	customizer = no
+	icon = 1
+}
+
+hoa_war_hero = {
+	martial = 2
+	combat_rating = 5
+	monthly_character_prestige = 0.05
+	vassal_opinion = 10
+
+	opposites = {
+		hoa_battle_tested
+	}
+
+	customizer = no
+	icon = 2
+}
+
+hoa_legendary_warrior = {
+	martial = 3
+	combat_rating = 8
+	monthly_character_prestige = 0.1
+	vassal_opinion = 5
+	same_opinion = 15
+
+	customizer = no
+	icon = 3
+}
+
+hoa_scar_bearer = {
+	martial = 1
+	combat_rating = 3
+	diplomacy = -1
+	same_opinion = 5
+
+	customizer = no
+	icon = 4
+}
+
+# ==================================
+# DUNGEON / ADVENTURE TRAITS
+# ==================================
+
+hoa_veteran_adventurer = {
+	martial = 1
+	intrigue = 1
+	combat_rating = 2
+	monthly_character_prestige = 0.02
+
+	customizer = no
+	icon = 5
+}
+
+hoa_dungeon_survivor = {
+	martial = 1
+	health = 0.5
+	diplomacy = -1
+	same_opinion = 5
+
+	customizer = no
+	icon = 6
+}
+
+hoa_raid_leader = {
+	martial = 2
+	vassal_opinion = 10
+	combat_rating = 3
+	monthly_character_prestige = 0.05
+
+	customizer = no
+	icon = 7
+}
+
+hoa_treasure_hunter = {
+	stewardship = 1
+	intrigue = 1
+	combat_rating = 1
+	monthly_character_prestige = 0.02
+
+	customizer = no
+	icon = 8
+}
+
+# ==================================
+# SCHOLARLY / MAGIC TRAITS
+# ==================================
+
+hoa_arcane_scholar = {
+	learning = 2
+	health = 0.3
+	monthly_character_piety = 0.03
+
+	customizer = no
+	icon = 9
+}
+
+hoa_spirit_touched = {
+	learning = 2
+	diplomacy = -1
+	health = 0.2
+	monthly_character_piety = 0.05
+
+	customizer = no
+	icon = 10
+}
+
+hoa_loremaster = {
+	learning = 3
+	monthly_character_prestige = 0.05
+	culture_techpoints = 0.02
+
+	customizer = no
+	icon = 11
+}
+
+# ==================================
+# SOCIAL / POLITICAL TRAITS
+# ==================================
+
+hoa_silver_tongue = {
+	diplomacy = 2
+	intrigue = 1
+	vassal_opinion = 5
+	sex_appeal_opinion = 10
+
+	customizer = no
+	icon = 12
+}
+
+hoa_tavern_regular = {
+	diplomacy = 1
+	stewardship = -1
+	intrigue = 1
+	same_opinion = 10
+
+	customizer = no
+	icon = 13
+}
+
+hoa_merchant_prince = {
+	stewardship = 2
+	local_tax_modifier = 0.05
+	monthly_character_prestige = 0.03
+
+	customizer = no
+	icon = 14
+}
+
+# ==================================
+# INTRIGUE / SHADOW TRAITS
+# ==================================
+
+hoa_shadow_agent = {
+	intrigue = 2
+	plot_power_modifier = 0.1
+	combat_rating = 1
+
+	customizer = no
+	icon = 15
+}
+
+hoa_master_schemer = {
+	intrigue = 3
+	plot_power_modifier = 0.15
+	diplomacy = -1
+	same_opinion = -5
+
+	opposites = {
+		honest
+		just
+	}
+
+	customizer = no
+	icon = 16
+}
+
+# ==================================
+# CRAFTING / PROFESSION TRAITS
+# ==================================
+
+hoa_master_crafter = {
+	stewardship = 1
+	martial = 1
+	monthly_character_prestige = 0.02
+
+	customizer = no
+	icon = 17
+}
+
+hoa_iron_will = {
+	martial = 1
+	intrigue = 1
+	health = 0.5
+
+	customizer = no
+	icon = 18
+}
