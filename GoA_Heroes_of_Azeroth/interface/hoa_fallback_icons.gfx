@@ -1,0 +1,245 @@
+spriteTypes = {
+
+	# ====================================================================
+	# Heroes of Azeroth — Fallback GFX Definitions
+	# Maps WoW-style icon names (used in hoa_t0_sets.txt) to existing
+	# HoA submod textures. These GFX names follow WoW item naming
+	# conventions but have no dedicated artwork yet. Each entry points
+	# to the closest thematic match from our existing inventory icons.
+	#
+	# These may also exist in the GoA base mod; if so, the base mod's
+	# definitions will take priority due to CK2 load order. These
+	# fallbacks ensure the icons display correctly regardless.
+	#
+	# To replace a fallback: create the proper .png in
+	# gfx/interface/inventory/ and update the texturefile path below.
+	# ====================================================================
+
+	# --- EVENT PICTURES (fallback to existing HoA event art) ---
+
+	# GFX_evt_battle — generic battle scene, used in dungeon combat events
+	spriteType = {
+		name = "GFX_evt_battle"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_dungeon_entrance.png"
+		noOfFrames = 1
+	}
+	# GFX_evt_council — council/diplomatic scene, used in raid planning events
+	spriteType = {
+		name = "GFX_evt_council"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_raid_victory.png"
+		noOfFrames = 1
+	}
+	# GFX_evt_shadow — shadow/spy scene, used in spymaster and rogue events
+	spriteType = {
+		name = "GFX_evt_shadow"
+		texturefile = "gfx/interface/event_pictures/hoa_evt_dungeon_entrance.png"
+		noOfFrames = 1
+	}
+
+	# --- CHEST ARMOR: CLOTH ---
+
+	# inv_chest_cloth_44 — generic cloth chest (Robes of Arugal)
+	spriteType = {
+		name = "GFX_inv_chest_cloth_44"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_mage_epic.png"
+		noOfFrames = 1
+	}
+	# inv_chest_cloth_raidmage_j_01 — raid mage chest
+	spriteType = {
+		name = "GFX_inv_chest_cloth_raidmage_j_01"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_mage_epic.png"
+		noOfFrames = 1
+	}
+
+	# --- CHEST ARMOR: LEATHER ---
+
+	# inv_chest_leather_28 — leather chest piece
+	spriteType = {
+		name = "GFX_inv_chest_leather_28"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_mage_epic.png"
+		noOfFrames = 1
+	}
+
+	# --- CHEST ARMOR: MAIL ---
+
+	# inv_chest_mail_15 — mail chest piece
+	spriteType = {
+		name = "GFX_inv_chest_mail_15"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_warrior_epic.png"
+		noOfFrames = 1
+	}
+	# inv_chest_mail_19 — mail chest piece
+	spriteType = {
+		name = "GFX_inv_chest_mail_19"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_warrior_epic.png"
+		noOfFrames = 1
+	}
+
+	# --- CHEST ARMOR: PLATE ---
+
+	# inv_chest_plate_16 — plate chest (Scarlet Tabard)
+	spriteType = {
+		name = "GFX_inv_chest_plate_16"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_warrior_epic.png"
+		noOfFrames = 1
+	}
+	# inv_chest_plate_22 — plate chest piece
+	spriteType = {
+		name = "GFX_inv_chest_plate_22"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_warrior_epic.png"
+		noOfFrames = 1
+	}
+	# inv_chest_plate_24 — plate chest piece
+	spriteType = {
+		name = "GFX_inv_chest_plate_24"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_warrior_epic.png"
+		noOfFrames = 1
+	}
+	# inv_chest_plate_raidwarrior_j_01 — raid warrior plate chest
+	spriteType = {
+		name = "GFX_inv_chest_plate_raidwarrior_j_01"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_warrior_epic.png"
+		noOfFrames = 1
+	}
+
+	# --- GLOVES ---
+
+	# inv_glove_cloth_dungeoncloth_c_01 — cloth dungeon gloves
+	spriteType = {
+		name = "GFX_inv_glove_cloth_dungeoncloth_c_01"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_mage_epic.png"
+		noOfFrames = 1
+	}
+	# inv_glove_plate_dungeonplate_c_03 — plate dungeon gloves (Gordok Shackle)
+	spriteType = {
+		name = "GFX_inv_glove_plate_dungeonplate_c_03"
+		texturefile = "gfx/interface/inventory/hoa_inv_chest_warrior_epic.png"
+		noOfFrames = 1
+	}
+
+	# --- HELMS: CLOTH ---
+
+	# inv_helm_cloth_dungeoncloth_c_01 — cloth dungeon helm (Gnomish Goggles, Gandling Hood)
+	spriteType = {
+		name = "GFX_inv_helm_cloth_dungeoncloth_c_01"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_mage_t1.png"
+		noOfFrames = 1
+	}
+	# inv_helm_cloth_raidmage_j_01 — raid mage helm
+	spriteType = {
+		name = "GFX_inv_helm_cloth_raidmage_j_01"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_mage_t2.png"
+		noOfFrames = 1
+	}
+
+	# --- HELMS: LEATHER ---
+
+	# inv_helm_leather_dungeonleather_c_01 — leather dungeon helm
+	spriteType = {
+		name = "GFX_inv_helm_leather_dungeonleather_c_01"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_rogue_t1.png"
+		noOfFrames = 1
+	}
+
+	# --- HELMS: MAIL ---
+
+	# inv_helm_mail_dungeonmail_c_01 — mail dungeon helm
+	spriteType = {
+		name = "GFX_inv_helm_mail_dungeonmail_c_01"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_hunter_t1.png"
+		noOfFrames = 1
+	}
+	# inv_helm_mail_dungeonmail_c_02 — mail dungeon helm (Zulian Headdress)
+	spriteType = {
+		name = "GFX_inv_helm_mail_dungeonmail_c_02"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_shaman_t1.png"
+		noOfFrames = 1
+	}
+
+	# --- HELMS: PLATE ---
+
+	# inv_helm_plate_dungeonplate_c_01 — plate dungeon helm
+	spriteType = {
+		name = "GFX_inv_helm_plate_dungeonplate_c_01"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_warrior_t1.png"
+		noOfFrames = 1
+	}
+	# inv_helm_plate_dungeonplate_c_02 — plate dungeon helm
+	spriteType = {
+		name = "GFX_inv_helm_plate_dungeonplate_c_02"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_paladin_t1.png"
+		noOfFrames = 1
+	}
+	# inv_helm_plate_raidwarrior_j_01 — raid warrior plate helm
+	spriteType = {
+		name = "GFX_inv_helm_plate_raidwarrior_j_01"
+		texturefile = "gfx/interface/inventory/hoa_inv_helm_warrior_t2.png"
+		noOfFrames = 1
+	}
+
+	# --- JEWELRY: NECKLACES ---
+
+	# inv_jewelry_necklace_13 — necklace (Theradras Crystal)
+	spriteType = {
+		name = "GFX_inv_jewelry_necklace_13"
+		texturefile = "gfx/interface/inventory/hoa_inv_necklace_epic.png"
+		noOfFrames = 1
+	}
+	# inv_jewelry_necklace_21 — necklace (Rend's Head Trophy)
+	spriteType = {
+		name = "GFX_inv_jewelry_necklace_21"
+		texturefile = "gfx/interface/inventory/hoa_inv_necklace_epic.png"
+		noOfFrames = 1
+	}
+
+	# --- JEWELRY: RINGS ---
+
+	# inv_jewelry_ring_36 — ring (Thermaplugg Cog)
+	spriteType = {
+		name = "GFX_inv_jewelry_ring_36"
+		texturefile = "gfx/interface/inventory/hoa_inv_ring_epic.png"
+		noOfFrames = 1
+	}
+	# inv_jewelry_ring_57 — ring (Baron's Deathcharger Reins, Primal Hakkari Idol, C'Thun Eye)
+	spriteType = {
+		name = "GFX_inv_jewelry_ring_57"
+		texturefile = "gfx/interface/inventory/hoa_inv_ring_epic.png"
+		noOfFrames = 1
+	}
+
+	# --- WEAPONS: STAVES ---
+
+	# inv_staff_30 — staff (Celebrian Staff)
+	spriteType = {
+		name = "GFX_inv_staff_30"
+		texturefile = "gfx/interface/inventory/hoa_inv_staff_epic.png"
+		noOfFrames = 1
+	}
+	# inv_staff_47 — staff (Tome of Immoleth, Headmaster's Charge)
+	spriteType = {
+		name = "GFX_inv_staff_47"
+		texturefile = "gfx/interface/inventory/hoa_inv_staff_epic.png"
+		noOfFrames = 1
+	}
+
+	# --- WEAPONS: SWORDS ---
+
+	# inv_sword_27 — sword (Shadowfang Blade)
+	spriteType = {
+		name = "GFX_inv_sword_27"
+		texturefile = "gfx/interface/inventory/hoa_inv_sword_uncommon.png"
+		noOfFrames = 1
+	}
+	# inv_sword_39 — sword (Mograine's Corrupted Ashbringer, Runeblade of Baron Rivendare)
+	spriteType = {
+		name = "GFX_inv_sword_39"
+		texturefile = "gfx/interface/inventory/hoa_inv_sword_rare.png"
+		noOfFrames = 1
+	}
+	# inv_sword_48 — sword (Blackhand Doomsaw, Hakkar's Fang, Dark Edge of Insanity)
+	spriteType = {
+		name = "GFX_inv_sword_48"
+		texturefile = "gfx/interface/inventory/hoa_inv_sword_epic.png"
+		noOfFrames = 1
+	}
+}

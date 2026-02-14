@@ -149,7 +149,7 @@ hoa_ret_chevaucheurs_loups = {
 }
 
 # GRUNTS DE LA HORDE
-# Infanterie lourde de base. Forts, endurants, disciplinÃ©s.
+# Infanterie lourde de base. Forts, endurants, disciplinés.
 # L'epine dorsale de toute armee orc. LOK'TAR OGAR.
 hoa_ret_grunts_horde = {
 	potential = {
@@ -342,7 +342,7 @@ hoa_ret_cavaliers_beliers = {
 
 # PILOTES DE MECHAS
 # Petits gnomes dans d'enormes exosquelettes mecaniques.
-# Puissance de feu demesurÃ©e. Fragile mais devastateur.
+# Puissance de feu demesurée. Fragile mais devastateur.
 hoa_ret_pilotes_mechas = {
 	potential = {
 		is_nomadic = no
@@ -593,7 +593,7 @@ hoa_ret_abominations = {
 	}
 }
 
-# ARCHERS REPROUVÃ‰S
+# ARCHERS REPROUVÉS
 # Archers squelettiques. Fleches empoisonnees et pestilentes.
 # N'ont pas besoin de dormir. Tirent sans fatigue.
 hoa_ret_archers_reprouves = {
@@ -951,7 +951,7 @@ hoa_ret_garde_greymane = {
 
 # MAITRES BRASSEURS
 # Moines pandarens combattant avec un tonneau sur le dos.
-# Arts martiaux et alcool fortifiant. ImprÃ©visibles.
+# Arts martiaux et alcool fortifiant. Imprévisibles.
 hoa_ret_maitres_brasseurs = {
 	potential = {
 		is_nomadic = no

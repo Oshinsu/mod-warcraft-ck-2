@@ -1,0 +1,686 @@
+namespace = hoa_society
+
+# =====================================================
+# Heroes of Azeroth - Secret Society Events
+# =====================================================
+
+# ========================
+# SOCIETY FOUNDED
+# ========================
+character_event = {
+	id = hoa_society.1
+	title = hoa_society.1.title
+	desc = hoa_society.1.desc
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+
+	# Choose the society's purpose
+	option = {
+		name = hoa_society.1.a
+		# Shadow Council - political manipulation
+		set_character_flag = hoa_society_type_shadow
+		custom_tooltip = {
+			text = hoa_society_shadow_council_tooltip
+		}
+		ai_chance = { factor = 40 }
+	}
+
+	option = {
+		name = hoa_society.1.b
+		# Arcane Circle - magical research
+		trigger = {
+			OR = {
+				is_mage_class_trigger = yes
+				is_warlock_class_trigger = yes
+				is_druid_class_trigger = yes
+				is_shaman_class_trigger = yes
+				is_priest_class_trigger = yes
+			}
+		}
+		set_character_flag = hoa_society_type_arcane
+		custom_tooltip = {
+			text = hoa_society_arcane_circle_tooltip
+		}
+		ai_chance = { factor = 30 }
+	}
+
+	option = {
+		name = hoa_society.1.c
+		# Trade Syndicate - economic power
+		set_character_flag = hoa_society_type_trade
+		custom_tooltip = {
+			text = hoa_society_trade_syndicate_tooltip
+		}
+		ai_chance = { factor = 30 }
+	}
+}
+
+# ========================
+# GENERIC RECRUIT RESULT
+# ========================
+character_event = {
+	id = hoa_society.10
+	title = hoa_society.10.title
+	desc = hoa_society.10.desc
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+
+	immediate = {
+		random_courtier = {
+			limit = {
+				is_adult = yes
+				NOT = { has_character_modifier = hoa_society_member_loyal }
+				NOT = { trait = honest }
+				intrigue >= 6
+			}
+			save_event_target_as = recruit_target
+		}
+	}
+
+	# Success: target joins
+	option = {
+		name = hoa_society.10.a
+		trigger = {
+			event_target:recruit_target = { always = yes }
+		}
+		event_target:recruit_target = {
+			add_character_modifier = {
+				name = hoa_society_member_loyal
+				duration = -1
+			}
+			opinion = {
+				who = ROOT
+				modifier = hoa_opinion_society_recruited
+				years = 10
+			}
+		}
+		# Clear cooldown after 180 days
+		hidden_tooltip = {
+			character_event = { id = hoa_society.15 days = 180 }
+		}
+		ai_chance = { factor = 100 }
+	}
+
+	# Failure: nobody suitable
+	option = {
+		name = hoa_society.10.b
+		trigger = {
+			NOT = { event_target:recruit_target = { always = yes } }
+		}
+		prestige = -10
+		hidden_tooltip = {
+			character_event = { id = hoa_society.15 days = 90 }
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+# ========================
+# TARGETED RECRUIT RESULT
+# ========================
+character_event = {
+	id = hoa_society.11
+	title = hoa_society.11.title
+	desc = hoa_society.11.desc
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			# Success chance based on intrigue comparison
+			60 = {
+				modifier = {
+					factor = 1.5
+					FROM = { intrigue >= 16 }
+				}
+				modifier = {
+					factor = 1.3
+					FROM = { is_rogue_class_trigger = yes }
+				}
+				modifier = {
+					factor = 1.3
+					trait = deceitful
+				}
+				modifier = {
+					factor = 0.7
+					trait = brave
+				}
+				set_character_flag = hoa_recruit_success
+			}
+			30 = {
+				modifier = {
+					factor = 1.5
+					trait = honest
+				}
+				modifier = {
+					factor = 1.3
+					intrigue >= 14
+				}
+				set_character_flag = hoa_recruit_refuse
+			}
+			10 = {
+				modifier = {
+					factor = 2
+					trait = honest
+				}
+				set_character_flag = hoa_recruit_betrayal
+			}
+		}
+	}
+
+	# Success: they join
+	option = {
+		name = hoa_society.11.a
+		trigger = { has_character_flag = hoa_recruit_success }
+		add_character_modifier = {
+			name = hoa_society_member_loyal
+			duration = -1
+		}
+		opinion = {
+			who = FROM
+			modifier = hoa_opinion_society_recruited
+			years = 10
+		}
+		clr_character_flag = hoa_recruit_success
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = hoa_society.15 days = 180 }
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+
+	# Refusal: polite decline
+	option = {
+		name = hoa_society.11.b
+		trigger = { has_character_flag = hoa_recruit_refuse }
+		clr_character_flag = hoa_recruit_refuse
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = hoa_society.15 days = 90 }
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+
+	# Betrayal: they report you
+	option = {
+		name = hoa_society.11.c
+		trigger = { has_character_flag = hoa_recruit_betrayal }
+		clr_character_flag = hoa_recruit_betrayal
+		# 50% chance liege finds out
+		hidden_tooltip = {
+			FROM = {
+				random_list = {
+					50 = {
+						character_event = { id = hoa_society.30 }
+					}
+					50 = {
+						character_event = { id = hoa_society.15 days = 90 }
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+# ========================
+# CLEAR RECRUITING COOLDOWN
+# ========================
+character_event = {
+	id = hoa_society.15
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = hoa_recruiting_cooldown
+	}
+}
+
+# ========================
+# SHADOW OPERATION RESULTS
+# ========================
+character_event = {
+	id = hoa_society.20
+	title = hoa_society.20.title
+	desc = hoa_society.20.desc
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+
+	immediate = {
+		# Count loyal members for operation strength
+		random_list = {
+			# Great success
+			25 = {
+				modifier = {
+					factor = 1.5
+					intrigue >= 18
+				}
+				modifier = {
+					factor = 1.3
+					is_rogue_class_trigger = yes
+				}
+				modifier = {
+					factor = 1.2
+					is_warlock_class_trigger = yes
+				}
+				modifier = {
+					factor = 1.2
+					has_character_flag = hoa_society_type_shadow
+				}
+				set_character_flag = hoa_shadow_op_great
+			}
+			# Good success
+			35 = {
+				modifier = {
+					factor = 1.2
+					intrigue >= 14
+				}
+				set_character_flag = hoa_shadow_op_good
+			}
+			# Failure
+			25 = {
+				set_character_flag = hoa_shadow_op_fail
+			}
+			# Exposure risk
+			15 = {
+				modifier = {
+					factor = 1.5
+					NOT = { intrigue >= 12 }
+				}
+				set_character_flag = hoa_shadow_op_exposed
+			}
+		}
+	}
+
+	# Great success
+	option = {
+		name = hoa_society.20.a
+		trigger = { has_character_flag = hoa_shadow_op_great }
+		wealth = 200
+		prestige = 100
+		add_character_modifier = {
+			name = hoa_society_shadow_ops
+			duration = 730
+		}
+		# Weaken a rival
+		random_rival = {
+			limit = { is_ruler = yes }
+			prestige = -100
+		}
+		clr_character_flag = hoa_shadow_op_great
+		hidden_tooltip = {
+			character_event = { id = hoa_society.25 days = 365 }
+		}
+		ai_chance = { factor = 100 }
+	}
+
+	# Good success
+	option = {
+		name = hoa_society.20.b
+		trigger = { has_character_flag = hoa_shadow_op_good }
+		wealth = 100
+		prestige = 50
+		clr_character_flag = hoa_shadow_op_good
+		hidden_tooltip = {
+			character_event = { id = hoa_society.25 days = 365 }
+		}
+		ai_chance = { factor = 100 }
+	}
+
+	# Failure
+	option = {
+		name = hoa_society.20.c
+		trigger = { has_character_flag = hoa_shadow_op_fail }
+		prestige = -25
+		clr_character_flag = hoa_shadow_op_fail
+		hidden_tooltip = {
+			character_event = { id = hoa_society.25 days = 365 }
+		}
+		ai_chance = { factor = 100 }
+	}
+
+	# Exposed!
+	option = {
+		name = hoa_society.20.d
+		trigger = { has_character_flag = hoa_shadow_op_exposed }
+		character_event = { id = hoa_society.30 }
+		clr_character_flag = hoa_shadow_op_exposed
+		ai_chance = { factor = 100 }
+	}
+}
+
+# ========================
+# CLEAR SHADOW OP COOLDOWN
+# ========================
+character_event = {
+	id = hoa_society.25
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = hoa_shadow_op_cooldown
+	}
+}
+
+# ========================
+# SOCIETY EXPOSED!
+# ========================
+character_event = {
+	id = hoa_society.30
+	title = hoa_society.30.title
+	desc = hoa_society.30.desc
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+
+	# Your society has been discovered!
+	option = {
+		name = hoa_society.30.a
+		# Deny everything (intrigue check)
+		trigger = { intrigue >= 16 }
+		prestige = -50
+		# 50% chance it works
+		random_list = {
+			50 = {
+				custom_tooltip = {
+					text = hoa_society_denial_success_tooltip
+				}
+			}
+			50 = {
+				add_character_modifier = {
+					name = hoa_society_exposed
+					duration = 1825
+				}
+				prestige = -100
+			}
+		}
+		ai_chance = { factor = 60 }
+	}
+
+	# Bribe witnesses
+	option = {
+		name = hoa_society.30.b
+		trigger = { wealth >= 300 }
+		wealth = -300
+		# Usually works
+		random_list = {
+			80 = {
+				custom_tooltip = {
+					text = hoa_society_bribe_success_tooltip
+				}
+			}
+			20 = {
+				add_character_modifier = {
+					name = hoa_society_exposed
+					duration = 1825
+				}
+				prestige = -200
+			}
+		}
+		ai_chance = { factor = 30 }
+	}
+
+	# Accept exposure
+	option = {
+		name = hoa_society.30.c
+		add_character_modifier = {
+			name = hoa_society_exposed
+			duration = 1825
+		}
+		prestige = -150
+		any_vassal = {
+			limit = { NOT = { has_character_modifier = hoa_society_member_loyal } }
+			opinion = {
+				who = ROOT
+				modifier = hoa_opinion_society_betrayed
+				years = 5
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+}
+
+# ========================
+# SOCIETY FLAVOR: Internal Struggle (MTTH)
+# ========================
+character_event = {
+	id = hoa_society.40
+	title = hoa_society.40.title
+	desc = hoa_society.40.desc
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+
+	trigger = {
+		has_character_modifier = hoa_secret_society_leader
+		any_courtier = {
+			has_character_modifier = hoa_society_member_loyal
+		}
+		NOT = { has_character_flag = hoa_society_struggle_cooldown }
+	}
+
+	mean_time_to_happen = {
+		years = 8
+		modifier = {
+			factor = 0.7
+			any_courtier = {
+				has_character_modifier = hoa_society_member_loyal
+				intrigue >= 16
+			}
+		}
+		modifier = {
+			factor = 0.5
+			any_courtier = {
+				has_character_modifier = hoa_society_member_loyal
+				trait = ambitious
+			}
+		}
+	}
+
+	# A member wants more power
+	option = {
+		name = hoa_society.40.a
+		# Give them a role - they stay loyal
+		random_courtier = {
+			limit = { has_character_modifier = hoa_society_member_loyal }
+			opinion = {
+				who = ROOT
+				modifier = hoa_opinion_society_brother
+				years = 5
+			}
+		}
+		prestige = -25
+		set_character_flag = hoa_society_struggle_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_society.45 days = 1825 }
+		}
+		ai_chance = { factor = 60 }
+	}
+
+	# Refuse - risk losing them
+	option = {
+		name = hoa_society.40.b
+		random_courtier = {
+			limit = { has_character_modifier = hoa_society_member_loyal }
+			# 40% chance they become disloyal
+			random_list = {
+				40 = {
+					remove_character_modifier = hoa_society_member_loyal
+					add_character_modifier = {
+						name = hoa_society_member_disloyal
+						duration = 730
+					}
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_society_betrayed
+						years = 3
+					}
+				}
+				60 = {
+					# They grumble but stay
+					opinion = {
+						who = ROOT
+						modifier = hoa_opinion_meditation_rejected
+						years = 2
+					}
+				}
+			}
+		}
+		set_character_flag = hoa_society_struggle_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_society.45 days = 1825 }
+		}
+		ai_chance = { factor = 30 }
+	}
+
+	# Eliminate the troublemaker
+	option = {
+		name = hoa_society.40.c
+		trigger = { intrigue >= 16 }
+		random_courtier = {
+			limit = {
+				has_character_modifier = hoa_society_member_loyal
+				OR = {
+					trait = ambitious
+					intrigue >= 14
+				}
+			}
+			remove_character_modifier = hoa_society_member_loyal
+			imprison = ROOT
+		}
+		piety = -25
+		set_character_flag = hoa_society_struggle_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_society.45 days = 1825 }
+		}
+		ai_chance = { factor = 10 }
+	}
+}
+
+# ========================
+# CLEAR STRUGGLE COOLDOWN
+# ========================
+character_event = {
+	id = hoa_society.45
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = hoa_society_struggle_cooldown
+	}
+}
+
+# ========================
+# SOCIETY BENEFIT: ARCANE DISCOVERY (Magic societies)
+# ========================
+character_event = {
+	id = hoa_society.50
+	title = hoa_society.50.title
+	desc = hoa_society.50.desc
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_diplomacy
+
+	trigger = {
+		has_character_modifier = hoa_secret_society_leader
+		has_character_flag = hoa_society_type_arcane
+		is_magic_class_trigger = yes
+		NOT = { has_character_flag = hoa_arcane_discovery_cooldown }
+	}
+
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 0.6
+			learning >= 18
+		}
+		modifier = {
+			factor = 0.7
+			is_mage_class_trigger = yes
+		}
+	}
+
+	# Major arcane discovery
+	option = {
+		name = hoa_society.50.a
+		learning = 1
+		prestige = 100
+		piety = 50
+		set_character_flag = hoa_arcane_discovery_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_society.55 days = 1825 }
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+# ========================
+# CLEAR ARCANE DISCOVERY COOLDOWN
+# ========================
+character_event = {
+	id = hoa_society.55
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = hoa_arcane_discovery_cooldown
+	}
+}
+
+# ========================
+# SOCIETY BENEFIT: TRADE PROFIT (Trade societies)
+# ========================
+character_event = {
+	id = hoa_society.60
+	title = hoa_society.60.title
+	desc = hoa_society.60.desc
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_diplomacy
+
+	trigger = {
+		has_character_modifier = hoa_secret_society_leader
+		has_character_flag = hoa_society_type_trade
+		NOT = { has_character_flag = hoa_trade_profit_cooldown }
+	}
+
+	mean_time_to_happen = {
+		years = 3
+		modifier = {
+			factor = 0.6
+			stewardship >= 16
+		}
+		modifier = {
+			factor = 0.8
+			wealth >= 500
+		}
+	}
+
+	# Trade windfall
+	option = {
+		name = hoa_society.60.a
+		wealth = 150
+		prestige = 25
+		set_character_flag = hoa_trade_profit_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_society.65 days = 1095 }
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+# ========================
+# CLEAR TRADE PROFIT COOLDOWN
+# ========================
+character_event = {
+	id = hoa_society.65
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = hoa_trade_profit_cooldown
+	}
+}

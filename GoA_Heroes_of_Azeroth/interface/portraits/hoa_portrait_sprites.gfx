@@ -1,0 +1,238 @@
+spriteTypes = {
+
+	# === HUMAN (humangfx) ===
+	spriteType = {
+		name = "GFX_hoa_human_male_base"
+		texturefile = "gfx/characters/human/male/hoa_human_male_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_human_female_base"
+		texturefile = "gfx/characters/human/male/hoa_human_female_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_human_male_hair"
+		texturefile = "gfx/characters/human/male/hoa_human_male_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_human_female_hair"
+		texturefile = "gfx/characters/human/male/hoa_human_female_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_human_male_beard"
+		texturefile = "gfx/characters/human/male/hoa_human_male_beard.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_human_male_clothes"
+		texturefile = "gfx/characters/human/male/hoa_human_male_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_human_female_clothes"
+		texturefile = "gfx/characters/human/male/hoa_human_female_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_human_male_headgear"
+		texturefile = "gfx/characters/human/male/hoa_human_male_headgear.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_human_female_headgear"
+		texturefile = "gfx/characters/human/male/hoa_human_female_headgear.png"
+		noOfFrames = 5
+	}
+
+	# === ORC (orcgfx) ===
+	spriteType = {
+		name = "GFX_hoa_orc_male_base"
+		texturefile = "gfx/characters/orc/male/hoa_orc_male_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_orc_female_base"
+		texturefile = "gfx/characters/orc/male/hoa_orc_female_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_orc_male_hair"
+		texturefile = "gfx/characters/orc/male/hoa_orc_male_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_orc_female_hair"
+		texturefile = "gfx/characters/orc/male/hoa_orc_female_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_orc_male_beard"
+		texturefile = "gfx/characters/orc/male/hoa_orc_male_beard.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_orc_male_clothes"
+		texturefile = "gfx/characters/orc/male/hoa_orc_male_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_orc_female_clothes"
+		texturefile = "gfx/characters/orc/male/hoa_orc_female_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_orc_male_headgear"
+		texturefile = "gfx/characters/orc/male/hoa_orc_male_headgear.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_orc_female_headgear"
+		texturefile = "gfx/characters/orc/male/hoa_orc_female_headgear.png"
+		noOfFrames = 5
+	}
+
+	# === NIGHTELF (nightelfgfx) ===
+	spriteType = {
+		name = "GFX_hoa_nightelf_male_base"
+		texturefile = "gfx/characters/nightelf/male/hoa_nightelf_male_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_nightelf_female_base"
+		texturefile = "gfx/characters/nightelf/male/hoa_nightelf_female_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_nightelf_male_hair"
+		texturefile = "gfx/characters/nightelf/male/hoa_nightelf_male_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_nightelf_female_hair"
+		texturefile = "gfx/characters/nightelf/male/hoa_nightelf_female_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_nightelf_male_beard"
+		texturefile = "gfx/characters/nightelf/male/hoa_nightelf_male_beard.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_nightelf_male_clothes"
+		texturefile = "gfx/characters/nightelf/male/hoa_nightelf_male_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_nightelf_female_clothes"
+		texturefile = "gfx/characters/nightelf/male/hoa_nightelf_female_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_nightelf_male_headgear"
+		texturefile = "gfx/characters/nightelf/male/hoa_nightelf_male_headgear.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_nightelf_female_headgear"
+		texturefile = "gfx/characters/nightelf/male/hoa_nightelf_female_headgear.png"
+		noOfFrames = 5
+	}
+
+	# === BLOODELF (bloodelfgfx) ===
+	spriteType = {
+		name = "GFX_hoa_bloodelf_male_base"
+		texturefile = "gfx/characters/bloodelf/male/hoa_bloodelf_male_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_bloodelf_female_base"
+		texturefile = "gfx/characters/bloodelf/male/hoa_bloodelf_female_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_bloodelf_male_hair"
+		texturefile = "gfx/characters/bloodelf/male/hoa_bloodelf_male_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_bloodelf_female_hair"
+		texturefile = "gfx/characters/bloodelf/male/hoa_bloodelf_female_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_bloodelf_male_beard"
+		texturefile = "gfx/characters/bloodelf/male/hoa_bloodelf_male_beard.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_bloodelf_male_clothes"
+		texturefile = "gfx/characters/bloodelf/male/hoa_bloodelf_male_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_bloodelf_female_clothes"
+		texturefile = "gfx/characters/bloodelf/male/hoa_bloodelf_female_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_bloodelf_male_headgear"
+		texturefile = "gfx/characters/bloodelf/male/hoa_bloodelf_male_headgear.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_bloodelf_female_headgear"
+		texturefile = "gfx/characters/bloodelf/male/hoa_bloodelf_female_headgear.png"
+		noOfFrames = 5
+	}
+
+	# === TROLL (trollgfx) ===
+	spriteType = {
+		name = "GFX_hoa_troll_male_base"
+		texturefile = "gfx/characters/troll/male/hoa_troll_male_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_troll_female_base"
+		texturefile = "gfx/characters/troll/male/hoa_troll_female_base.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_troll_male_hair"
+		texturefile = "gfx/characters/troll/male/hoa_troll_male_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_troll_female_hair"
+		texturefile = "gfx/characters/troll/male/hoa_troll_female_hair.png"
+		noOfFrames = 8
+	}
+	spriteType = {
+		name = "GFX_hoa_troll_male_beard"
+		texturefile = "gfx/characters/troll/male/hoa_troll_male_beard.png"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_hoa_troll_male_clothes"
+		texturefile = "gfx/characters/troll/male/hoa_troll_male_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_troll_female_clothes"
+		texturefile = "gfx/characters/troll/male/hoa_troll_female_clothes.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_troll_male_headgear"
+		texturefile = "gfx/characters/troll/male/hoa_troll_male_headgear.png"
+		noOfFrames = 5
+	}
+	spriteType = {
+		name = "GFX_hoa_troll_female_headgear"
+		texturefile = "gfx/characters/troll/male/hoa_troll_female_headgear.png"
+		noOfFrames = 5
+	}
+
+}

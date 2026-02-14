@@ -1,0 +1,196 @@
+# GoA: Heroes of Azeroth - Council Modifiers
+# Modifiers used by Chancellor, Steward, Marshal, and Spymaster decisions/events.
+
+# ==========================================
+# CHANCELLOR MODIFIERS
+# ==========================================
+
+# Granted by successful treaty negotiation
+hoa_trade_treaty = {
+	tax_income = 0.10
+	icon = 4
+}
+
+# Long-term diplomatic contacts network
+hoa_diplomatic_network = {
+	diplomacy = 2
+	icon = 4
+}
+
+# Hosting a grand diplomatic summit
+hoa_summit_host = {
+	diplomacy = 3
+	monthly_character_prestige = 0.1
+	icon = 4
+}
+
+# ==========================================
+# STEWARD MODIFIERS
+# ==========================================
+
+# Realm audit found savings on construction
+hoa_audit_discount = {
+	build_cost_modifier = -0.20
+	icon = 4
+}
+
+# Optimized tax collection
+hoa_efficient_treasury = {
+	tax_income = 0.05
+	icon = 4
+}
+
+# ==========================================
+# SPYMASTER MODIFIERS
+# ==========================================
+
+# Active spy network in enemy realm
+hoa_shadow_network = {
+	intrigue = 2
+	plot_power_modifier = 0.10
+	icon = 7
+}
+
+# Major intelligence gathered from spies
+hoa_spy_intel_major = {
+	intrigue = 2
+	icon = 7
+}
+
+# Minor intelligence gathered from spies
+hoa_spy_intel_minor = {
+	intrigue = 1
+	icon = 7
+}
+
+# ==========================================
+# MARSHAL MODIFIERS - FORTIFICATION
+# ==========================================
+
+# Border defenses reinforced by the marshal
+hoa_fortified_borders = {
+	fort_level = 1
+	garrison_size = 0.15
+	icon = 4
+}
+
+# ==========================================
+# MARSHAL MODIFIERS - MILITARY DOCTRINES
+# Class-specific doctrines based on marshal's WoW class.
+# Each provides a base levy_size bonus plus a
+# class-specific combat modifier.
+# ==========================================
+
+# Base doctrine - marshal has no recognized class
+hoa_military_doctrine = {
+	levy_size = 0.05
+	icon = 4
+}
+
+# Warrior doctrine: disciplined heavy infantry formations
+hoa_doctrine_warrior = {
+	levy_size = 0.05
+	heavy_infantry_offensive = 0.15
+	icon = 4
+}
+
+# Hunter doctrine: elite ranged combat tactics
+hoa_doctrine_hunter = {
+	levy_size = 0.05
+	archers_offensive = 0.15
+	icon = 4
+}
+
+# Mage doctrine: arcane enhancement of all forces
+hoa_doctrine_mage = {
+	levy_size = 0.10
+	icon = 4
+}
+
+# Paladin doctrine: holy inspiration and morale
+hoa_doctrine_paladin = {
+	levy_size = 0.05
+	morale_offence = 0.10
+	icon = 4
+}
+
+# Rogue doctrine: guerrilla and skirmish tactics
+hoa_doctrine_rogue = {
+	levy_size = 0.05
+	light_infantry_offensive = 0.20
+	icon = 4
+}
+
+# Shaman doctrine: spiritual resilience in battle
+hoa_doctrine_shaman = {
+	levy_size = 0.05
+	morale_defence = 0.10
+	icon = 4
+}
+
+# Death Knight doctrine: relentless dread advance
+hoa_doctrine_deathknight = {
+	levy_size = 0.05
+	morale_offence = 0.15
+	icon = 4
+}
+
+# Default doctrine - no class or unmatched class
+hoa_doctrine_default = {
+	levy_size = 0.05
+	icon = 4
+}
+
+# ==========================================
+# MARSHAL MODIFIERS - CAMPAIGN PLANS
+# Granted after marshal completes campaign planning.
+# Quality depends on marshal's martial skill.
+# ==========================================
+
+# Excellent campaign plan - comprehensive strategy
+hoa_campaign_plan_excellent = {
+	morale_offence = 0.10
+	morale_defence = 0.10
+	icon = 4
+}
+
+# Good campaign plan - solid offensive strategy
+hoa_campaign_plan_good = {
+	morale_offence = 0.10
+	icon = 4
+}
+
+# Average campaign plan - basic offensive boost
+hoa_campaign_plan_average = {
+	morale_offence = 0.05
+	icon = 4
+}
+
+# Cooldown after planning a campaign
+hoa_campaign_plan_cooldown = { }
+
+# ==========================================
+# SABOTAGE MODIFIERS (Province-level)
+# Applied by spymaster operations to enemy provinces.
+# ==========================================
+
+# Major sabotage - significant economic disruption
+hoa_province_sabotaged = {
+	tax_income = -0.30
+	levy_size = -0.20
+	icon = 7
+}
+
+# Minor sabotage - moderate economic disruption
+hoa_province_sabotaged_minor = {
+	tax_income = -0.15
+	icon = 7
+}
+
+# ==========================================
+# OPINION MODIFIERS (Council-related)
+# ==========================================
+
+opinion_disappointed = {
+	opinion = -15
+}

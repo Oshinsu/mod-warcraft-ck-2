@@ -1,0 +1,126 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+hoa_appease_faction;Appease Faction;Apaiser la Faction;Fraktion beschwichtigen;;Apaciguar Faccion;;;;;;;;;x
+hoa_appease_faction_desc;Spend gold to calm dissatisfied vassals and prevent rebellion.;Depensez de l'or pour calmer les vassaux mecontents et prevenir la rebellion.;Gebt Gold aus, um unzufriedene Vasallen zu beruhigen.;;Gasta oro para calmar a los vasallos insatisfechos.;;;;;;;;;x
+hoa_spy_on_factions;Spy on Factions;Espionner les Factions;Fraktionen bespitzeln;;Espiar Facciones;;;;;;;;;x
+hoa_spy_on_factions_desc;Send your spymaster to uncover faction plots against you.;Envoyez votre maitre-espion decouvrir les complots factionnels.;Schickt euren Spionagemeister, um Fraktionskomplotte aufzudecken.;;Envia a tu maestro de espias a descubrir complots facciosos.;;;;;;;;;x
+hoa_rally_loyalists;Rally Loyalists;Rallier les Loyalistes;Loyalisten sammeln;;Reunir Leales;;;;;;;;;x
+hoa_rally_loyalists_desc;Inspire your loyal supporters to stand firm against dissent.;Inspirez vos partisans loyaux a rester fermes face a la dissidence.;Inspiriert eure loyalen Anhanger.;;Inspira a tus seguidores leales contra la disidencia.;;;;;;;;;x
+hoa_faction_ultimatum;Deliver Ultimatum;Delivrer un Ultimatum;Ultimatum stellen;;Entregar Ultimatum;;;;;;;;;x
+hoa_faction_ultimatum_desc;Confront a disloyal vassal: submit or face consequences.;Confrontez un vassal deloyal: soumettez-vous ou subissez les consequences.;Konfrontiert einen illoyalen Vasallen.;;Confronta a un vasallo desleal: someterse o enfrentar consecuencias.;;;;;;;;;x
+hoa_faction.1.desc;You have spent gold to appease your dissatisfied vassals. The results are in.;Vous avez depense de l'or pour apaiser vos vassaux. Les resultats sont arrives.;Ihr habt Gold ausgegeben, um eure Vasallen zu beschwichtigen.;;Has gastado oro para apaciguar a tus vasallos insatisfechos.;;;;;;;;;x
+hoa_faction.1.a;They are pleased!;Ils sont satisfaits!;Sie sind zufrieden!;;Estan satisfechos!;;;;;;;;;x
+hoa_faction.1.b;Some are appeased.;Certains sont apaises.;Einige sind beschwichtigt.;;Algunos estan apaciguados.;;;;;;;;;x
+hoa_faction.1.c;They took the gold and remained angry.;Ils ont pris l'or et sont restes en colere.;Sie nahmen das Gold und blieben zornig.;;Tomaron el oro y siguieron enfadados.;;;;;;;;;x
+hoa_faction.5.desc;A powerful vassal demands concessions from you.;Un puissant vassal exige des concessions de votre part.;Ein machtiger Vasall verlangt Zugestandnisse.;;Un vasallo poderoso exige concesiones.;;;;;;;;;x
+hoa_faction.5.a;Grant their demands.;Accordez leurs demandes.;Gewahrt ihre Forderungen.;;Conceded sus demandas.;;;;;;;;;x
+hoa_faction.5.b;Refuse!;Refusez!;Lehnt ab!;;Rechazad!;;;;;;;;;x
+hoa_faction.5.c;Counter-offer.;Contre-proposition.;Gegenangebot.;;Contraoferta.;;;;;;;;;x
+hoa_faction.10.desc;Your spymaster returns with intelligence about faction activities.;Votre maitre-espion revient avec des renseignements sur les activites factionnelles.;Euer Spionagemeister kehrt mit Geheimdienstinformationen zuruck.;;Tu maestro de espias regresa con inteligencia sobre las facciones.;;;;;;;;;x
+hoa_faction.10.a;Full intelligence report!;Rapport de renseignement complet!;Vollstandiger Geheimdienstbericht!;;Informe de inteligencia completo!;;;;;;;;;x
+hoa_faction.10.b;Partial findings.;Resultats partiels.;Teilerkenntnisse.;;Hallazgos parciales.;;;;;;;;;x
+hoa_faction.10.c;Nothing found.;Rien trouve.;Nichts gefunden.;;Nada encontrado.;;;;;;;;;x
+hoa_faction.10.d;Our spying was detected!;Notre espionnage a ete detecte!;Unsere Spionage wurde entdeckt!;;Nuestro espionaje fue detectado!;;;;;;;;;x
+hoa_faction.20.desc;You rally your loyalists with a stirring address.;Vous ralliez vos loyalistes avec un discours inspirant.;Ihr versammelt eure Loyalisten mit einer mitreissenden Ansprache.;;Reunes a tus leales con un discurso inspirador.;;;;;;;;;x
+hoa_faction.20.a;For the realm!;Pour le royaume!;Fur das Reich!;;Por el reino!;;;;;;;;;x
+hoa_faction.30.desc;Your liege has delivered an ultimatum: submit or face consequences.;Votre suzerain a delivre un ultimatum: soumettez-vous ou subissez les consequences.;Euer Lehnsherr hat ein Ultimatum gestellt.;;Tu senor ha entregado un ultimatum: someterse o enfrentar consecuencias.;;;;;;;;;x
+hoa_faction.30.a;I submit...;Je me soumets...;Ich unterwerfe mich...;;Me someto...;;;;;;;;;x
+hoa_faction.30.b;Never! I defy you!;Jamais! Je vous defie!;Niemals! Ich trotze euch!;;Jamas! Os desafio!;;;;;;;;;x
+hoa_faction.30.c;Let us negotiate.;Negocions.;Lasst uns verhandeln.;;Negociemos.;;;;;;;;;x
+hoa_faction.31.desc;Your vassal proposes a counter-deal: autonomy in exchange for loyalty.;Votre vassal propose un accord: autonomie en echange de loyaute.;Euer Vasall schlagt einen Gegenvorschlag vor.;;Tu vasallo propone un trato: autonomia a cambio de lealtad.;;;;;;;;;x
+hoa_faction.31.a;Accept the deal.;Acceptez l'accord.;Akzeptiert den Handel.;;Aceptad el trato.;;;;;;;;;x
+hoa_faction.31.b;Reject it.;Rejetez-le.;Lehnt ab.;;Rechazadlo.;;;;;;;;;x
+hoa_faction.40.desc;A coalition of your vassals has risen against you! Civil war threatens!;Une coalition de vos vassaux s'est soulevee contre vous! La guerre civile menace!;Eine Koalition eurer Vasallen hat sich gegen euch erhoben!;;Una coalicion de vasallos se ha alzado contra ti!;;;;;;;;;x
+hoa_faction.40.a;Negotiate peace.;Negociez la paix.;Verhandelt Frieden.;;Negociad la paz.;;;;;;;;;x
+hoa_faction.40.b;Show of force!;Demonstration de force!;Machtdemonstration!;;Demostracion de fuerza!;;;;;;;;;x
+hoa_faction.40.c;Prepare for war.;Preparez la guerre.;Bereitet den Krieg vor.;;Preparad la guerra.;;;;;;;;;x
+hoa_faction.50.desc;A loyal vassal warns you about a brewing conspiracy.;Un vassal loyal vous avertit d'une conspiration imminente.;Ein loyaler Vasall warnt euch vor einer Verschworung.;;Un vasallo leal te advierte sobre una conspiracion.;;;;;;;;;x
+hoa_faction.50.a;Useful intelligence. Reward them.;Renseignement utile. Recompensez-les.;Nutzliche Informationen. Belohnt sie.;;Inteligencia util. Recompensadlos.;;;;;;;;;x
+hoa_establish_trade_route;Establish Trade Route;Etablir une Route Commerciale;Handelsroute errichten;;Establecer Ruta Comercial;;;;;;;;;x
+hoa_establish_trade_route_desc;Invest in establishing a lasting trade route with a neighboring realm.;Investissez pour etablir une route commerciale durable avec un royaume voisin.;Investiert in eine dauerhafte Handelsroute mit einem Nachbarreich.;;Invierte en establecer una ruta comercial duradera con un reino vecino.;;;;;;;;;x
+hoa_send_caravan;Send Trade Caravan;Envoyer une Caravane;Handelskarawane entsenden;;Enviar Caravana Comercial;;;;;;;;;x
+hoa_send_caravan_desc;Send a caravan of goods for trade. Profitable but risky.;Envoyez une caravane de marchandises. Rentable mais risque.;Schickt eine Handelskarawane. Profitabel aber riskant.;;Envia una caravana de mercancias. Rentable pero arriesgado.;;;;;;;;;x
+hoa_trade_fair;Host Trade Fair;Organiser une Foire Commerciale;Handelsmesse veranstalten;;Organizar Feria Comercial;;;;;;;;;x
+hoa_trade_fair_desc;Host a grand trade fair in your capital, attracting merchants from across the realm.;Organisez une grande foire commerciale dans votre capitale.;Veranstaltet eine grosse Handelsmesse in eurer Hauptstadt.;;Organiza una gran feria comercial en tu capital.;;;;;;;;;x
+hoa_hire_mercenary_escort;Hire Mercenary Escort;Engager une Escorte Mercenaire;Soldnereskorte anheuern;;Contratar Escolta Mercenaria;;;;;;;;;x
+hoa_hire_mercenary_escort_desc;Hire mercenaries to protect your caravan from bandits.;Engagez des mercenaires pour proteger votre caravane des bandits.;Heuert Soldner an, um eure Karawane zu schutzen.;;Contrata mercenarios para proteger tu caravana de bandidos.;;;;;;;;;x
+hoa_trade_embargo;Impose Trade Embargo;Imposer un Embargo Commercial;Handelsembargo verhangen;;Imponer Embargo Comercial;;;;;;;;;x
+hoa_trade_embargo_desc;Cut off trade with an enemy to damage their economy.;Coupez le commerce avec un ennemi pour endommager son economie.;Unterbindet den Handel mit einem Feind.;;Corta el comercio con un enemigo para danar su economia.;;;;;;;;;x
+hoa_trade.1.desc;The trade route has been established. Reports arrive about its profitability.;La route commerciale a ete etablie. Les rapports arrivent sur sa rentabilite.;Die Handelsroute wurde errichtet. Berichte uber die Rentabilitat treffen ein.;;La ruta comercial ha sido establecida. Llegan informes sobre su rentabilidad.;;;;;;;;;x
+hoa_trade.1.a;A thriving route!;Une route florissante!;Eine bluhende Route!;;Una ruta prospera!;;;;;;;;;x
+hoa_trade.1.b;Modest but steady.;Modeste mais regulier.;Bescheiden aber stetig.;;Modesta pero constante.;;;;;;;;;x
+hoa_trade.1.c;The route is not viable.;La route n'est pas viable.;Die Route ist nicht rentabel.;;La ruta no es viable.;;;;;;;;;x
+hoa_trade.1.d;Bandits destroyed the caravan!;Des bandits ont detruit la caravane!;Banditen haben die Karawane zerstort!;;Bandidos destruyeron la caravana!;;;;;;;;;x
+hoa_trade.10.desc;Your caravan has completed its journey. What happened along the way?;Votre caravane a termine son voyage. Que s'est-il passe en chemin?;Eure Karawane hat ihre Reise beendet.;;Tu caravana ha completado su viaje.;;;;;;;;;x
+hoa_trade.10.a;Safe arrival with good profits!;Arrivee sure avec de bons profits!;Sichere Ankunft mit guten Gewinnen!;;Llegada segura con buenos beneficios!;;;;;;;;;x
+hoa_trade.10.b;Exceptional trade!;Commerce exceptionnel!;Aussergewohnlicher Handel!;;Comercio excepcional!;;;;;;;;;x
+hoa_trade.10.c;The caravan was ambushed!;La caravane a ete attaquee!;Die Karawane wurde uberfallen!;;La caravana fue emboscada!;;;;;;;;;x
+hoa_trade.10.d;The caravan was lost.;La caravane a ete perdue.;Die Karawane ging verloren.;;La caravana se perdio.;;;;;;;;;x
+hoa_trade.11.desc;Your caravan has been ambushed by bandits on the trade road!;Votre caravane a ete attaquee par des bandits sur la route commerciale!;Eure Karawane wurde von Banditen uberfallen!;;Tu caravana ha sido emboscada por bandidos!;;;;;;;;;x
+hoa_trade.11.a;Send troops to rescue!;Envoyez des troupes au secours!;Schickt Truppen zur Rettung!;;Enviad tropas al rescate!;;;;;;;;;x
+hoa_trade.11.b;Pay the ransom.;Payez la rancon.;Zahlt das Losegeld.;;Pagad el rescate.;;;;;;;;;x
+hoa_trade.11.c;Write it off.;Passez l'eponge.;Schreibt es ab.;;Dadlo por perdido.;;;;;;;;;x
+hoa_trade.20.desc;Merchants gather from across the realm for your grand trade fair.;Des marchands se rassemblent de tout le royaume pour votre grande foire.;Handler aus dem ganzen Reich versammeln sich zu eurer Messe.;;Comerciantes se reunen de todo el reino para tu gran feria.;;;;;;;;;x
+hoa_trade.20.a;A grand success!;Un grand succes!;Ein grosser Erfolg!;;Un gran exito!;;;;;;;;;x
+hoa_trade.20.b;Good turnout.;Bonne affluence.;Gute Beteiligung.;;Buena asistencia.;;;;;;;;;x
+hoa_trade.20.c;Poor attendance.;Faible affluence.;Geringe Beteiligung.;;Poca asistencia.;;;;;;;;;x
+hoa_trade.20.d;Fire! Disaster!;Au feu! Catastrophe!;Feuer! Katastrophe!;;Fuego! Desastre!;;;;;;;;;x
+hoa_trade.30.desc;A trade embargo has been imposed against you, strangling your economy.;Un embargo commercial a ete impose contre vous, etranglant votre economie.;Ein Handelsembargo wurde gegen euch verhangt.;;Un embargo comercial ha sido impuesto contra ti.;;;;;;;;;x
+hoa_trade.30.a;We must endure.;Nous devons endurer.;Wir mussen durchhalten.;;Debemos resistir.;;;;;;;;;x
+hoa_lead_charge;Lead Personal Charge;Mener une Charge Personnelle;Personlichen Angriff fuhren;;Liderar Carga Personal;;;;;;;;;x
+hoa_lead_charge_desc;Lead your troops from the front in a daring personal charge.;Menez vos troupes depuis le front dans une charge personnelle audacieuse.;Fuhrt eure Truppen von vorne in einem gewagten personlichen Angriff.;;Lidera a tus tropas desde el frente en una audaz carga personal.;;;;;;;;;x
+hoa_fortify_position;Fortify Position;Fortifier la Position;Stellung befestigen;;Fortificar Posicion;;;;;;;;;x
+hoa_fortify_position_desc;Dig in and fortify your army's current position.;Retranchez-vous et fortifiez la position actuelle de votre armee.;Grabt euch ein und befestigt die Stellung eurer Armee.;;Atrincherate y fortifica la posicion actual de tu ejercito.;;;;;;;;;x
+hoa_inspire_troops;Inspire Troops;Inspirer les Troupes;Truppen inspirieren;;Inspirar Tropas;;;;;;;;;x
+hoa_inspire_troops_desc;Give a rousing speech to boost your army's morale.;Prononcez un discours galvanisant pour renforcer le moral de votre armee.;Haltet eine mitreissende Rede, um die Moral zu starken.;;Da un discurso para elevar la moral de tu ejercito.;;;;;;;;;x
+hoa_challenge_enemy_commander;Challenge Enemy Commander;Defier le Commandant Ennemi;Feindlichen Kommandanten herausfordern;;Desafiar al Comandante Enemigo;;;;;;;;;x
+hoa_challenge_enemy_commander_desc;Challenge the enemy commander to single combat. Extremely dangerous but potentially decisive.;Defiez le commandant ennemi en combat singulier. Extremement dangereux mais potentiellement decisif.;Fordert den feindlichen Kommandanten zum Zweikampf.;;Desafia al comandante enemigo a combate singular.;;;;;;;;;x
+hoa_class_battle_ability;Use Class Battle Ability;Utiliser la Capacite de Classe;Klassenkampffahigkeit einsetzen;;Usar Habilidad de Clase en Batalla;;;;;;;;;x
+hoa_class_battle_ability_desc;Unleash your class-specific combat ability on the battlefield.;Liberez votre capacite de combat specifique a votre classe sur le champ de bataille.;Entfesselt eure klassenspezifische Kampffahigkeit.;;Libera tu habilidad de combate especifica de clase en el campo de batalla.;;;;;;;;;x
+hoa_battle.1.desc;You charge forward at the head of your troops, sword raised high!;Vous chargez a la tete de vos troupes, epee levee!;Ihr sturmt an der Spitze eurer Truppen voran!;;Cargas al frente de tus tropas con la espada en alto!;;;;;;;;;x
+hoa_battle.1.a;A glorious victory!;Une victoire glorieuse!;Ein glorreicher Sieg!;;Una victoria gloriosa!;;;;;;;;;x
+hoa_battle.1.b;A solid success.;Un succes solide.;Ein solider Erfolg.;;Un solido exito.;;;;;;;;;x
+hoa_battle.1.c;Wounded in the charge.;Blesse dans la charge.;In der Attacke verwundet.;;Herido en la carga.;;;;;;;;;x
+hoa_battle.1.d;A catastrophic failure!;Un echec catastrophique!;Ein katastrophales Scheitern!;;Un fracaso catastrofico!;;;;;;;;;x
+hoa_battle.10.desc;You stand before your assembled troops to deliver a speech.;Vous vous tenez devant vos troupes assemblees pour prononcer un discours.;Ihr steht vor euren versammelten Truppen fur eine Ansprache.;;Te presentas ante tus tropas reunidas para dar un discurso.;;;;;;;;;x
+hoa_battle.10.a;A legendary speech!;Un discours legendaire!;Eine legendare Rede!;;Un discurso legendario!;;;;;;;;;x
+hoa_battle.10.b;Well received.;Bien recu.;Gut aufgenommen.;;Bien recibido.;;;;;;;;;x
+hoa_battle.10.c;They listened politely.;Ils ont ecoute poliment.;Sie horten hoflich zu.;;Escucharon educadamente.;;;;;;;;;x
+hoa_battle.10.d;Embarrassing...;Embarrassant...;Peinlich...;;Vergonzoso...;;;;;;;;;x
+hoa_battle.20.desc;You stride forward and challenge the enemy commander to single combat!;Vous avancez et defiez le commandant ennemi en combat singulier!;Ihr tretet vor und fordert den Feind zum Zweikampf!;;Avanzas y desafias al comandante enemigo a combate singular!;;;;;;;;;x
+hoa_battle.20.a;Victory! The enemy falls!;Victoire! L'ennemi tombe!;Sieg! Der Feind fallt!;;Victoria! El enemigo cae!;;;;;;;;;x
+hoa_battle.20.b;A draw. Both wounded.;Match nul. Les deux blesses.;Unentschieden. Beide verwundet.;;Empate. Ambos heridos.;;;;;;;;;x
+hoa_battle.20.c;Defeated and wounded.;Vaincu et blesse.;Besiegt und verwundet.;;Derrotado y herido.;;;;;;;;;x
+hoa_battle.20.d;A fatal blow...;Un coup fatal...;Ein todlicher Schlag...;;Un golpe fatal...;;;;;;;;;x
+hoa_battle.30.desc;You channel your class abilities into the heat of battle!;Vous canalisez vos capacites de classe dans la chaleur de la bataille!;Ihr kanalisiert eure Klassenfahigkeiten in die Hitze des Gefechts!;;Canalizas tus habilidades de clase en el fragor de la batalla!;;;;;;;;;x
+hoa_battle.30.a;Power unleashed!;Puissance liberee!;Macht entfesselt!;;Poder desatado!;;;;;;;;;x
+hoa_battle.40.desc;During the siege, your engineers spot a weakness in the enemy fortifications.;Pendant le siege, vos ingenieurs repèrent une faiblesse dans les fortifications ennemies.;Wahrend der Belagerung entdecken eure Ingenieure eine Schwachstelle.;;Durante el asedio, tus ingenieros detectan una debilidad en las fortificaciones.;;;;;;;;;x
+hoa_battle.40.a;Tunnel under the walls!;Creusez un tunnel sous les murs!;Grabt einen Tunnel unter den Mauern!;;Excavad un tunel bajo los muros!;;;;;;;;;x
+hoa_battle.40.b;Negotiate surrender.;Negociez la reddition.;Verhandelt die Ubergabe.;;Negociad la rendicion.;;;;;;;;;x
+hoa_battle.40.c;Frontal assault!;Assaut frontal!;Frontalangriff!;;Asalto frontal!;;;;;;;;;x
+hoa_battle.50.desc;The war drags on. Your people and soldiers grow weary.;La guerre s'eternise. Votre peuple et vos soldats sont las.;Der Krieg zieht sich hin. Euer Volk und eure Soldaten werden mude.;;La guerra se prolonga. Tu pueblo y soldados estan agotados.;;;;;;;;;x
+hoa_battle.50.a;Hold a feast to restore morale.;Organisez un festin pour restaurer le moral.;Haltet ein Fest, um die Moral zu heben.;;Organizad un festin para restaurar la moral.;;;;;;;;;x
+hoa_battle.50.b;Press on regardless.;Continuez malgre tout.;Macht trotzdem weiter.;;Continuad pese a todo.;;;;;;;;;x
+hoa_battle.50.c;Seek peace.;Cherchez la paix.;Sucht Frieden.;;Buscad la paz.;;;;;;;;;x
+hoa_fortified_position;Fortified Position;Position Fortifiee;Befestigte Stellung;;Posicion Fortificada;;;;;;;;;x
+hoa_inspired_army;Inspired Army;Armee Inspiree;Inspirierte Armee;;Ejercito Inspirado;;;;;;;;;x
+hoa_inspired_army_minor;Encouraged Troops;Troupes Encouragees;Ermutigte Truppen;;Tropas Animadas;;;;;;;;;x
+hoa_speech_fumble;Fumbled Speech;Discours Rate;Misslungene Rede;;Discurso Fallido;;;;;;;;;x
+hoa_duel_champion;Duel Champion;Champion de Duel;Duellchampion;;Campeon de Duelo;;;;;;;;;x
+hoa_battle_warrior_rage;Berserker Rage;Rage du Berserker;Berserkerwut;;Furia del Berserker;;;;;;;;;x
+hoa_battle_mage_barrage;Arcane Barrage;Barrage Arcanique;Arkanes Sperrfeuer;;Bombardeo Arcano;;;;;;;;;x
+hoa_battle_paladin_shield;Divine Shield;Bouclier Divin;Gottlicher Schild;;Escudo Divino;;;;;;;;;x
+hoa_battle_rogue_ambush;Shadow Ambush;Embuscade de l'Ombre;Schattenhinterhalt;;Emboscada de Sombra;;;;;;;;;x
+hoa_battle_hunter_arrows;Rain of Arrows;Pluie de Fleches;Pfeilregen;;Lluvia de Flechas;;;;;;;;;x
+hoa_battle_shaman_storm;Elemental Storm;Tempete Elementaire;Elementarsturm;;Tormenta Elemental;;;;;;;;;x
+hoa_battle_priest_heal;Mass Heal;Soin de Masse;Massenheilung;;Sanacion Masiva;;;;;;;;;x
+hoa_battle_warlock_demons;Summon Demons;Invocation de Demons;Damonenbeschwörung;;Invocacion de Demonios;;;;;;;;;x
+hoa_battle_druid_wrath;Nature's Wrath;Courroux de la Nature;Zorn der Natur;;Furia de la Naturaleza;;;;;;;;;x
+hoa_battle_dk_undead;Army of the Dead;Armee des Morts;Armee der Toten;;Ejercito de los Muertos;;;;;;;;;x
+hoa_battle_monk_serenity;Inner Serenity;Serenite Interieure;Innere Gelassenheit;;Serenidad Interior;;;;;;;;;x
+hoa_rallied_loyalists;Rallied Loyalists;Loyalistes Rallies;Versammelte Loyalisten;;Leales Reunidos;;;;;;;;;x
+hoa_active_trade_route;Active Trade Route;Route Commerciale Active;Aktive Handelsroute;;Ruta Comercial Activa;;;;;;;;;x
+hoa_active_trade_route_minor;Minor Trade Route;Route Commerciale Mineure;Kleine Handelsroute;;Ruta Comercial Menor;;;;;;;;;x
+hoa_trade_fair_active;Trade Fair;Foire Commerciale;Handelsmesse;;Feria Comercial;;;;;;;;;x
+hoa_renowned_market;Renowned Market;Marche Renomme;Berühmter Markt;;Mercado Renombrado;;;;;;;;;x
+hoa_embargoed;Trade Embargo;Embargo Commercial;Handelsembargo;;Embargo Comercial;;;;;;;;;x
+hoa_civil_war_prepared;Prepared for Civil War;Prepare a la Guerre Civile;Auf Burgerkrieg vorbereitet;;Preparado para Guerra Civil;;;;;;;;;x

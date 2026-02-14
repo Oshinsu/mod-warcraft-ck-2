@@ -1,0 +1,135 @@
+namespace = hoa_gift
+
+# =====================================================
+# Heroes of Azeroth - Gift Confirmation Events
+# =====================================================
+# Feedback events fired to the sender after a gift.
+# Each tier has its own flavor text.
+# =====================================================
+
+# ========================
+# Small Gift Sent (25 gold)
+# ========================
+character_event = {
+	id = hoa_gift.1
+	title = hoa_gift.1.title
+	desc = hoa_gift.1.desc
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_gift.1.a
+		tooltip = {
+			custom_tooltip = {
+				text = hoa_gift_small_sent_tooltip
+			}
+		}
+	}
+}
+
+# ========================
+# Moderate Gift Sent (50 gold)
+# ========================
+character_event = {
+	id = hoa_gift.2
+	title = hoa_gift.2.title
+	desc = hoa_gift.2.desc
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_gift.2.a
+		tooltip = {
+			custom_tooltip = {
+				text = hoa_gift_moderate_sent_tooltip
+			}
+		}
+	}
+}
+
+# ========================
+# Generous Gift Sent (100 gold)
+# ========================
+character_event = {
+	id = hoa_gift.3
+	title = hoa_gift.3.title
+	desc = hoa_gift.3.desc
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_gift.3.a
+		tooltip = {
+			custom_tooltip = {
+				text = hoa_gift_generous_sent_tooltip
+			}
+		}
+	}
+}
+
+# ========================
+# Royal Gift Sent (250 gold)
+# ========================
+character_event = {
+	id = hoa_gift.4
+	title = hoa_gift.4.title
+	desc = hoa_gift.4.desc
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_gift.4.a
+		tooltip = {
+			custom_tooltip = {
+				text = hoa_gift_royal_sent_tooltip
+			}
+		}
+	}
+}
+
+# ========================
+# Legendary Gift Sent (500 gold)
+# ========================
+character_event = {
+	id = hoa_gift.5
+	title = hoa_gift.5.title
+	desc = hoa_gift.5.desc
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_gift.5.a
+		prestige = 50
+		tooltip = {
+			custom_tooltip = {
+				text = hoa_gift_legendary_sent_tooltip
+			}
+		}
+	}
+}
+
+# ========================
+# Gift Received Notification (recipient gets notified)
+# ========================
+character_event = {
+	id = hoa_gift.10
+	title = hoa_gift.10.title
+	desc = hoa_gift.10.desc
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = hoa_gift.10.a
+		tooltip = {
+			custom_tooltip = {
+				text = hoa_gift_received_tooltip
+			}
+		}
+	}
+}

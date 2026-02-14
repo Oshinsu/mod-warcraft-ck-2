@@ -1,0 +1,502 @@
+# GoA: Heroes of Azeroth - Council Events
+# Chancellor-driven diplomacy events: treaty negotiation,
+# chancellor capture/rescue, diplomatic summits, and intelligence.
+
+namespace = hoa_council
+
+###############################################
+# TREATY NEGOTIATION RESULT
+# Fired 90 days after hoa_chancellor_negotiate_treaty decision.
+# Outcome weighted by chancellor's diplomacy skill.
+###############################################
+character_event = {
+	id = hoa_council.1
+	desc = hoa_council.1.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			# Great Success - treaty secured
+			30 = {
+				modifier = {
+					factor = 1.5
+					job_chancellor = { diplomacy >= 15 }
+				}
+				modifier = {
+					factor = 1.3
+					job_chancellor = { diplomacy >= 20 }
+				}
+				modifier = {
+					factor = 1.2
+					# Military backing helps negotiations
+					martial >= 10
+				}
+				set_character_flag = hoa_treaty_great
+			}
+			# Moderate Success - partial deal
+			35 = {
+				modifier = {
+					factor = 1.2
+					job_chancellor = { diplomacy >= 14 }
+				}
+				set_character_flag = hoa_treaty_moderate
+			}
+			# Failure - chancellor returns empty-handed
+			35 = {
+				modifier = {
+					factor = 0.7
+					job_chancellor = { diplomacy >= 16 }
+				}
+				modifier = {
+					factor = 1.3
+					trait = craven
+				}
+				set_character_flag = hoa_treaty_fail
+			}
+		}
+	}
+
+	# Option A: Great Success - Full trade treaty
+	option = {
+		name = hoa_council.1.a
+		trigger = { has_character_flag = hoa_treaty_great }
+		prestige = 200
+		add_character_modifier = {
+			name = hoa_trade_treaty
+			duration = 3650
+		}
+		custom_tooltip = { text = hoa_treaty_great_success_tt }
+		hidden_tooltip = {
+			clr_character_flag = hoa_treaty_great
+		}
+	}
+
+	# Option B: Moderate Success - Some gold and prestige
+	option = {
+		name = hoa_council.1.b
+		trigger = { has_character_flag = hoa_treaty_moderate }
+		prestige = 50
+		wealth = 100
+		custom_tooltip = { text = hoa_treaty_moderate_success_tt }
+		hidden_tooltip = {
+			clr_character_flag = hoa_treaty_moderate
+		}
+	}
+
+	# Option C: Failure - Chancellor returns empty-handed
+	option = {
+		name = hoa_council.1.c
+		trigger = { has_character_flag = hoa_treaty_fail }
+		prestige = -50
+		custom_tooltip = { text = hoa_treaty_failure_tt }
+		hidden_tooltip = {
+			# 10% chance the chancellor was captured during negotiations
+			random_list = {
+				10 = {
+					character_event = { id = hoa_council.2 days = 7 }
+				}
+				90 = {
+					# Nothing further happens
+				}
+			}
+			clr_character_flag = hoa_treaty_fail
+		}
+	}
+}
+
+###############################################
+# CHANCELLOR CAPTURED
+# Your chancellor was seized during failed negotiations.
+# Choose: pay ransom, send marshal, or abandon them.
+###############################################
+character_event = {
+	id = hoa_council.2
+	desc = hoa_council.2.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	# Option A: Pay ransom (200 gold)
+	option = {
+		name = hoa_council.2.a
+		trigger = {
+			wealth >= 200
+		}
+		wealth = -200
+		prestige = -25
+		custom_tooltip = { text = hoa_chancellor_ransomed_tt }
+		# Chancellor is safely returned
+	}
+
+	# Option B: Send the marshal to rescue
+	option = {
+		name = hoa_council.2.b
+		custom_tooltip = { text = hoa_marshal_rescue_attempt_tt }
+		hidden_tooltip = {
+			character_event = { id = hoa_council.3 days = 30 }
+		}
+	}
+
+	# Option C: Abandon the chancellor
+	option = {
+		name = hoa_council.2.c
+		prestige = -75
+		custom_tooltip = { text = hoa_chancellor_abandoned_tt }
+		hidden_tooltip = {
+			# All courtiers lose opinion of you
+			any_courtier = {
+				limit = {
+					is_adult = yes
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_abandoned_chancellor
+					years = 10
+				}
+			}
+			# The chancellor dies in captivity
+			job_chancellor = {
+				death = {
+					death_reason = death_dungeon
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				trait = cruel
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = cruel }
+			}
+		}
+	}
+}
+
+###############################################
+# MARSHAL RESCUE ATTEMPT
+# Your marshal leads a covert mission to free the
+# captured chancellor. Success depends on martial skill.
+###############################################
+character_event = {
+	id = hoa_council.3
+	desc = hoa_council.3.desc
+	picture = GFX_evt_battle
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			# Rescue succeeds
+			50 = {
+				modifier = {
+					factor = 1.5
+					martial >= 14
+				}
+				modifier = {
+					factor = 1.3
+					martial >= 18
+				}
+				modifier = {
+					factor = 1.2
+					trait = brave
+				}
+				modifier = {
+					factor = 1.2
+					any_courtier = {
+						has_job_title = job_marshal
+						martial >= 16
+					}
+				}
+				set_character_flag = hoa_rescue_success
+			}
+			# Rescue fails
+			50 = {
+				modifier = {
+					factor = 1.5
+					NOT = { martial >= 14 }
+				}
+				modifier = {
+					factor = 1.3
+					trait = craven
+				}
+				set_character_flag = hoa_rescue_fail
+			}
+		}
+	}
+
+	# Success - Chancellor freed!
+	option = {
+		name = hoa_council.3.a
+		trigger = { has_character_flag = hoa_rescue_success }
+		prestige = 50
+		custom_tooltip = { text = hoa_chancellor_rescued_tt }
+		hidden_tooltip = {
+			job_chancellor = {
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_rescued_me
+					years = 20
+				}
+			}
+			clr_character_flag = hoa_rescue_success
+		}
+	}
+
+	# Failure - Chancellor dies in the attempt
+	option = {
+		name = hoa_council.3.b
+		trigger = { has_character_flag = hoa_rescue_fail }
+		prestige = -100
+		custom_tooltip = { text = hoa_chancellor_rescue_failed_tt }
+		hidden_tooltip = {
+			job_chancellor = {
+				death = {
+					death_reason = death_battle
+				}
+			}
+			clr_character_flag = hoa_rescue_fail
+		}
+	}
+}
+
+###############################################
+# DIPLOMATIC SUMMIT
+# Fired 60 days after hoa_chancellor_organize_summit decision.
+# Your chancellor invites neighboring rulers for a grand
+# diplomatic gathering. Outcome depends on diplomacy.
+###############################################
+character_event = {
+	id = hoa_council.10
+	desc = hoa_council.10.desc
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			# Great Success - 3 rulers attend, major prestige and opinion
+			30 = {
+				modifier = {
+					factor = 1.5
+					job_chancellor = { diplomacy >= 18 }
+				}
+				modifier = {
+					factor = 1.3
+					diplomacy >= 15
+				}
+				modifier = {
+					factor = 1.2
+					trait = diplomat
+				}
+				modifier = {
+					factor = 1.2
+					higher_tier_than = DUKE
+				}
+				set_character_flag = hoa_summit_great
+			}
+			# Good - 2 rulers attend
+			40 = {
+				modifier = {
+					factor = 1.2
+					job_chancellor = { diplomacy >= 15 }
+				}
+				set_character_flag = hoa_summit_good
+			}
+			# Poor - Only 1 ruler attends
+			20 = {
+				modifier = {
+					factor = 0.8
+					job_chancellor = { diplomacy >= 16 }
+				}
+				set_character_flag = hoa_summit_poor
+			}
+			# Disaster - Nobody comes, embarrassment
+			10 = {
+				modifier = {
+					factor = 1.5
+					trait = shy
+				}
+				modifier = {
+					factor = 1.3
+					NOT = { diplomacy >= 10 }
+				}
+				modifier = {
+					factor = 0.5
+					diplomacy >= 16
+				}
+				set_character_flag = hoa_summit_disaster
+			}
+		}
+	}
+
+	# Great Success - A triumphant summit!
+	option = {
+		name = hoa_council.10.a
+		trigger = { has_character_flag = hoa_summit_great }
+		prestige = 300
+		add_character_modifier = {
+			name = hoa_summit_host
+			duration = 1825
+		}
+		hidden_tooltip = {
+			any_independent_ruler = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { war_with = ROOT }
+					is_within_diplo_range = ROOT
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_summit_great
+					years = 10
+				}
+			}
+			clr_character_flag = hoa_summit_great
+		}
+		custom_tooltip = { text = hoa_summit_great_tt }
+	}
+
+	# Good - Productive summit
+	option = {
+		name = hoa_council.10.b
+		trigger = { has_character_flag = hoa_summit_good }
+		prestige = 100
+		hidden_tooltip = {
+			any_independent_ruler = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { war_with = ROOT }
+					is_within_diplo_range = ROOT
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_summit_good
+					years = 5
+				}
+			}
+			clr_character_flag = hoa_summit_good
+		}
+		custom_tooltip = { text = hoa_summit_good_tt }
+	}
+
+	# Poor - Lackluster attendance
+	option = {
+		name = hoa_council.10.c
+		trigger = { has_character_flag = hoa_summit_poor }
+		prestige = 50
+		custom_tooltip = { text = hoa_summit_poor_tt }
+		hidden_tooltip = {
+			clr_character_flag = hoa_summit_poor
+		}
+	}
+
+	# Disaster - Nobody came, humiliation
+	option = {
+		name = hoa_council.10.d
+		trigger = { has_character_flag = hoa_summit_disaster }
+		prestige = -100
+		hidden_tooltip = {
+			any_vassal = {
+				limit = {
+					is_adult = yes
+					is_ruler = yes
+				}
+				opinion = {
+					who = ROOT
+					modifier = hoa_opinion_summit_disaster
+					years = 5
+				}
+			}
+			clr_character_flag = hoa_summit_disaster
+		}
+		custom_tooltip = { text = hoa_summit_disaster_tt }
+	}
+}
+
+###############################################
+# CHANCELLOR INTELLIGENCE REPORT
+# MTTH-based flavor event. Your highly skilled chancellor
+# uncovers intelligence about a neighbor's alliance plans.
+###############################################
+character_event = {
+	id = hoa_council.11
+	desc = hoa_council.11.desc
+	picture = GFX_evt_council
+
+	trigger = {
+		is_ruler = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		prisoner = no
+		NOT = { has_character_flag = hoa_intel_cooldown }
+		job_chancellor = {
+			diplomacy >= 18
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 8
+		modifier = {
+			factor = 0.7
+			job_chancellor = { diplomacy >= 20 }
+		}
+		modifier = {
+			factor = 0.8
+			job_chancellor = { diplomacy >= 22 }
+		}
+		modifier = {
+			factor = 0.8
+			intrigue >= 12
+		}
+		modifier = {
+			factor = 0.9
+			trait = diplomat
+		}
+	}
+
+	# Accept the intelligence report
+	option = {
+		name = hoa_council.11.a
+		add_character_modifier = {
+			name = hoa_intel_report
+			duration = 730
+		}
+		set_character_flag = hoa_intel_cooldown
+		custom_tooltip = { text = hoa_intel_report_received_tt }
+		hidden_tooltip = {
+			# Clear cooldown flag after 2 years
+			character_event = { id = hoa_council.12 days = 730 }
+		}
+	}
+
+	# Dismiss the report
+	option = {
+		name = hoa_council.11.b
+		prestige = 5
+		set_character_flag = hoa_intel_cooldown
+		hidden_tooltip = {
+			character_event = { id = hoa_council.12 days = 730 }
+		}
+		ai_chance = { factor = 10 }
+	}
+}
+
+###############################################
+# INTELLIGENCE COOLDOWN CLEAR (Hidden helper event)
+# Clears the intel cooldown flag after 2 years.
+###############################################
+character_event = {
+	id = hoa_council.12
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = hoa_intel_cooldown
+	}
+}
