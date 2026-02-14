@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_dagger_epic",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_dagger_epic.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background with vignette. A sinister curved assassin's dagger with a blade forged from blackened shadow-steel, the edge dripping viscous green poison that glows faintly. Skull-shaped pommel with two tiny ruby eyes that gleam. Serrated back edge for extra brutality. The blade is slightly translucent, dark smoke wisping from its surface. Dark leather and wire wrapped grip. Purple epic quality (#a335ee) shadow glow with green poison drips. Diagonal orientation. Small, lethal, venomous. No hands, single item, dark background, readable at 80x80.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

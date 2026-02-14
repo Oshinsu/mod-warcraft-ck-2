@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_helm_hunter_t2",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_helm_hunter_t2.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background. Hunter Tier 2 Dragonstalker Helm \u2014 a dramatic mail helmet shaped like a dragon's head with swept-back horns curving elegantly. Green dragon scales covering the surface with gold trim along every edge. Dragon eye gems on the brow ridge glowing with inner green fire. The helm channels the power of the Green Dragonflight. Dragonslayer, predator of legends. Purple epic quality (#a335ee) glow with green dragon fire wisps emanating from the eye gems. Front-facing view. No person, single item, dark background.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

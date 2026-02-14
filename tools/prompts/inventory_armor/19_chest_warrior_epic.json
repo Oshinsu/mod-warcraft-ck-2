@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_chest_warrior_epic",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_chest_warrior_epic.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background. Warrior Tier 2 Wrath chestpiece \u2014 a heavy plate warrior breastplate of blue-tinted steel with ornate gold filigree trim running along every edge and seam. A dragon motif embossed in gold relief on the center chest. Shoulder attachment rivets visible at the top. Belt buckle with a lion Alliance crest at the waist. The steel has a cold blue sheen reflecting light. Heroic, heavy, commanding. Purple epic quality (#a335ee) glow with steel-blue reflections. Front-facing flat display as if on a mannequin. No person wearing it, single item, dark background.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

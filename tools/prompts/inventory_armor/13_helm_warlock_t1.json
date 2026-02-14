@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_helm_warlock_t1",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_helm_warlock_t1.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background. Warlock Tier 1 Felheart Hood \u2014 a dark purple cloth hood with two small demonic horn-like protrusions growing from the top. Sickly green fel energy glowing from within the hood's depths, casting eerie green shadows on the fabric. Dark purple and green color scheme. Sinister demonic runes embroidered on the fabric in thread that glows faintly. Dark magic practitioner, servant of demons. Blue rare quality (#0070dd) with green fel undertone glow. Front-facing view. No person, single item, dark background.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

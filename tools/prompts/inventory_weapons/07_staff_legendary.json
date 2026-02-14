@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_staff_legendary",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_staff_legendary.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background with vignette. Atiesh, Greatstaff of the Guardian \u2014 a tall elegant staff topped with a raven perched on a crescent moon made of pure shimmering arcane energy. The raven is detailed with iridescent black feathers, eyes glowing blue. Staff shaft is ancient polished dark wood with arcane runes spiraling along its entire length, emitting faint blue light. Intense orange legendary quality (#ff8000) glow radiating outward, stardust and magical particles swirling. Vertical orientation. Immense ancient arcane authority. No hands, single item, dark background, readable at 80x80.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

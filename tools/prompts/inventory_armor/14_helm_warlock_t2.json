@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_helm_warlock_t2",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_helm_warlock_t2.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background. Warlock Tier 2 Nemesis Crown \u2014 a terrifying dark iron crown bristling with multiple curving demon horns of varying heights. Green fel fire blazing between and above the horns like a demonic bonfire. Shadow energy wreathing the base. Dark iron and shadow metal construction. Green and purple color scheme. Pure concentrated demonic power made manifest. Purple epic quality (#a335ee) glow with intense green fel energy streams rising from between the horns. Front-facing view. No person, single item, dark background.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}

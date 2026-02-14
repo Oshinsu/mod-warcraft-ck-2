@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "model": "google/nano-banana-pro",
+    "asset_id": "hoa_inv_staff_epic",
+    "target_path": "GoA_Heroes_of_Azeroth/gfx/interface/inventory/hoa_inv_staff_epic.png"
+  },
+  "parameters": {
+    "aspect_ratio": "1:1",
+    "output_format": "png"
+  },
+  "prompt_construction": {
+    "positive": "World of Warcraft inventory icon, hand-painted game asset style, single item centered on dark gradient background with vignette. An ornate arcane mage staff with a large pulsing purple crystal orb at the top, held by twisted silver branches growing from the shaft. Ancient rune-carved dark wooden shaft with gold bands and arcane symbols. Purple arcane energy swirling around the crystal, trailing magical particles. Purple epic quality (#a335ee) aura glow surrounding the weapon. Vertical orientation, slightly angled. Rich painterly brushwork, metallic reflections on silver, deep crystal transparency. No hands, no characters, single item only, clean dark background, readable silhouette at 80x80 pixels.",
+    "negative": "text, watermark, signature, UI, modern, anime, cartoon, photorealistic face, blurry, low quality, multiple items, busy background, person wearing item, hands holding item"
+  }
+}
