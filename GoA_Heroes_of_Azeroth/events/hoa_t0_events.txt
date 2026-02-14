@@ -11,7 +11,7 @@ namespace = hoa_t0
 character_event = {
 	id = hoa_t0.1
 	desc = hoa_t0.1.desc
-	picture = GFX_evt_castle
+	picture = GFX_evt_hoa_shadowfang_keep
 
 	is_triggered_only = yes
 
@@ -58,7 +58,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.2
 	desc = hoa_t0.2.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_shadowfang_keep
 
 	is_triggered_only = yes
 
@@ -108,7 +108,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.3
 	desc = hoa_t0.3.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_shadowfang_keep
 
 	is_triggered_only = yes
 
@@ -161,7 +161,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.10
 	desc = hoa_t0.10.desc
-	picture = GFX_evt_castle
+	picture = GFX_evt_hoa_scarlet_monastery
 
 	is_triggered_only = yes
 
@@ -204,7 +204,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.11
 	desc = hoa_t0.11.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_scarlet_monastery
 
 	is_triggered_only = yes
 
@@ -241,7 +241,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.12
 	desc = hoa_t0.12.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_scarlet_monastery
 
 	is_triggered_only = yes
 
@@ -294,7 +294,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.20
 	desc = hoa_t0.20.desc
-	picture = GFX_evt_castle
+	picture = GFX_evt_hoa_gnomeregan
 
 	is_triggered_only = yes
 
@@ -338,7 +338,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.21
 	desc = hoa_t0.21.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_gnomeregan
 
 	is_triggered_only = yes
 
@@ -374,7 +374,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.22
 	desc = hoa_t0.22.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_gnomeregan
 
 	is_triggered_only = yes
 
@@ -422,7 +422,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.30
 	desc = hoa_t0.30.desc
-	picture = GFX_evt_mysterious_stranger
+	picture = GFX_evt_hoa_maraudon
 
 	is_triggered_only = yes
 
@@ -467,7 +467,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.31
 	desc = hoa_t0.31.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_maraudon
 
 	is_triggered_only = yes
 
@@ -502,7 +502,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.32
 	desc = hoa_t0.32.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_maraudon
 
 	is_triggered_only = yes
 
@@ -551,7 +551,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.40
 	desc = hoa_t0.40.desc
-	picture = GFX_evt_castle
+	picture = GFX_evt_hoa_dire_maul
 
 	is_triggered_only = yes
 
@@ -594,7 +594,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.41
 	desc = hoa_t0.41.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_dire_maul
 
 	is_triggered_only = yes
 
@@ -631,7 +631,7 @@ character_event = {
 character_event = {
 	id = hoa_t0.42
 	desc = hoa_t0.42.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_dire_maul
 
 	is_triggered_only = yes
 

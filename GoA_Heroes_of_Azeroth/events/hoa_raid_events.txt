@@ -13,7 +13,7 @@ namespace = hoa_raid
 character_event = {
 	id = hoa_raid.1
 	desc = hoa_raid.1.desc
-	picture = GFX_evt_burning_house
+	picture = GFX_evt_hoa_molten_core
 
 	is_triggered_only = yes
 
@@ -68,7 +68,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.2
 	desc = hoa_raid.2.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_molten_core
 
 	is_triggered_only = yes
 
@@ -118,7 +118,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.3
 	desc = hoa_raid.3.desc
-	picture = GFX_evt_burning_house
+	picture = GFX_evt_hoa_ragnaros
 
 	is_triggered_only = yes
 
@@ -238,7 +238,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.10
 	desc = hoa_raid.10.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_blackwing_lair
 
 	is_triggered_only = yes
 
@@ -292,7 +292,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.11
 	desc = hoa_raid.11.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_blackwing_lair
 
 	is_triggered_only = yes
 
@@ -339,7 +339,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.12
 	desc = hoa_raid.12.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_blackwing_lair
 
 	is_triggered_only = yes
 
@@ -410,7 +410,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.20
 	desc = hoa_raid.20.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_ahn_qiraj
 
 	is_triggered_only = yes
 
@@ -454,7 +454,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.21
 	desc = hoa_raid.21.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_ahn_qiraj
 
 	is_triggered_only = yes
 
@@ -501,7 +501,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.22
 	desc = hoa_raid.22.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_ahn_qiraj
 
 	is_triggered_only = yes
 
@@ -558,7 +558,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.30
 	desc = hoa_raid.30.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_naxxramas
 
 	is_triggered_only = yes
 
@@ -604,7 +604,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.31
 	desc = hoa_raid.31.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_naxxramas
 
 	is_triggered_only = yes
 
@@ -651,7 +651,7 @@ character_event = {
 character_event = {
 	id = hoa_raid.32
 	desc = hoa_raid.32.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_naxxramas
 
 	is_triggered_only = yes
 

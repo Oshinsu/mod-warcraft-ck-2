@@ -11,7 +11,7 @@ namespace = hoa_t05
 character_event = {
 	id = hoa_t05.1
 	desc = hoa_t05.1.desc
-	picture = GFX_evt_burning_house
+	picture = GFX_evt_hoa_stratholme
 
 	is_triggered_only = yes
 
@@ -55,7 +55,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.2
 	desc = hoa_t05.2.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_stratholme
 
 	is_triggered_only = yes
 
@@ -93,7 +93,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.3
 	desc = hoa_t05.3.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_stratholme
 
 	is_triggered_only = yes
 
@@ -146,7 +146,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.10
 	desc = hoa_t05.10.desc
-	picture = GFX_evt_mysterious_stranger
+	picture = GFX_evt_hoa_scholomance
 
 	is_triggered_only = yes
 
@@ -190,7 +190,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.11
 	desc = hoa_t05.11.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_scholomance
 
 	is_triggered_only = yes
 
@@ -227,7 +227,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.12
 	desc = hoa_t05.12.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_scholomance
 
 	is_triggered_only = yes
 
@@ -277,7 +277,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.20
 	desc = hoa_t05.20.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_blackrock_spire
 
 	is_triggered_only = yes
 
@@ -320,7 +320,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.21
 	desc = hoa_t05.21.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_blackrock_spire
 
 	is_triggered_only = yes
 
@@ -358,7 +358,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.22
 	desc = hoa_t05.22.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_blackrock_spire
 
 	is_triggered_only = yes
 
@@ -407,7 +407,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.30
 	desc = hoa_t05.30.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_zulgurub
 
 	is_triggered_only = yes
 
@@ -451,7 +451,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.31
 	desc = hoa_t05.31.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_zulgurub
 
 	is_triggered_only = yes
 
@@ -489,7 +489,7 @@ character_event = {
 character_event = {
 	id = hoa_t05.32
 	desc = hoa_t05.32.desc
-	picture = GFX_evt_battle
+	picture = GFX_evt_hoa_zulgurub
 
 	is_triggered_only = yes
 
